@@ -16,5 +16,10 @@ namespace Unicom_TIC.Views.AdminView
         {
             InitializeComponent();
         }
+
+        private void AdminStudentDelete_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

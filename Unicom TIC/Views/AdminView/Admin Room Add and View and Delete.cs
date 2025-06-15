@@ -16,5 +16,10 @@ namespace Unicom_TIC.Views.AdminView
         {
             InitializeComponent();
         }
+
+        private void Admin_Room_Add_and_View_and_Delete_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

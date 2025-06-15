@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Windows.Forms;
 using Unicom_TIC.Controller;
 using Unicom_TIC.Model;
@@ -22,6 +23,21 @@ namespace Unicom_TIC.Views.AdminView
             else if (AdminStaffAddFemale.Checked)
                 gender = "Female";
 
+            // ============================ Staff Object Creation ============================
+            Staff staff = new Staff
+            {
+                FirstName = AdminStaffAddFirstName.Text,
+                LastName = AdminStaffAddLastName.Text,
+                Address = AdminStaffAddAddress.Text,
+                DOB = AdminStaffAddDOB.Value.ToString("yyyy-MM-dd"),
+                Gender = gender,
+                Role = AdminStaffAddRole.Text,
+                PhoneNumber = AdminStaffAddPhoneNumber.Text,
+                Email = AdminStaffAddEmail.Text
+            };
+
+
+
             // ============================ Input Validation ============================
             if (string.IsNullOrWhiteSpace(AdminStaffAddFirstName.Text) ||
                 string.IsNullOrWhiteSpace(AdminStaffAddLastName.Text) ||
@@ -43,18 +59,15 @@ namespace Unicom_TIC.Views.AdminView
                 return;
             }
 
-            // ============================ Staff Object Creation ============================
-            Staff staff = new Staff
+            // ============================ Phone Number validation ============================
+
+            if (staff.PhoneNumber.Length != 10 || !staff.PhoneNumber.All(char.IsDigit))
             {
-                FirstName = AdminStaffAddFirstName.Text,
-                LastName = AdminStaffAddLastName.Text,
-                Address = AdminStaffAddAddress.Text,
-                DOB = AdminStaffAddDOB.Value.ToString("yyyy-MM-dd"),
-                Gender = gender,
-                Role = AdminStaffAddRole.Text,
-                PhoneNumber = AdminStaffAddPhoneNumber.Text,
-                Email = AdminStaffAddEmail.Text
-            };
+                MessageBox.Show("Please enter a valid Phone Number", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+
 
             // ============================ Save using Controller ============================
             try
@@ -106,6 +119,11 @@ namespace Unicom_TIC.Views.AdminView
         private void AdminStaffAddPhoneNumber_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void AdminStaffAddClear_Click(object sender, EventArgs e)
+        {
+            ClearFields();
         }
     }
 }

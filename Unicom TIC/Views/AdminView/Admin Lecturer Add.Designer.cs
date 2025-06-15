@@ -109,6 +109,7 @@
             this.AdminLecturerAddClear.TabIndex = 25;
             this.AdminLecturerAddClear.Text = "Clear";
             this.AdminLecturerAddClear.UseVisualStyleBackColor = true;
+            this.AdminLecturerAddClear.Click += new System.EventHandler(this.AdminLecturerAddClear_Click);
             // 
             // tableLayoutPanel1
             // 

@@ -112,7 +112,6 @@ namespace Unicom_TIC.Repositories
                          Address TEXT NOT NULL,
                          DOB TEXT,
                          Gender TEXT,
-                         Role TEXT NOT NULL,
                          Email TEXT NOT NULL,
                          PhoneNumber TEXT NOT NULL,
                          CourseID INTEGER,
@@ -140,9 +139,11 @@ namespace Unicom_TIC.Repositories
                     CREATE TABLE IF NOT EXISTS Marks
                        (
                         MarkID INTEGER PRIMARY KEY AUTOINCREMENT,
+                        Score INTEGER,
                         StudentID INTEGER,
                         ExamID INTEGER,
-                        Score INTEGER,
+                        SubjectID INTEGER,
+                        FOREIGN KEY(SubjectID) REFERENCES Subjects(SubjectID),
                         FOREIGN KEY(StudentID) REFERENCES Students(StudentID),
                         FOREIGN KEY(ExamID) REFERENCES Exams(ExamID)
                        );
@@ -168,10 +169,12 @@ namespace Unicom_TIC.Repositories
                        (
                          TimetableID INTEGER PRIMARY KEY AUTOINCREMENT,
                          SubjectID INTEGER,
+                         LecturerID INTEGER,
                          TimeSlot TEXT NOT NULL,
                          RoomID INTEGER,
                          FOREIGN KEY(SubjectID) REFERENCES Subjects(SubjectID),
-                         FOREIGN KEY(RoomID) REFERENCES Rooms(RoomID)    
+                         FOREIGN KEY(RoomID) REFERENCES Rooms(RoomID)   
+                         FOREIGN KEY(LecturerID) REFERENCES Lecturers(LecturerID)  
                        );
                 ";
                 cmd.ExecuteNonQuery();
@@ -196,10 +199,10 @@ namespace Unicom_TIC.Repositories
                     CREATE TABLE IF NOT EXISTS StudentCourses 
                        (
                           StudentID INTEGER,
-                          CourseID INTEGER,
-                          PRIMARY KEY (StudentID , CourseID ),
+                          SubjectID INTEGER,
+                          PRIMARY KEY (StudentID , SubjectID ),
                           FOREIGN KEY(StudentID) REFERENCES Students(StudentID),
-                          FOREIGN KEY(CourseID) REFERENCES Courses(CourseID)
+                          FOREIGN KEY(SubjectID) REFERENCES Subjects(SubjectID)
                        );
                 ";
                 cmd.ExecuteNonQuery();

@@ -90,6 +90,16 @@ namespace Unicom_TIC.Views.AdminView
             }
         }
 
+        private void AdminCourseDetails_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void Admin_Course_Add_and_View_and_Delete_Load(object sender, EventArgs e)
+        {
+
+        }
+
         // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     }
 

@@ -109,6 +109,7 @@
             this.AdminStaffAddClear.TabIndex = 25;
             this.AdminStaffAddClear.Text = "Clear";
             this.AdminStaffAddClear.UseVisualStyleBackColor = true;
+            this.AdminStaffAddClear.Click += new System.EventHandler(this.AdminStaffAddClear_Click);
             // 
             // tableLayoutPanel1
             // 

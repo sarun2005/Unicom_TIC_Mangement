@@ -57,6 +57,7 @@
     <Compile Include="Controller\LecturerController.cs" />
     <Compile Include="Controller\StaffController.cs" />
     <Compile Include="Controller\StudentController.cs" />
+    <Compile Include="Controller\SubjectController.cs" />
     <Compile Include="Model\Admin.cs" />
     <Compile Include="Model\Course.cs" />
     <Compile Include="Model\Exam.cs" />
@@ -170,6 +171,24 @@
     <Compile Include="Views\AdminView\Main Admin.Designer.cs">
       <DependentUpon>Main Admin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\LecturerView\Main Lecturer Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\LecturerView\Main Lecturer Form.Designer.cs">
+      <DependentUpon>Main Lecturer Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StaffView\Main Staff Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\StaffView\Main Staff Form.Designer.cs">
+      <DependentUpon>Main Staff Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StudentView\Main Student Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\StudentView\Main Student Form.Designer.cs">
+      <DependentUpon>Main Student Form.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -227,6 +246,15 @@
     <EmbeddedResource Include="Views\AdminView\Main Admin.resx">
       <DependentUpon>Main Admin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\LecturerView\Main Lecturer Form.resx">
+      <DependentUpon>Main Lecturer Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StaffView\Main Staff Form.resx">
+      <DependentUpon>Main Staff Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StudentView\Main Student Form.resx">
+      <DependentUpon>Main Student Form.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -242,11 +270,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\LecturerView\" />
-    <Folder Include="Views\StaffView\" />
-    <Folder Include="Views\StudentView\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.119.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -44,17 +44,20 @@
             this.AdminAdminUpdateLastName = new System.Windows.Forms.TextBox();
             this.AdminAdminUpdateSave = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.AdminAdminSearch = new System.Windows.Forms.Button();
+            this.AdminAdminSearchText = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // AdminAdminUpdateBack
             // 
-            this.AdminAdminUpdateBack.Location = new System.Drawing.Point(79, 366);
+            this.AdminAdminUpdateBack.Location = new System.Drawing.Point(78, 413);
             this.AdminAdminUpdateBack.Name = "AdminAdminUpdateBack";
             this.AdminAdminUpdateBack.Size = new System.Drawing.Size(107, 29);
             this.AdminAdminUpdateBack.TabIndex = 18;
             this.AdminAdminUpdateBack.Text = "Clear";
             this.AdminAdminUpdateBack.UseVisualStyleBackColor = true;
+            this.AdminAdminUpdateBack.Click += new System.EventHandler(this.AdminAdminUpdateBack_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -73,7 +76,7 @@
             this.tableLayoutPanel1.Controls.Add(this.AdminAdminUpdateEmail, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.AdminAdminUpdateRole, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.AdminAdminUpdateLastName, 1, 2);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(185, 77);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(184, 124);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 6;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
@@ -100,6 +103,7 @@
             this.AdminAdminUpdateFirstName.Name = "AdminAdminUpdateFirstName";
             this.AdminAdminUpdateFirstName.Size = new System.Drawing.Size(224, 20);
             this.AdminAdminUpdateFirstName.TabIndex = 9;
+            this.AdminAdminUpdateFirstName.TextChanged += new System.EventHandler(this.AdminAdminUpdateFirstName_TextChanged);
             // 
             // AdminAdminUpdateAdminID
             // 
@@ -107,6 +111,7 @@
             this.AdminAdminUpdateAdminID.Name = "AdminAdminUpdateAdminID";
             this.AdminAdminUpdateAdminID.Size = new System.Drawing.Size(224, 20);
             this.AdminAdminUpdateAdminID.TabIndex = 3;
+            this.AdminAdminUpdateAdminID.TextChanged += new System.EventHandler(this.AdminAdminUpdateAdminID_TextChanged);
             // 
             // label6
             // 
@@ -159,6 +164,7 @@
             this.AdminAdminUpdatePhoneNumber.Name = "AdminAdminUpdatePhoneNumber";
             this.AdminAdminUpdatePhoneNumber.Size = new System.Drawing.Size(224, 20);
             this.AdminAdminUpdatePhoneNumber.TabIndex = 10;
+            this.AdminAdminUpdatePhoneNumber.TextChanged += new System.EventHandler(this.AdminAdminUpdatePhoneNumber_TextChanged);
             // 
             // AdminAdminUpdateEmail
             // 
@@ -166,6 +172,7 @@
             this.AdminAdminUpdateEmail.Name = "AdminAdminUpdateEmail";
             this.AdminAdminUpdateEmail.Size = new System.Drawing.Size(224, 20);
             this.AdminAdminUpdateEmail.TabIndex = 11;
+            this.AdminAdminUpdateEmail.TextChanged += new System.EventHandler(this.AdminAdminUpdateEmail_TextChanged);
             // 
             // AdminAdminUpdateRole
             // 
@@ -174,6 +181,7 @@
             this.AdminAdminUpdateRole.Name = "AdminAdminUpdateRole";
             this.AdminAdminUpdateRole.Size = new System.Drawing.Size(224, 21);
             this.AdminAdminUpdateRole.TabIndex = 2;
+            this.AdminAdminUpdateRole.SelectedIndexChanged += new System.EventHandler(this.AdminAdminUpdateRole_SelectedIndexChanged);
             // 
             // AdminAdminUpdateLastName
             // 
@@ -181,15 +189,17 @@
             this.AdminAdminUpdateLastName.Name = "AdminAdminUpdateLastName";
             this.AdminAdminUpdateLastName.Size = new System.Drawing.Size(224, 20);
             this.AdminAdminUpdateLastName.TabIndex = 17;
+            this.AdminAdminUpdateLastName.TextChanged += new System.EventHandler(this.AdminAdminUpdateLastName_TextChanged);
             // 
             // AdminAdminUpdateSave
             // 
-            this.AdminAdminUpdateSave.Location = new System.Drawing.Point(643, 366);
+            this.AdminAdminUpdateSave.Location = new System.Drawing.Point(642, 413);
             this.AdminAdminUpdateSave.Name = "AdminAdminUpdateSave";
             this.AdminAdminUpdateSave.Size = new System.Drawing.Size(107, 29);
             this.AdminAdminUpdateSave.TabIndex = 16;
             this.AdminAdminUpdateSave.Text = "Save";
             this.AdminAdminUpdateSave.UseVisualStyleBackColor = true;
+            this.AdminAdminUpdateSave.Click += new System.EventHandler(this.AdminAdminUpdateSave_Click);
             // 
             // label1
             // 
@@ -201,16 +211,37 @@
             this.label1.TabIndex = 15;
             this.label1.Text = "Update Admin";
             // 
+            // AdminAdminSearch
+            // 
+            this.AdminAdminSearch.Location = new System.Drawing.Point(233, 67);
+            this.AdminAdminSearch.Name = "AdminAdminSearch";
+            this.AdminAdminSearch.Size = new System.Drawing.Size(103, 23);
+            this.AdminAdminSearch.TabIndex = 20;
+            this.AdminAdminSearch.Text = "Search";
+            this.AdminAdminSearch.UseVisualStyleBackColor = true;
+            this.AdminAdminSearch.Click += new System.EventHandler(this.AdminAdminSearch_Click);
+            // 
+            // AdminAdminSearchText
+            // 
+            this.AdminAdminSearchText.Location = new System.Drawing.Point(399, 70);
+            this.AdminAdminSearchText.Name = "AdminAdminSearchText";
+            this.AdminAdminSearchText.Size = new System.Drawing.Size(177, 20);
+            this.AdminAdminSearchText.TabIndex = 19;
+            this.AdminAdminSearchText.TextChanged += new System.EventHandler(this.AdminAdminSearchText_TextChanged);
+            // 
             // Admin_Admin_Update
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.AdminAdminSearch);
+            this.Controls.Add(this.AdminAdminSearchText);
             this.Controls.Add(this.AdminAdminUpdateBack);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.AdminAdminUpdateSave);
             this.Controls.Add(this.label1);
             this.Name = "Admin_Admin_Update";
             this.Size = new System.Drawing.Size(796, 489);
+            this.Load += new System.EventHandler(this.Admin_Admin_Update_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
@@ -236,5 +267,7 @@
         private System.Windows.Forms.TextBox AdminAdminUpdateLastName;
         private System.Windows.Forms.Button AdminAdminUpdateSave;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button AdminAdminSearch;
+        private System.Windows.Forms.TextBox AdminAdminSearchText;
     }
 }

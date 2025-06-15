@@ -41,7 +41,7 @@ namespace Unicom_TIC.Views.AdminView
 
 
 
-        // Admin Add ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        //  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ Admin Add +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         private void AdminAdminAddSave_Click(object sender, EventArgs e)
         {
             // ============================ Admin Object Creation ============================
@@ -54,7 +54,7 @@ namespace Unicom_TIC.Views.AdminView
                 Email = AdminAdminAddEmail.Text
             };
 
-                        
+
 
             // ============================ Input Validation ============================
             if (string.IsNullOrWhiteSpace(AdminAdminAddFirstName.Text) ||
@@ -67,12 +67,11 @@ namespace Unicom_TIC.Views.AdminView
             {
                 MessageBox.Show("Please enter your details", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
-            }
-            ;
+            };
 
 
-            // ============================ Phone validation ============================
 
+            // ============================ Phone Number validation ============================
             if (admin.PhoneNumber.Length != 10 || !admin.PhoneNumber.All(char.IsDigit))
             {
                 MessageBox.Show("Please enter a valid Phone Number", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -87,7 +86,7 @@ namespace Unicom_TIC.Views.AdminView
                 return;
             }
 
-           
+
 
 
 
@@ -108,12 +107,15 @@ namespace Unicom_TIC.Views.AdminView
 
             
             ClearFields();
+
+            // ============================ VIEW ============================
             LoadAdmins();
         }
 
+        // ============================ VIEW ============================
         private void LoadAdmins()
         {
-
+            
         }
 
 
@@ -132,36 +134,25 @@ namespace Unicom_TIC.Views.AdminView
 
 
 
-
-
-
-
-
-
-
-
+       
+        
+        // ============================ CLEAR ============================
         private void AdminAdminAddBack_Click(object sender, EventArgs e)
         {
             ClearFields();
         }
+
+
 
         private void label1_Click(object sender, EventArgs e)
         {
 
         }
 
+        private void AdminAdminAddRole_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
-
-
-
-
-
-
-
-
-    }
-
-
-       
+        }
+    }    
     
 }

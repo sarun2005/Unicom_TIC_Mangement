@@ -16,5 +16,15 @@ namespace Unicom_TIC.Views.AdminView
         {
             InitializeComponent();
         }
+
+        private void Admin_Lecturer_Update_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AdminLecturerUpdateRole_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 using Unicom_TIC.Controller;
 using Unicom_TIC.Model;
@@ -10,9 +12,11 @@ namespace Unicom_TIC.Views.AdminView
         public Admin_Lecturer_Add()
         {
             InitializeComponent();
+            
         }
 
-        
+       
+
         private void AdminLecturerAddSave_Click(object sender, EventArgs e)
         {
             // ============================ Gender Check ============================
@@ -21,6 +25,26 @@ namespace Unicom_TIC.Views.AdminView
                 gender = "Male";
             else if (AdminLecturerAddFemale.Checked)
                 gender = "Female";
+
+
+            // ============================ Lecturer Object Creation ============================
+            Lecturer lecturer = new Lecturer
+            {
+                FirstName = AdminLecturerAddFirstName.Text,
+                LastName = AdminLecturerAddLastName.Text,
+                Address = AdminLecturerAddAddress.Text,
+                DOB = AdminLecturerAddDOB.Value.ToString("yyyy-MM-dd"),
+                Gender = gender,
+                Subject = AdminLecturerAddSubject.Text,
+                PhoneNumber = AdminLecturerAddPhoneNumber.Text,
+                Email = AdminLecturerAddEmail.Text
+            };
+
+            // ============================ Save using Controller ONLY ============================
+            LecturerController lecturerController = new LecturerController();
+
+
+
 
             // ============================ Input Validation ============================
             if (string.IsNullOrWhiteSpace(AdminLecturerAddFirstName.Text) ||
@@ -43,22 +67,15 @@ namespace Unicom_TIC.Views.AdminView
                 return;
             }
 
-            // ============================ Lecturer Object Creation ============================
-            Lecturer lecturer = new Lecturer
+            // ============================ Phone Number validation ============================
+
+            if (lecturer.PhoneNumber.Length != 10 || !lecturer.PhoneNumber.All(char.IsDigit))
             {
-                FirstName = AdminLecturerAddFirstName.Text,
-                LastName = AdminLecturerAddLastName.Text,
-                Address = AdminLecturerAddAddress.Text,
-                DOB = AdminLecturerAddDOB.Value.ToString("yyyy-MM-dd"),
-                Gender = gender,
-                Subject = AdminLecturerAddSubject.Text,
-                PhoneNumber = AdminLecturerAddPhoneNumber.Text,
-                Email = AdminLecturerAddEmail.Text
-            };
+                MessageBox.Show("Please enter a valid Phone Number", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
-            // ============================ Save using Controller ONLY ============================
-            LecturerController lecturerController = new LecturerController();
-
+            
             try
             {
                 lecturerController.AddLecturer(lecturer);
@@ -74,11 +91,13 @@ namespace Unicom_TIC.Views.AdminView
             LoadLecturers();
         }
 
-        
         private void LoadLecturers()
         {
             
         }
+
+
+
 
         // Clear form inputs
         private void ClearFields()
@@ -98,11 +117,18 @@ namespace Unicom_TIC.Views.AdminView
         private void Admin_Lecturer_Add_Load(object sender, EventArgs e)
         {
             AdminLecturerAddSubject.DropDownStyle = ComboBoxStyle.DropDownList;
+
             AdminLecturerAddSubject.Items.Add("Python");
             AdminLecturerAddSubject.Items.Add("C#");
             AdminLecturerAddSubject.Items.Add("Java");
             AdminLecturerAddSubject.Items.Add("HTML");
             AdminLecturerAddSubject.Items.Add("PHP");
+        }
+
+        private void AdminLecturerAddClear_Click(object sender, EventArgs e)
+        {
+            ClearFields();
+
         }
     }
 }

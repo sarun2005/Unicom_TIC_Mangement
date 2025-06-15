@@ -265,6 +265,7 @@
             this.AdminLecturerUpdateRole.Name = "AdminLecturerUpdateRole";
             this.AdminLecturerUpdateRole.Size = new System.Drawing.Size(224, 21);
             this.AdminLecturerUpdateRole.TabIndex = 2;
+            this.AdminLecturerUpdateRole.SelectedIndexChanged += new System.EventHandler(this.AdminLecturerUpdateRole_SelectedIndexChanged);
             // 
             // AdminLecturerUpdateEmail
             // 
@@ -312,6 +313,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Admin_Lecturer_Update";
             this.Size = new System.Drawing.Size(796, 489);
+            this.Load += new System.EventHandler(this.Admin_Lecturer_Update_Load);
             this.s.ResumeLayout(false);
             this.s.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);

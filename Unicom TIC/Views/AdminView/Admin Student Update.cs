@@ -21,5 +21,10 @@ namespace Unicom_TIC.Views.AdminView
         {
 
         }
+
+        private void AdminStudentUpdateSave_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

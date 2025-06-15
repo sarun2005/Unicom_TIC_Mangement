@@ -14,5 +14,10 @@ namespace Unicom_TIC.Model
         public string Role { get; set; }
         public string PhoneNumber { get; set; }
         public string Email { get; set; }
+
+        public static implicit operator Admin(Lecturer v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

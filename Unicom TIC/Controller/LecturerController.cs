@@ -79,5 +79,117 @@ namespace Unicom_TIC.Controller
             }
         }
 
+
+
+
+        // ===================================== VIEW AND DELETE SEARCH =====================================
+        public Admin ViewAdminByID(int lecturerID)
+        {
+            Admin lecturer = null;
+
+            string searchQuery = "SELECT * FROM Admins WHERE AdminID = @AdminAdminSearchID";
+
+            using (var connection = DataBaseConnection.GetConnection())
+            using (var cmd = new SQLiteCommand(searchQuery, connection))
+            {
+                cmd.Parameters.AddWithValue("@AdminAdminSearchID", lecturerID);
+
+                using (var read = cmd.ExecuteReader())
+                {
+                    if (read.Read())
+                    {
+                        lecturer = new Lecturer
+                        {
+                            LecturerID = Convert.ToInt32(read["LecturerID"]),
+                            FirstName = read["FirstName"].ToString(),
+                            LastName = read["LastName"].ToString(),
+                            Role = read["Role"].ToString(),
+                            Email = read["Email"].ToString(),
+                            PhoneNumber = read["PhoneNumber"].ToString()
+                        };
+                    }
+                }
+            }
+            return lecturer;
+        }
+
+
+
+
+        // ===================================== UPDATE =====================================
+        internal void UpdateLecturer(Lecturer lecturer)
+        {
+            if (lecturer is null)
+            {
+                throw new ArgumentNullException(nameof(lecturer));
+            }
+
+            using (var connection = DataBaseConnection.GetConnection())
+            {
+                string updateQuery = "UPDATE Lecturers SET FirstName = @FirstName , LastName = @LastName , Address = @Address , DOB = @DOB ," +
+                                     "Role = @Role , Gender = @gender , Subject = @Subject , Email = @Email , PhoneNumber = @PhoneNumber WHERE LecturerID = @LecturerID ";
+
+                using (var updateLecturerCommand = new SQLiteCommand(updateQuery, connection))
+                {
+                    updateLecturerCommand.Parameters.AddWithValue("@FirstName", lecturer.FirstName);
+                    updateLecturerCommand.Parameters.AddWithValue("@LastName", lecturer.LastName);
+                    updateLecturerCommand.Parameters.AddWithValue("@Address", lecturer.Address);
+                    updateLecturerCommand.Parameters.AddWithValue("@DOB", lecturer.DOB);
+                    updateLecturerCommand.Parameters.AddWithValue("@Role", lecturer.Role);
+                    updateLecturerCommand.Parameters.AddWithValue("@gender", lecturer.Gender);
+                    updateLecturerCommand.Parameters.AddWithValue("@Subject", lecturer.Subject);
+                    updateLecturerCommand.Parameters.AddWithValue("@Email", lecturer.Email);
+                    updateLecturerCommand.Parameters.AddWithValue("@PhoneNumber", lecturer.PhoneNumber);
+
+                    updateLecturerCommand.ExecuteNonQuery(); // This executes the update command
+                }
+            }
+        }
+
+
+
+        // ===================================== UPDATE SEARCH =====================================
+        public List<Lecturer> SearchAdmins(string keyword)
+        {
+            List<Lecturer> lecturers = new List<Lecturer>();
+
+            string sql =
+                @"SELECT * FROM Admins
+                    WHERE AdminID   = @AdminAdminSearchID
+                          OR FirstName LIKE @AdminAdminSearchText
+                          OR LastName  LIKE @AdminAdminSearchText
+                          OR Email     LIKE @AdminAdminSearchText"
+                ;
+
+            using (var connection = DataBaseConnection.GetConnection())
+            using (var cmd = new SQLiteCommand(sql, connection))
+            {
+                // ---- AdminID parameter ----
+                if (int.TryParse(keyword, out int idVal))
+                    cmd.Parameters.AddWithValue("@AdminAdminSearchID", idVal);   // number typed
+                else
+                    cmd.Parameters.AddWithValue("@AdminAdminSearchID", DBNull.Value); // no match
+
+
+
+                // ---- Text wildcard parameter ----
+                cmd.Parameters.AddWithValue("@AdminAdminSearchText", $"%{keyword}%");
+
+                using (var read = cmd.ExecuteReader())
+                    while (read.Read())
+                        lecturers.Add(new Lecturer
+                        {
+                            LecturerID = Convert.ToInt32(read["LecturerID"]),
+                            FirstName = read["FirstName"].ToString(),
+                            LastName = read["LastName"].ToString(),
+                            Role = read["Role"].ToString(),
+                            Email = read["Email"].ToString(),
+                            PhoneNumber = read["PhoneNumber"].ToString()
+                        });
+            }
+
+            return lecturers;
+        }
+
     }
 }

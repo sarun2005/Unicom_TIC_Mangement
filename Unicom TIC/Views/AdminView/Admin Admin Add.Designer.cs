@@ -145,6 +145,7 @@
             this.AdminAdminAddRole.Name = "AdminAdminAddRole";
             this.AdminAdminAddRole.Size = new System.Drawing.Size(224, 21);
             this.AdminAdminAddRole.TabIndex = 2;
+            this.AdminAdminAddRole.SelectedIndexChanged += new System.EventHandler(this.AdminAdminAddRole_SelectedIndexChanged);
             // 
             // AdminAdminAddFirstName
             // 

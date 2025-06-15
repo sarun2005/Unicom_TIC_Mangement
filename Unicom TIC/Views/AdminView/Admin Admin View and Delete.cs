@@ -17,9 +17,14 @@ namespace Unicom_TIC.Views.AdminView
         public Admin_Admin_View_and_Delete()
         {
             InitializeComponent();
+
+            // ============================ VIEW ============================
             LoadAdmins();
+
         }
 
+
+        // ============================ VIEW ============================
         public void LoadAdmins()
         {
             AdminController adminController = new AdminController();
@@ -28,16 +33,10 @@ namespace Unicom_TIC.Views.AdminView
             AdminAdminDetails.DataSource = admins;
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
 
-        }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
 
-        }
-
+        //  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ Admin Delete +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         private void AdminAdminDelete_Click(object sender, EventArgs e)
         {
             if (AdminAdminDetails.SelectedRows.Count > 0)
@@ -60,17 +59,59 @@ namespace Unicom_TIC.Views.AdminView
                 MessageBox.Show("Please select an admin to delete.", "Selection Required", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+        // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+
 
         private void AdminAdminSearchText_TextChanged(object sender, EventArgs e)
         {
+            string keyword = AdminAdminSearchText.Text.Trim();
 
+            AdminController controller = new AdminController();
+            List<Admin> result;
+
+            if (string.IsNullOrEmpty(keyword))
+            {
+                result = controller.ViewAllAdmins(); // empty search → show all
+            }
+            else
+            {
+                result = controller.SearchAdmins(keyword);
+            }
+
+            AdminAdminDetails.DataSource = null;
+            AdminAdminDetails.DataSource = result;
         }
+
+
+
+
 
 
 
         private void AdminAdminSearch_Click(object sender, EventArgs e)
         {
             
+        }
+
+
+
+
+        private void Admin_Admin_View_and_Delete_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

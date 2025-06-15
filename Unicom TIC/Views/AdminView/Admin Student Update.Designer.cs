@@ -282,6 +282,7 @@
             this.AdminStudentUpdateSave.TabIndex = 30;
             this.AdminStudentUpdateSave.Text = "Save";
             this.AdminStudentUpdateSave.UseVisualStyleBackColor = true;
+            this.AdminStudentUpdateSave.Click += new System.EventHandler(this.AdminStudentUpdateSave_Click);
             // 
             // label1
             // 

@@ -31,22 +31,25 @@
             this.AdminStudentDelete = new System.Windows.Forms.Button();
             this.AdminStudentDetails = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
+            this.AdminAdminSearchText = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.AdminStudentDetails)).BeginInit();
             this.SuspendLayout();
             // 
             // AdminStudentDelete
             // 
-            this.AdminStudentDelete.Location = new System.Drawing.Point(579, 447);
+            this.AdminStudentDelete.Location = new System.Drawing.Point(346, 443);
             this.AdminStudentDelete.Name = "AdminStudentDelete";
             this.AdminStudentDelete.Size = new System.Drawing.Size(107, 29);
             this.AdminStudentDelete.TabIndex = 5;
             this.AdminStudentDelete.Text = "Delete";
             this.AdminStudentDelete.UseVisualStyleBackColor = true;
+            this.AdminStudentDelete.Click += new System.EventHandler(this.AdminStudentDelete_Click);
             // 
             // AdminStudentDetails
             // 
             this.AdminStudentDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.AdminStudentDetails.Location = new System.Drawing.Point(26, 165);
+            this.AdminStudentDetails.Location = new System.Drawing.Point(27, 159);
             this.AdminStudentDetails.Name = "AdminStudentDetails";
             this.AdminStudentDetails.Size = new System.Drawing.Size(742, 257);
             this.AdminStudentDetails.TabIndex = 12;
@@ -61,10 +64,29 @@
             this.label1.TabIndex = 11;
             this.label1.Text = "Student Details";
             // 
+            // AdminAdminSearchText
+            // 
+            this.AdminAdminSearchText.Location = new System.Drawing.Point(397, 96);
+            this.AdminAdminSearchText.Name = "AdminAdminSearchText";
+            this.AdminAdminSearchText.Size = new System.Drawing.Size(177, 20);
+            this.AdminAdminSearchText.TabIndex = 13;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(273, 100);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(50, 16);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "Search";
+            // 
             // Admin_Student_View_and_Delete
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.AdminAdminSearchText);
             this.Controls.Add(this.AdminStudentDetails);
             this.Controls.Add(this.AdminStudentDelete);
             this.Controls.Add(this.label1);
@@ -81,5 +103,7 @@
         private System.Windows.Forms.Button AdminStudentDelete;
         private System.Windows.Forms.DataGridView AdminStudentDetails;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox AdminAdminSearchText;
+        private System.Windows.Forms.Label label2;
     }
 }

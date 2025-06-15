@@ -21,7 +21,7 @@ namespace Unicom_TIC.Views.AdminView
 
         private void Main_Admin_Load(object sender, EventArgs e)
         {
-            // Left Panel Show Details +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+            //  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ Left Panel Show Details ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
             // Admin Management
             TreeNode AdminNode = TreeMainAdmin.Nodes.Add("Admin Management");
@@ -106,13 +106,13 @@ namespace Unicom_TIC.Views.AdminView
         private void TreeMainAdmin_AfterSelect(object sender, TreeViewEventArgs e)
         {
 
-            // Connect Forms +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+            //  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ Connect Forms ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
             string selected = e.Node.Text;
             MainAdminMainPanel.Controls.Clear(); // Only once is enough
 
 
-            // Admin ===========================================================================================
-            // Admin Add *****************************************************
+            // ============================ ADMIN ============================
+            // Admin Add 
             if (selected == "Add New Admin")
             {
                 Admin_Admin_Add addAdminAction = new Admin_Admin_Add();
@@ -121,7 +121,7 @@ namespace Unicom_TIC.Views.AdminView
             }
 
 
-            // Admin View/Delete *****************************************************
+            // Admin View/Delete 
             else if (selected == "View/Delete Admins")
             {
                 Admin_Admin_View_and_Delete ViewandDeleteAdminAction = new Admin_Admin_View_and_Delete();
@@ -130,7 +130,7 @@ namespace Unicom_TIC.Views.AdminView
             }
 
 
-            // Admin Update *****************************************************
+            // Admin Update 
             else if (selected == "Update Admins")
             {
                 Admin_Admin_Update AdminUpdateAction = new Admin_Admin_Update();
@@ -139,14 +139,14 @@ namespace Unicom_TIC.Views.AdminView
             }
 
 
-            
 
 
 
 
 
-            // Lecturer ===================================================================================================
-            // Lecturer Add ****************************************************
+
+            // ============================ LECTURER ============================
+            // Lecturer Add 
             else if (selected == "Add New Lecturer")
             {
                 Admin_Lecturer_Add addLecturerAction = new Admin_Lecturer_Add();
@@ -154,7 +154,7 @@ namespace Unicom_TIC.Views.AdminView
                 MainAdminMainPanel.Controls.Add(addLecturerAction);
             }
 
-            // Lecturer View/Delete *****************************************************
+            // Lecturer View/Delete 
             else if (selected == "View/Delete Lecturers")
             {
                 Admin_Lecturer_View_and_Delete ViewandDeleteLecturerAction = new Admin_Lecturer_View_and_Delete();
@@ -163,7 +163,7 @@ namespace Unicom_TIC.Views.AdminView
             }
 
 
-            // Lecturer Update *****************************************************
+            // Lecturer Update 
             else if (selected == "Update Lecturers")
             {
                 Admin_Lecturer_Update LecturerUpdateAction = new Admin_Lecturer_Update();
@@ -175,8 +175,11 @@ namespace Unicom_TIC.Views.AdminView
 
 
 
-            // Staff ========================================================
-            // Staff Add ******************************************************************************************
+
+
+
+            // ============================ STAFF ============================
+            // Staff Add 
             else if (selected == "Add New Staff")
             {
                 Admin_Staff_Add addStaffAction = new Admin_Staff_Add();
@@ -184,7 +187,7 @@ namespace Unicom_TIC.Views.AdminView
                 MainAdminMainPanel.Controls.Add(addStaffAction);
             }
 
-            // Staff View/Delete *****************************************************
+            // Staff View/Delete 
             else if (selected == "View/Delete Staffs")
             {
                 Admin_Staff_View_and_Delete ViewandDeleteStaffAction = new Admin_Staff_View_and_Delete();
@@ -193,7 +196,7 @@ namespace Unicom_TIC.Views.AdminView
             }
 
 
-            // Staff Update *****************************************************
+            // Staff Update 
             else if (selected == "Update Staffs")
             {
                 Admin_Staff_Update StaffUpdateAction = new Admin_Staff_Update();
@@ -205,8 +208,10 @@ namespace Unicom_TIC.Views.AdminView
 
 
 
-            // Student ========================================================
-            // Student Add ******************************************************************************************
+
+
+            // ============================ STUDENT ============================
+            // Student Add 
             else if (selected == "Add New Student")
             {
                 Admin_Student_Add addStudentAction = new Admin_Student_Add();
@@ -214,7 +219,7 @@ namespace Unicom_TIC.Views.AdminView
                 MainAdminMainPanel.Controls.Add(addStudentAction);
             }
 
-            // Student View/Delete *****************************************************
+            // Student View/Delete 
             else if (selected == "View/Delete Students")
             {
                 Admin_Student_View_and_Delete ViewandDeleteStudentAction = new Admin_Student_View_and_Delete();
@@ -223,7 +228,7 @@ namespace Unicom_TIC.Views.AdminView
             }
 
 
-            // Student Update *****************************************************
+            // Student Update 
             else if (selected == "Update Students")
             {
                 Admin_Student_Update StudentUpdateAction = new Admin_Student_Update();
@@ -234,7 +239,11 @@ namespace Unicom_TIC.Views.AdminView
 
 
 
-            // Course Update *****************************************************
+
+
+
+
+            // ============================ COURSE ============================
             else if (selected == "Add/View/Delete Course")
             {
                 Admin_Course_Add_and_View_and_Delete CourseAction = new Admin_Course_Add_and_View_and_Delete();
@@ -244,7 +253,11 @@ namespace Unicom_TIC.Views.AdminView
 
 
 
-            // Subject Update *****************************************************
+
+
+
+
+            // ============================ SUBJECT ============================
             else if (selected == "Add/View/Delete Subject")
             {
                 Admin_Subject_Add_and_View_and_Delete SubjectAction = new Admin_Subject_Add_and_View_and_Delete();
@@ -253,7 +266,11 @@ namespace Unicom_TIC.Views.AdminView
             }
 
 
-            // Room Update *****************************************************
+
+
+
+
+            // ============================ ROOM ============================
             else if (selected == "Add/View/Delete Room")
             {
                 Admin_Room_Add_and_View_and_Delete RoomAction = new Admin_Room_Add_and_View_and_Delete();
@@ -279,5 +296,9 @@ namespace Unicom_TIC.Views.AdminView
 
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
