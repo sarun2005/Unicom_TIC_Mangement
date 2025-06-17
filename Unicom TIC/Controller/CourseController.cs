@@ -11,7 +11,9 @@ namespace Unicom_TIC.Controller
 {
     internal class CourseController
     {
-        public static void AddCourse(Course course)
+         
+
+        public  void AddCourse(Course course)
         {
             using (var connection = DataBaseConnection.GetConnection())
             {
@@ -39,7 +41,7 @@ namespace Unicom_TIC.Controller
                     Course course = new Course
                     {
                         CourseID = reader.GetInt32(0),
-                        CourseName = reader.GetString(1),
+                        CourseName = reader.GetString(1)
 
                     };
                     courses.Add(course);
@@ -61,5 +63,35 @@ namespace Unicom_TIC.Controller
 
         }
 
+
+
+
+       
+        private const string UpdateCourseQuery = @"
+            UPDATE Courses
+            SET CourseName = @CourseName
+               
+            WHERE CourseID = @CourseID";
+        // ===================================== Update  =====================================
+        public bool UpdateCourse(Course course)
+        {
+            if (course == null || string.IsNullOrWhiteSpace(course.CourseName) )
+            {
+                throw new ArgumentException("Course details cannot be null or empty.");
+            }
+
+            using (var connection = DataBaseConnection.GetConnection())
+            {
+                using (var cmd = new SQLiteCommand(UpdateCourseQuery, connection))
+                {
+                    cmd.Parameters.Add("@CourseName", System.Data.DbType.String).Value = course.CourseName.Trim();
+                    cmd.Parameters.Add("@CourseID", System.Data.DbType.Int32).Value = course.CourseID;
+
+                    return cmd.ExecuteNonQuery() > 0; 
+                }
+            }
+        }
+
+       
     }
 }

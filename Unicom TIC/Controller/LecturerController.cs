@@ -11,32 +11,31 @@ namespace Unicom_TIC.Controller
 {
     internal class LecturerController
     {
-        // Add New Lecturer Method =========================================================
+        // ===================================== ADD =====================================
         public void AddLecturer(Lecturer lecturer)
         {
             using (var connection = DataBaseConnection.GetConnection())
             {
                 string addlecturerQuery = "INSERT INTO Lecturers ( FirstName , LastName , Address , DOB , Gender , Subject , Email , PhoneNumber ) " +
-                                           "VALUES ( @AdminLecturerAddFirstName , @AdminLecturerAddLastName , @AdminLecturerAddAddress ,@AdminLecturerAddDOB ," +
-                                          " @gender ,  @AdminLecturerAddSubject , @AdminLecturerAddEmail , @AdminLecturerAddPhoneNumber )";
+                                           "VALUES ( @FirstName , @LastName , @Address ,@DOB , @gender ,  @Subject , @Email , @PhoneNumber )";
 
 
                 SQLiteCommand insertLecturerCommand = new SQLiteCommand(addlecturerQuery, connection);
-                insertLecturerCommand.Parameters.AddWithValue("@AdminLecturerAddFirstName", lecturer.FirstName);
-                insertLecturerCommand.Parameters.AddWithValue("@AdminLecturerAddLastName", lecturer.LastName);
-                insertLecturerCommand.Parameters.AddWithValue("@AdminLecturerAddAddress", lecturer.Address);
-                insertLecturerCommand.Parameters.AddWithValue("@AdminLecturerAddDOB", lecturer.DOB);
+                insertLecturerCommand.Parameters.AddWithValue("@FirstName", lecturer.FirstName);
+                insertLecturerCommand.Parameters.AddWithValue("@LastName", lecturer.LastName);
+                insertLecturerCommand.Parameters.AddWithValue("@Address", lecturer.Address);
+                insertLecturerCommand.Parameters.AddWithValue("@DOB", lecturer.DOB);
                 insertLecturerCommand.Parameters.AddWithValue("@gender", lecturer.Gender);
-                insertLecturerCommand.Parameters.AddWithValue("@AdminLecturerAddSubject", lecturer.Subject);
-                insertLecturerCommand.Parameters.AddWithValue("@AdminLecturerAddEmail", lecturer.Email);
-                insertLecturerCommand.Parameters.AddWithValue("@AdminLecturerAddPhoneNumber", lecturer.PhoneNumber);
+                insertLecturerCommand.Parameters.AddWithValue("@Subject", lecturer.Subject);
+                insertLecturerCommand.Parameters.AddWithValue("@Email", lecturer.Email);
+                insertLecturerCommand.Parameters.AddWithValue("@PhoneNumber", lecturer.PhoneNumber);
                 insertLecturerCommand.ExecuteNonQuery();
             }
         }
 
 
 
-        // View All Lecturers Method =========================================================
+        // ===================================== VIEW =====================================
         public List<Lecturer> ViewAllLecturers()
         {
             List<Lecturer> lecturers = new List<Lecturer>();
@@ -67,7 +66,9 @@ namespace Unicom_TIC.Controller
         }
 
 
-        // Delete Lecturer Method =========================================================
+
+
+        // ===================================== DELETE =====================================
         public void DeleteLecturer(int lecturerID)
         {
             using (var connection = DataBaseConnection.GetConnection())
@@ -81,38 +82,7 @@ namespace Unicom_TIC.Controller
 
 
 
-
-        // ===================================== VIEW AND DELETE SEARCH =====================================
-        public Admin ViewAdminByID(int lecturerID)
-        {
-            Admin lecturer = null;
-
-            string searchQuery = "SELECT * FROM Admins WHERE AdminID = @AdminAdminSearchID";
-
-            using (var connection = DataBaseConnection.GetConnection())
-            using (var cmd = new SQLiteCommand(searchQuery, connection))
-            {
-                cmd.Parameters.AddWithValue("@AdminAdminSearchID", lecturerID);
-
-                using (var read = cmd.ExecuteReader())
-                {
-                    if (read.Read())
-                    {
-                        lecturer = new Lecturer
-                        {
-                            LecturerID = Convert.ToInt32(read["LecturerID"]),
-                            FirstName = read["FirstName"].ToString(),
-                            LastName = read["LastName"].ToString(),
-                            Role = read["Role"].ToString(),
-                            Email = read["Email"].ToString(),
-                            PhoneNumber = read["PhoneNumber"].ToString()
-                        };
-                    }
-                }
-            }
-            return lecturer;
-        }
-
+       
 
 
 
@@ -135,7 +105,6 @@ namespace Unicom_TIC.Controller
                     updateLecturerCommand.Parameters.AddWithValue("@LastName", lecturer.LastName);
                     updateLecturerCommand.Parameters.AddWithValue("@Address", lecturer.Address);
                     updateLecturerCommand.Parameters.AddWithValue("@DOB", lecturer.DOB);
-                    updateLecturerCommand.Parameters.AddWithValue("@Role", lecturer.Role);
                     updateLecturerCommand.Parameters.AddWithValue("@gender", lecturer.Gender);
                     updateLecturerCommand.Parameters.AddWithValue("@Subject", lecturer.Subject);
                     updateLecturerCommand.Parameters.AddWithValue("@Email", lecturer.Email);
@@ -148,44 +117,54 @@ namespace Unicom_TIC.Controller
 
 
 
-        // ===================================== UPDATE SEARCH =====================================
-        public List<Lecturer> SearchAdmins(string keyword)
+
+
+        // ===================================== VIEW SEARCH =====================================
+        public List<Lecturer> SearchLecturers(string keyword)
         {
             List<Lecturer> lecturers = new List<Lecturer>();
+            bool isNumeric = int.TryParse(keyword, out int idVal);
 
-            string sql =
-                @"SELECT * FROM Admins
-                    WHERE AdminID   = @AdminAdminSearchID
-                          OR FirstName LIKE @AdminAdminSearchText
-                          OR LastName  LIKE @AdminAdminSearchText
-                          OR Email     LIKE @AdminAdminSearchText"
-                ;
+            string sql = @"
+                SELECT * FROM Lecturers
+                WHERE FirstName LIKE @AdminLecturerSearchText COLLATE NOCASE
+                   OR LastName LIKE @AdminLecturerSearchText COLLATE NOCASE
+                   OR Email LIKE @AdminLecturerSearchText COLLATE NOCASE";
+
+
+            if (isNumeric)
+            {
+                sql += " OR LecturerID = @AdminLecturerSearchID";
+            }
 
             using (var connection = DataBaseConnection.GetConnection())
             using (var cmd = new SQLiteCommand(sql, connection))
             {
-                // ---- AdminID parameter ----
-                if (int.TryParse(keyword, out int idVal))
-                    cmd.Parameters.AddWithValue("@AdminAdminSearchID", idVal);   // number typed
-                else
-                    cmd.Parameters.AddWithValue("@AdminAdminSearchID", DBNull.Value); // no match
+                cmd.Parameters.AddWithValue("@AdminLecturerSearchText", $"%{keyword}%");
 
-
-
-                // ---- Text wildcard parameter ----
-                cmd.Parameters.AddWithValue("@AdminAdminSearchText", $"%{keyword}%");
+                if (isNumeric)
+                {
+                    cmd.Parameters.AddWithValue("@AdminLecturerSearchID", idVal);
+                }
 
                 using (var read = cmd.ExecuteReader())
+                {
                     while (read.Read())
+                    {
                         lecturers.Add(new Lecturer
                         {
                             LecturerID = Convert.ToInt32(read["LecturerID"]),
                             FirstName = read["FirstName"].ToString(),
                             LastName = read["LastName"].ToString(),
-                            Role = read["Role"].ToString(),
+                            Address = read["Address"].ToString(),
+                            DOB = read["DOB"].ToString(),
+                            Gender = read["gender"].ToString(),
+                            Subject = read["Subject"].ToString(),
                             Email = read["Email"].ToString(),
                             PhoneNumber = read["PhoneNumber"].ToString()
                         });
+                    }
+                }
             }
 
             return lecturers;

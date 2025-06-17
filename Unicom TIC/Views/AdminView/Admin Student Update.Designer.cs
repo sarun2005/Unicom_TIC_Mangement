@@ -172,6 +172,7 @@
             // 
             // AdminStudentUpdateDOB
             // 
+            this.AdminStudentUpdateDOB.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.AdminStudentUpdateDOB.Location = new System.Drawing.Point(178, 123);
             this.AdminStudentUpdateDOB.Name = "AdminStudentUpdateDOB";
             this.AdminStudentUpdateDOB.Size = new System.Drawing.Size(224, 20);

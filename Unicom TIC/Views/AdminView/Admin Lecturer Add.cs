@@ -99,7 +99,7 @@ namespace Unicom_TIC.Views.AdminView
 
 
 
-        // Clear form inputs
+        // ============================ CLEAR ============================
         private void ClearFields()
         {
             AdminLecturerAddFirstName.Text = "";
@@ -128,6 +128,16 @@ namespace Unicom_TIC.Views.AdminView
         private void AdminLecturerAddClear_Click(object sender, EventArgs e)
         {
             ClearFields();
+
+        }
+
+        private void AdminLecturerAddSubject_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AdminLecturerAddEmail_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

@@ -11,6 +11,7 @@ namespace Unicom_TIC.Controller
 {
     internal class StaffController
     {
+        // ===================================== ADD =====================================
         public void AddStaff(Staff staff)
         {
             using (var connection = DataBaseConnection.GetConnection())
@@ -34,7 +35,7 @@ namespace Unicom_TIC.Controller
         }
 
 
-        // View All Staff Method =========================================================
+        // ===================================== VIEW =====================================
         public List<Staff> ViewAllStaffs()
         {
             List<Staff> staffs = new List<Staff>();
@@ -65,7 +66,7 @@ namespace Unicom_TIC.Controller
 
 
 
-        // Delete Staff Method =========================================================
+        // ===================================== DELETE =====================================
         public void DeleteStaff(int staffID)
         {
             using (var connection = DataBaseConnection.GetConnection())
@@ -76,5 +77,94 @@ namespace Unicom_TIC.Controller
                 deleteStaffCommand.ExecuteNonQuery();
             }
         }
+
+        
+
+
+
+        // ===================================== UPDATE =====================================
+        internal void UpdateStaff(Staff staff)
+        {
+            if (staff is null)
+            {
+                throw new ArgumentNullException(nameof(staff));
+            }
+
+            using (var connection = DataBaseConnection.GetConnection())
+            {
+                string updateQuery = "UPDATE Staffs SET FirstName = @FirstName , LastName = @LastName , Address = @Address , DOB = @DOB ," +
+                                     "Role = @Role , Gender = @gender , Email = @Email , PhoneNumber = @PhoneNumber WHERE StaffID = @StaffID ";
+
+                using (var updateStaffCommand = new SQLiteCommand(updateQuery, connection))
+                {
+                    updateStaffCommand.Parameters.AddWithValue("@FirstName", staff.FirstName);
+                    updateStaffCommand.Parameters.AddWithValue("@LastName", staff.LastName);
+                    updateStaffCommand.Parameters.AddWithValue("@Address", staff.Address);
+                    updateStaffCommand.Parameters.AddWithValue("@DOB", staff.DOB);
+                    updateStaffCommand.Parameters.AddWithValue("@Role", staff.Role);
+                    updateStaffCommand.Parameters.AddWithValue("@gender", staff.Gender);
+                    updateStaffCommand.Parameters.AddWithValue("@Email", staff.Email);
+                    updateStaffCommand.Parameters.AddWithValue("@PhoneNumber", staff.PhoneNumber);
+                    updateStaffCommand.Parameters.AddWithValue("@StaffID", staff.StaffID);
+
+                    updateStaffCommand.ExecuteNonQuery(); 
+                }
+            }
+        }
+
+
+
+        // ===================================== UPDATE AND VIEW SEARCH =====================================
+        public List<Staff> SearchStaffs(string keyword)
+        {
+            List<Staff> staffs = new List<Staff>();
+            bool isNumeric = int.TryParse(keyword, out int idVal);
+
+            string sql = @"
+                SELECT * FROM Staffs
+                WHERE FirstName LIKE @AdminStaffSearchText COLLATE NOCASE
+                   OR LastName LIKE @AdminStaffSearchText COLLATE NOCASE
+                   OR Email LIKE @AdminStaffSearchText COLLATE NOCASE";
+
+
+            if (isNumeric)
+            {
+                sql += " OR StaffID = @AdminStaffSearchID";
+            }
+
+            using (var connection = DataBaseConnection.GetConnection())
+            using (var cmd = new SQLiteCommand(sql, connection))
+            {
+                cmd.Parameters.AddWithValue("@AdminStaffSearchText", $"%{keyword}%");
+
+                if (isNumeric)
+                {
+                    cmd.Parameters.AddWithValue("@AdminStaffSearchID", idVal);
+                }
+
+                using (var read = cmd.ExecuteReader())
+                {
+                    while (read.Read())
+                    {
+                        staffs.Add(new Staff
+                        {
+                            StaffID = Convert.ToInt32(read["StaffID"]),
+                            FirstName = read["FirstName"].ToString(),
+                            LastName = read["LastName"].ToString(),
+                            Address = read["Address"].ToString(),
+                            DOB = read["DOB"].ToString(),
+                            Gender = read["gender"].ToString(),
+                            Role = read["Role"].ToString(),
+                            Email = read["Email"].ToString(),
+                            PhoneNumber = read["PhoneNumber"].ToString()
+                        });
+                    }
+                }
+            }
+
+            return staffs;
+        }
+
+        
     }
 }

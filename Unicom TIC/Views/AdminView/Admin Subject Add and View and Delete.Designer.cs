@@ -39,8 +39,6 @@
             this.AdminSubjectDelete = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.button1 = new System.Windows.Forms.Button();
-            this.AdminAdminSearchText = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.AdminSubjectDetails)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -117,6 +115,7 @@
             this.AdminSubjectUpdate.TabIndex = 7;
             this.AdminSubjectUpdate.Text = "Update";
             this.AdminSubjectUpdate.UseVisualStyleBackColor = true;
+            this.AdminSubjectUpdate.Click += new System.EventHandler(this.AdminSubjectUpdate_Click);
             // 
             // AdminSubjectDelete
             // 
@@ -126,6 +125,7 @@
             this.AdminSubjectDelete.TabIndex = 8;
             this.AdminSubjectDelete.Text = "Delete";
             this.AdminSubjectDelete.UseVisualStyleBackColor = true;
+            this.AdminSubjectDelete.Click += new System.EventHandler(this.AdminSubjectDelete_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -152,30 +152,12 @@
             this.button1.TabIndex = 10;
             this.button1.Text = "Clear";
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // AdminAdminSearchText
-            // 
-            this.AdminAdminSearchText.Location = new System.Drawing.Point(371, 258);
-            this.AdminAdminSearchText.Name = "AdminAdminSearchText";
-            this.AdminAdminSearchText.Size = new System.Drawing.Size(177, 20);
-            this.AdminAdminSearchText.TabIndex = 11;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(268, 262);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(50, 16);
-            this.label4.TabIndex = 15;
-            this.label4.Text = "Search";
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Admin_Subject_Add_and_View_and_Delete
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.AdminAdminSearchText);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.AdminSubjectDelete);
@@ -207,7 +189,5 @@
         private System.Windows.Forms.Button AdminSubjectDelete;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox AdminAdminSearchText;
-        private System.Windows.Forms.Label label4;
     }
 }

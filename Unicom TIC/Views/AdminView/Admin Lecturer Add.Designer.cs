@@ -249,6 +249,7 @@
             this.AdminLecturerAddSubject.Name = "AdminLecturerAddSubject";
             this.AdminLecturerAddSubject.Size = new System.Drawing.Size(224, 21);
             this.AdminLecturerAddSubject.TabIndex = 2;
+            this.AdminLecturerAddSubject.SelectedIndexChanged += new System.EventHandler(this.AdminLecturerAddSubject_SelectedIndexChanged);
             // 
             // AdminLecturerAddEmail
             // 
@@ -256,6 +257,7 @@
             this.AdminLecturerAddEmail.Name = "AdminLecturerAddEmail";
             this.AdminLecturerAddEmail.Size = new System.Drawing.Size(224, 20);
             this.AdminLecturerAddEmail.TabIndex = 18;
+            this.AdminLecturerAddEmail.TextChanged += new System.EventHandler(this.AdminLecturerAddEmail_TextChanged);
             // 
             // AdminLecturerAddPhoneNumber
             // 

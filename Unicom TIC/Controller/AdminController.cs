@@ -9,7 +9,7 @@ using Unicom_TIC.Repositories;
 
 namespace Unicom_TIC.Controller
 {
-    internal class AdminController
+    internal class AdminController 
     {
         // ===================================== ADD =====================================
         public void AddAdmin(Admin admin)
@@ -25,7 +25,7 @@ namespace Unicom_TIC.Controller
                 insertAdminCommand.Parameters.AddWithValue("@LastName", admin.LastName);
                 insertAdminCommand.Parameters.AddWithValue("@Role", admin.Role);
                 insertAdminCommand.Parameters.AddWithValue("@Email", admin.Email);
-                insertAdminCommand.Parameters.AddWithValue("@AdminAdminAddPhoneNumber", admin.PhoneNumber);
+                insertAdminCommand.Parameters.AddWithValue("@PhoneNumber", admin.PhoneNumber);
                 insertAdminCommand.ExecuteNonQuery();
             }
         }
@@ -77,40 +77,7 @@ namespace Unicom_TIC.Controller
 
 
 
-
-        // ===================================== VIEW AND DELETE SEARCH =====================================
-        public Admin ViewAdminByID(int adminID)
-        {
-            Admin admin = null;
-
-            string searchQuery = "SELECT * FROM Admins WHERE AdminID = @AdminAdminSearchID";
-
-            using (var connection = DataBaseConnection.GetConnection())
-            using (var cmd = new SQLiteCommand(searchQuery, connection))
-            {
-                cmd.Parameters.AddWithValue("@AdminAdminSearchID", adminID);
-
-                using (var read = cmd.ExecuteReader())
-                {
-                    if (read.Read())
-                    {
-                        admin = new Admin
-                        {
-                            AdminID = Convert.ToInt32(read["AdminID"]),
-                            FirstName = read["FirstName"].ToString(),
-                            LastName = read["LastName"].ToString(),
-                            Role = read["Role"].ToString(),
-                            Email = read["Email"].ToString(),
-                            PhoneNumber = read["PhoneNumber"].ToString()
-                        };
-                    }
-                }
-            }
-            return admin;
-        }
-
-
-
+       
 
         // ===================================== UPDATE =====================================
         internal void UpdateAdmin(Admin admin)
@@ -122,7 +89,8 @@ namespace Unicom_TIC.Controller
 
             using (var connection = DataBaseConnection.GetConnection())
             {
-                string updateQuery = "UPDATE Admins SET FirstName = @FirstName, LastName = @LastName, Role = @Role, Email = @Email, PhoneNumber = @PhoneNumber WHERE AdminID = @AdminID";
+                string updateQuery = "UPDATE Admins SET FirstName = @FirstName, LastName = @LastName, Role = @Role, Email = @Email," +
+                                     " PhoneNumber = @PhoneNumber WHERE AdminID = @AdminID";
 
                 using (var command = new SQLiteCommand(updateQuery, connection))
                 {
@@ -132,8 +100,7 @@ namespace Unicom_TIC.Controller
                     command.Parameters.AddWithValue("@Email", admin.Email);
                     command.Parameters.AddWithValue("@PhoneNumber", admin.PhoneNumber);
                     command.Parameters.AddWithValue("@AdminID", admin.AdminID);
-
-                    command.ExecuteNonQuery(); // This executes the update command
+                    command.ExecuteNonQuery(); 
                 }
             }
         }
@@ -141,9 +108,95 @@ namespace Unicom_TIC.Controller
 
 
 
+        // ===================================== UPDATE AND VIEW SEARCH =====================================
+        public List<Admin> SearchAdmins(string keyword)
+        {
+            List<Admin> admins = new List<Admin>();
+            bool isNumeric = int.TryParse(keyword, out int idVal);
+
+            string sql = @"
+                SELECT * FROM Admins
+                WHERE FirstName LIKE @AdminAdminSearchText COLLATE NOCASE
+                   OR LastName LIKE @AdminAdminSearchText COLLATE NOCASE
+                   OR Email LIKE @AdminAdminSearchText COLLATE NOCASE";
 
 
-        // ===================================== UPDATE AND SEARCH =====================================
+            if (isNumeric)
+            {
+                sql += " OR AdminID = @AdminAdminSearchID";
+            }
+
+            using (var connection = DataBaseConnection.GetConnection())
+            using (var cmd = new SQLiteCommand(sql, connection))
+            {
+                cmd.Parameters.AddWithValue("@AdminAdminSearchText", $"%{keyword}%");
+
+                if (isNumeric)
+                {
+                    cmd.Parameters.AddWithValue("@AdminAdminSearchID", idVal);
+                }
+
+                using (var read = cmd.ExecuteReader())
+                {
+                    while (read.Read())
+                    {
+                        admins.Add(new Admin
+                        {
+                            AdminID = Convert.ToInt32(read["AdminID"]),
+                            FirstName = read["FirstName"].ToString(),
+                            LastName = read["LastName"].ToString(),
+                            Role = read["Role"].ToString(),
+                            Email = read["Email"].ToString(),
+                            PhoneNumber = read["PhoneNumber"].ToString()
+                        });
+                    }
+                }
+            }
+
+            return admins;
+        }
+
+
+
+
+        /*
+       // ===================================== UPDATE SEARCH =====================================
+       public Admin ViewAdminByID(int adminID)
+       {
+           Admin admin = null;
+
+           string searchQuery = "SELECT * FROM Admins WHERE AdminID = @AdminAdminSearchID";
+
+           using (var connection = DataBaseConnection.GetConnection())
+           using (var cmd = new SQLiteCommand(searchQuery, connection))
+           {
+               cmd.Parameters.AddWithValue("@AdminAdminSearchID", adminID);
+
+               using (var read = cmd.ExecuteReader())
+               {
+                   if (read.Read())
+                   {
+                       admin = new Admin
+                       {
+                           AdminID = Convert.ToInt32(read["AdminID"]),
+                           FirstName = read["FirstName"].ToString(),
+                           LastName = read["LastName"].ToString(),
+                           Role = read["Role"].ToString(),
+                           Email = read["Email"].ToString(),
+                           PhoneNumber = read["PhoneNumber"].ToString()
+                       };
+                   }
+               }
+           }
+           return admin;
+       }
+       */
+
+
+
+        /*
+
+        // =====================================  VIEW AND DELETE SEARCH =====================================
         public List<Admin> SearchAdmins(string keyword)
         {
             List<Admin> admins = new List<Admin>();
@@ -161,7 +214,7 @@ namespace Unicom_TIC.Controller
             {
                 // ---- AdminID parameter ----
                 if (int.TryParse(keyword, out int idVal))
-                    cmd.Parameters.AddWithValue("@AdminAdminSearchID", idVal);   // number typed
+                    cmd.Parameters.AddWithValue("@AdminAdminSearchID", idVal);   
                 else
                     cmd.Parameters.AddWithValue("@AdminAdminSearchID", DBNull.Value); // no match
 
@@ -186,6 +239,8 @@ namespace Unicom_TIC.Controller
             return admins;
         }
 
-       
+        */
+
+
     }
 }

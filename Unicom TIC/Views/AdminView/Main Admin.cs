@@ -195,11 +195,11 @@ namespace Unicom_TIC.Views.AdminView
                 MainAdminMainPanel.Controls.Add(ViewandDeleteStaffAction);
             }
 
-
+            
             // Staff Update 
             else if (selected == "Update Staffs")
             {
-                Admin_Staff_Update StaffUpdateAction = new Admin_Staff_Update();
+                Admin_Staff_Update_New StaffUpdateAction = new Admin_Staff_Update_New();
                 StaffUpdateAction.Dock = DockStyle.Fill;
                 MainAdminMainPanel.Controls.Add(StaffUpdateAction);
             }

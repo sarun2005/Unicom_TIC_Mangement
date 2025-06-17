@@ -31,7 +31,7 @@
             this.AdminStudentDelete = new System.Windows.Forms.Button();
             this.AdminStudentDetails = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.AdminAdminSearchText = new System.Windows.Forms.TextBox();
+            this.AdminStudentSearchText = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.AdminStudentDetails)).BeginInit();
             this.SuspendLayout();
@@ -53,6 +53,7 @@
             this.AdminStudentDetails.Name = "AdminStudentDetails";
             this.AdminStudentDetails.Size = new System.Drawing.Size(742, 257);
             this.AdminStudentDetails.TabIndex = 12;
+            this.AdminStudentDetails.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AdminStudentDetails_CellContentClick);
             // 
             // label1
             // 
@@ -64,12 +65,13 @@
             this.label1.TabIndex = 11;
             this.label1.Text = "Student Details";
             // 
-            // AdminAdminSearchText
+            // AdminStudentSearchText
             // 
-            this.AdminAdminSearchText.Location = new System.Drawing.Point(397, 96);
-            this.AdminAdminSearchText.Name = "AdminAdminSearchText";
-            this.AdminAdminSearchText.Size = new System.Drawing.Size(177, 20);
-            this.AdminAdminSearchText.TabIndex = 13;
+            this.AdminStudentSearchText.Location = new System.Drawing.Point(397, 96);
+            this.AdminStudentSearchText.Name = "AdminStudentSearchText";
+            this.AdminStudentSearchText.Size = new System.Drawing.Size(177, 20);
+            this.AdminStudentSearchText.TabIndex = 13;
+            this.AdminStudentSearchText.TextChanged += new System.EventHandler(this.AdminAdminSearchText_TextChanged);
             // 
             // label2
             // 
@@ -86,12 +88,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.AdminAdminSearchText);
+            this.Controls.Add(this.AdminStudentSearchText);
             this.Controls.Add(this.AdminStudentDetails);
             this.Controls.Add(this.AdminStudentDelete);
             this.Controls.Add(this.label1);
             this.Name = "Admin_Student_View_and_Delete";
             this.Size = new System.Drawing.Size(796, 489);
+            this.Load += new System.EventHandler(this.Admin_Student_View_and_Delete_Load);
             ((System.ComponentModel.ISupportInitialize)(this.AdminStudentDetails)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -103,7 +106,7 @@
         private System.Windows.Forms.Button AdminStudentDelete;
         private System.Windows.Forms.DataGridView AdminStudentDetails;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox AdminAdminSearchText;
+        private System.Windows.Forms.TextBox AdminStudentSearchText;
         private System.Windows.Forms.Label label2;
     }
 }

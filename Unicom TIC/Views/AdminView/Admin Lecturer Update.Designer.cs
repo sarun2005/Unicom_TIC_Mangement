@@ -40,25 +40,27 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.AdminLecturerUpdateastName = new System.Windows.Forms.TextBox();
+            this.AdminLecturerUpdateLastName = new System.Windows.Forms.TextBox();
             this.AdminLecturerUpdateFirstName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.AdminLecturerUpdateAddress = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.AdminLecturerUpdateRole = new System.Windows.Forms.ComboBox();
+            this.AdminLecturerUpdateSubject = new System.Windows.Forms.ComboBox();
             this.AdminLecturerUpdateEmail = new System.Windows.Forms.TextBox();
             this.AdminLecturerUpdatePhoneNumber = new System.Windows.Forms.TextBox();
             this.AdminLecturerUpdateSave = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.AdminLecturerSearch = new System.Windows.Forms.Button();
+            this.AdminUpdateLecturerSearchText = new System.Windows.Forms.TextBox();
             this.s.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // AdminLecturerUpdateLecturerID
             // 
-            this.AdminLecturerUpdateLecturerID.Location = new System.Drawing.Point(402, 77);
+            this.AdminLecturerUpdateLecturerID.Location = new System.Drawing.Point(403, 125);
             this.AdminLecturerUpdateLecturerID.Name = "AdminLecturerUpdateLecturerID";
             this.AdminLecturerUpdateLecturerID.Size = new System.Drawing.Size(224, 20);
             this.AdminLecturerUpdateLecturerID.TabIndex = 30;
@@ -66,7 +68,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(227, 84);
+            this.label10.Location = new System.Drawing.Point(228, 132);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(60, 13);
             this.label10.TabIndex = 29;
@@ -81,7 +83,7 @@
             this.s.Controls.Add(this.AdminLecturerUpdateFemale, 2, 0);
             this.s.Controls.Add(this.label4, 0, 0);
             this.s.Controls.Add(this.AdminLecturerUpdateMale, 1, 0);
-            this.s.Location = new System.Drawing.Point(224, 391);
+            this.s.Location = new System.Drawing.Point(225, 439);
             this.s.Name = "s";
             this.s.RowCount = 1;
             this.s.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -121,12 +123,13 @@
             // 
             // AdminLecturerUpdateClear
             // 
-            this.AdminLecturerUpdateClear.Location = new System.Drawing.Point(109, 453);
+            this.AdminLecturerUpdateClear.Location = new System.Drawing.Point(110, 501);
             this.AdminLecturerUpdateClear.Name = "AdminLecturerUpdateClear";
             this.AdminLecturerUpdateClear.Size = new System.Drawing.Size(107, 29);
             this.AdminLecturerUpdateClear.TabIndex = 27;
             this.AdminLecturerUpdateClear.Text = "Clear";
             this.AdminLecturerUpdateClear.UseVisualStyleBackColor = true;
+            this.AdminLecturerUpdateClear.Click += new System.EventHandler(this.AdminLecturerUpdateClear_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -137,17 +140,17 @@
             this.tableLayoutPanel1.Controls.Add(this.label9, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.label7, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.AdminLecturerUpdateastName, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.AdminLecturerUpdateLastName, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.AdminLecturerUpdateFirstName, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.AdminLecturerUpdateAddress, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.label8, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.label6, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.label5, 0, 6);
-            this.tableLayoutPanel1.Controls.Add(this.AdminLecturerUpdateRole, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.AdminLecturerUpdateSubject, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.AdminLecturerUpdateEmail, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.AdminLecturerUpdatePhoneNumber, 1, 6);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(224, 118);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(225, 166);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 7;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
@@ -169,6 +172,7 @@
             // 
             // AdminLecturerUpdateDOB
             // 
+            this.AdminLecturerUpdateDOB.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.AdminLecturerUpdateDOB.Location = new System.Drawing.Point(178, 117);
             this.AdminLecturerUpdateDOB.Name = "AdminLecturerUpdateDOB";
             this.AdminLecturerUpdateDOB.Size = new System.Drawing.Size(224, 20);
@@ -201,12 +205,12 @@
             this.label3.TabIndex = 13;
             this.label3.Text = "Last Name";
             // 
-            // AdminLecturerUpdateastName
+            // AdminLecturerUpdateLastName
             // 
-            this.AdminLecturerUpdateastName.Location = new System.Drawing.Point(178, 41);
-            this.AdminLecturerUpdateastName.Name = "AdminLecturerUpdateastName";
-            this.AdminLecturerUpdateastName.Size = new System.Drawing.Size(224, 20);
-            this.AdminLecturerUpdateastName.TabIndex = 9;
+            this.AdminLecturerUpdateLastName.Location = new System.Drawing.Point(178, 41);
+            this.AdminLecturerUpdateLastName.Name = "AdminLecturerUpdateLastName";
+            this.AdminLecturerUpdateLastName.Size = new System.Drawing.Size(224, 20);
+            this.AdminLecturerUpdateLastName.TabIndex = 9;
             // 
             // AdminLecturerUpdateFirstName
             // 
@@ -236,9 +240,9 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(3, 152);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(29, 13);
+            this.label8.Size = new System.Drawing.Size(43, 13);
             this.label8.TabIndex = 20;
-            this.label8.Text = "Role";
+            this.label8.Text = "Subject";
             // 
             // label6
             // 
@@ -258,14 +262,14 @@
             this.label5.TabIndex = 15;
             this.label5.Text = "Phone Number";
             // 
-            // AdminLecturerUpdateRole
+            // AdminLecturerUpdateSubject
             // 
-            this.AdminLecturerUpdateRole.FormattingEnabled = true;
-            this.AdminLecturerUpdateRole.Location = new System.Drawing.Point(178, 155);
-            this.AdminLecturerUpdateRole.Name = "AdminLecturerUpdateRole";
-            this.AdminLecturerUpdateRole.Size = new System.Drawing.Size(224, 21);
-            this.AdminLecturerUpdateRole.TabIndex = 2;
-            this.AdminLecturerUpdateRole.SelectedIndexChanged += new System.EventHandler(this.AdminLecturerUpdateRole_SelectedIndexChanged);
+            this.AdminLecturerUpdateSubject.FormattingEnabled = true;
+            this.AdminLecturerUpdateSubject.Location = new System.Drawing.Point(178, 155);
+            this.AdminLecturerUpdateSubject.Name = "AdminLecturerUpdateSubject";
+            this.AdminLecturerUpdateSubject.Size = new System.Drawing.Size(224, 21);
+            this.AdminLecturerUpdateSubject.TabIndex = 2;
+            this.AdminLecturerUpdateSubject.SelectedIndexChanged += new System.EventHandler(this.AdminLecturerUpdateRole_SelectedIndexChanged);
             // 
             // AdminLecturerUpdateEmail
             // 
@@ -283,12 +287,13 @@
             // 
             // AdminLecturerUpdateSave
             // 
-            this.AdminLecturerUpdateSave.Location = new System.Drawing.Point(670, 453);
+            this.AdminLecturerUpdateSave.Location = new System.Drawing.Point(671, 501);
             this.AdminLecturerUpdateSave.Name = "AdminLecturerUpdateSave";
             this.AdminLecturerUpdateSave.Size = new System.Drawing.Size(107, 29);
             this.AdminLecturerUpdateSave.TabIndex = 25;
             this.AdminLecturerUpdateSave.Text = "Save";
             this.AdminLecturerUpdateSave.UseVisualStyleBackColor = true;
+            this.AdminLecturerUpdateSave.Click += new System.EventHandler(this.AdminLecturerUpdateSave_Click);
             // 
             // label1
             // 
@@ -300,10 +305,30 @@
             this.label1.TabIndex = 24;
             this.label1.Text = "Update Lecturer";
             // 
+            // AdminLecturerSearch
+            // 
+            this.AdminLecturerSearch.Location = new System.Drawing.Point(258, 76);
+            this.AdminLecturerSearch.Name = "AdminLecturerSearch";
+            this.AdminLecturerSearch.Size = new System.Drawing.Size(103, 23);
+            this.AdminLecturerSearch.TabIndex = 32;
+            this.AdminLecturerSearch.Text = "Search";
+            this.AdminLecturerSearch.UseVisualStyleBackColor = true;
+            this.AdminLecturerSearch.Click += new System.EventHandler(this.AdminLecturerSearch_Click);
+            // 
+            // AdminUpdateLecturerSearchText
+            // 
+            this.AdminUpdateLecturerSearchText.Location = new System.Drawing.Point(424, 79);
+            this.AdminUpdateLecturerSearchText.Name = "AdminUpdateLecturerSearchText";
+            this.AdminUpdateLecturerSearchText.Size = new System.Drawing.Size(177, 20);
+            this.AdminUpdateLecturerSearchText.TabIndex = 31;
+            this.AdminUpdateLecturerSearchText.TextChanged += new System.EventHandler(this.AdminLecturerSearchText_TextChanged);
+            // 
             // Admin_Lecturer_Update
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.AdminLecturerSearch);
+            this.Controls.Add(this.AdminUpdateLecturerSearchText);
             this.Controls.Add(this.AdminLecturerUpdateLecturerID);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.s);
@@ -312,7 +337,7 @@
             this.Controls.Add(this.AdminLecturerUpdateSave);
             this.Controls.Add(this.label1);
             this.Name = "Admin_Lecturer_Update";
-            this.Size = new System.Drawing.Size(796, 489);
+            this.Size = new System.Drawing.Size(829, 547);
             this.Load += new System.EventHandler(this.Admin_Lecturer_Update_Load);
             this.s.ResumeLayout(false);
             this.s.PerformLayout();
@@ -337,17 +362,19 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox AdminLecturerUpdateastName;
+        private System.Windows.Forms.TextBox AdminLecturerUpdateLastName;
         private System.Windows.Forms.TextBox AdminLecturerUpdateFirstName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox AdminLecturerUpdateAddress;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox AdminLecturerUpdateRole;
+        private System.Windows.Forms.ComboBox AdminLecturerUpdateSubject;
         private System.Windows.Forms.TextBox AdminLecturerUpdateEmail;
         private System.Windows.Forms.TextBox AdminLecturerUpdatePhoneNumber;
         private System.Windows.Forms.Button AdminLecturerUpdateSave;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button AdminLecturerSearch;
+        private System.Windows.Forms.TextBox AdminUpdateLecturerSearchText;
     }
 }

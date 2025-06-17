@@ -10,13 +10,14 @@ using System.Windows.Forms;
 using Unicom_TIC.Controller;
 using Unicom_TIC.Model;
 
+
 namespace Unicom_TIC.Views.AdminView
 {
     public partial class Admin_Staff_View_and_Delete : UserControl
     {
         public Admin_Staff_View_and_Delete()
         {
-            InitializeComponent();
+           InitializeComponent();
             LoadStaffs();
 
         }
@@ -69,6 +70,37 @@ namespace Unicom_TIC.Views.AdminView
             }
         }
 
+
+
         // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+        //  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ Staff Search in View and Delete ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        private void AdminStaffSearchText_TextChanged(object sender, EventArgs e)
+        {
+            string keyword = AdminStaffSearchText.Text.Trim(); 
+
+            StaffController staffController = new StaffController();
+            List<Staff> result;
+
+            if (string.IsNullOrEmpty(keyword))
+            {
+                result = staffController.ViewAllStaffs();
+            }
+            else
+            {
+                result = staffController.SearchStaffs(keyword);
+            }
+
+            AdminStaffDetails.DataSource = null;
+            AdminStaffDetails.DataSource = result;
+        }
+        // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+        private void Admin_Staff_View_and_Delete_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

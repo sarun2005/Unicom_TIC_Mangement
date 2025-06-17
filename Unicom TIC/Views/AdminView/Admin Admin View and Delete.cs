@@ -17,7 +17,8 @@ namespace Unicom_TIC.Views.AdminView
         public Admin_Admin_View_and_Delete()
         {
             InitializeComponent();
-
+            
+            
             // ============================ VIEW ============================
             LoadAdmins();
 
@@ -65,8 +66,10 @@ namespace Unicom_TIC.Views.AdminView
 
 
 
+        //  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ Admin Search in View and Delete +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         private void AdminAdminSearchText_TextChanged(object sender, EventArgs e)
         {
+
             string keyword = AdminAdminSearchText.Text.Trim();
 
             AdminController controller = new AdminController();
@@ -85,7 +88,7 @@ namespace Unicom_TIC.Views.AdminView
             AdminAdminDetails.DataSource = result;
         }
 
-
+        // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
 

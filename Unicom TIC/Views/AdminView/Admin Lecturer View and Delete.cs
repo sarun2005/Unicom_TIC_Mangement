@@ -68,6 +68,35 @@ namespace Unicom_TIC.Views.AdminView
             }
         }
 
+        // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+
+
+       
+
+        private void AdminAdminSearchText_TextChanged(object sender, EventArgs e)
+        {
+            string keyword = AdminLecturerSearchText.Text.Trim();
+
+            LecturerController controller = new LecturerController();
+            List<Lecturer> result;
+
+            if (string.IsNullOrEmpty(keyword))
+            {
+                result = controller.ViewAllLecturers(); // empty search → show all
+            }
+            else
+            {
+                result = controller.SearchLecturers(keyword);
+            }
+
+            AdminLecturerDetails.DataSource = null;
+            AdminLecturerDetails.DataSource = result;
+        }
+
+
         private void Admin_Lecturer_View_and_Delete_Load(object sender, EventArgs e)
         {
 
@@ -78,6 +107,6 @@ namespace Unicom_TIC.Views.AdminView
 
         }
 
-        // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
     }
 }

@@ -55,9 +55,11 @@
     <Compile Include="Controller\AdminController.cs" />
     <Compile Include="Controller\CourseController.cs" />
     <Compile Include="Controller\LecturerController.cs" />
+    <Compile Include="Controller\RoomController.cs" />
     <Compile Include="Controller\StaffController.cs" />
     <Compile Include="Controller\StudentController.cs" />
     <Compile Include="Controller\SubjectController.cs" />
+    <Compile Include="Controller\UserController.cs" />
     <Compile Include="Model\Admin.cs" />
     <Compile Include="Model\Course.cs" />
     <Compile Include="Model\Exam.cs" />
@@ -129,11 +131,11 @@
     <Compile Include="Views\AdminView\Admin Staff Add.Designer.cs">
       <DependentUpon>Admin Staff Add.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\AdminView\Admin Staff Update.cs">
+    <Compile Include="Views\AdminView\Admin Staff Update New.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\AdminView\Admin Staff Update.Designer.cs">
-      <DependentUpon>Admin Staff Update.cs</DependentUpon>
+    <Compile Include="Views\AdminView\Admin Staff Update New.Designer.cs">
+      <DependentUpon>Admin Staff Update New.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\AdminView\Admin Staff View and Delete.cs">
       <SubType>UserControl</SubType>
@@ -176,6 +178,18 @@
     </Compile>
     <Compile Include="Views\LecturerView\Main Lecturer Form.Designer.cs">
       <DependentUpon>Main Lecturer Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Login\Login Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Login\Login Form.Designer.cs">
+      <DependentUpon>Login Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Login\Register Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Login\Register Form.Designer.cs">
+      <DependentUpon>Register Form.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\StaffView\Main Staff Form.cs">
       <SubType>Form</SubType>
@@ -225,8 +239,8 @@
     <EmbeddedResource Include="Views\AdminView\Admin Staff Add.resx">
       <DependentUpon>Admin Staff Add.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\AdminView\Admin Staff Update.resx">
-      <DependentUpon>Admin Staff Update.cs</DependentUpon>
+    <EmbeddedResource Include="Views\AdminView\Admin Staff Update New.resx">
+      <DependentUpon>Admin Staff Update New.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\AdminView\Admin Staff View and Delete.resx">
       <DependentUpon>Admin Staff View and Delete.cs</DependentUpon>
@@ -248,6 +262,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\LecturerView\Main Lecturer Form.resx">
       <DependentUpon>Main Lecturer Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Login\Login Form.resx">
+      <DependentUpon>Login Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Login\Register Form.resx">
+      <DependentUpon>Register Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\StaffView\Main Staff Form.resx">
       <DependentUpon>Main Staff Form.cs</DependentUpon>

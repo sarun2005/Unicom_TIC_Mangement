@@ -33,8 +33,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.LecturerMainPanel = new System.Windows.Forms.Panel();
             this.StudentLeftPanel = new System.Windows.Forms.Panel();
-            this.LecturerTreeView = new System.Windows.Forms.TreeView();
             this.button1 = new System.Windows.Forms.Button();
+            this.LecturerTreeView = new System.Windows.Forms.TreeView();
             this.StudentTopPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.StudentLeftPanel.SuspendLayout();
@@ -77,6 +77,17 @@
             this.StudentLeftPanel.Size = new System.Drawing.Size(200, 602);
             this.StudentLeftPanel.TabIndex = 3;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(44, 575);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(79, 24);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Log Out";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // LecturerTreeView
             // 
             this.LecturerTreeView.BackColor = System.Drawing.SystemColors.InactiveCaption;
@@ -88,17 +99,6 @@
             this.LecturerTreeView.Size = new System.Drawing.Size(200, 607);
             this.LecturerTreeView.TabIndex = 0;
             this.LecturerTreeView.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.LecturerTreeView_AfterSelect);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(44, 575);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(79, 24);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Log Out";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Main_Lecturer_Form
             // 

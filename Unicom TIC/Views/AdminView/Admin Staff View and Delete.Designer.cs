@@ -28,13 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.AdminStaffSearchText = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.AdminStaffDetails = new System.Windows.Forms.DataGridView();
             this.AdminStaffDelete = new System.Windows.Forms.Button();
-            this.AdminAdminSearchText = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.AdminStaffDetails)).BeginInit();
             this.SuspendLayout();
+            // 
+            // AdminStaffSearchText
+            // 
+            this.AdminStaffSearchText.Location = new System.Drawing.Point(402, 76);
+            this.AdminStaffSearchText.Name = "AdminStaffSearchText";
+            this.AdminStaffSearchText.Size = new System.Drawing.Size(177, 20);
+            this.AdminStaffSearchText.TabIndex = 17;
+            this.AdminStaffSearchText.TextChanged += new System.EventHandler(this.AdminStaffSearchText_TextChanged);
             // 
             // label1
             // 
@@ -65,13 +73,6 @@
             this.AdminStaffDelete.UseVisualStyleBackColor = true;
             this.AdminStaffDelete.Click += new System.EventHandler(this.AdminStaffDelete_Click);
             // 
-            // AdminAdminSearchText
-            // 
-            this.AdminAdminSearchText.Location = new System.Drawing.Point(402, 76);
-            this.AdminAdminSearchText.Name = "AdminAdminSearchText";
-            this.AdminAdminSearchText.Size = new System.Drawing.Size(177, 20);
-            this.AdminAdminSearchText.TabIndex = 17;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -87,12 +88,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.AdminAdminSearchText);
+            this.Controls.Add(this.AdminStaffSearchText);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.AdminStaffDetails);
             this.Controls.Add(this.AdminStaffDelete);
             this.Name = "Admin_Staff_View_and_Delete";
             this.Size = new System.Drawing.Size(796, 489);
+            this.Load += new System.EventHandler(this.Admin_Staff_View_and_Delete_Load);
             ((System.ComponentModel.ISupportInitialize)(this.AdminStaffDetails)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -104,7 +106,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView AdminStaffDetails;
         private System.Windows.Forms.Button AdminStaffDelete;
-        private System.Windows.Forms.TextBox AdminAdminSearchText;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox AdminStaffSearchText;
     }
 }

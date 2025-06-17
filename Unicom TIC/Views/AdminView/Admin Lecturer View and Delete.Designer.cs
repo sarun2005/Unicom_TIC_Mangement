@@ -31,7 +31,7 @@
             this.AdminLecturerDetails = new System.Windows.Forms.DataGridView();
             this.AdminLecturerDelete = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.AdminAdminSearchText = new System.Windows.Forms.TextBox();
+            this.AdminLecturerSearchText = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.AdminLecturerDetails)).BeginInit();
             this.SuspendLayout();
@@ -66,12 +66,13 @@
             this.label1.Text = "Lecturer Details";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // AdminAdminSearchText
+            // AdminLecturerSearchText
             // 
-            this.AdminAdminSearchText.Location = new System.Drawing.Point(399, 71);
-            this.AdminAdminSearchText.Name = "AdminAdminSearchText";
-            this.AdminAdminSearchText.Size = new System.Drawing.Size(177, 20);
-            this.AdminAdminSearchText.TabIndex = 13;
+            this.AdminLecturerSearchText.Location = new System.Drawing.Point(399, 71);
+            this.AdminLecturerSearchText.Name = "AdminLecturerSearchText";
+            this.AdminLecturerSearchText.Size = new System.Drawing.Size(177, 20);
+            this.AdminLecturerSearchText.TabIndex = 13;
+            this.AdminLecturerSearchText.TextChanged += new System.EventHandler(this.AdminAdminSearchText_TextChanged);
             // 
             // label2
             // 
@@ -88,7 +89,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.AdminAdminSearchText);
+            this.Controls.Add(this.AdminLecturerSearchText);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.AdminLecturerDelete);
             this.Controls.Add(this.AdminLecturerDetails);
@@ -106,7 +107,7 @@
         private System.Windows.Forms.DataGridView AdminLecturerDetails;
         private System.Windows.Forms.Button AdminLecturerDelete;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox AdminAdminSearchText;
+        private System.Windows.Forms.TextBox AdminLecturerSearchText;
         private System.Windows.Forms.Label label2;
     }
 }

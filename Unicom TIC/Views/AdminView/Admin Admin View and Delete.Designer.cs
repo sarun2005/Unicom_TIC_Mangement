@@ -28,22 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.AdminAdminDetails = new System.Windows.Forms.DataGridView();
             this.AdminAdminDelete = new System.Windows.Forms.Button();
             this.AdminAdminSearchText = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.AdminAdminDetails = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.AdminAdminDetails)).BeginInit();
             this.SuspendLayout();
-            // 
-            // AdminAdminDetails
-            // 
-            this.AdminAdminDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.AdminAdminDetails.Location = new System.Drawing.Point(48, 114);
-            this.AdminAdminDetails.Name = "AdminAdminDetails";
-            this.AdminAdminDetails.Size = new System.Drawing.Size(641, 279);
-            this.AdminAdminDetails.TabIndex = 0;
-            this.AdminAdminDetails.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // AdminAdminDelete
             // 
@@ -83,6 +74,15 @@
             this.label2.TabIndex = 14;
             this.label2.Text = "Search";
             // 
+            // AdminAdminDetails
+            // 
+            this.AdminAdminDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.AdminAdminDetails.Location = new System.Drawing.Point(48, 114);
+            this.AdminAdminDetails.Name = "AdminAdminDetails";
+            this.AdminAdminDetails.Size = new System.Drawing.Size(641, 279);
+            this.AdminAdminDetails.TabIndex = 0;
+            this.AdminAdminDetails.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
             // Admin_Admin_View_and_Delete
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -102,11 +102,10 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView AdminAdminDetails;
         private System.Windows.Forms.Button AdminAdminDelete;
         private System.Windows.Forms.TextBox AdminAdminSearchText;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridView AdminAdminDetails;
     }
 }

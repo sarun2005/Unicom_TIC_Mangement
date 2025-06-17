@@ -19,7 +19,7 @@ namespace Unicom_TIC.Repositories
                     CREATE TABLE IF NOT EXISTS Users 
                       ( 
                         UserID INTEGER PRIMARY KEY AUTOINCREMENT,
-                        Username TEXT NOT NULL,
+                        Username TEXT UNIQUE NOT NULL,
                         Password TEXT NOT NULL,
                         Role TEXT NOT NULL
                       );
@@ -173,7 +173,7 @@ namespace Unicom_TIC.Repositories
                          TimeSlot TEXT NOT NULL,
                          RoomID INTEGER,
                          FOREIGN KEY(SubjectID) REFERENCES Subjects(SubjectID),
-                         FOREIGN KEY(RoomID) REFERENCES Rooms(RoomID)   
+                         FOREIGN KEY(RoomID) REFERENCES Rooms(RoomID),  
                          FOREIGN KEY(LecturerID) REFERENCES Lecturers(LecturerID)  
                        );
                 ";

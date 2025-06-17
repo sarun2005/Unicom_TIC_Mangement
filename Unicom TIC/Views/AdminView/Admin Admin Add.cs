@@ -55,7 +55,6 @@ namespace Unicom_TIC.Views.AdminView
             };
 
 
-
             // ============================ Input Validation ============================
             if (string.IsNullOrWhiteSpace(AdminAdminAddFirstName.Text) ||
                 string.IsNullOrWhiteSpace(AdminAdminAddLastName.Text) ||
@@ -87,9 +86,6 @@ namespace Unicom_TIC.Views.AdminView
             }
 
 
-
-
-
             // ============================ Save using Controller ONLY ============================
             AdminController adminController = new AdminController();
 
@@ -105,21 +101,32 @@ namespace Unicom_TIC.Views.AdminView
             }
 
 
-            
+            // ------------- CLEAR -------------
             ClearFields();
 
-            // ============================ VIEW ============================
+            // ------------- VIEW -------------
             LoadAdmins();
         }
 
-        // ============================ VIEW ============================
-        private void LoadAdmins()
+        
+
+        // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+
+
+
+
+
+
+        // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ CLEAR +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        private void AdminAdminAddBack_Click(object sender, EventArgs e)
         {
-            
+            ClearFields();
         }
 
-
-        // ============================ Clear fields after saving ============================
+        // ------------- Clear fields Method -------------
         private void ClearFields()
         {
             AdminAdminAddFirstName.Text = "";
@@ -134,13 +141,8 @@ namespace Unicom_TIC.Views.AdminView
 
 
 
-       
-        
-        // ============================ CLEAR ============================
-        private void AdminAdminAddBack_Click(object sender, EventArgs e)
-        {
-            ClearFields();
-        }
+
+
 
 
 
@@ -150,6 +152,18 @@ namespace Unicom_TIC.Views.AdminView
         }
 
         private void AdminAdminAddRole_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
+        // ------------- VIEW -------------
+        private void LoadAdmins()
+        {
+
+        }
+
+        private void AdminAdminAddFirstName_TextChanged(object sender, EventArgs e)
         {
 
         }

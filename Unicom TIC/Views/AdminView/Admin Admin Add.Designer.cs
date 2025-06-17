@@ -153,6 +153,7 @@
             this.AdminAdminAddFirstName.Name = "AdminAdminAddFirstName";
             this.AdminAdminAddFirstName.Size = new System.Drawing.Size(224, 20);
             this.AdminAdminAddFirstName.TabIndex = 3;
+            this.AdminAdminAddFirstName.TextChanged += new System.EventHandler(this.AdminAdminAddFirstName_TextChanged);
             // 
             // label2
             // 

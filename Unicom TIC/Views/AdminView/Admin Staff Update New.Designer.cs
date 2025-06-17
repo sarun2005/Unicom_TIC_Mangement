@@ -1,6 +1,6 @@
 ﻿namespace Unicom_TIC.Views.AdminView
 {
-    partial class Admin_Staff_Update
+    partial class Admin_Staff_Update_New
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.AdminStaffSearchText = new System.Windows.Forms.TextBox();
+            this.AdminStaffUpdateSearch = new System.Windows.Forms.Button();
             this.AdminStaffUpdateStaffID = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.s = new System.Windows.Forms.TableLayoutPanel();
@@ -49,27 +51,44 @@
             this.label5 = new System.Windows.Forms.Label();
             this.AdminStaffUpdateRole = new System.Windows.Forms.ComboBox();
             this.AdminStaffUpdateEmail = new System.Windows.Forms.TextBox();
-            this.AdminStaffUpdatePhoneNumber = new System.Windows.Forms.TextBox();
+            this.AdminSatffUpdatePhoneNumber = new System.Windows.Forms.TextBox();
             this.AdminStaffUpdateSave = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.s.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
+            // AdminStaffSearchText
+            // 
+            this.AdminStaffSearchText.Location = new System.Drawing.Point(397, 76);
+            this.AdminStaffSearchText.Name = "AdminStaffSearchText";
+            this.AdminStaffSearchText.Size = new System.Drawing.Size(223, 20);
+            this.AdminStaffSearchText.TabIndex = 46;
+            // 
+            // AdminStaffUpdateSearch
+            // 
+            this.AdminStaffUpdateSearch.Location = new System.Drawing.Point(245, 73);
+            this.AdminStaffUpdateSearch.Name = "AdminStaffUpdateSearch";
+            this.AdminStaffUpdateSearch.Size = new System.Drawing.Size(75, 23);
+            this.AdminStaffUpdateSearch.TabIndex = 45;
+            this.AdminStaffUpdateSearch.Text = "Search";
+            this.AdminStaffUpdateSearch.UseVisualStyleBackColor = true;
+            this.AdminStaffUpdateSearch.Click += new System.EventHandler(this.AdminStaffUpdateSearch_Click);
+            // 
             // AdminStaffUpdateStaffID
             // 
-            this.AdminStaffUpdateStaffID.Location = new System.Drawing.Point(346, 58);
+            this.AdminStaffUpdateStaffID.Location = new System.Drawing.Point(396, 119);
             this.AdminStaffUpdateStaffID.Name = "AdminStaffUpdateStaffID";
             this.AdminStaffUpdateStaffID.Size = new System.Drawing.Size(224, 20);
-            this.AdminStaffUpdateStaffID.TabIndex = 35;
+            this.AdminStaffUpdateStaffID.TabIndex = 44;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(171, 65);
+            this.label10.Location = new System.Drawing.Point(221, 126);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(43, 13);
-            this.label10.TabIndex = 34;
+            this.label10.TabIndex = 43;
             this.label10.Text = "Staff ID";
             // 
             // s
@@ -81,12 +100,12 @@
             this.s.Controls.Add(this.AdminStaffUpdateFemale, 2, 0);
             this.s.Controls.Add(this.label4, 0, 0);
             this.s.Controls.Add(this.AdminStaffUpdateMale, 1, 0);
-            this.s.Location = new System.Drawing.Point(168, 376);
+            this.s.Location = new System.Drawing.Point(218, 437);
             this.s.Name = "s";
             this.s.RowCount = 1;
             this.s.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.s.Size = new System.Drawing.Size(448, 41);
-            this.s.TabIndex = 33;
+            this.s.TabIndex = 42;
             // 
             // AdminStaffUpdateFemale
             // 
@@ -121,12 +140,13 @@
             // 
             // AdminStaffUpdateClear
             // 
-            this.AdminStaffUpdateClear.Location = new System.Drawing.Point(55, 440);
+            this.AdminStaffUpdateClear.Location = new System.Drawing.Point(105, 501);
             this.AdminStaffUpdateClear.Name = "AdminStaffUpdateClear";
             this.AdminStaffUpdateClear.Size = new System.Drawing.Size(107, 29);
-            this.AdminStaffUpdateClear.TabIndex = 32;
+            this.AdminStaffUpdateClear.TabIndex = 41;
             this.AdminStaffUpdateClear.Text = "Clear";
             this.AdminStaffUpdateClear.UseVisualStyleBackColor = true;
+            this.AdminStaffUpdateClear.Click += new System.EventHandler(this.AdminStaffUpdateClear_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -146,8 +166,8 @@
             this.tableLayoutPanel1.Controls.Add(this.label5, 0, 6);
             this.tableLayoutPanel1.Controls.Add(this.AdminStaffUpdateRole, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.AdminStaffUpdateEmail, 1, 5);
-            this.tableLayoutPanel1.Controls.Add(this.AdminStaffUpdatePhoneNumber, 1, 6);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(168, 103);
+            this.tableLayoutPanel1.Controls.Add(this.AdminSatffUpdatePhoneNumber, 1, 6);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(218, 164);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 7;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
@@ -165,10 +185,11 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(448, 267);
-            this.tableLayoutPanel1.TabIndex = 31;
+            this.tableLayoutPanel1.TabIndex = 40;
             // 
             // AdminStaffUpdateDOB
             // 
+            this.AdminStaffUpdateDOB.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.AdminStaffUpdateDOB.Location = new System.Drawing.Point(178, 117);
             this.AdminStaffUpdateDOB.Name = "AdminStaffUpdateDOB";
             this.AdminStaffUpdateDOB.Size = new System.Drawing.Size(224, 20);
@@ -273,36 +294,39 @@
             this.AdminStaffUpdateEmail.Size = new System.Drawing.Size(224, 20);
             this.AdminStaffUpdateEmail.TabIndex = 18;
             // 
-            // AdminStaffUpdatePhoneNumber
+            // AdminSatffUpdatePhoneNumber
             // 
-            this.AdminStaffUpdatePhoneNumber.Location = new System.Drawing.Point(178, 231);
-            this.AdminStaffUpdatePhoneNumber.Name = "AdminStaffUpdatePhoneNumber";
-            this.AdminStaffUpdatePhoneNumber.Size = new System.Drawing.Size(224, 20);
-            this.AdminStaffUpdatePhoneNumber.TabIndex = 11;
+            this.AdminSatffUpdatePhoneNumber.Location = new System.Drawing.Point(178, 231);
+            this.AdminSatffUpdatePhoneNumber.Name = "AdminSatffUpdatePhoneNumber";
+            this.AdminSatffUpdatePhoneNumber.Size = new System.Drawing.Size(224, 20);
+            this.AdminSatffUpdatePhoneNumber.TabIndex = 11;
             // 
             // AdminStaffUpdateSave
             // 
-            this.AdminStaffUpdateSave.Location = new System.Drawing.Point(627, 440);
+            this.AdminStaffUpdateSave.Location = new System.Drawing.Point(677, 501);
             this.AdminStaffUpdateSave.Name = "AdminStaffUpdateSave";
             this.AdminStaffUpdateSave.Size = new System.Drawing.Size(107, 29);
-            this.AdminStaffUpdateSave.TabIndex = 30;
+            this.AdminStaffUpdateSave.TabIndex = 39;
             this.AdminStaffUpdateSave.Text = "Save";
             this.AdminStaffUpdateSave.UseVisualStyleBackColor = true;
+            this.AdminStaffUpdateSave.Click += new System.EventHandler(this.AdminStaffUpdateSave_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(371, 14);
+            this.label1.Location = new System.Drawing.Point(389, 7);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(128, 24);
-            this.label1.TabIndex = 29;
+            this.label1.TabIndex = 38;
             this.label1.Text = "Update Staff";
             // 
-            // Admin_Staff_Update
+            // Admin_Staff_Update_New
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.AdminStaffSearchText);
+            this.Controls.Add(this.AdminStaffUpdateSearch);
             this.Controls.Add(this.AdminStaffUpdateStaffID);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.s);
@@ -310,8 +334,8 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.AdminStaffUpdateSave);
             this.Controls.Add(this.label1);
-            this.Name = "Admin_Staff_Update";
-            this.Size = new System.Drawing.Size(796, 489);
+            this.Name = "Admin_Staff_Update_New";
+            this.Size = new System.Drawing.Size(902, 681);
             this.s.ResumeLayout(false);
             this.s.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -323,6 +347,8 @@
 
         #endregion
 
+        private System.Windows.Forms.TextBox AdminStaffSearchText;
+        private System.Windows.Forms.Button AdminStaffUpdateSearch;
         private System.Windows.Forms.TextBox AdminStaffUpdateStaffID;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TableLayoutPanel s;
@@ -344,7 +370,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox AdminStaffUpdateRole;
         private System.Windows.Forms.TextBox AdminStaffUpdateEmail;
-        private System.Windows.Forms.TextBox AdminStaffUpdatePhoneNumber;
+        private System.Windows.Forms.TextBox AdminSatffUpdatePhoneNumber;
         private System.Windows.Forms.Button AdminStaffUpdateSave;
         private System.Windows.Forms.Label label1;
     }

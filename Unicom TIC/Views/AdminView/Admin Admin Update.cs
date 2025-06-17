@@ -101,9 +101,9 @@ namespace Unicom_TIC.Views.AdminView
 
             
             AdminController controller = new AdminController();
-            Admin admin = controller.ViewAdminByID(adminID);
+            Admin admin = controller.SearchAdmins(adminID.ToString()).FirstOrDefault();
 
-            
+
             if (admin == null)
             {
                 MessageBox.Show("There is nothing with this AdminID..", "Not Found", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -138,6 +138,18 @@ namespace Unicom_TIC.Views.AdminView
 
 
 
+        private void Admin_Admin_Update_Load(object sender, EventArgs e)
+        {
+            // ============================ Add items to the role dropdown ============================
+            AdminAdminUpdateRole.DropDownStyle = ComboBoxStyle.DropDownList;
+
+            AdminAdminUpdateRole.Items.Add("Owner");
+            AdminAdminUpdateRole.Items.Add("Manager");
+            AdminAdminUpdateRole.Items.Add("Staff");
+            AdminAdminUpdateRole.Items.Add("Lecturer");
+        }
+
+
 
         private void AdminAdminSearchText_TextChanged(object sender, EventArgs e)
         {
@@ -164,17 +176,7 @@ namespace Unicom_TIC.Views.AdminView
 
         }
 
-        private void Admin_Admin_Update_Load(object sender, EventArgs e)
-        {
-            // ============================ Add items to the role dropdown ============================
-            AdminAdminUpdateRole.DropDownStyle = ComboBoxStyle.DropDownList;
-
-            AdminAdminUpdateRole.Items.Add("Owner");
-            AdminAdminUpdateRole.Items.Add("Manager");
-            AdminAdminUpdateRole.Items.Add("Staff");
-            AdminAdminUpdateRole.Items.Add("Lecturer");
-        }
-
+       
         private void AdminAdminUpdateAdminID_TextChanged(object sender, EventArgs e)
         {
 

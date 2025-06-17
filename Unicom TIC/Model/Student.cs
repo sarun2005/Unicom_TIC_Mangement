@@ -17,5 +17,6 @@ namespace Unicom_TIC.Model
         public string PhoneNumber { get; set; }
         public string Email { get; set; }
         public int CourseID { get; set; }
+        public string CourseName { get; internal set; }
     }
 }
