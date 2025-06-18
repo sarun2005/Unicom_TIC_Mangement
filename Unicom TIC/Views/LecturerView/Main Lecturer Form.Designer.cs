@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_Lecturer_Form));
             this.StudentTopPanel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.LecturerMainPanel = new System.Windows.Forms.Panel();
+            this.MainLecturerMainPanel = new System.Windows.Forms.Panel();
             this.StudentLeftPanel = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.LecturerTreeView = new System.Windows.Forms.TreeView();
@@ -59,13 +59,14 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // LecturerMainPanel
+            // MainLecturerMainPanel
             // 
-            this.LecturerMainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.LecturerMainPanel.Location = new System.Drawing.Point(200, 0);
-            this.LecturerMainPanel.Name = "LecturerMainPanel";
-            this.LecturerMainPanel.Size = new System.Drawing.Size(813, 602);
-            this.LecturerMainPanel.TabIndex = 4;
+            this.MainLecturerMainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MainLecturerMainPanel.Location = new System.Drawing.Point(200, 0);
+            this.MainLecturerMainPanel.Name = "MainLecturerMainPanel";
+            this.MainLecturerMainPanel.Size = new System.Drawing.Size(813, 602);
+            this.MainLecturerMainPanel.TabIndex = 4;
+            this.MainLecturerMainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.MainLecturerMainPanel_Paint_1);
             // 
             // StudentLeftPanel
             // 
@@ -106,7 +107,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1013, 602);
             this.Controls.Add(this.StudentTopPanel);
-            this.Controls.Add(this.LecturerMainPanel);
+            this.Controls.Add(this.MainLecturerMainPanel);
             this.Controls.Add(this.StudentLeftPanel);
             this.Name = "Main_Lecturer_Form";
             this.Text = "Main_Lecturer_Form";
@@ -122,7 +123,7 @@
 
         private System.Windows.Forms.Panel StudentTopPanel;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel LecturerMainPanel;
+        private System.Windows.Forms.Panel MainLecturerMainPanel;
         private System.Windows.Forms.Panel StudentLeftPanel;
         private System.Windows.Forms.TreeView LecturerTreeView;
         private System.Windows.Forms.Button button1;

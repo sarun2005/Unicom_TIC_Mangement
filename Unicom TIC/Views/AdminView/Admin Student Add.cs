@@ -140,6 +140,11 @@ namespace Unicom_TIC.Views.AdminView
         {
             ClearFields();
         }
+
+        private void AdminStudentAddCourse_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
         // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
     }

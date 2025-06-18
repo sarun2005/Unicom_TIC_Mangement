@@ -21,7 +21,16 @@ namespace Unicom_TIC.Repositories
                         UserID INTEGER PRIMARY KEY AUTOINCREMENT,
                         Username TEXT UNIQUE NOT NULL,
                         Password TEXT NOT NULL,
-                        Role TEXT NOT NULL
+                        Role TEXT NOT NULL,
+                        AdminID INTEGER,
+                        StaffID INTEGER,
+                        LecturerID INTEGER,
+                        StudentID INTEGER,
+                        FOREIGN KEY (AdminID) REFERENCES Admins(AdminID),
+                        FOREIGN KEY (StaffID) REFERENCES Staffs(StaffID),
+                        FOREIGN KEY (LecturerID) REFERENCES Lecturers(LecturerID),
+                        FOREIGN KEY (StudentID) REFERENCES Students(StudentID)
+
                       );
                 ";
                 cmd.ExecuteNonQuery();

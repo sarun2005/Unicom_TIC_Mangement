@@ -17,15 +17,15 @@ namespace Unicom_TIC.Views.AdminView
         public Admin_Admin_View_and_Delete()
         {
             InitializeComponent();
-            
-            
-            // ============================ VIEW ============================
+
+
+            // ------- VIEW -------
             LoadAdmins();
 
         }
 
 
-        // ============================ VIEW ============================
+        // ============================ VIEW METHOD ============================
         public void LoadAdmins()
         {
             AdminController adminController = new AdminController();
@@ -98,9 +98,6 @@ namespace Unicom_TIC.Views.AdminView
         {
             
         }
-
-
-
 
         private void Admin_Admin_View_and_Delete_Load(object sender, EventArgs e)
         {

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Unicom_TIC.Views.AdminView;
 
 namespace Unicom_TIC.Views.LecturerView
 {
@@ -24,10 +25,7 @@ namespace Unicom_TIC.Views.LecturerView
 
         }
 
-        private void LecturerTreeView_AfterSelect(object sender, TreeViewEventArgs e)
-        {
-           
-        }
+       
 
         private void Main_Lecturer_Form_Load(object sender, EventArgs e)
         {
@@ -50,9 +48,30 @@ namespace Unicom_TIC.Views.LecturerView
 
         }
 
+
+        private void LecturerTreeView_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+            string selected = e.Node.Text;
+            MainLecturerMainPanel.Controls.Clear(); // Only once is enough
+
+
+            
+            // View Details
+            if (selected == "View Details")
+            {
+                Lecturer_Details viewLecturerAction = new Lecturer_Details();
+                viewLecturerAction.Dock = DockStyle.Fill;
+                MainLecturerMainPanel.Controls.Add(viewLecturerAction);
+            }
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void MainLecturerMainPanel_Paint_1(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

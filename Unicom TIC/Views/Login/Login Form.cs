@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Unicom_TIC.Controller;
 using Unicom_TIC.Views.Login;
 
 namespace Unicom_TIC.Views
@@ -54,7 +55,53 @@ namespace Unicom_TIC.Views
 
         private void Login_Click(object sender, EventArgs e)
         {
+            // --------------- 1. Input Validation ---------------
+            string username = Loginusername.Text.Trim();
+            string password = Loginpassword.Text;   // Trim not required ‑‑ PasswordChar hides input
+            string role = LoginRole.Text;
+            string idText = LoginID.Text.Trim();
 
+            if (string.IsNullOrWhiteSpace(username) ||
+                string.IsNullOrWhiteSpace(password) ||
+                string.IsNullOrWhiteSpace(role) ||
+                string.IsNullOrWhiteSpace(idText))
+            {
+                MessageBox.Show("Please fill in all details.","Login Failed", MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (!int.TryParse(idText, out int enteredId))
+            {
+                MessageBox.Show("ID must be a numeric value.",
+                                "Invalid ID",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning);
+                return;
+            }
+
+            // --------------- 2. AuthenticateUser call ---------------
+            bool isValid = UserController.AuthenticateUser(username,
+                                                           password,
+                                                           role,
+                                                           enteredId);
+
+            if (isValid)
+            {
+                MessageBox.Show("Login successful!",
+                                "Success",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Information);
+
+                // TODO: Navigate to your dashboard here
+                // this.Hide();  new Dashboard().ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Incorrect credentials. Please try again.",
+                                "Login Failed",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+            }
         }
 
         private void Loginpassword_TextChanged(object sender, EventArgs e)

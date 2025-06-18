@@ -6,11 +6,16 @@ using System.Threading.Tasks;
 
 namespace Unicom_TIC.Model
 {
-    internal class User
+    public class User
     {
         public int UserID { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
         public string Role { get; set; }
+
+        public int? AdminID { get; set; }
+        public int? StaffID { get; set; }
+        public int? LecturerID { get; set; }
+        public int? StudentID { get; set; }
     }
 }

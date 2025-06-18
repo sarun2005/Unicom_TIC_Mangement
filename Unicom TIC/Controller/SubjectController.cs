@@ -9,7 +9,7 @@ namespace Unicom_TIC.Controller
 {
     internal class SubjectController
     {
-        // ===================================== Add Subject =====================================
+        // ===================================== ADD =====================================
         public void AddSubject(Subject subject)
         {
             using (var connection = DataBaseConnection.GetConnection())
@@ -35,7 +35,7 @@ namespace Unicom_TIC.Controller
             using (var connection = DataBaseConnection.GetConnection())
             {
                 const string sql = @"
-            SELECT s.SubjectID, s.SubjectName, s.CourseID, c.CourseName
+            SELECT s.SubjectID, s.SubjectName,c.CourseID,  c.CourseName
             FROM Subjects s
             LEFT JOIN Courses c ON s.CourseID = c.CourseID;";
 
@@ -44,24 +44,15 @@ namespace Unicom_TIC.Controller
                 {
                     while (rdr.Read())
                     {
-                        try
+                        Subject subject = new Subject
                         {
-                            Subject subject = new Subject
-                            {
-                                SubjectID = Convert.ToInt32(rdr["SubjectID"]),
-                                SubjectName = rdr["SubjectName"].ToString(),
-                                CourseID = Convert.ToInt32(rdr["CourseID"]),
-                                CourseName = rdr["CourseName"] == DBNull.Value ? null : rdr["CourseName"].ToString()
-                            };
-                            list.Add(subject);
-                        }
-                        catch (InvalidCastException ex)
-                        {
-                            // Log the error with column values for debugging
-                            Console.WriteLine($"Error casting values: {ex.Message}");
-                            Console.WriteLine($"Row values: {string.Join(", ", Enumerable.Range(0, rdr.FieldCount).Select(i => rdr[i].ToString()))}");
-                             // Re-throw if you want to propagate the error
-                        }
+                            SubjectID = Convert.ToInt32(rdr["SubjectID"]),
+                            SubjectName = rdr["SubjectName"].ToString(),
+                            CourseID = Convert.ToInt32(rdr["CourseID"]),
+                            CourseName = rdr["CourseName"] == DBNull.Value ? null : rdr["CourseName"].ToString()
+                        };
+                        list.Add(subject);
+                       
                     }
                 }
             }
@@ -95,30 +86,22 @@ namespace Unicom_TIC.Controller
                 throw new ArgumentException("Subject details cannot be null or empty.");
             }
 
-            try
+            
+           
+            using (var connection = DataBaseConnection.GetConnection())
             {
-                using (var connection = DataBaseConnection.GetConnection())
+                string UpdateSubjectQuery = "UPDATE Subjects SET SubjectName = @SubjectName, CourseID = @CourseID WHERE SubjectID = @SubjectID";
+                using (SQLiteCommand cmd = new SQLiteCommand(UpdateSubjectQuery, connection))
                 {
-                    string UpdateSubjectQuery = "UPDATE Subjects SET SubjectName = @SubjectName, CourseID = @CourseID WHERE SubjectID = @SubjectID";
-                    using (SQLiteCommand cmd = new SQLiteCommand(UpdateSubjectQuery, connection))
-                    {
-                        cmd.Parameters.Add("@SubjectName", System.Data.DbType.String).Value = subject.SubjectName.Trim();
-                        cmd.Parameters.Add("@CourseID", System.Data.DbType.Int32).Value = subject.CourseID;
-                        cmd.Parameters.Add("@SubjectID", System.Data.DbType.Int32).Value = subject.SubjectID;
+                    cmd.Parameters.Add("@SubjectName", System.Data.DbType.String).Value = subject.SubjectName.Trim();
+                    cmd.Parameters.Add("@CourseID", System.Data.DbType.Int32).Value = subject.CourseID;
+                    cmd.Parameters.Add("@SubjectID", System.Data.DbType.Int32).Value = subject.SubjectID;
 
-                        int rowsAffected = cmd.ExecuteNonQuery();
-                        return rowsAffected > 0;
-                    }
+                    int rowsAffected = cmd.ExecuteNonQuery();
+                    return rowsAffected > 0;
                 }
             }
-            catch (SQLiteException sqlEx)
-            {
-                throw new Exception("Database error: " + sqlEx.Message);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Error updating subject: " + ex.Message);
-            }
+            
         }
 
 

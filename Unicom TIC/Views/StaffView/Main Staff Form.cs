@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Unicom_TIC.Views.LecturerView;
 
 namespace Unicom_TIC.Views.StaffView
 {
@@ -43,7 +44,18 @@ namespace Unicom_TIC.Views.StaffView
 
         private void StaffTreeView_AfterSelect(object sender, TreeViewEventArgs e)
         {
+            string selected = e.Node.Text;
+            MainStaffMainPanel.Controls.Clear(); // Only once is enough
 
+
+
+            // View Details
+            if (selected == "View Details")
+            {
+                Staff_Details viewStaffAction = new Staff_Details();
+                viewStaffAction.Dock = DockStyle.Fill;
+                MainStaffMainPanel.Controls.Add(viewStaffAction);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)

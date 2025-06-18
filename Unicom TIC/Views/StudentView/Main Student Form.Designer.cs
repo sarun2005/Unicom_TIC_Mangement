@@ -30,11 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_Student_Form));
             this.StudentLeftPanel = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.StudentTreeView = new System.Windows.Forms.TreeView();
-            this.StudentMainPanel = new System.Windows.Forms.Panel();
+            this.MainStudentMainPanel = new System.Windows.Forms.Panel();
             this.StudentTopPanel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.StudentLeftPanel.SuspendLayout();
             this.StudentTopPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -50,6 +50,17 @@
             this.StudentLeftPanel.Size = new System.Drawing.Size(200, 607);
             this.StudentLeftPanel.TabIndex = 0;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(52, 571);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(79, 24);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Log Out";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // StudentTreeView
             // 
             this.StudentTreeView.BackColor = System.Drawing.SystemColors.InactiveCaption;
@@ -61,14 +72,14 @@
             this.StudentTreeView.TabIndex = 0;
             this.StudentTreeView.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.StudentTreeView_AfterSelect);
             // 
-            // StudentMainPanel
+            // MainStudentMainPanel
             // 
-            this.StudentMainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.StudentMainPanel.Location = new System.Drawing.Point(200, 0);
-            this.StudentMainPanel.Name = "StudentMainPanel";
-            this.StudentMainPanel.Size = new System.Drawing.Size(815, 607);
-            this.StudentMainPanel.TabIndex = 1;
-            this.StudentMainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.StudentMainPanel_Paint);
+            this.MainStudentMainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MainStudentMainPanel.Location = new System.Drawing.Point(200, 0);
+            this.MainStudentMainPanel.Name = "MainStudentMainPanel";
+            this.MainStudentMainPanel.Size = new System.Drawing.Size(815, 607);
+            this.MainStudentMainPanel.TabIndex = 1;
+            this.MainStudentMainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.StudentMainPanel_Paint);
             // 
             // StudentTopPanel
             // 
@@ -89,24 +100,13 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(52, 571);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(79, 24);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Log Out";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // Main_Student_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1015, 607);
             this.Controls.Add(this.StudentTopPanel);
-            this.Controls.Add(this.StudentMainPanel);
+            this.Controls.Add(this.MainStudentMainPanel);
             this.Controls.Add(this.StudentLeftPanel);
             this.Name = "Main_Student_Form";
             this.Text = "Main_Student_Form";
@@ -122,7 +122,7 @@
 
         private System.Windows.Forms.Panel StudentLeftPanel;
         private System.Windows.Forms.TreeView StudentTreeView;
-        private System.Windows.Forms.Panel StudentMainPanel;
+        private System.Windows.Forms.Panel MainStudentMainPanel;
         private System.Windows.Forms.Panel StudentTopPanel;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;

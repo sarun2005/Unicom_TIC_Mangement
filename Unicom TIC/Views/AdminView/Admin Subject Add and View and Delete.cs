@@ -29,12 +29,19 @@ namespace Unicom_TIC.Views.AdminView
 
         public void LoadSubjects()
         {
-
             SubjectController subjectController = new SubjectController();
             List<Subject> subjects = subjectController.ViewAllSubjectsWithCourse();
+
             AdminSubjectDetails.DataSource = null;
             AdminSubjectDetails.DataSource = subjects;
+
+            
+            if (AdminSubjectDetails.Columns["CourseID"] != null)
+                AdminSubjectDetails.Columns["CourseID"].Visible = false;
+
+          
         }
+
 
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -150,20 +157,20 @@ namespace Unicom_TIC.Views.AdminView
         {
             AdminSubjectSubjectName.Text = string.Empty;
             AdminSubjectCourseName.SelectedIndex = -1;
-            selectedSubjectId = -1; // Reset selected subject ID
-            AdminSubjectDetails.ClearSelection(); // Clear DataGridView selection
+            selectedSubjectId = -1;
+            AdminSubjectDetails.ClearSelection();
         }
 
 
         private void AdminSubjectDetails_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex < 0) return; // Check if header row is clicked
+            if (e.RowIndex < 0) return; 
 
-            // No need to cast if the DataSource is already List<Subject>
+           
             var subject = (Subject)AdminSubjectDetails.Rows[e.RowIndex].DataBoundItem;
             selectedSubjectId = subject.SubjectID;
             AdminSubjectSubjectName.Text = subject.SubjectName;
-            AdminSubjectCourseName.SelectedValue = subject.CourseID;
+            //AdminSubjectCourseName.SelectedValue = subject.CourseID;
         }
 
 

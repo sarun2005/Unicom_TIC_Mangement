@@ -108,12 +108,18 @@ namespace Unicom_TIC.Views.AdminView
             LoadAdmins();
         }
 
-        
-
         // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
 
+
+
+
+        // ------------- VIEW -------------
+        private void LoadAdmins()
+        {
+
+        }
 
 
 
@@ -155,13 +161,7 @@ namespace Unicom_TIC.Views.AdminView
         {
 
         }
-
-
-        // ------------- VIEW -------------
-        private void LoadAdmins()
-        {
-
-        }
+               
 
         private void AdminAdminAddFirstName_TextChanged(object sender, EventArgs e)
         {

@@ -79,9 +79,8 @@ namespace Unicom_TIC.Views.AdminView
 
             // Timetable Management
             TreeNode TimetableNode = TreeMainAdmin.Nodes.Add("Timetable Management");
-            TimetableNode.Nodes.Add("Add Timetable Entry");
-            TimetableNode.Nodes.Add("View/Delete Timetable");
-            TimetableNode.Nodes.Add("Update Timetable");
+            TimetableNode.Nodes.Add("Add/View/Delete Timetable");
+            
 
 
             // Room Management
@@ -267,7 +266,13 @@ namespace Unicom_TIC.Views.AdminView
 
 
 
-
+            // ============================ TIMETABLE ============================
+            else if (selected == "Add/View/Delete Timetable")
+            {
+                Timetable TimetableAction = new Timetable();
+                TimetableAction.Dock = DockStyle.Fill;
+                MainAdminMainPanel.Controls.Add(TimetableAction);
+            }
 
 
             // ============================ ROOM ============================

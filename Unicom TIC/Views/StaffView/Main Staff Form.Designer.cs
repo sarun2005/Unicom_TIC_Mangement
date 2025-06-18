@@ -31,10 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_Staff_Form));
             this.StudentTopPanel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.StaffMainPanel = new System.Windows.Forms.Panel();
+            this.MainStaffMainPanel = new System.Windows.Forms.Panel();
             this.StudentLeftPanel = new System.Windows.Forms.Panel();
-            this.StaffTreeView = new System.Windows.Forms.TreeView();
             this.button1 = new System.Windows.Forms.Button();
+            this.StaffTreeView = new System.Windows.Forms.TreeView();
             this.StudentTopPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.StudentLeftPanel.SuspendLayout();
@@ -59,14 +59,14 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // StaffMainPanel
+            // MainStaffMainPanel
             // 
-            this.StaffMainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.StaffMainPanel.Location = new System.Drawing.Point(200, 0);
-            this.StaffMainPanel.Name = "StaffMainPanel";
-            this.StaffMainPanel.Size = new System.Drawing.Size(813, 602);
-            this.StaffMainPanel.TabIndex = 4;
-            this.StaffMainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.StaffMainPanel_Paint);
+            this.MainStaffMainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MainStaffMainPanel.Location = new System.Drawing.Point(200, 0);
+            this.MainStaffMainPanel.Name = "MainStaffMainPanel";
+            this.MainStaffMainPanel.Size = new System.Drawing.Size(813, 602);
+            this.MainStaffMainPanel.TabIndex = 4;
+            this.MainStaffMainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.StaffMainPanel_Paint);
             // 
             // StudentLeftPanel
             // 
@@ -77,17 +77,6 @@
             this.StudentLeftPanel.Name = "StudentLeftPanel";
             this.StudentLeftPanel.Size = new System.Drawing.Size(200, 602);
             this.StudentLeftPanel.TabIndex = 3;
-            // 
-            // StaffTreeView
-            // 
-            this.StaffTreeView.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.StaffTreeView.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.StaffTreeView.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StaffTreeView.Location = new System.Drawing.Point(0, 0);
-            this.StaffTreeView.Name = "StaffTreeView";
-            this.StaffTreeView.Size = new System.Drawing.Size(200, 607);
-            this.StaffTreeView.TabIndex = 0;
-            this.StaffTreeView.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.StaffTreeView_AfterSelect);
             // 
             // button1
             // 
@@ -100,13 +89,24 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // StaffTreeView
+            // 
+            this.StaffTreeView.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.StaffTreeView.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.StaffTreeView.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StaffTreeView.Location = new System.Drawing.Point(0, 0);
+            this.StaffTreeView.Name = "StaffTreeView";
+            this.StaffTreeView.Size = new System.Drawing.Size(200, 607);
+            this.StaffTreeView.TabIndex = 0;
+            this.StaffTreeView.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.StaffTreeView_AfterSelect);
+            // 
             // Main_Staff_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1013, 602);
             this.Controls.Add(this.StudentTopPanel);
-            this.Controls.Add(this.StaffMainPanel);
+            this.Controls.Add(this.MainStaffMainPanel);
             this.Controls.Add(this.StudentLeftPanel);
             this.Name = "Main_Staff_Form";
             this.Text = "Main_Staff_Form";
@@ -122,7 +122,7 @@
 
         private System.Windows.Forms.Panel StudentTopPanel;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel StaffMainPanel;
+        private System.Windows.Forms.Panel MainStaffMainPanel;
         private System.Windows.Forms.Panel StudentLeftPanel;
         private System.Windows.Forms.TreeView StaffTreeView;
         private System.Windows.Forms.Button button1;

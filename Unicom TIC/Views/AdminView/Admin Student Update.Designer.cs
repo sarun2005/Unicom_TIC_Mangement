@@ -274,6 +274,7 @@
             this.AdminStudentUpdateCourse.Name = "AdminStudentUpdateCourse";
             this.AdminStudentUpdateCourse.Size = new System.Drawing.Size(225, 21);
             this.AdminStudentUpdateCourse.TabIndex = 23;
+            this.AdminStudentUpdateCourse.SelectedIndexChanged += new System.EventHandler(this.AdminStudentUpdateCourse_SelectedIndexChanged);
             // 
             // AdminStudentUpdateSave
             // 
@@ -308,6 +309,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Admin_Student_Update";
             this.Size = new System.Drawing.Size(795, 517);
+            this.Load += new System.EventHandler(this.Admin_Student_Update_Load);
             this.s.ResumeLayout(false);
             this.s.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);

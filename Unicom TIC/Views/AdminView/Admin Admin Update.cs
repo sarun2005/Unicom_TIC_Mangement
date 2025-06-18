@@ -140,6 +140,7 @@ namespace Unicom_TIC.Views.AdminView
 
         private void Admin_Admin_Update_Load(object sender, EventArgs e)
         {
+                       
             // ============================ Add items to the role dropdown ============================
             AdminAdminUpdateRole.DropDownStyle = ComboBoxStyle.DropDownList;
 
@@ -149,7 +150,7 @@ namespace Unicom_TIC.Views.AdminView
             AdminAdminUpdateRole.Items.Add("Lecturer");
         }
 
-
+       
 
         private void AdminAdminSearchText_TextChanged(object sender, EventArgs e)
         {

@@ -256,6 +256,7 @@
             this.AdminStudentAddCourse.Name = "AdminStudentAddCourse";
             this.AdminStudentAddCourse.Size = new System.Drawing.Size(224, 21);
             this.AdminStudentAddCourse.TabIndex = 23;
+            this.AdminStudentAddCourse.SelectedIndexChanged += new System.EventHandler(this.AdminStudentAddCourse_SelectedIndexChanged);
             // 
             // AdminStudentAddSave
             // 

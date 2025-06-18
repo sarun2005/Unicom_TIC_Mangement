@@ -40,7 +40,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.RegisterRole = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.userid = new System.Windows.Forms.TextBox();
             this.Registerusername = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -99,7 +99,7 @@
             this.RegisterID.Controls.Add(this.label2, 0, 0);
             this.RegisterID.Controls.Add(this.label4, 0, 2);
             this.RegisterID.Controls.Add(this.RegisterRole, 1, 0);
-            this.RegisterID.Controls.Add(this.textBox1, 1, 1);
+            this.RegisterID.Controls.Add(this.userid, 1, 1);
             this.RegisterID.Controls.Add(this.Registerusername, 1, 2);
             this.RegisterID.Location = new System.Drawing.Point(23, 79);
             this.RegisterID.Margin = new System.Windows.Forms.Padding(4);
@@ -120,6 +120,7 @@
             this.Registerconformpassword.Name = "Registerconformpassword";
             this.Registerconformpassword.Size = new System.Drawing.Size(266, 20);
             this.Registerconformpassword.TabIndex = 11;
+            this.Registerconformpassword.UseSystemPasswordChar = true;
             this.Registerconformpassword.TextChanged += new System.EventHandler(this.Registerconformpassword_TextChanged);
             // 
             // label1
@@ -139,6 +140,7 @@
             this.Registerpassword.Name = "Registerpassword";
             this.Registerpassword.Size = new System.Drawing.Size(266, 20);
             this.Registerpassword.TabIndex = 9;
+            this.Registerpassword.UseSystemPasswordChar = true;
             this.Registerpassword.TextChanged += new System.EventHandler(this.Registerpassword_TextChanged);
             // 
             // label5
@@ -191,14 +193,14 @@
             this.RegisterRole.TabIndex = 6;
             this.RegisterRole.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // textBox1
+            // userid
             // 
-            this.textBox1.Location = new System.Drawing.Point(113, 56);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(266, 20);
-            this.textBox1.TabIndex = 7;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.userid.Location = new System.Drawing.Point(113, 56);
+            this.userid.Margin = new System.Windows.Forms.Padding(4);
+            this.userid.Name = "userid";
+            this.userid.Size = new System.Drawing.Size(266, 20);
+            this.userid.TabIndex = 7;
+            this.userid.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // Registerusername
             // 
@@ -278,7 +280,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox RegisterRole;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox userid;
         private System.Windows.Forms.TextBox Registerusername;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;

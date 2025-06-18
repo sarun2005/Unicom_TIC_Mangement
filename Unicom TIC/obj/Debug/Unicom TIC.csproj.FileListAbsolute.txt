@@ -1,0 +1,38 @@
+Z:\Projects\New folder\Unicom TIC\bin\Debug\Unicom TIC.exe.config
+Z:\Projects\New folder\Unicom TIC\bin\Debug\Unicom TIC.exe
+Z:\Projects\New folder\Unicom TIC\bin\Debug\Unicom TIC.pdb
+Z:\Projects\New folder\Unicom TIC\bin\Debug\System.Data.SQLite.dll
+Z:\Projects\New folder\Unicom TIC\bin\Debug\System.Data.SQLite.xml
+Z:\Projects\New folder\Unicom TIC\obj\Debug\Unicom TIC.csproj.AssemblyReference.cache
+Z:\Projects\New folder\Unicom TIC\obj\Debug\Unicom_TIC.Properties.Resources.resources
+Z:\Projects\New folder\Unicom TIC\obj\Debug\Unicom_TIC.Views.AdminView.Admin_Admin_Add.resources
+Z:\Projects\New folder\Unicom TIC\obj\Debug\Unicom_TIC.Views.AdminView.Admin_Admin_Update.resources
+Z:\Projects\New folder\Unicom TIC\obj\Debug\Unicom_TIC.Views.AdminView.Admin_Admin_View_and_Delete.resources
+Z:\Projects\New folder\Unicom TIC\obj\Debug\Unicom_TIC.Views.AdminView.Admin_Course_Add_and_View_and_Delete.resources
+Z:\Projects\New folder\Unicom TIC\obj\Debug\Unicom_TIC.Views.AdminView.Admin_Lecturer_Add.resources
+Z:\Projects\New folder\Unicom TIC\obj\Debug\Unicom_TIC.Views.AdminView.Admin_Lecturer_Update.resources
+Z:\Projects\New folder\Unicom TIC\obj\Debug\Unicom_TIC.Views.AdminView.Admin_Lecturer_View_and_Delete.resources
+Z:\Projects\New folder\Unicom TIC\obj\Debug\Unicom_TIC.Views.AdminView.Admin_Room_Add_and_View_and_Delete.resources
+Z:\Projects\New folder\Unicom TIC\obj\Debug\Unicom_TIC.Views.AdminView.Admin_Staff_Add.resources
+Z:\Projects\New folder\Unicom TIC\obj\Debug\Unicom_TIC.Views.AdminView.Admin_Staff_Update_New.resources
+Z:\Projects\New folder\Unicom TIC\obj\Debug\Unicom_TIC.Views.AdminView.Admin_Staff_View_and_Delete.resources
+Z:\Projects\New folder\Unicom TIC\obj\Debug\Unicom_TIC.Views.AdminView.Admin_Student_Add.resources
+Z:\Projects\New folder\Unicom TIC\obj\Debug\Unicom_TIC.Views.AdminView.Admin_Student_Update.resources
+Z:\Projects\New folder\Unicom TIC\obj\Debug\Unicom_TIC.Views.AdminView.Admin_Student_View_and_Delete.resources
+Z:\Projects\New folder\Unicom TIC\obj\Debug\Unicom_TIC.Views.AdminView.Admin_Subject_Add_and_View_and_Delete.resources
+Z:\Projects\New folder\Unicom TIC\obj\Debug\Unicom_TIC.Views.AdminView.Main_Admin.resources
+Z:\Projects\New folder\Unicom TIC\obj\Debug\Unicom_TIC.Views.AdminView.Timetable.resources
+Z:\Projects\New folder\Unicom TIC\obj\Debug\Unicom_TIC.Views.LecturerView.Lecturer_Details.resources
+Z:\Projects\New folder\Unicom TIC\obj\Debug\Unicom_TIC.Views.LecturerView.Main_Lecturer_Form.resources
+Z:\Projects\New folder\Unicom TIC\obj\Debug\Unicom_TIC.Views.LoginForm.resources
+Z:\Projects\New folder\Unicom TIC\obj\Debug\Unicom_TIC.Views.Login.Register_Form.resources
+Z:\Projects\New folder\Unicom TIC\obj\Debug\Unicom_TIC.Views.StaffView.Main_Staff_Form.resources
+Z:\Projects\New folder\Unicom TIC\obj\Debug\Unicom_TIC.Views.StaffView.Staff_Details.resources
+Z:\Projects\New folder\Unicom TIC\obj\Debug\Unicom_TIC.Views.StudentView.Main_Student_Form.resources
+Z:\Projects\New folder\Unicom TIC\obj\Debug\Unicom_TIC.Views.StudentView.Student_Details.resources
+Z:\Projects\New folder\Unicom TIC\obj\Debug\Unicom TIC.csproj.GenerateResource.cache
+Z:\Projects\New folder\Unicom TIC\obj\Debug\Unicom TIC.csproj.CoreCompileInputs.cache
+Z:\Projects\New folder\Unicom TIC\obj\Debug\Unicom TIC.csproj.Up2Date
+Z:\Projects\New folder\Unicom TIC\obj\Debug\Unicom TIC.exe
+Z:\Projects\New folder\Unicom TIC\obj\Debug\Unicom TIC.pdb
+Z:\Projects\New folder\Unicom TIC\obj\Debug\Unicom_TIC.Views.AdminView.Marks_Add_and_Delete_and_Update.resources

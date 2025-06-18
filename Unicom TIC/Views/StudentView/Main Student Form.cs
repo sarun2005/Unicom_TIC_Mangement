@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Unicom_TIC.Views.LecturerView;
 
 namespace Unicom_TIC.Views.StudentView
 {
@@ -32,10 +33,7 @@ namespace Unicom_TIC.Views.StudentView
 
         }
 
-        private void StudentTreeView_AfterSelect(object sender, TreeViewEventArgs e)
-        {
-
-        }
+       
 
         private void Main_Student_Form_Load(object sender, EventArgs e)
         {
@@ -52,6 +50,22 @@ namespace Unicom_TIC.Views.StudentView
             // Timetable Management
             TreeNode TimetableNode = StudentTreeView.Nodes.Add("Timetable Management");
             TimetableNode.Nodes.Add("View Timetable");
+        }
+
+        private void StudentTreeView_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+            string selected = e.Node.Text;
+            MainStudentMainPanel.Controls.Clear(); // Only once is enough
+
+
+
+            // View Details
+            if (selected == "View Details")
+            {
+                Student_Details viewStudentAction = new Student_Details();
+                viewStudentAction.Dock = DockStyle.Fill;
+                MainStudentMainPanel.Controls.Add(viewStudentAction);
+            }
         }
 
         private void StudentMainPanel_Paint(object sender, PaintEventArgs e)

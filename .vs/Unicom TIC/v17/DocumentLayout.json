@@ -1,250 +1,186 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "Z:\\Projects\\Unicom TIC\\",
+  "WorkspaceRootPath": "Z:\\Projects\\New folder\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\Unicom TIC\\unicom tic\\controller\\lecturercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\controller\\lecturercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|z:\\projects\\unicom tic\\unicom tic\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\Unicom TIC\\unicom tic\\repositories\\databasetables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\repositories\\databasetables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\Unicom TIC\\unicom tic\\model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\Unicom TIC\\unicom tic\\repositories\\databaseconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\repositories\\databaseconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|z:\\projects\\unicom tic\\unicom tic\\views\\login\\register form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\views\\login\\register form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|z:\\projects\\unicom tic\\unicom tic\\views\\login\\register form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\views\\login\\register form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|z:\\projects\\unicom tic\\unicom tic\\views\\login\\login form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\views\\login\\login form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|z:\\projects\\unicom tic\\unicom tic\\views\\login\\login form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\views\\login\\login form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|z:\\projects\\unicom tic\\unicom tic\\controller\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\controller\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\Unicom TIC\\unicom tic\\controller\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\controller\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\Unicom TIC\\unicom tic\\views\\adminview\\admin admin add.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\views\\adminview\\admin admin add.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\Unicom TIC\\unicom tic\\views\\adminview\\admin admin add.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\views\\adminview\\admin admin add.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|z:\\projects\\unicom tic\\unicom tic\\views\\adminview\\admin staff add.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\views\\adminview\\admin staff add.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\Unicom TIC\\unicom tic\\views\\adminview\\admin staff add.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\views\\adminview\\admin staff add.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|z:\\projects\\unicom tic\\unicom tic\\model\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\model\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|z:\\projects\\unicom tic\\unicom tic\\model\\lecturer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\model\\lecturer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|z:\\projects\\unicom tic\\unicom tic\\views\\adminview\\admin student add.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\views\\adminview\\admin student add.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\Unicom TIC\\unicom tic\\views\\adminview\\admin student add.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\views\\adminview\\admin student add.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|z:\\projects\\unicom tic\\unicom tic\\controller\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\controller\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\Unicom TIC\\unicom tic\\views\\adminview\\admin student view and delete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\views\\adminview\\admin student view and delete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\Unicom TIC\\unicom tic\\views\\adminview\\admin student view and delete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\views\\adminview\\admin student view and delete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\Unicom TIC\\unicom tic\\views\\adminview\\admin subject add and view and delete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\views\\adminview\\admin subject add and view and delete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\Unicom TIC\\unicom tic\\views\\adminview\\admin subject add and view and delete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\views\\adminview\\admin subject add and view and delete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\Unicom TIC\\unicom tic\\views\\adminview\\admin lecturer add.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\views\\adminview\\admin lecturer add.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\Unicom TIC\\unicom tic\\views\\adminview\\admin lecturer add.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\views\\adminview\\admin lecturer add.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|z:\\projects\\unicom tic\\unicom tic\\views\\adminview\\admin admin view and delete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\views\\adminview\\admin admin view and delete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\Unicom TIC\\unicom tic\\views\\adminview\\admin admin view and delete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\views\\adminview\\admin admin view and delete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\Unicom TIC\\unicom tic\\views\\adminview\\admin staff update new.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\views\\adminview\\admin staff update new.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\Unicom TIC\\unicom tic\\views\\adminview\\admin staff view and delete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\views\\adminview\\admin staff view and delete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\Unicom TIC\\unicom tic\\views\\adminview\\admin staff view and delete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\views\\adminview\\admin staff view and delete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\Unicom TIC\\unicom tic\\controller\\staffcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\controller\\staffcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\Unicom TIC\\unicom tic\\views\\adminview\\main admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\views\\adminview\\main admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\Unicom TIC\\unicom tic\\views\\adminview\\main admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\New folder\\unicom tic\\views\\adminview\\main admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\views\\adminview\\main admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\Unicom TIC\\unicom tic\\views\\adminview\\admin admin update.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\views\\adminview\\admin admin update.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\New folder\\unicom tic\\views\\adminview\\main admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\views\\adminview\\main admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\Unicom TIC\\unicom tic\\views\\adminview\\admin admin update.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\views\\adminview\\admin admin update.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|z:\\projects\\new folder\\unicom tic\\views\\adminview\\marks add and delete and update.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\views\\adminview\\marks add and delete and update.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\Unicom TIC\\unicom tic\\views\\studentview\\main student form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\views\\studentview\\main student form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|z:\\projects\\new folder\\unicom tic\\views\\adminview\\marks add and delete and update.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\views\\adminview\\marks add and delete and update.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\Unicom TIC\\unicom tic\\views\\staffview\\main staff form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\views\\staffview\\main staff form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|z:\\projects\\new folder\\unicom tic\\views\\adminview\\timetable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\views\\adminview\\timetable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\Unicom TIC\\unicom tic\\views\\lecturerview\\main lecturer form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\views\\lecturerview\\main lecturer form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|z:\\projects\\new folder\\unicom tic\\views\\adminview\\timetable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\views\\adminview\\timetable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\Unicom TIC\\unicom tic\\views\\lecturerview\\main lecturer form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\views\\lecturerview\\main lecturer form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|z:\\projects\\new folder\\unicom tic\\views\\adminview\\admin student update.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\views\\adminview\\admin student update.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\Unicom TIC\\unicom tic\\views\\adminview\\main admin.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\views\\adminview\\main admin.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\Unicom TIC\\unicom tic\\views\\adminview\\main admin.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
-      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\views\\adminview\\main admin.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\Unicom TIC\\unicom tic\\views\\adminview\\admin student update.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\New folder\\unicom tic\\views\\adminview\\admin student update.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\views\\adminview\\admin student update.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\Unicom TIC\\unicom tic\\views\\adminview\\admin room add and view and delete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\views\\adminview\\admin room add and view and delete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|z:\\projects\\new folder\\unicom tic\\views\\adminview\\admin student add.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\views\\adminview\\admin student add.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\Unicom TIC\\unicom tic\\views\\adminview\\admin lecturer view and delete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\views\\adminview\\admin lecturer view and delete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\New folder\\unicom tic\\views\\adminview\\admin student add.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\views\\adminview\\admin student add.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\Unicom TIC\\unicom tic\\views\\adminview\\admin lecturer update.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\New folder\\unicom tic\\controller\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\controller\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\New folder\\unicom tic\\views\\login\\login form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\views\\login\\login form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\New folder\\unicom tic\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\New folder\\unicom tic\\views\\adminview\\admin subject add and view and delete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\views\\adminview\\admin subject add and view and delete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\New folder\\unicom tic\\views\\login\\register form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\views\\login\\register form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\New folder\\unicom tic\\repositories\\databasetables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\repositories\\databasetables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\New folder\\unicom tic\\repositories\\databaseconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\repositories\\databaseconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\New folder\\unicom tic\\views\\lecturerview\\main lecturer form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\views\\lecturerview\\main lecturer form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\New folder\\unicom tic\\views\\staffview\\main staff form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\views\\staffview\\main staff form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\New folder\\unicom tic\\views\\lecturerview\\lecturer details.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\views\\lecturerview\\lecturer details.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\New folder\\unicom tic\\views\\staffview\\staff details.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\views\\staffview\\staff details.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\New folder\\unicom tic\\views\\studentview\\student details.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\views\\studentview\\student details.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\New folder\\unicom tic\\views\\staffview\\main staff form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\views\\staffview\\main staff form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\New folder\\unicom tic\\views\\studentview\\main student form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\views\\studentview\\main student form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\New folder\\unicom tic\\views\\studentview\\main student form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\views\\studentview\\main student form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\New folder\\unicom tic\\views\\lecturerview\\main lecturer form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\views\\lecturerview\\main lecturer form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\New folder\\unicom tic\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\New folder\\unicom tic\\views\\adminview\\admin lecturer update.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\views\\adminview\\admin lecturer update.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\Unicom TIC\\unicom tic\\views\\adminview\\admin course add and view and delete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\New folder\\unicom tic\\views\\adminview\\admin staff update new.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\views\\adminview\\admin staff update new.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\New folder\\unicom tic\\views\\adminview\\admin staff add.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\views\\adminview\\admin staff add.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\New folder\\unicom tic\\views\\adminview\\admin lecturer add.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\views\\adminview\\admin lecturer add.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\New folder\\unicom tic\\views\\lecturerview\\lecturer details.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\views\\lecturerview\\lecturer details.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\New folder\\unicom tic\\views\\lecturerview\\lecturer details.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
+      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\views\\lecturerview\\lecturer details.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\New folder\\unicom tic\\model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\New folder\\unicom tic\\views\\adminview\\admin admin add.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\views\\adminview\\admin admin add.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\New folder\\unicom tic\\views\\adminview\\admin admin add.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\views\\adminview\\admin admin add.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\New folder\\unicom tic\\model\\exam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\model\\exam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\New folder\\unicom tic\\views\\adminview\\admin lecturer view and delete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\views\\adminview\\admin lecturer view and delete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\New folder\\unicom tic\\views\\adminview\\admin course add and view and delete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\views\\adminview\\admin course add and view and delete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\Unicom TIC\\unicom tic\\views\\adminview\\admin lecturer update.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\views\\adminview\\admin lecturer update.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\Unicom TIC\\unicom tic\\views\\adminview\\admin lecturer view and delete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\views\\adminview\\admin lecturer view and delete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\Unicom TIC\\unicom tic\\controller\\subjectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\controller\\subjectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\Unicom TIC\\unicom tic\\model\\subject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\model\\subject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\Unicom TIC\\unicom tic\\model\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\model\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\Unicom TIC\\unicom tic\\controller\\roomcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\New folder\\unicom tic\\controller\\roomcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\controller\\roomcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\Unicom TIC\\unicom tic\\model\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\model\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\New folder\\unicom tic\\views\\adminview\\admin admin view and delete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\views\\adminview\\admin admin view and delete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\Unicom TIC\\unicom tic\\controller\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\controller\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\New folder\\unicom tic\\views\\adminview\\admin admin view and delete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\views\\adminview\\admin admin view and delete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\Unicom TIC\\unicom tic\\views\\adminview\\admin room add and view and delete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\views\\adminview\\admin room add and view and delete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\New folder\\unicom tic\\controller\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\controller\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\Unicom TIC\\unicom tic\\views\\adminview\\admin course add and view and delete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\views\\adminview\\admin course add and view and delete.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\New folder\\unicom tic\\views\\adminview\\admin admin update.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\views\\adminview\\admin admin update.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\Unicom TIC\\unicom tic\\views\\adminview\\admin room add and view and delete.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\views\\adminview\\admin room add and view and delete.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\Unicom TIC\\unicom tic\\model\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\model\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|Z:\\Projects\\Unicom TIC\\unicom tic\\views\\login form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:unicom tic\\views\\login form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|Z:\\Projects\\Unicom TIC\\unicom tic\\views\\adminview\\admin admin add form.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:unicom tic\\views\\adminview\\admin admin add form.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
+      "AbsoluteMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|Z:\\Projects\\New folder\\unicom tic\\views\\adminview\\admin admin update.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D2E9BAED-82C5-4AF0-8059-EA7465BD4480}|Unicom TIC\\Unicom TIC.csproj|solutionrelative:unicom tic\\views\\adminview\\admin admin update.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -254,743 +190,538 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Register Form.cs [Design]",
-              "DocumentMoniker": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\Login\\Register Form.cs",
-              "RelativeDocumentMoniker": "Unicom TIC\\Views\\Login\\Register Form.cs",
-              "ToolTip": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\Login\\Register Form.cs [Design]",
-              "RelativeToolTip": "Unicom TIC\\Views\\Login\\Register Form.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-17T12:03:34.857Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Login Form.cs [Design]",
-              "DocumentMoniker": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\Login\\Login Form.cs",
-              "RelativeDocumentMoniker": "Unicom TIC\\Views\\Login\\Login Form.cs",
-              "ToolTip": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\Login\\Login Form.cs [Design]",
-              "RelativeToolTip": "Unicom TIC\\Views\\Login\\Login Form.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-17T12:03:07.372Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Login Form.cs",
-              "DocumentMoniker": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\Login\\Login Form.cs",
-              "RelativeDocumentMoniker": "Unicom TIC\\Views\\Login\\Login Form.cs",
-              "ToolTip": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\Login\\Login Form.cs",
-              "RelativeToolTip": "Unicom TIC\\Views\\Login\\Login Form.cs",
-              "ViewState": "AQIAADMAAAAAAAAAAAAAwFUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-17T12:03:16.315Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "AdminController.cs",
-              "DocumentMoniker": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Controller\\AdminController.cs",
-              "RelativeDocumentMoniker": "Unicom TIC\\Controller\\AdminController.cs",
-              "ToolTip": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Controller\\AdminController.cs",
-              "RelativeToolTip": "Unicom TIC\\Controller\\AdminController.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAJYAAAAbAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T04:13:10.572Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DataBaseTables.cs",
-              "DocumentMoniker": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Repositories\\DataBaseTables.cs",
-              "RelativeDocumentMoniker": "Unicom TIC\\Repositories\\DataBaseTables.cs",
-              "ToolTip": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Repositories\\DataBaseTables.cs",
-              "RelativeToolTip": "Unicom TIC\\Repositories\\DataBaseTables.cs",
-              "ViewState": "AQIAACUAAAAAAAAAAAAgwBYAAAAvAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T04:34:21.74Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "DataBaseConnection.cs",
-              "DocumentMoniker": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Repositories\\DataBaseConnection.cs",
-              "RelativeDocumentMoniker": "Unicom TIC\\Repositories\\DataBaseConnection.cs",
-              "ToolTip": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Repositories\\DataBaseConnection.cs",
-              "RelativeToolTip": "Unicom TIC\\Repositories\\DataBaseConnection.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T05:30:43.13Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "User.cs",
-              "DocumentMoniker": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Model\\User.cs",
-              "RelativeDocumentMoniker": "Unicom TIC\\Model\\User.cs",
-              "ToolTip": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Model\\User.cs",
-              "RelativeToolTip": "Unicom TIC\\Model\\User.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
+              "Title": "Marks Add and Delete and Update.cs",
+              "DocumentMoniker": "Z:\\Projects\\New folder\\Unicom TIC\\Views\\AdminView\\Marks Add and Delete and Update.cs",
+              "RelativeDocumentMoniker": "Unicom TIC\\Views\\AdminView\\Marks Add and Delete and Update.cs",
+              "ToolTip": "Z:\\Projects\\New folder\\Unicom TIC\\Views\\AdminView\\Marks Add and Delete and Update.cs",
+              "RelativeToolTip": "Unicom TIC\\Views\\AdminView\\Marks Add and Delete and Update.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAQwBoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-17T04:03:35.594Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Admin Admin Add.cs",
-              "DocumentMoniker": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\AdminView\\Admin Admin Add.cs",
-              "RelativeDocumentMoniker": "Unicom TIC\\Views\\AdminView\\Admin Admin Add.cs",
-              "ToolTip": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\AdminView\\Admin Admin Add.cs",
-              "RelativeToolTip": "Unicom TIC\\Views\\AdminView\\Admin Admin Add.cs",
-              "ViewState": "AQIAACwAAAAAAAAAAAA6wC4AAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T04:14:27.413Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Program.cs",
-              "RelativeDocumentMoniker": "Unicom TIC\\Program.cs",
-              "ToolTip": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Program.cs",
-              "RelativeToolTip": "Unicom TIC\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-17T12:04:48.424Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "LecturerController.cs",
-              "DocumentMoniker": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Controller\\LecturerController.cs",
-              "RelativeDocumentMoniker": "Unicom TIC\\Controller\\LecturerController.cs",
-              "ToolTip": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Controller\\LecturerController.cs",
-              "RelativeToolTip": "Unicom TIC\\Controller\\LecturerController.cs",
-              "ViewState": "AQIAAIMAAAAAAAAAAAAhwGsAAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T11:10:35.844Z",
+              "WhenOpened": "2025-06-18T12:36:50.584Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Register Form.cs",
-              "DocumentMoniker": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\Login\\Register Form.cs",
-              "RelativeDocumentMoniker": "Unicom TIC\\Views\\Login\\Register Form.cs",
-              "ToolTip": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\Login\\Register Form.cs",
-              "RelativeToolTip": "Unicom TIC\\Views\\Login\\Register Form.cs",
-              "ViewState": "AQIAAEoAAAAAAAAAAAAYwG0AAAAAAAAA",
+              "Title": "Timetable.cs",
+              "DocumentMoniker": "Z:\\Projects\\New folder\\Unicom TIC\\Views\\AdminView\\Timetable.cs",
+              "RelativeDocumentMoniker": "Unicom TIC\\Views\\AdminView\\Timetable.cs",
+              "ToolTip": "Z:\\Projects\\New folder\\Unicom TIC\\Views\\AdminView\\Timetable.cs",
+              "RelativeToolTip": "Unicom TIC\\Views\\AdminView\\Timetable.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAqwB8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-17T12:06:24.885Z",
+              "WhenOpened": "2025-06-18T12:33:08.331Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Controller\\UserController.cs",
-              "RelativeDocumentMoniker": "Unicom TIC\\Controller\\UserController.cs",
-              "ToolTip": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Controller\\UserController.cs",
-              "RelativeToolTip": "Unicom TIC\\Controller\\UserController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "DocumentIndex": 2,
+              "Title": "Marks Add and Delete and Update.cs [Design]",
+              "DocumentMoniker": "Z:\\Projects\\New folder\\Unicom TIC\\Views\\AdminView\\Marks Add and Delete and Update.cs",
+              "RelativeDocumentMoniker": "Unicom TIC\\Views\\AdminView\\Marks Add and Delete and Update.cs",
+              "ToolTip": "Z:\\Projects\\New folder\\Unicom TIC\\Views\\AdminView\\Marks Add and Delete and Update.cs [Design]",
+              "RelativeToolTip": "Unicom TIC\\Views\\AdminView\\Marks Add and Delete and Update.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-17T12:31:17.191Z",
+              "WhenOpened": "2025-06-18T12:31:12.584Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Admin Student Update.cs",
+              "DocumentMoniker": "Z:\\Projects\\New folder\\Unicom TIC\\Views\\AdminView\\Admin Student Update.cs",
+              "RelativeDocumentMoniker": "Unicom TIC\\Views\\AdminView\\Admin Student Update.cs",
+              "ToolTip": "Z:\\Projects\\New folder\\Unicom TIC\\Views\\AdminView\\Admin Student Update.cs",
+              "RelativeToolTip": "Unicom TIC\\Views\\AdminView\\Admin Student Update.cs",
+              "ViewState": "AQIAABkAAAAAAAAAAAAswCQAAACtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-18T12:27:54.544Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Admin Admin Add.cs [Design]",
-              "DocumentMoniker": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\AdminView\\Admin Admin Add.cs",
-              "RelativeDocumentMoniker": "Unicom TIC\\Views\\AdminView\\Admin Admin Add.cs",
-              "ToolTip": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\AdminView\\Admin Admin Add.cs [Design]",
-              "RelativeToolTip": "Unicom TIC\\Views\\AdminView\\Admin Admin Add.cs [Design]",
+              "DocumentIndex": 16,
+              "Title": "DataBaseConnection.cs",
+              "DocumentMoniker": "Z:\\Projects\\New folder\\Unicom TIC\\Repositories\\DataBaseConnection.cs",
+              "RelativeDocumentMoniker": "Unicom TIC\\Repositories\\DataBaseConnection.cs",
+              "ToolTip": "Z:\\Projects\\New folder\\Unicom TIC\\Repositories\\DataBaseConnection.cs",
+              "RelativeToolTip": "Unicom TIC\\Repositories\\DataBaseConnection.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T04:14:24.495Z",
+              "WhenOpened": "2025-06-18T05:09:02.066Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Main Admin.cs [Design]",
+              "DocumentMoniker": "Z:\\Projects\\New folder\\Unicom TIC\\Views\\AdminView\\Main Admin.cs",
+              "RelativeDocumentMoniker": "Unicom TIC\\Views\\AdminView\\Main Admin.cs",
+              "ToolTip": "Z:\\Projects\\New folder\\Unicom TIC\\Views\\AdminView\\Main Admin.cs [Design]",
+              "RelativeToolTip": "Unicom TIC\\Views\\AdminView\\Main Admin.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-18T04:34:18.922Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Main Admin.cs",
+              "DocumentMoniker": "Z:\\Projects\\New folder\\Unicom TIC\\Views\\AdminView\\Main Admin.cs",
+              "RelativeDocumentMoniker": "Unicom TIC\\Views\\AdminView\\Main Admin.cs",
+              "ToolTip": "Z:\\Projects\\New folder\\Unicom TIC\\Views\\AdminView\\Main Admin.cs",
+              "RelativeToolTip": "Unicom TIC\\Views\\AdminView\\Main Admin.cs",
+              "ViewState": "AQIAABsBAAAAAAAAAAAAADEBAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-18T10:08:01.69Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Timetable.cs [Design]",
+              "DocumentMoniker": "Z:\\Projects\\New folder\\Unicom TIC\\Views\\AdminView\\Timetable.cs",
+              "RelativeDocumentMoniker": "Unicom TIC\\Views\\AdminView\\Timetable.cs",
+              "ToolTip": "Z:\\Projects\\New folder\\Unicom TIC\\Views\\AdminView\\Timetable.cs [Design]",
+              "RelativeToolTip": "Unicom TIC\\Views\\AdminView\\Timetable.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-18T11:50:24.916Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 15,
-              "Title": "Student.cs",
-              "DocumentMoniker": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Model\\Student.cs",
-              "RelativeDocumentMoniker": "Unicom TIC\\Model\\Student.cs",
-              "ToolTip": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Model\\Student.cs",
-              "RelativeToolTip": "Unicom TIC\\Model\\Student.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAABAAAA",
+              "Title": "DataBaseTables.cs",
+              "DocumentMoniker": "Z:\\Projects\\New folder\\Unicom TIC\\Repositories\\DataBaseTables.cs",
+              "RelativeDocumentMoniker": "Unicom TIC\\Repositories\\DataBaseTables.cs",
+              "ToolTip": "Z:\\Projects\\New folder\\Unicom TIC\\Repositories\\DataBaseTables.cs",
+              "RelativeToolTip": "Unicom TIC\\Repositories\\DataBaseTables.cs",
+              "ViewState": "AQIAALgAAAAAAAAAAAAiwNoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-17T11:58:05.22Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Admin Staff Add.cs",
-              "DocumentMoniker": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\AdminView\\Admin Staff Add.cs",
-              "RelativeDocumentMoniker": "Unicom TIC\\Views\\AdminView\\Admin Staff Add.cs",
-              "ToolTip": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\AdminView\\Admin Staff Add.cs",
-              "RelativeToolTip": "Unicom TIC\\Views\\AdminView\\Admin Staff Add.cs",
-              "ViewState": "AQIAAFsAAAAAAAAAAAAiwGsAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-17T12:14:09.2Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-18T03:06:43.994Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 14,
-              "Title": "Admin Staff Add.cs [Design]",
-              "DocumentMoniker": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\AdminView\\Admin Staff Add.cs",
-              "RelativeDocumentMoniker": "Unicom TIC\\Views\\AdminView\\Admin Staff Add.cs",
-              "ToolTip": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\AdminView\\Admin Staff Add.cs [Design]",
-              "RelativeToolTip": "Unicom TIC\\Views\\AdminView\\Admin Staff Add.cs [Design]",
+              "Title": "Register Form.cs [Design]",
+              "DocumentMoniker": "Z:\\Projects\\New folder\\Unicom TIC\\Views\\Login\\Register Form.cs",
+              "RelativeDocumentMoniker": "Unicom TIC\\Views\\Login\\Register Form.cs",
+              "ToolTip": "Z:\\Projects\\New folder\\Unicom TIC\\Views\\Login\\Register Form.cs [Design]",
+              "RelativeToolTip": "Unicom TIC\\Views\\Login\\Register Form.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-17T07:25:14.408Z",
+              "WhenOpened": "2025-06-18T03:29:36.561Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Admin Student Add.cs",
+              "DocumentMoniker": "Z:\\Projects\\New folder\\Unicom TIC\\Views\\AdminView\\Admin Student Add.cs",
+              "RelativeDocumentMoniker": "Unicom TIC\\Views\\AdminView\\Admin Student Add.cs",
+              "ToolTip": "Z:\\Projects\\New folder\\Unicom TIC\\Views\\AdminView\\Admin Student Add.cs",
+              "RelativeToolTip": "Unicom TIC\\Views\\AdminView\\Admin Student Add.cs",
+              "ViewState": "AQIAAG4AAAAAAAAAAAAIwIcAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-18T12:27:24.812Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Admin Student Update.cs [Design]",
+              "DocumentMoniker": "Z:\\Projects\\New folder\\Unicom TIC\\Views\\AdminView\\Admin Student Update.cs",
+              "RelativeDocumentMoniker": "Unicom TIC\\Views\\AdminView\\Admin Student Update.cs",
+              "ToolTip": "Z:\\Projects\\New folder\\Unicom TIC\\Views\\AdminView\\Admin Student Update.cs [Design]",
+              "RelativeToolTip": "Unicom TIC\\Views\\AdminView\\Admin Student Update.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-18T04:34:20.604Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "Admin Subject Add and View and Delete.cs [Design]",
-              "DocumentMoniker": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\AdminView\\Admin Subject Add and View and Delete.cs",
-              "RelativeDocumentMoniker": "Unicom TIC\\Views\\AdminView\\Admin Subject Add and View and Delete.cs",
-              "ToolTip": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\AdminView\\Admin Subject Add and View and Delete.cs [Design]",
-              "RelativeToolTip": "Unicom TIC\\Views\\AdminView\\Admin Subject Add and View and Delete.cs [Design]",
+              "DocumentIndex": 12,
+              "Title": "Program.cs",
+              "DocumentMoniker": "Z:\\Projects\\New folder\\Unicom TIC\\Program.cs",
+              "RelativeDocumentMoniker": "Unicom TIC\\Program.cs",
+              "ToolTip": "Z:\\Projects\\New folder\\Unicom TIC\\Program.cs",
+              "RelativeToolTip": "Unicom TIC\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T04:10:10.969Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-06-18T03:44:46.37Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 13,
               "Title": "Admin Subject Add and View and Delete.cs",
-              "DocumentMoniker": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\AdminView\\Admin Subject Add and View and Delete.cs",
+              "DocumentMoniker": "Z:\\Projects\\New folder\\Unicom TIC\\Views\\AdminView\\Admin Subject Add and View and Delete.cs",
               "RelativeDocumentMoniker": "Unicom TIC\\Views\\AdminView\\Admin Subject Add and View and Delete.cs",
-              "ToolTip": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\AdminView\\Admin Subject Add and View and Delete.cs",
+              "ToolTip": "Z:\\Projects\\New folder\\Unicom TIC\\Views\\AdminView\\Admin Subject Add and View and Delete.cs",
               "RelativeToolTip": "Unicom TIC\\Views\\AdminView\\Admin Subject Add and View and Delete.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAACQAAAAJAAAA",
+              "ViewState": "AQIAAC4AAAAAAAAAAAAywEUAAABHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-16T04:12:58.537Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Admin Student Add.cs",
-              "DocumentMoniker": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\AdminView\\Admin Student Add.cs",
+              "DocumentIndex": 9,
+              "Title": "Admin Student Add.cs [Design]",
+              "DocumentMoniker": "Z:\\Projects\\New folder\\Unicom TIC\\Views\\AdminView\\Admin Student Add.cs",
               "RelativeDocumentMoniker": "Unicom TIC\\Views\\AdminView\\Admin Student Add.cs",
-              "ToolTip": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\AdminView\\Admin Student Add.cs",
-              "RelativeToolTip": "Unicom TIC\\Views\\AdminView\\Admin Student Add.cs",
-              "ViewState": "AQIAAHQAAAAAAAAAAAAQwIwAAAAaAAAA",
+              "ToolTip": "Z:\\Projects\\New folder\\Unicom TIC\\Views\\AdminView\\Admin Student Add.cs [Design]",
+              "RelativeToolTip": "Unicom TIC\\Views\\AdminView\\Admin Student Add.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-17T11:32:32.344Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Lecturer.cs",
-              "DocumentMoniker": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Model\\Lecturer.cs",
-              "RelativeDocumentMoniker": "Unicom TIC\\Model\\Lecturer.cs",
-              "ToolTip": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Model\\Lecturer.cs",
-              "RelativeToolTip": "Unicom TIC\\Model\\Lecturer.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-17T11:57:56.736Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "Admin Student View and Delete.cs [Design]",
-              "DocumentMoniker": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\AdminView\\Admin Student View and Delete.cs",
-              "RelativeDocumentMoniker": "Unicom TIC\\Views\\AdminView\\Admin Student View and Delete.cs",
-              "ToolTip": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\AdminView\\Admin Student View and Delete.cs [Design]",
-              "RelativeToolTip": "Unicom TIC\\Views\\AdminView\\Admin Student View and Delete.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-17T02:22:51.974Z",
+              "WhenOpened": "2025-06-18T04:34:16.466Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Admin Student View and Delete.cs",
-              "DocumentMoniker": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\AdminView\\Admin Student View and Delete.cs",
-              "RelativeDocumentMoniker": "Unicom TIC\\Views\\AdminView\\Admin Student View and Delete.cs",
-              "ToolTip": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\AdminView\\Admin Student View and Delete.cs",
-              "RelativeToolTip": "Unicom TIC\\Views\\AdminView\\Admin Student View and Delete.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAAAYwC8AAAAAAAAA",
+              "DocumentIndex": 10,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "Z:\\Projects\\New folder\\Unicom TIC\\Controller\\UserController.cs",
+              "RelativeDocumentMoniker": "Unicom TIC\\Controller\\UserController.cs",
+              "ToolTip": "Z:\\Projects\\New folder\\Unicom TIC\\Controller\\UserController.cs",
+              "RelativeToolTip": "Unicom TIC\\Controller\\UserController.cs",
+              "ViewState": "AQIAADsAAAAAAAAAAAAUwHYAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-17T04:30:52.331Z",
+              "WhenOpened": "2025-06-18T03:15:12.71Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Login Form.cs",
+              "DocumentMoniker": "Z:\\Projects\\New folder\\Unicom TIC\\Views\\Login\\Login Form.cs",
+              "RelativeDocumentMoniker": "Unicom TIC\\Views\\Login\\Login Form.cs",
+              "ToolTip": "Z:\\Projects\\New folder\\Unicom TIC\\Views\\Login\\Login Form.cs",
+              "RelativeToolTip": "Unicom TIC\\Views\\Login\\Login Form.cs",
+              "ViewState": "AQIAACUAAAAAAAAAAAAqwDkAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-18T09:46:07.637Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Main Lecturer Form.cs [Design]",
+              "DocumentMoniker": "Z:\\Projects\\New folder\\Unicom TIC\\Views\\LecturerView\\Main Lecturer Form.cs",
+              "RelativeDocumentMoniker": "Unicom TIC\\Views\\LecturerView\\Main Lecturer Form.cs",
+              "ToolTip": "Z:\\Projects\\New folder\\Unicom TIC\\Views\\LecturerView\\Main Lecturer Form.cs [Design]",
+              "RelativeToolTip": "Unicom TIC\\Views\\LecturerView\\Main Lecturer Form.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-18T10:03:56.747Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 19,
-              "Title": "StudentController.cs",
-              "DocumentMoniker": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Controller\\StudentController.cs",
-              "RelativeDocumentMoniker": "Unicom TIC\\Controller\\StudentController.cs",
-              "ToolTip": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Controller\\StudentController.cs",
-              "RelativeToolTip": "Unicom TIC\\Controller\\StudentController.cs",
-              "ViewState": "AQIAACUAAAAAAAAAAAAgwEAAAAA4AAAA",
+              "Title": "Lecturer Details.cs [Design]",
+              "DocumentMoniker": "Z:\\Projects\\New folder\\Unicom TIC\\Views\\LecturerView\\Lecturer Details.cs",
+              "RelativeDocumentMoniker": "Unicom TIC\\Views\\LecturerView\\Lecturer Details.cs",
+              "ToolTip": "Z:\\Projects\\New folder\\Unicom TIC\\Views\\LecturerView\\Lecturer Details.cs [Design]",
+              "RelativeToolTip": "Unicom TIC\\Views\\LecturerView\\Lecturer Details.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-17T11:16:28.785Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-18T10:04:31.015Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 18,
-              "Title": "Admin Student Add.cs [Design]",
-              "DocumentMoniker": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\AdminView\\Admin Student Add.cs",
-              "RelativeDocumentMoniker": "Unicom TIC\\Views\\AdminView\\Admin Student Add.cs",
-              "ToolTip": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\AdminView\\Admin Student Add.cs [Design]",
-              "RelativeToolTip": "Unicom TIC\\Views\\AdminView\\Admin Student Add.cs [Design]",
+              "Title": "Main Staff Form.cs [Design]",
+              "DocumentMoniker": "Z:\\Projects\\New folder\\Unicom TIC\\Views\\StaffView\\Main Staff Form.cs",
+              "RelativeDocumentMoniker": "Unicom TIC\\Views\\StaffView\\Main Staff Form.cs",
+              "ToolTip": "Z:\\Projects\\New folder\\Unicom TIC\\Views\\StaffView\\Main Staff Form.cs [Design]",
+              "RelativeToolTip": "Unicom TIC\\Views\\StaffView\\Main Staff Form.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-17T07:25:26.816Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-06-18T10:18:29.969Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Staff Details.cs [Design]",
+              "DocumentMoniker": "Z:\\Projects\\New folder\\Unicom TIC\\Views\\StaffView\\Staff Details.cs",
+              "RelativeDocumentMoniker": "Unicom TIC\\Views\\StaffView\\Staff Details.cs",
+              "ToolTip": "Z:\\Projects\\New folder\\Unicom TIC\\Views\\StaffView\\Staff Details.cs [Design]",
+              "RelativeToolTip": "Unicom TIC\\Views\\StaffView\\Staff Details.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-18T10:16:04.62Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Student Details.cs [Design]",
+              "DocumentMoniker": "Z:\\Projects\\New folder\\Unicom TIC\\Views\\StudentView\\Student Details.cs",
+              "RelativeDocumentMoniker": "Unicom TIC\\Views\\StudentView\\Student Details.cs",
+              "ToolTip": "Z:\\Projects\\New folder\\Unicom TIC\\Views\\StudentView\\Student Details.cs [Design]",
+              "RelativeToolTip": "Unicom TIC\\Views\\StudentView\\Student Details.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-18T10:21:17.55Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Main Staff Form.cs",
+              "DocumentMoniker": "Z:\\Projects\\New folder\\Unicom TIC\\Views\\StaffView\\Main Staff Form.cs",
+              "RelativeDocumentMoniker": "Unicom TIC\\Views\\StaffView\\Main Staff Form.cs",
+              "ToolTip": "Z:\\Projects\\New folder\\Unicom TIC\\Views\\StaffView\\Main Staff Form.cs",
+              "RelativeToolTip": "Unicom TIC\\Views\\StaffView\\Main Staff Form.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAAiwC4AAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-18T10:18:31.119Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Main Student Form.cs",
+              "DocumentMoniker": "Z:\\Projects\\New folder\\Unicom TIC\\Views\\StudentView\\Main Student Form.cs",
+              "RelativeDocumentMoniker": "Unicom TIC\\Views\\StudentView\\Main Student Form.cs",
+              "ToolTip": "Z:\\Projects\\New folder\\Unicom TIC\\Views\\StudentView\\Main Student Form.cs",
+              "RelativeToolTip": "Unicom TIC\\Views\\StudentView\\Main Student Form.cs",
+              "ViewState": "AQIAACAAAAAAAAAAAAAUwEIAAABDAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-18T10:20:10.551Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 24,
-              "Title": "Admin Lecturer Add.cs",
-              "DocumentMoniker": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\AdminView\\Admin Lecturer Add.cs",
-              "RelativeDocumentMoniker": "Unicom TIC\\Views\\AdminView\\Admin Lecturer Add.cs",
-              "ToolTip": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\AdminView\\Admin Lecturer Add.cs",
-              "RelativeToolTip": "Unicom TIC\\Views\\AdminView\\Admin Lecturer Add.cs",
-              "ViewState": "AQIAAGoAAAAAAAAAAAASwIEAAAAaAAAA",
+              "Title": "Main Student Form.cs [Design]",
+              "DocumentMoniker": "Z:\\Projects\\New folder\\Unicom TIC\\Views\\StudentView\\Main Student Form.cs",
+              "RelativeDocumentMoniker": "Unicom TIC\\Views\\StudentView\\Main Student Form.cs",
+              "ToolTip": "Z:\\Projects\\New folder\\Unicom TIC\\Views\\StudentView\\Main Student Form.cs [Design]",
+              "RelativeToolTip": "Unicom TIC\\Views\\StudentView\\Main Student Form.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T11:13:08.556Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-18T10:20:09.539Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 25,
-              "Title": "Admin Lecturer Add.cs [Design]",
-              "DocumentMoniker": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\AdminView\\Admin Lecturer Add.cs",
-              "RelativeDocumentMoniker": "Unicom TIC\\Views\\AdminView\\Admin Lecturer Add.cs",
-              "ToolTip": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\AdminView\\Admin Lecturer Add.cs [Design]",
-              "RelativeToolTip": "Unicom TIC\\Views\\AdminView\\Admin Lecturer Add.cs [Design]",
+              "Title": "Main Lecturer Form.cs",
+              "DocumentMoniker": "Z:\\Projects\\New folder\\Unicom TIC\\Views\\LecturerView\\Main Lecturer Form.cs",
+              "RelativeDocumentMoniker": "Unicom TIC\\Views\\LecturerView\\Main Lecturer Form.cs",
+              "ToolTip": "Z:\\Projects\\New folder\\Unicom TIC\\Views\\LecturerView\\Main Lecturer Form.cs",
+              "RelativeToolTip": "Unicom TIC\\Views\\LecturerView\\Main Lecturer Form.cs",
+              "ViewState": "AQIAACIAAAAAAAAAAAAiwDUAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T11:13:06.851Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-06-18T10:08:25.515Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 26,
-              "Title": "Admin Admin View and Delete.cs",
-              "DocumentMoniker": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\AdminView\\Admin Admin View and Delete.cs",
-              "RelativeDocumentMoniker": "Unicom TIC\\Views\\AdminView\\Admin Admin View and Delete.cs",
-              "ToolTip": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\AdminView\\Admin Admin View and Delete.cs",
-              "RelativeToolTip": "Unicom TIC\\Views\\AdminView\\Admin Admin View and Delete.cs",
-              "ViewState": "AQIAABQAAAAAAAAAAAAlwCIAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T04:14:34.892Z",
-              "EditorCaption": ""
+              "Title": "packages.config",
+              "DocumentMoniker": "Z:\\Projects\\New folder\\Unicom TIC\\packages.config",
+              "RelativeDocumentMoniker": "Unicom TIC\\packages.config",
+              "ToolTip": "Z:\\Projects\\New folder\\Unicom TIC\\packages.config",
+              "RelativeToolTip": "Unicom TIC\\packages.config",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-06-18T10:15:08.728Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 27,
-              "Title": "Admin Admin View and Delete.cs [Design]",
-              "DocumentMoniker": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\AdminView\\Admin Admin View and Delete.cs",
-              "RelativeDocumentMoniker": "Unicom TIC\\Views\\AdminView\\Admin Admin View and Delete.cs",
-              "ToolTip": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\AdminView\\Admin Admin View and Delete.cs [Design]",
-              "RelativeToolTip": "Unicom TIC\\Views\\AdminView\\Admin Admin View and Delete.cs [Design]",
+              "Title": "Admin Lecturer Update.cs [Design]",
+              "DocumentMoniker": "Z:\\Projects\\New folder\\Unicom TIC\\Views\\AdminView\\Admin Lecturer Update.cs",
+              "RelativeDocumentMoniker": "Unicom TIC\\Views\\AdminView\\Admin Lecturer Update.cs",
+              "ToolTip": "Z:\\Projects\\New folder\\Unicom TIC\\Views\\AdminView\\Admin Lecturer Update.cs [Design]",
+              "RelativeToolTip": "Unicom TIC\\Views\\AdminView\\Admin Lecturer Update.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T04:14:33.852Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "Admin Admin Update.cs",
-              "DocumentMoniker": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\AdminView\\Admin Admin Update.cs",
-              "RelativeDocumentMoniker": "Unicom TIC\\Views\\AdminView\\Admin Admin Update.cs",
-              "ToolTip": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\AdminView\\Admin Admin Update.cs",
-              "RelativeToolTip": "Unicom TIC\\Views\\AdminView\\Admin Admin Update.cs",
-              "ViewState": "AQIAAIkAAAAAAAAAAAAUwJsAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T08:45:10.465Z"
+              "WhenOpened": "2025-06-18T04:34:15.106Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 28,
               "Title": "Admin Staff Update New.cs [Design]",
-              "DocumentMoniker": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\AdminView\\Admin Staff Update New.cs",
+              "DocumentMoniker": "Z:\\Projects\\New folder\\Unicom TIC\\Views\\AdminView\\Admin Staff Update New.cs",
               "RelativeDocumentMoniker": "Unicom TIC\\Views\\AdminView\\Admin Staff Update New.cs",
-              "ToolTip": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\AdminView\\Admin Staff Update New.cs [Design]",
+              "ToolTip": "Z:\\Projects\\New folder\\Unicom TIC\\Views\\AdminView\\Admin Staff Update New.cs [Design]",
               "RelativeToolTip": "Unicom TIC\\Views\\AdminView\\Admin Staff Update New.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-17T08:04:20.849Z"
+              "WhenOpened": "2025-06-18T10:25:49.904Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 29,
-              "Title": "Admin Staff View and Delete.cs",
-              "DocumentMoniker": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\AdminView\\Admin Staff View and Delete.cs",
-              "RelativeDocumentMoniker": "Unicom TIC\\Views\\AdminView\\Admin Staff View and Delete.cs",
-              "ToolTip": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\AdminView\\Admin Staff View and Delete.cs",
-              "RelativeToolTip": "Unicom TIC\\Views\\AdminView\\Admin Staff View and Delete.cs",
-              "ViewState": "AQIAAFMAAAAAAAAAAAAmwGAAAAAyAAAA",
+              "Title": "Admin Staff Add.cs [Design]",
+              "DocumentMoniker": "Z:\\Projects\\New folder\\Unicom TIC\\Views\\AdminView\\Admin Staff Add.cs",
+              "RelativeDocumentMoniker": "Unicom TIC\\Views\\AdminView\\Admin Staff Add.cs",
+              "ToolTip": "Z:\\Projects\\New folder\\Unicom TIC\\Views\\AdminView\\Admin Staff Add.cs [Design]",
+              "RelativeToolTip": "Unicom TIC\\Views\\AdminView\\Admin Staff Add.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-17T08:08:28.401Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "Main Admin.cs",
-              "DocumentMoniker": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\AdminView\\Main Admin.cs",
-              "RelativeDocumentMoniker": "Unicom TIC\\Views\\AdminView\\Main Admin.cs",
-              "ToolTip": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\AdminView\\Main Admin.cs",
-              "RelativeToolTip": "Unicom TIC\\Views\\AdminView\\Main Admin.cs",
-              "ViewState": "AQIAALEAAAAAAAAAAAAAAMwAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-17T08:04:53.134Z"
+              "WhenOpened": "2025-06-18T10:15:29.728Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 31,
-              "Title": "StaffController.cs",
-              "DocumentMoniker": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Controller\\StaffController.cs",
-              "RelativeDocumentMoniker": "Unicom TIC\\Controller\\StaffController.cs",
-              "ToolTip": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Controller\\StaffController.cs",
-              "RelativeToolTip": "Unicom TIC\\Controller\\StaffController.cs",
-              "ViewState": "AQIAAI4AAAAAAAAAAADwv6cAAAAIAAAA",
+              "Title": "Lecturer Details.cs",
+              "DocumentMoniker": "Z:\\Projects\\New folder\\Unicom TIC\\Views\\LecturerView\\Lecturer Details.cs",
+              "RelativeDocumentMoniker": "Unicom TIC\\Views\\LecturerView\\Lecturer Details.cs",
+              "ToolTip": "Z:\\Projects\\New folder\\Unicom TIC\\Views\\LecturerView\\Lecturer Details.cs",
+              "RelativeToolTip": "Unicom TIC\\Views\\LecturerView\\Lecturer Details.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAADwvxUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T05:05:53.732Z"
+              "WhenOpened": "2025-06-18T10:05:31.428Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 30,
-              "Title": "Admin Staff View and Delete.cs [Design]",
-              "DocumentMoniker": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\AdminView\\Admin Staff View and Delete.cs",
-              "RelativeDocumentMoniker": "Unicom TIC\\Views\\AdminView\\Admin Staff View and Delete.cs",
-              "ToolTip": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\AdminView\\Admin Staff View and Delete.cs [Design]",
-              "RelativeToolTip": "Unicom TIC\\Views\\AdminView\\Admin Staff View and Delete.cs [Design]",
+              "Title": "Admin Lecturer Add.cs [Design]",
+              "DocumentMoniker": "Z:\\Projects\\New folder\\Unicom TIC\\Views\\AdminView\\Admin Lecturer Add.cs",
+              "RelativeDocumentMoniker": "Unicom TIC\\Views\\AdminView\\Admin Lecturer Add.cs",
+              "ToolTip": "Z:\\Projects\\New folder\\Unicom TIC\\Views\\AdminView\\Admin Lecturer Add.cs [Design]",
+              "RelativeToolTip": "Unicom TIC\\Views\\AdminView\\Admin Lecturer Add.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-17T04:26:35.714Z"
+              "WhenOpened": "2025-06-18T10:03:42.344Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "Main Admin.cs [Design]",
-              "DocumentMoniker": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\AdminView\\Main Admin.cs",
-              "RelativeDocumentMoniker": "Unicom TIC\\Views\\AdminView\\Main Admin.cs",
-              "ToolTip": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\AdminView\\Main Admin.cs [Design]",
-              "RelativeToolTip": "Unicom TIC\\Views\\AdminView\\Main Admin.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-17T07:27:52.199Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "Admin Admin Update.cs [Design]",
-              "DocumentMoniker": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\AdminView\\Admin Admin Update.cs",
-              "RelativeDocumentMoniker": "Unicom TIC\\Views\\AdminView\\Admin Admin Update.cs",
-              "ToolTip": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\AdminView\\Admin Admin Update.cs [Design]",
-              "RelativeToolTip": "Unicom TIC\\Views\\AdminView\\Admin Admin Update.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T08:45:08.717Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 59,
-              "Title": "Login Form.cs [Design]",
-              "DocumentMoniker": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\Login Form.cs",
-              "RelativeDocumentMoniker": "Unicom TIC\\Views\\Login Form.cs",
-              "ToolTip": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\Login Form.cs [Design]",
-              "RelativeToolTip": "Unicom TIC\\Views\\Login Form.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T11:55:37.98Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "Main Admin.Designer.cs",
-              "DocumentMoniker": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\AdminView\\Main Admin.Designer.cs",
-              "RelativeDocumentMoniker": "Unicom TIC\\Views\\AdminView\\Main Admin.Designer.cs",
-              "ToolTip": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\AdminView\\Main Admin.Designer.cs",
-              "RelativeToolTip": "Unicom TIC\\Views\\AdminView\\Main Admin.Designer.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-17T07:25:36.967Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "Main Lecturer Form.cs [Design]",
-              "DocumentMoniker": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\LecturerView\\Main Lecturer Form.cs",
-              "RelativeDocumentMoniker": "Unicom TIC\\Views\\LecturerView\\Main Lecturer Form.cs",
-              "ToolTip": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\LecturerView\\Main Lecturer Form.cs [Design]",
-              "RelativeToolTip": "Unicom TIC\\Views\\LecturerView\\Main Lecturer Form.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-17T07:26:02.562Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "Main Lecturer Form.cs",
-              "DocumentMoniker": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\LecturerView\\Main Lecturer Form.cs",
-              "RelativeDocumentMoniker": "Unicom TIC\\Views\\LecturerView\\Main Lecturer Form.cs",
-              "ToolTip": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\LecturerView\\Main Lecturer Form.cs",
-              "RelativeToolTip": "Unicom TIC\\Views\\LecturerView\\Main Lecturer Form.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAAAUwCEAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-17T07:26:09.115Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "Main Staff Form.cs [Design]",
-              "DocumentMoniker": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\StaffView\\Main Staff Form.cs",
-              "RelativeDocumentMoniker": "Unicom TIC\\Views\\StaffView\\Main Staff Form.cs",
-              "ToolTip": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\StaffView\\Main Staff Form.cs [Design]",
-              "RelativeToolTip": "Unicom TIC\\Views\\StaffView\\Main Staff Form.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-17T07:27:19.048Z"
+              "DocumentIndex": 32,
+              "Title": "Lecturer Details.resx",
+              "DocumentMoniker": "Z:\\Projects\\New folder\\Unicom TIC\\Views\\LecturerView\\Lecturer Details.resx",
+              "RelativeDocumentMoniker": "Unicom TIC\\Views\\LecturerView\\Lecturer Details.resx",
+              "ToolTip": "Z:\\Projects\\New folder\\Unicom TIC\\Views\\LecturerView\\Lecturer Details.resx",
+              "RelativeToolTip": "Unicom TIC\\Views\\LecturerView\\Lecturer Details.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-06-18T10:05:33.883Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 36,
-              "Title": "Main Student Form.cs [Design]",
-              "DocumentMoniker": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\StudentView\\Main Student Form.cs",
-              "RelativeDocumentMoniker": "Unicom TIC\\Views\\StudentView\\Main Student Form.cs",
-              "ToolTip": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\StudentView\\Main Student Form.cs [Design]",
-              "RelativeToolTip": "Unicom TIC\\Views\\StudentView\\Main Student Form.cs [Design]",
+              "Title": "Exam.cs",
+              "DocumentMoniker": "Z:\\Projects\\New folder\\Unicom TIC\\Model\\Exam.cs",
+              "RelativeDocumentMoniker": "Unicom TIC\\Model\\Exam.cs",
+              "ToolTip": "Z:\\Projects\\New folder\\Unicom TIC\\Model\\Exam.cs",
+              "RelativeToolTip": "Unicom TIC\\Model\\Exam.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-17T07:27:21.687Z"
+              "WhenOpened": "2025-06-18T05:20:10.684Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
-              "Title": "Main Admin.resx",
-              "DocumentMoniker": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\AdminView\\Main Admin.resx",
-              "RelativeDocumentMoniker": "Unicom TIC\\Views\\AdminView\\Main Admin.resx",
-              "ToolTip": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\AdminView\\Main Admin.resx",
-              "RelativeToolTip": "Unicom TIC\\Views\\AdminView\\Main Admin.resx",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2025-06-17T07:25:37.91Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "Admin Student Update.cs [Design]",
-              "DocumentMoniker": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\AdminView\\Admin Student Update.cs",
-              "RelativeDocumentMoniker": "Unicom TIC\\Views\\AdminView\\Admin Student Update.cs",
-              "ToolTip": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\AdminView\\Admin Student Update.cs [Design]",
-              "RelativeToolTip": "Unicom TIC\\Views\\AdminView\\Admin Student Update.cs [Design]",
+              "DocumentIndex": 35,
+              "Title": "Admin Admin Add.cs [Design]",
+              "DocumentMoniker": "Z:\\Projects\\New folder\\Unicom TIC\\Views\\AdminView\\Admin Admin Add.cs",
+              "RelativeDocumentMoniker": "Unicom TIC\\Views\\AdminView\\Admin Admin Add.cs",
+              "ToolTip": "Z:\\Projects\\New folder\\Unicom TIC\\Views\\AdminView\\Admin Admin Add.cs [Design]",
+              "RelativeToolTip": "Unicom TIC\\Views\\AdminView\\Admin Admin Add.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-17T07:25:28.517Z"
+              "WhenOpened": "2025-06-18T02:09:03.202Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 33,
+              "Title": "User.cs",
+              "DocumentMoniker": "Z:\\Projects\\New folder\\Unicom TIC\\Model\\User.cs",
+              "RelativeDocumentMoniker": "Unicom TIC\\Model\\User.cs",
+              "ToolTip": "Z:\\Projects\\New folder\\Unicom TIC\\Model\\User.cs",
+              "RelativeToolTip": "Unicom TIC\\Model\\User.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-18T04:54:49.806Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "Admin Admin Add.cs",
+              "DocumentMoniker": "Z:\\Projects\\New folder\\Unicom TIC\\Views\\AdminView\\Admin Admin Add.cs",
+              "RelativeDocumentMoniker": "Unicom TIC\\Views\\AdminView\\Admin Admin Add.cs",
+              "ToolTip": "Z:\\Projects\\New folder\\Unicom TIC\\Views\\AdminView\\Admin Admin Add.cs",
+              "RelativeToolTip": "Unicom TIC\\Views\\AdminView\\Admin Admin Add.cs",
+              "ViewState": "AQIAACQAAAAAAAAAAAAiwD8AAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T04:14:27.413Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
               "Title": "Admin Lecturer View and Delete.cs [Design]",
-              "DocumentMoniker": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\AdminView\\Admin Lecturer View and Delete.cs",
+              "DocumentMoniker": "Z:\\Projects\\New folder\\Unicom TIC\\Views\\AdminView\\Admin Lecturer View and Delete.cs",
               "RelativeDocumentMoniker": "Unicom TIC\\Views\\AdminView\\Admin Lecturer View and Delete.cs",
-              "ToolTip": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\AdminView\\Admin Lecturer View and Delete.cs [Design]",
+              "ToolTip": "Z:\\Projects\\New folder\\Unicom TIC\\Views\\AdminView\\Admin Lecturer View and Delete.cs [Design]",
               "RelativeToolTip": "Unicom TIC\\Views\\AdminView\\Admin Lecturer View and Delete.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T11:12:39.126Z"
+              "WhenOpened": "2025-06-18T04:34:15.783Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
-              "Title": "Admin Lecturer Update.cs [Design]",
-              "DocumentMoniker": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\AdminView\\Admin Lecturer Update.cs",
-              "RelativeDocumentMoniker": "Unicom TIC\\Views\\AdminView\\Admin Lecturer Update.cs",
-              "ToolTip": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\AdminView\\Admin Lecturer Update.cs [Design]",
-              "RelativeToolTip": "Unicom TIC\\Views\\AdminView\\Admin Lecturer Update.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-17T04:43:00.933Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 38,
               "Title": "Admin Course Add and View and Delete.cs [Design]",
-              "DocumentMoniker": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\AdminView\\Admin Course Add and View and Delete.cs",
+              "DocumentMoniker": "Z:\\Projects\\New folder\\Unicom TIC\\Views\\AdminView\\Admin Course Add and View and Delete.cs",
               "RelativeDocumentMoniker": "Unicom TIC\\Views\\AdminView\\Admin Course Add and View and Delete.cs",
-              "ToolTip": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\AdminView\\Admin Course Add and View and Delete.cs [Design]",
+              "ToolTip": "Z:\\Projects\\New folder\\Unicom TIC\\Views\\AdminView\\Admin Course Add and View and Delete.cs [Design]",
               "RelativeToolTip": "Unicom TIC\\Views\\AdminView\\Admin Course Add and View and Delete.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-16T04:11:01.202Z"
             },
             {
               "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "Admin Admin View and Delete.cs",
+              "DocumentMoniker": "Z:\\Projects\\New folder\\Unicom TIC\\Views\\AdminView\\Admin Admin View and Delete.cs",
+              "RelativeDocumentMoniker": "Unicom TIC\\Views\\AdminView\\Admin Admin View and Delete.cs",
+              "ToolTip": "Z:\\Projects\\New folder\\Unicom TIC\\Views\\AdminView\\Admin Admin View and Delete.cs",
+              "RelativeToolTip": "Unicom TIC\\Views\\AdminView\\Admin Admin View and Delete.cs",
+              "ViewState": "AQIAAGAAAAAAAAAAAAAxwDsAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T04:14:34.892Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "Admin Admin View and Delete.cs [Design]",
+              "DocumentMoniker": "Z:\\Projects\\New folder\\Unicom TIC\\Views\\AdminView\\Admin Admin View and Delete.cs",
+              "RelativeDocumentMoniker": "Unicom TIC\\Views\\AdminView\\Admin Admin View and Delete.cs",
+              "ToolTip": "Z:\\Projects\\New folder\\Unicom TIC\\Views\\AdminView\\Admin Admin View and Delete.cs [Design]",
+              "RelativeToolTip": "Unicom TIC\\Views\\AdminView\\Admin Admin View and Delete.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T04:14:33.852Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "Z:\\Projects\\New folder\\Unicom TIC\\Controller\\AdminController.cs",
+              "RelativeDocumentMoniker": "Unicom TIC\\Controller\\AdminController.cs",
+              "ToolTip": "Z:\\Projects\\New folder\\Unicom TIC\\Controller\\AdminController.cs",
+              "RelativeToolTip": "Unicom TIC\\Controller\\AdminController.cs",
+              "ViewState": "AQIAADAAAAAAAAAAAAAowD0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T04:13:10.572Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 43,
-              "Title": "Admin Room Add and View and Delete.cs [Design]",
-              "DocumentMoniker": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\AdminView\\Admin Room Add and View and Delete.cs",
-              "RelativeDocumentMoniker": "Unicom TIC\\Views\\AdminView\\Admin Room Add and View and Delete.cs",
-              "ToolTip": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\AdminView\\Admin Room Add and View and Delete.cs [Design]",
-              "RelativeToolTip": "Unicom TIC\\Views\\AdminView\\Admin Room Add and View and Delete.cs [Design]",
+              "Title": "Admin Admin Update.cs",
+              "DocumentMoniker": "Z:\\Projects\\New folder\\Unicom TIC\\Views\\AdminView\\Admin Admin Update.cs",
+              "RelativeDocumentMoniker": "Unicom TIC\\Views\\AdminView\\Admin Admin Update.cs",
+              "ToolTip": "Z:\\Projects\\New folder\\Unicom TIC\\Views\\AdminView\\Admin Admin Update.cs",
+              "RelativeToolTip": "Unicom TIC\\Views\\AdminView\\Admin Admin Update.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAI4AAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T04:32:22.728Z"
+              "WhenOpened": "2025-06-16T08:45:10.465Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
-              "Title": "Admin Admin Add Form.resx",
-              "DocumentMoniker": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\AdminView\\Admin Admin Add Form.resx",
-              "RelativeDocumentMoniker": "Unicom TIC\\Views\\AdminView\\Admin Admin Add Form.resx",
-              "ToolTip": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\AdminView\\Admin Admin Add Form.resx",
-              "RelativeToolTip": "Unicom TIC\\Views\\AdminView\\Admin Admin Add Form.resx",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2025-06-17T07:24:54.444Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 47,
-              "Title": "Admin Lecturer Update.cs",
-              "DocumentMoniker": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\AdminView\\Admin Lecturer Update.cs",
-              "RelativeDocumentMoniker": "Unicom TIC\\Views\\AdminView\\Admin Lecturer Update.cs",
-              "ToolTip": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\AdminView\\Admin Lecturer Update.cs",
-              "RelativeToolTip": "Unicom TIC\\Views\\AdminView\\Admin Lecturer Update.cs",
-              "ViewState": "AQIAADUAAAAAAAAAAAAIwGUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-17T04:46:16.815Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 48,
-              "Title": "Admin Lecturer View and Delete.cs",
-              "DocumentMoniker": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\AdminView\\Admin Lecturer View and Delete.cs",
-              "RelativeDocumentMoniker": "Unicom TIC\\Views\\AdminView\\Admin Lecturer View and Delete.cs",
-              "ToolTip": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\AdminView\\Admin Lecturer View and Delete.cs",
-              "RelativeToolTip": "Unicom TIC\\Views\\AdminView\\Admin Lecturer View and Delete.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAzAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T11:12:40.344Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 49,
-              "Title": "SubjectController.cs",
-              "DocumentMoniker": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Controller\\SubjectController.cs",
-              "RelativeDocumentMoniker": "Unicom TIC\\Controller\\SubjectController.cs",
-              "ToolTip": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Controller\\SubjectController.cs",
-              "RelativeToolTip": "Unicom TIC\\Controller\\SubjectController.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAAswC8AAAAZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T04:13:13.047Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 50,
-              "Title": "Subject.cs",
-              "DocumentMoniker": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Model\\Subject.cs",
-              "RelativeDocumentMoniker": "Unicom TIC\\Model\\Subject.cs",
-              "ToolTip": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Model\\Subject.cs",
-              "RelativeToolTip": "Unicom TIC\\Model\\Subject.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAApAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T04:29:07.171Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 51,
-              "Title": "Admin.cs",
-              "DocumentMoniker": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Model\\Admin.cs",
-              "RelativeDocumentMoniker": "Unicom TIC\\Model\\Admin.cs",
-              "ToolTip": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Model\\Admin.cs",
-              "RelativeToolTip": "Unicom TIC\\Model\\Admin.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-17T04:02:51.455Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 39,
               "Title": "RoomController.cs",
-              "DocumentMoniker": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Controller\\RoomController.cs",
+              "DocumentMoniker": "Z:\\Projects\\New folder\\Unicom TIC\\Controller\\RoomController.cs",
               "RelativeDocumentMoniker": "Unicom TIC\\Controller\\RoomController.cs",
-              "ToolTip": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Controller\\RoomController.cs",
+              "ToolTip": "Z:\\Projects\\New folder\\Unicom TIC\\Controller\\RoomController.cs",
               "RelativeToolTip": "Unicom TIC\\Controller\\RoomController.cs",
-              "ViewState": "AQIAAB8AAAAAAAAAAAAgwDEAAAAsAAAA",
+              "ViewState": "AQIAACQAAAAAAAAAAAAowDEAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-16T04:33:19.504Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
-              "Title": "Admin Room Add and View and Delete.cs",
-              "DocumentMoniker": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\AdminView\\Admin Room Add and View and Delete.cs",
-              "RelativeDocumentMoniker": "Unicom TIC\\Views\\AdminView\\Admin Room Add and View and Delete.cs",
-              "ToolTip": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\AdminView\\Admin Room Add and View and Delete.cs",
-              "RelativeToolTip": "Unicom TIC\\Views\\AdminView\\Admin Room Add and View and Delete.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAA9AAAA",
+              "DocumentIndex": 44,
+              "Title": "Admin Admin Update.cs [Design]",
+              "DocumentMoniker": "Z:\\Projects\\New folder\\Unicom TIC\\Views\\AdminView\\Admin Admin Update.cs",
+              "RelativeDocumentMoniker": "Unicom TIC\\Views\\AdminView\\Admin Admin Update.cs",
+              "ToolTip": "Z:\\Projects\\New folder\\Unicom TIC\\Views\\AdminView\\Admin Admin Update.cs [Design]",
+              "RelativeToolTip": "Unicom TIC\\Views\\AdminView\\Admin Admin Update.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T04:37:52.263Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 54,
-              "Title": "CourseController.cs",
-              "DocumentMoniker": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Controller\\CourseController.cs",
-              "RelativeDocumentMoniker": "Unicom TIC\\Controller\\CourseController.cs",
-              "ToolTip": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Controller\\CourseController.cs",
-              "RelativeToolTip": "Unicom TIC\\Controller\\CourseController.cs",
-              "ViewState": "AQIAAD4AAAAAAAAAAAAwwA8AAAAeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T04:13:15.572Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 53,
-              "Title": "Course.cs",
-              "DocumentMoniker": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Model\\Course.cs",
-              "RelativeDocumentMoniker": "Unicom TIC\\Model\\Course.cs",
-              "ToolTip": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Model\\Course.cs",
-              "RelativeToolTip": "Unicom TIC\\Model\\Course.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-17T03:11:17.187Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 56,
-              "Title": "Admin Course Add and View and Delete.cs",
-              "DocumentMoniker": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\AdminView\\Admin Course Add and View and Delete.cs",
-              "RelativeDocumentMoniker": "Unicom TIC\\Views\\AdminView\\Admin Course Add and View and Delete.cs",
-              "ToolTip": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\AdminView\\Admin Course Add and View and Delete.cs",
-              "RelativeToolTip": "Unicom TIC\\Views\\AdminView\\Admin Course Add and View and Delete.cs",
-              "ViewState": "AQIAACEAAAAAAAAAAAAiwD8AAAAzAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T04:37:30.328Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 57,
-              "Title": "Admin Room Add and View and Delete.Designer.cs",
-              "DocumentMoniker": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\AdminView\\Admin Room Add and View and Delete.Designer.cs",
-              "RelativeDocumentMoniker": "Unicom TIC\\Views\\AdminView\\Admin Room Add and View and Delete.Designer.cs",
-              "ToolTip": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Views\\AdminView\\Admin Room Add and View and Delete.Designer.cs",
-              "RelativeToolTip": "Unicom TIC\\Views\\AdminView\\Admin Room Add and View and Delete.Designer.cs",
-              "ViewState": "AQIAACAAAAAAAAAAAAASwDQAAABtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T09:07:30.129Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 58,
-              "Title": "Room.cs",
-              "DocumentMoniker": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Model\\Room.cs",
-              "RelativeDocumentMoniker": "Unicom TIC\\Model\\Room.cs",
-              "ToolTip": "Z:\\Projects\\Unicom TIC\\Unicom TIC\\Model\\Room.cs",
-              "RelativeToolTip": "Unicom TIC\\Model\\Room.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAGAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T05:45:29.431Z"
+              "WhenOpened": "2025-06-16T08:45:08.717Z"
             }
           ]
         }
