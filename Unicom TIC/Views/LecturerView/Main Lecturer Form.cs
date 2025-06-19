@@ -13,6 +13,7 @@ namespace Unicom_TIC.Views.LecturerView
 {
     public partial class Main_Lecturer_Form : Form
     {
+
         public Main_Lecturer_Form()
         {
             InitializeComponent();
@@ -66,7 +67,9 @@ namespace Unicom_TIC.Views.LecturerView
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Hide();
+            LoginForm loginForm = new LoginForm();  
+            loginForm.ShowDialog();
         }
 
         private void MainLecturerMainPanel_Paint_1(object sender, PaintEventArgs e)

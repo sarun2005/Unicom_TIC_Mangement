@@ -34,7 +34,6 @@
             this.ID = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.LoginRole = new System.Windows.Forms.ComboBox();
             this.LoginID = new System.Windows.Forms.TextBox();
             this.Loginusername = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -43,6 +42,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.Login = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.LoginRole = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -120,16 +120,6 @@
             this.label4.Size = new System.Drawing.Size(69, 17);
             this.label4.TabIndex = 4;
             this.label4.Text = "Username";
-            // 
-            // LoginRole
-            // 
-            this.LoginRole.FormattingEnabled = true;
-            this.LoginRole.Location = new System.Drawing.Point(114, 4);
-            this.LoginRole.Margin = new System.Windows.Forms.Padding(4);
-            this.LoginRole.Name = "LoginRole";
-            this.LoginRole.Size = new System.Drawing.Size(269, 25);
-            this.LoginRole.TabIndex = 6;
-            this.LoginRole.SelectedIndexChanged += new System.EventHandler(this.LoginRole_SelectedIndexChanged);
             // 
             // LoginID
             // 
@@ -233,6 +223,16 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // LoginRole
+            // 
+            this.LoginRole.FormattingEnabled = true;
+            this.LoginRole.Location = new System.Drawing.Point(114, 4);
+            this.LoginRole.Margin = new System.Windows.Forms.Padding(4);
+            this.LoginRole.Name = "LoginRole";
+            this.LoginRole.Size = new System.Drawing.Size(269, 25);
+            this.LoginRole.TabIndex = 6;
+            this.LoginRole.SelectedIndexChanged += new System.EventHandler(this.LoginRole_SelectedIndexChanged);
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -269,7 +269,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox Loginpassword;
-        private System.Windows.Forms.ComboBox LoginRole;
         private System.Windows.Forms.TextBox LoginID;
         private System.Windows.Forms.TextBox Loginusername;
         private System.Windows.Forms.CheckBox checkBoxShowPassword;
@@ -277,5 +276,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button Login;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ComboBox LoginRole;
     }
 }

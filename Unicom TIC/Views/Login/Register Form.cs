@@ -20,10 +20,10 @@ namespace Unicom_TIC.Views.Login
             InitializeComponent();
         }
 
-        
-       
 
-        
+
+
+        // ============================ Go to Login Form ============================
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -31,16 +31,14 @@ namespace Unicom_TIC.Views.Login
             loginForm.ShowDialog(); 
         }
 
-        
-       
 
-       
+
+
+        // ============================ Role Combobox Show ============================
         private void Register_Form_Load(object sender, EventArgs e)
-        {
-           
+        {           
             RegisterRole.DropDownStyle = ComboBoxStyle.DropDownList;
-
-            
+                        
             RegisterRole.Items.Add("Admin");
             RegisterRole.Items.Add("Lecturer");
             RegisterRole.Items.Add("Staff");
@@ -48,13 +46,13 @@ namespace Unicom_TIC.Views.Login
            
         }
 
-        
+
+        // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ CLEAR ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         private void button1_Click(object sender, EventArgs e)
         {
             ClearFields(); 
         }
-
-     
+             
         private void ClearFields()
         {
             Registerusername.Text = "";
@@ -63,8 +61,14 @@ namespace Unicom_TIC.Views.Login
             Registerconformpassword.Text = "";
             RegisterRole.SelectedIndex = -1; 
         }
+        // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-       
+
+
+
+
+
+        // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ REGISTER ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         private void Register_Click(object sender, EventArgs e)
         {
             
@@ -87,7 +91,7 @@ namespace Unicom_TIC.Views.Login
                 return; 
             };
 
-            // ============================ Password Confirmation ============================
+            // ============================ Password Conformation ============================
             if (password != conformPassword)
             {
                 MessageBox.Show("Passwords do not match.", "Password Mismatch", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -95,7 +99,7 @@ namespace Unicom_TIC.Views.Login
             }
 
             // ============================ Password Strength ============================
-            if (password.Length <= 6)
+            if (password.Length < 6)
             {
                 MessageBox.Show("Password must be at least 6 characters long.", "Weak Password", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -150,6 +154,17 @@ namespace Unicom_TIC.Views.Login
                     MessageBox.Show($"{role} ID {enteredId} was not found in the database. Please enter a valid ID.", "Invalid Role ID", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
+
+
+                // ============================ Role ID already used check ============================
+                if (userController.IsRoleIdAlreadyUsed(role, enteredId))
+                {
+                    MessageBox.Show($"This {role} ID is already associated with an existing account.", "Duplicate Role ID", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+
+
             }
             catch (Exception ex)
             {

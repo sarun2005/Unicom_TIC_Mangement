@@ -19,7 +19,7 @@ namespace Unicom_TIC.Repositories
                     CREATE TABLE IF NOT EXISTS Users 
                       ( 
                         UserID INTEGER PRIMARY KEY AUTOINCREMENT,
-                        Username TEXT UNIQUE NOT NULL,
+                        Username TEXT UNIQUE NOT NULL COLLATE BINARY,
                         Password TEXT NOT NULL,
                         Role TEXT NOT NULL,
                         AdminID INTEGER,

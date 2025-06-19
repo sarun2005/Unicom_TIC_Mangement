@@ -33,23 +33,23 @@
             this.label4 = new System.Windows.Forms.Label();
             this.LecturerMale = new System.Windows.Forms.RadioButton();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.LecturerLecturerID = new System.Windows.Forms.TextBox();
+            this.LecturerPhoneNumber = new System.Windows.Forms.TextBox();
+            this.LecturerEmail = new System.Windows.Forms.TextBox();
+            this.LecturerSubject = new System.Windows.Forms.ComboBox();
             this.LecturerDOB = new System.Windows.Forms.DateTimePicker();
+            this.LecturerAddress = new System.Windows.Forms.TextBox();
+            this.LecturerLastName = new System.Windows.Forms.TextBox();
+            this.LecturerFirstName = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.LecturerLastName = new System.Windows.Forms.TextBox();
-            this.LecturerFirstName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.LecturerAddress = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.LecturerSubject = new System.Windows.Forms.ComboBox();
-            this.LecturerEmail = new System.Windows.Forms.TextBox();
-            this.LecturerPhoneNumber = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.LecturerLecturerID = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.s.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -80,6 +80,7 @@
             this.LecturerFemale.TabStop = true;
             this.LecturerFemale.Text = "Female";
             this.LecturerFemale.UseVisualStyleBackColor = true;
+            this.LecturerFemale.CheckedChanged += new System.EventHandler(this.LecturerFemale_CheckedChanged);
             // 
             // label4
             // 
@@ -100,6 +101,7 @@
             this.LecturerMale.TabStop = true;
             this.LecturerMale.Text = "Male";
             this.LecturerMale.UseVisualStyleBackColor = true;
+            this.LecturerMale.CheckedChanged += new System.EventHandler(this.LecturerMale_CheckedChanged);
             // 
             // tableLayoutPanel1
             // 
@@ -136,6 +138,48 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(448, 324);
             this.tableLayoutPanel1.TabIndex = 29;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(3, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(60, 13);
+            this.label10.TabIndex = 32;
+            this.label10.Text = "Lecturer ID";
+            // 
+            // LecturerLecturerID
+            // 
+            this.LecturerLecturerID.Location = new System.Drawing.Point(178, 3);
+            this.LecturerLecturerID.Name = "LecturerLecturerID";
+            this.LecturerLecturerID.Size = new System.Drawing.Size(224, 20);
+            this.LecturerLecturerID.TabIndex = 33;
+            this.LecturerLecturerID.TextChanged += new System.EventHandler(this.LecturerLecturerID_TextChanged);
+            // 
+            // LecturerPhoneNumber
+            // 
+            this.LecturerPhoneNumber.Location = new System.Drawing.Point(178, 283);
+            this.LecturerPhoneNumber.Name = "LecturerPhoneNumber";
+            this.LecturerPhoneNumber.Size = new System.Drawing.Size(224, 20);
+            this.LecturerPhoneNumber.TabIndex = 11;
+            this.LecturerPhoneNumber.TextChanged += new System.EventHandler(this.LecturerPhoneNumber_TextChanged);
+            // 
+            // LecturerEmail
+            // 
+            this.LecturerEmail.Location = new System.Drawing.Point(178, 243);
+            this.LecturerEmail.Name = "LecturerEmail";
+            this.LecturerEmail.Size = new System.Drawing.Size(224, 20);
+            this.LecturerEmail.TabIndex = 18;
+            this.LecturerEmail.TextChanged += new System.EventHandler(this.LecturerEmail_TextChanged);
+            // 
+            // LecturerSubject
+            // 
+            this.LecturerSubject.FormattingEnabled = true;
+            this.LecturerSubject.Location = new System.Drawing.Point(178, 203);
+            this.LecturerSubject.Name = "LecturerSubject";
+            this.LecturerSubject.Size = new System.Drawing.Size(224, 21);
+            this.LecturerSubject.TabIndex = 2;
+            this.LecturerSubject.SelectedIndexChanged += new System.EventHandler(this.LecturerSubject_SelectedIndexChanged);
+            // 
             // LecturerDOB
             // 
             this.LecturerDOB.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -143,6 +187,58 @@
             this.LecturerDOB.Name = "LecturerDOB";
             this.LecturerDOB.Size = new System.Drawing.Size(224, 20);
             this.LecturerDOB.TabIndex = 15;
+            this.LecturerDOB.ValueChanged += new System.EventHandler(this.LecturerDOB_ValueChanged);
+            // 
+            // LecturerAddress
+            // 
+            this.LecturerAddress.Location = new System.Drawing.Point(178, 123);
+            this.LecturerAddress.Name = "LecturerAddress";
+            this.LecturerAddress.Size = new System.Drawing.Size(224, 20);
+            this.LecturerAddress.TabIndex = 10;
+            this.LecturerAddress.TextChanged += new System.EventHandler(this.LecturerAddress_TextChanged);
+            // 
+            // LecturerLastName
+            // 
+            this.LecturerLastName.Location = new System.Drawing.Point(178, 83);
+            this.LecturerLastName.Name = "LecturerLastName";
+            this.LecturerLastName.Size = new System.Drawing.Size(224, 20);
+            this.LecturerLastName.TabIndex = 9;
+            this.LecturerLastName.TextChanged += new System.EventHandler(this.AdminLecturerAddLastName_TextChanged);
+            // 
+            // LecturerFirstName
+            // 
+            this.LecturerFirstName.Location = new System.Drawing.Point(178, 43);
+            this.LecturerFirstName.Name = "LecturerFirstName";
+            this.LecturerFirstName.Size = new System.Drawing.Size(224, 20);
+            this.LecturerFirstName.TabIndex = 3;
+            this.LecturerFirstName.TextChanged += new System.EventHandler(this.LecturerFirstName_TextChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(3, 280);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(78, 13);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "Phone Number";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(3, 240);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(32, 13);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "Email";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(3, 200);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(43, 13);
+            this.label8.TabIndex = 20;
+            this.label8.Text = "Subject";
             // 
             // label9
             // 
@@ -171,22 +267,6 @@
             this.label3.TabIndex = 13;
             this.label3.Text = "Last Name";
             // 
-            // LecturerLastName
-            // 
-            this.LecturerLastName.Location = new System.Drawing.Point(178, 83);
-            this.LecturerLastName.Name = "LecturerLastName";
-            this.LecturerLastName.Size = new System.Drawing.Size(224, 20);
-            this.LecturerLastName.TabIndex = 9;
-            this.LecturerLastName.TextChanged += new System.EventHandler(this.AdminLecturerAddLastName_TextChanged);
-            // 
-            // LecturerFirstName
-            // 
-            this.LecturerFirstName.Location = new System.Drawing.Point(178, 43);
-            this.LecturerFirstName.Name = "LecturerFirstName";
-            this.LecturerFirstName.Size = new System.Drawing.Size(224, 20);
-            this.LecturerFirstName.TabIndex = 3;
-            this.LecturerFirstName.TextChanged += new System.EventHandler(this.LecturerFirstName_TextChanged);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -195,62 +275,6 @@
             this.label2.Size = new System.Drawing.Size(57, 13);
             this.label2.TabIndex = 12;
             this.label2.Text = "First Name";
-            // 
-            // LecturerAddress
-            // 
-            this.LecturerAddress.Location = new System.Drawing.Point(178, 123);
-            this.LecturerAddress.Name = "LecturerAddress";
-            this.LecturerAddress.Size = new System.Drawing.Size(224, 20);
-            this.LecturerAddress.TabIndex = 10;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(3, 200);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(43, 13);
-            this.label8.TabIndex = 20;
-            this.label8.Text = "Subject";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(3, 240);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(32, 13);
-            this.label6.TabIndex = 16;
-            this.label6.Text = "Email";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 280);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(78, 13);
-            this.label5.TabIndex = 15;
-            this.label5.Text = "Phone Number";
-            // 
-            // LecturerSubject
-            // 
-            this.LecturerSubject.FormattingEnabled = true;
-            this.LecturerSubject.Location = new System.Drawing.Point(178, 203);
-            this.LecturerSubject.Name = "LecturerSubject";
-            this.LecturerSubject.Size = new System.Drawing.Size(224, 21);
-            this.LecturerSubject.TabIndex = 2;
-            // 
-            // LecturerEmail
-            // 
-            this.LecturerEmail.Location = new System.Drawing.Point(178, 243);
-            this.LecturerEmail.Name = "LecturerEmail";
-            this.LecturerEmail.Size = new System.Drawing.Size(224, 20);
-            this.LecturerEmail.TabIndex = 18;
-            // 
-            // LecturerPhoneNumber
-            // 
-            this.LecturerPhoneNumber.Location = new System.Drawing.Point(178, 283);
-            this.LecturerPhoneNumber.Name = "LecturerPhoneNumber";
-            this.LecturerPhoneNumber.Size = new System.Drawing.Size(224, 20);
-            this.LecturerPhoneNumber.TabIndex = 11;
             // 
             // label1
             // 
@@ -262,22 +286,6 @@
             this.label1.TabIndex = 27;
             this.label1.Text = "Your Details";
             // 
-            // LecturerLecturerID
-            // 
-            this.LecturerLecturerID.Location = new System.Drawing.Point(178, 3);
-            this.LecturerLecturerID.Name = "LecturerLecturerID";
-            this.LecturerLecturerID.Size = new System.Drawing.Size(224, 20);
-            this.LecturerLecturerID.TabIndex = 33;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(3, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(60, 13);
-            this.label10.TabIndex = 32;
-            this.label10.Text = "Lecturer ID";
-            // 
             // Lecturer_Details
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -287,6 +295,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Lecturer_Details";
             this.Size = new System.Drawing.Size(698, 669);
+            this.Load += new System.EventHandler(this.Lecturer_Details_Load);
             this.s.ResumeLayout(false);
             this.s.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);

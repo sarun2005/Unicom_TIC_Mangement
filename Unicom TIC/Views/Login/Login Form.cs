@@ -8,7 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Unicom_TIC.Controller;
+using Unicom_TIC.Views.AdminView;
+using Unicom_TIC.Views.LecturerView;
 using Unicom_TIC.Views.Login;
+using Unicom_TIC.Views.StaffView;
+using Unicom_TIC.Views.StudentView;
+
 
 namespace Unicom_TIC.Views
 {
@@ -19,6 +24,8 @@ namespace Unicom_TIC.Views
             InitializeComponent();
         }
 
+
+        // ============================ Go to Register Form ============================
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -27,11 +34,11 @@ namespace Unicom_TIC.Views
 
         }
 
+
         private void LoginForm_Load(object sender, EventArgs e)
         {
             LoginRole.DropDownStyle = ComboBoxStyle.DropDownList;
-
-           
+                       
             LoginRole.Items.Add("Admin");
             LoginRole.Items.Add("Lecturer");
             LoginRole.Items.Add("Staff");
@@ -72,37 +79,56 @@ namespace Unicom_TIC.Views
 
             if (!int.TryParse(idText, out int enteredId))
             {
-                MessageBox.Show("ID must be a numeric value.",
-                                "Invalid ID",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Warning);
+                MessageBox.Show("ID must be a numeric value.", "Invalid ID",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                 return;
             }
 
+
             // --------------- 2. AuthenticateUser call ---------------
-            bool isValid = UserController.AuthenticateUser(username,
-                                                           password,
-                                                           role,
-                                                           enteredId);
+            bool isValid = UserController.AuthenticateUser(username,password,role,enteredId);
+
+
 
             if (isValid)
             {
-                MessageBox.Show("Login successful!",
-                                "Success",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Information);
+               
+                Form nextForm = null;
 
-                // TODO: Navigate to your dashboard here
-                // this.Hide();  new Dashboard().ShowDialog();
+                switch (role)                
+                {
+                    case "Admin":
+                        nextForm = new Main_Admin();
+                        break;
+                    case "Lecturer":
+                        nextForm = new Main_Lecturer_Form();
+                        break;
+                    case "Staff":
+                        nextForm = new Main_Staff_Form();
+                        break;
+                    case "Student":
+                        nextForm = new Main_Student_Form();
+                        break;
+                }
+
+                
+
+                MessageBox.Show("Login successful!","Success",MessageBoxButtons.OK,MessageBoxIcon.Information);
+
+                this.Hide();            
+                nextForm.ShowDialog(); 
+
+                
+                this.Show();
+                ClearFields();         
             }
             else
             {
-                MessageBox.Show("Incorrect credentials. Please try again.",
-                                "Login Failed",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Error);
+                MessageBox.Show("Incorrect credentials. Please try again.","Login Failed",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
+
         }
+
+
 
         private void Loginpassword_TextChanged(object sender, EventArgs e)
         {

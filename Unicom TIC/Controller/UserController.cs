@@ -11,14 +11,14 @@ namespace Unicom_TIC.Controller
 {
     internal class UserController
     {
-
+        // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ Register +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
         // ===================================== USERNAME CHECK BY DATABASE =====================================
         public static bool UsernameExists(string username)
         {
             using (var connection = DataBaseConnection.GetConnection())
             {
-                const string sql = "SELECT 1 FROM Users WHERE LOWER(Username) = LOWER(@u) LIMIT 1;";
+                const string sql = "SELECT 1 FROM Users WHERE Username = @u LIMIT 1;";
                 SQLiteCommand cmd = new SQLiteCommand(sql, connection);
                 cmd.Parameters.AddWithValue("@u", username.Trim());
                 return cmd.ExecuteScalar() != null;
@@ -28,7 +28,8 @@ namespace Unicom_TIC.Controller
 
 
 
-        // =====================================  Role‑specific ID existence checks =====================================
+
+        // =====================================  Role‑specific ID existence checks in Database =====================================
         public bool CheckAdminIDExists(int id)
         {
             return CheckIdExists("Admins", "AdminID", id);
@@ -68,30 +69,83 @@ namespace Unicom_TIC.Controller
             if (UsernameExists(user.Username))
                 throw new Exception("Username already exists.");
 
+            // ===================================== Role ID already used check =====================================
+            if (user.Role == "Admin" && user.AdminID.HasValue && IsRoleIdAlreadyUsed("Admin", user.AdminID.Value))
+                throw new Exception("This Admin ID is already linked to another user.");
+            if (user.Role == "Lecturer" && user.LecturerID.HasValue && IsRoleIdAlreadyUsed("Lecturer", user.LecturerID.Value))
+                throw new Exception("This Lecturer ID is already linked to another user.");
+            if (user.Role == "Staff" && user.StaffID.HasValue && IsRoleIdAlreadyUsed("Staff", user.StaffID.Value))
+                throw new Exception("This Staff ID is already linked to another user.");
+            if (user.Role == "Student" && user.StudentID.HasValue && IsRoleIdAlreadyUsed("Student", user.StudentID.Value))
+                throw new Exception("This Student ID is already linked to another user.");
+
+
 
             using (var connection = DataBaseConnection.GetConnection())
             {
-               string addUserQuery = "INSERT INTO Users ( Username , Password , Role , AdminID , StaffID , LecturerID , StudentID) " +
-                                     "VALUES ( @Username , @Password , @Role , @AdminID , @StaffID , @LecturerID , @StudentID)";
+                string addUserQuery = "INSERT INTO Users (Username, Password, Role, AdminID, StaffID, LecturerID, StudentID) " +
+                                      "VALUES (@Username, @Password, @Role, @AdminID, @StaffID, @LecturerID, @StudentID)";
 
                 SQLiteCommand insertUserCommand = new SQLiteCommand(addUserQuery, connection);
                 insertUserCommand.Parameters.AddWithValue("@Username", user.Username.Trim());
-                insertUserCommand.Parameters.AddWithValue("@Password", user.Password); 
+                insertUserCommand.Parameters.AddWithValue("@Password", user.Password);
                 insertUserCommand.Parameters.AddWithValue("@Role", user.Role);
                 insertUserCommand.Parameters.AddWithValue("@AdminID", ToDb(user.AdminID));
                 insertUserCommand.Parameters.AddWithValue("@StaffID", ToDb(user.StaffID));
                 insertUserCommand.Parameters.AddWithValue("@LecturerID", ToDb(user.LecturerID));
                 insertUserCommand.Parameters.AddWithValue("@StudentID", ToDb(user.StudentID));
-                insertUserCommand.ExecuteNonQuery(); 
+                insertUserCommand.ExecuteNonQuery();
             }
         }
 
 
-
-        // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ LOGIN ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-        public static bool AuthenticateUser(string username,string password,string role,int roleId)
+        private object ToDb(int? value)
         {
-            
+            return value.HasValue ? (object)value.Value : DBNull.Value;
+        }
+
+
+        public bool IsRoleIdAlreadyUsed(string role, int roleId)
+        {
+            using (var connection = DataBaseConnection.GetConnection())
+            {
+                string columnName;
+
+                switch (role)
+                {
+                    case "Admin":
+                        columnName = "AdminID";
+                        break;
+                    case "Lecturer":
+                        columnName = "LecturerID";
+                        break;
+                    case "Staff":
+                        columnName = "StaffID";
+                        break;
+                    case "Student":
+                        columnName = "StudentID";
+                        break;
+                    default:
+                        throw new ArgumentException("Invalid role", nameof(role));
+                }
+
+                string sql = $"SELECT 1 FROM Users WHERE {columnName} = @roleId LIMIT 1;";
+                using (var cmd = new SQLiteCommand(sql, connection))
+                {
+                    cmd.Parameters.AddWithValue("@roleId", roleId);
+                    return cmd.ExecuteScalar() != null;
+                }
+            }
+        }
+        // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+
+
+        // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ LOGIN ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        public static bool AuthenticateUser(string username,string password,string role,int roleId)
+        {            
             string idColumn;
             switch (role)
             {
@@ -114,7 +168,7 @@ namespace Unicom_TIC.Controller
             using (var connection = DataBaseConnection.GetConnection())
             {
                 string sql = $@"
-                SELECT 1 FROM Users WHERE  LOWER(Username) = LOWER(@u) AND  Password = @p AND  Role = @r AND {idColumn}  = @id LIMIT 1;";
+                SELECT 1 FROM Users WHERE Username = @u AND  Password = @p AND  Role = @r AND {idColumn}  = @id LIMIT 1;";
 
                 SQLiteCommand cmd = new SQLiteCommand(sql, connection);
                 cmd.Parameters.AddWithValue("@u", username.Trim());
@@ -126,12 +180,9 @@ namespace Unicom_TIC.Controller
             }
         }
 
-        
+        // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-        private object ToDb(int? value)
-        {
-            return value.HasValue ? (object)value.Value : DBNull.Value;
-        }
+       
     }
 }
 

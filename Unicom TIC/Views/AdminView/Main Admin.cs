@@ -303,7 +303,9 @@ namespace Unicom_TIC.Views.AdminView
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Hide();
+            LoginForm loginForm = new LoginForm();
+            loginForm.ShowDialog();
         }
     }
 }

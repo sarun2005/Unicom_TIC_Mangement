@@ -116,14 +116,21 @@ namespace Unicom_TIC.Views.AdminView
         // Load subjects to ComboBox
         private void Admin_Lecturer_Add_Load(object sender, EventArgs e)
         {
+            LoadSubjectsIntoComboBox();
+        }
+
+        private void LoadSubjectsIntoComboBox()
+        {
             AdminLecturerAddSubject.DropDownStyle = ComboBoxStyle.DropDownList;
 
-            AdminLecturerAddSubject.Items.Add("Python");
-            AdminLecturerAddSubject.Items.Add("C#");
-            AdminLecturerAddSubject.Items.Add("Java");
-            AdminLecturerAddSubject.Items.Add("HTML");
-            AdminLecturerAddSubject.Items.Add("PHP");
+            SubjectController subjectController = new SubjectController();
+            List<Subject> subjects = subjectController.ViewAllSubjectsWithCourse();
+            AdminLecturerAddSubject.DisplayMember = "SubjectName";
+            AdminLecturerAddSubject.ValueMember = "SubjectId";
+            AdminLecturerAddSubject.DataSource = subjects;
+            AdminLecturerAddSubject.SelectedIndex = -1;
         }
+
 
         private void AdminLecturerAddClear_Click(object sender, EventArgs e)
         {
