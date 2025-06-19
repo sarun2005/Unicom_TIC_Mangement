@@ -165,6 +165,40 @@ namespace Unicom_TIC.Controller
             return staffs;
         }
 
-        
+
+        // ===================================== VIEW (ONE) =====================================
+        public Staff GetStaffById(int id)
+        {
+            using (var connection = DataBaseConnection.GetConnection())
+            {
+                const string sql = "SELECT * FROM Staffs WHERE StaffID = @id LIMIT 1;";
+                using (var cmd = new SQLiteCommand(sql, connection))
+                {
+                    cmd.Parameters.AddWithValue("id", id);
+
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            return new Staff
+                            {
+                                StaffID = Convert.ToInt32(reader["StaffID"]),
+                                FirstName = reader["FirstName"].ToString(),
+                                LastName = reader["LastName"].ToString(),
+                                Address = reader["Address"].ToString(),
+                                DOB = reader["DOB"].ToString(),
+                                Gender = reader["Gender"].ToString(),
+                                Role = reader["Role"].ToString(),
+                                Email = reader["Email"].ToString(),
+                                PhoneNumber = reader["PhoneNumber"].ToString()
+                            };
+                        }
+                    }
+                }
+            }
+            return null;
+        }
+
+
     }
 }

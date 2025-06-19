@@ -35,20 +35,20 @@
             this.label4 = new System.Windows.Forms.Label();
             this.StudentMale = new System.Windows.Forms.RadioButton();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.StudentCourse = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.StudentPhoneNumber = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.StudentEmail = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.StudentDOB = new System.Windows.Forms.DateTimePicker();
+            this.StudentAddress = new System.Windows.Forms.TextBox();
+            this.StudentLastName = new System.Windows.Forms.TextBox();
+            this.StudentFirstName = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.StudentLastName = new System.Windows.Forms.TextBox();
-            this.StudentPhoneNumber = new System.Windows.Forms.TextBox();
-            this.StudentFirstName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.StudentAddress = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.StudentEmail = new System.Windows.Forms.TextBox();
-            this.StudentCourse = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.s.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -152,6 +152,14 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(448, 325);
             this.tableLayoutPanel1.TabIndex = 37;
             // 
+            // StudentCourse
+            // 
+            this.StudentCourse.FormattingEnabled = true;
+            this.StudentCourse.Location = new System.Drawing.Point(178, 283);
+            this.StudentCourse.Name = "StudentCourse";
+            this.StudentCourse.Size = new System.Drawing.Size(225, 21);
+            this.StudentCourse.TabIndex = 23;
+            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -161,6 +169,38 @@
             this.label10.TabIndex = 22;
             this.label10.Text = "Course";
             // 
+            // StudentPhoneNumber
+            // 
+            this.StudentPhoneNumber.Location = new System.Drawing.Point(178, 243);
+            this.StudentPhoneNumber.Name = "StudentPhoneNumber";
+            this.StudentPhoneNumber.Size = new System.Drawing.Size(224, 20);
+            this.StudentPhoneNumber.TabIndex = 11;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(3, 240);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(78, 13);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "Phone Number";
+            // 
+            // StudentEmail
+            // 
+            this.StudentEmail.Location = new System.Drawing.Point(178, 203);
+            this.StudentEmail.Name = "StudentEmail";
+            this.StudentEmail.Size = new System.Drawing.Size(224, 20);
+            this.StudentEmail.TabIndex = 18;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(3, 200);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(32, 13);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "Email";
+            // 
             // StudentDOB
             // 
             this.StudentDOB.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -168,6 +208,27 @@
             this.StudentDOB.Name = "StudentDOB";
             this.StudentDOB.Size = new System.Drawing.Size(224, 20);
             this.StudentDOB.TabIndex = 15;
+            // 
+            // StudentAddress
+            // 
+            this.StudentAddress.Location = new System.Drawing.Point(178, 123);
+            this.StudentAddress.Name = "StudentAddress";
+            this.StudentAddress.Size = new System.Drawing.Size(224, 20);
+            this.StudentAddress.TabIndex = 10;
+            // 
+            // StudentLastName
+            // 
+            this.StudentLastName.Location = new System.Drawing.Point(178, 83);
+            this.StudentLastName.Name = "StudentLastName";
+            this.StudentLastName.Size = new System.Drawing.Size(224, 20);
+            this.StudentLastName.TabIndex = 9;
+            // 
+            // StudentFirstName
+            // 
+            this.StudentFirstName.Location = new System.Drawing.Point(178, 43);
+            this.StudentFirstName.Name = "StudentFirstName";
+            this.StudentFirstName.Size = new System.Drawing.Size(224, 20);
+            this.StudentFirstName.TabIndex = 3;
             // 
             // label9
             // 
@@ -196,27 +257,6 @@
             this.label3.TabIndex = 13;
             this.label3.Text = "Last Name";
             // 
-            // StudentLastName
-            // 
-            this.StudentLastName.Location = new System.Drawing.Point(178, 83);
-            this.StudentLastName.Name = "StudentLastName";
-            this.StudentLastName.Size = new System.Drawing.Size(224, 20);
-            this.StudentLastName.TabIndex = 9;
-            // 
-            // StudentPhoneNumber
-            // 
-            this.StudentPhoneNumber.Location = new System.Drawing.Point(178, 243);
-            this.StudentPhoneNumber.Name = "StudentPhoneNumber";
-            this.StudentPhoneNumber.Size = new System.Drawing.Size(224, 20);
-            this.StudentPhoneNumber.TabIndex = 11;
-            // 
-            // StudentFirstName
-            // 
-            this.StudentFirstName.Location = new System.Drawing.Point(178, 43);
-            this.StudentFirstName.Name = "StudentFirstName";
-            this.StudentFirstName.Size = new System.Drawing.Size(224, 20);
-            this.StudentFirstName.TabIndex = 3;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -225,46 +265,6 @@
             this.label2.Size = new System.Drawing.Size(57, 13);
             this.label2.TabIndex = 12;
             this.label2.Text = "First Name";
-            // 
-            // StudentAddress
-            // 
-            this.StudentAddress.Location = new System.Drawing.Point(178, 123);
-            this.StudentAddress.Name = "StudentAddress";
-            this.StudentAddress.Size = new System.Drawing.Size(224, 20);
-            this.StudentAddress.TabIndex = 10;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(3, 200);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(32, 13);
-            this.label6.TabIndex = 16;
-            this.label6.Text = "Email";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 240);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(78, 13);
-            this.label5.TabIndex = 15;
-            this.label5.Text = "Phone Number";
-            // 
-            // StudentEmail
-            // 
-            this.StudentEmail.Location = new System.Drawing.Point(178, 203);
-            this.StudentEmail.Name = "StudentEmail";
-            this.StudentEmail.Size = new System.Drawing.Size(224, 20);
-            this.StudentEmail.TabIndex = 18;
-            // 
-            // StudentCourse
-            // 
-            this.StudentCourse.FormattingEnabled = true;
-            this.StudentCourse.Location = new System.Drawing.Point(178, 283);
-            this.StudentCourse.Name = "StudentCourse";
-            this.StudentCourse.Size = new System.Drawing.Size(225, 21);
-            this.StudentCourse.TabIndex = 23;
             // 
             // label1
             // 
@@ -285,6 +285,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Student_Details";
             this.Size = new System.Drawing.Size(763, 661);
+            this.Load += new System.EventHandler(this.Student_Details_Load);
             this.s.ResumeLayout(false);
             this.s.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);

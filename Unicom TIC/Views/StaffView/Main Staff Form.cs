@@ -15,7 +15,7 @@ namespace Unicom_TIC.Views.StaffView
     {
         private int staffId;
 
-        public Main_Staff_Form(int id)
+        public Main_Staff_Form(int id = 0)
         {
             InitializeComponent();
             staffId = id;
@@ -35,9 +35,8 @@ namespace Unicom_TIC.Views.StaffView
 
             // Marks Management
             TreeNode MarksNode = StaffTreeView.Nodes.Add("Marks Management");
-            MarksNode.Nodes.Add("Add Marks");
-            MarksNode.Nodes.Add("View/Delete Marks");
-            MarksNode.Nodes.Add("Update Marks");
+            MarksNode.Nodes.Add("Add/View/Delete Marks");
+            
 
 
             // Timetable Management
@@ -58,6 +57,24 @@ namespace Unicom_TIC.Views.StaffView
                 Staff_Details viewStaffAction = new Staff_Details(staffId);
                 viewStaffAction.Dock = DockStyle.Fill;
                 MainStaffMainPanel.Controls.Add(viewStaffAction);
+            }
+
+
+            // ============================ TIMETABLE ============================
+            else if (selected == "View Timetable")
+            {
+                Staff_Timetable TimetableAction = new Staff_Timetable();
+                TimetableAction.Dock = DockStyle.Fill;
+                MainStaffMainPanel.Controls.Add(TimetableAction);
+            }
+
+
+            // ============================ Marks ============================
+            else if (selected == "Add/View/Delete Marks")
+            {
+                Staff_Marks TimetableAction = new Staff_Marks();
+                TimetableAction.Dock = DockStyle.Fill;
+                MainStaffMainPanel.Controls.Add(TimetableAction);
             }
         }
 

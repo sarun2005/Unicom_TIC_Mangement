@@ -16,6 +16,10 @@ namespace Unicom_TIC.Model
 
         public int RoomID { get; set; }
 
-        public int LecturerID { get; set; } 
+        public int LecturerID { get; set; }
+        public string GroupName { get; internal set; }
+        public string SubjectName { get; internal set; }
+        public string LecturerName { get; internal set; }
+        public string RoomName { get; internal set; }
     }
 }

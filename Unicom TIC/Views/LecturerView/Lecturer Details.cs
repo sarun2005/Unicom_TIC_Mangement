@@ -31,17 +31,61 @@ namespace Unicom_TIC.Views.LecturerView
 
         }
 
+
+        // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ View Lecturer Details ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         private void Lecturer_Details_Load(object sender, EventArgs e)
         {
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             LoadLecturerDetails();
         }
 
         private void LoadLecturerDetails()
         {
             var controller = new LecturerController();
-            var lec = controller.GetLecturerById(lecturerId);
+            var lecturer = controller.GetLecturerById(lecturerId);
 
-            // ======================= only view not show =======================
+            // ======================= only view not change =======================
             LecturerMale.Enabled = false;
             LecturerFemale.Enabled = false;
             LecturerLecturerID.Enabled = false;
@@ -54,33 +98,34 @@ namespace Unicom_TIC.Views.LecturerView
             LecturerPhoneNumber.Enabled = false;
 
 
-            if (lec.Gender == "Male")
+            // ================= Gender Check =======================
+            if (lecturer.Gender == "Male")
             {
                 LecturerMale.Checked = true;
             }
-            else if (lec.Gender == "Female")
+            else if (lecturer.Gender == "Female")
             {
                 LecturerFemale.Checked = true;
             }
 
-            if (lec != null)
+            if (lecturer != null)
             {
 
-                LecturerLecturerID.Text = lec.LecturerID.ToString();
-                LecturerFirstName.Text = lec.FirstName;
-                LecturerLastName.Text = lec.LastName;
-                LecturerAddress.Text = lec.Address;
-                LecturerDOB.Text = lec.DOB;
-                LecturerSubject.Text = lec.Subject;
-                LecturerEmail.Text = lec.Email;
-                LecturerPhoneNumber.Text = lec.PhoneNumber;
+                LecturerLecturerID.Text = lecturer.LecturerID.ToString();
+                LecturerFirstName.Text = lecturer.FirstName;
+                LecturerLastName.Text = lecturer.LastName;
+                LecturerAddress.Text = lecturer.Address;
+                LecturerDOB.Text = lecturer.DOB;
+                LecturerSubject.Text = lecturer.Subject;
+                LecturerEmail.Text = lecturer.Email;
+                LecturerPhoneNumber.Text = lecturer.PhoneNumber;
             }
             else
             {
                 MessageBox.Show("Lecturer details not found.", "Error",MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
+        // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         private void LecturerLecturerID_TextChanged(object sender, EventArgs e)
         {
 

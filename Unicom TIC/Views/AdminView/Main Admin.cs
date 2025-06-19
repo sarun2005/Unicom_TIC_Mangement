@@ -14,13 +14,13 @@ namespace Unicom_TIC.Views.AdminView
     {
         private int adminId;
 
-        public Main_Admin(int id)
+        public Main_Admin(int id = 0)
         {
             InitializeComponent();
             adminId = id;
         }
 
-
+      
 
         private void Main_Admin_Load(object sender, EventArgs e)
         {
@@ -75,10 +75,8 @@ namespace Unicom_TIC.Views.AdminView
 
             // Marks Management
             TreeNode MarksNode = TreeMainAdmin.Nodes.Add("Marks Management");
-            MarksNode.Nodes.Add("Add Marks");
-            MarksNode.Nodes.Add("View/Delete Marks");
-            MarksNode.Nodes.Add("Update Marks");
-
+            MarksNode.Nodes.Add("Add/View/Delete Timetable");
+            
 
             // Timetable Management
             TreeNode TimetableNode = TreeMainAdmin.Nodes.Add("Timetable Management");
@@ -273,6 +271,15 @@ namespace Unicom_TIC.Views.AdminView
             else if (selected == "Add/View/Delete Timetable")
             {
                 Timetable TimetableAction = new Timetable();
+                TimetableAction.Dock = DockStyle.Fill;
+                MainAdminMainPanel.Controls.Add(TimetableAction);
+            }
+
+
+            // ============================ Marks ============================
+            else if (selected == "Add/View/Delete Marks")
+            {
+                Marks_Add_and_Delete_and_Update TimetableAction = new Marks_Add_and_Delete_and_Update();
                 TimetableAction.Dock = DockStyle.Fill;
                 MainAdminMainPanel.Controls.Add(TimetableAction);
             }

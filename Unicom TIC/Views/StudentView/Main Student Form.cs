@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Unicom_TIC.Views.LecturerView;
+using Unicom_TIC.Views.StaffView;
 
 namespace Unicom_TIC.Views.StudentView
 {
@@ -15,7 +16,7 @@ namespace Unicom_TIC.Views.StudentView
     {
         private int studentId;
 
-        public Main_Student_Form(int id)
+        public Main_Student_Form(int id = 0)
         {
             InitializeComponent();
             studentId = id;
@@ -55,6 +56,8 @@ namespace Unicom_TIC.Views.StudentView
             TimetableNode.Nodes.Add("View Timetable");
         }
 
+
+
         private void StudentTreeView_AfterSelect(object sender, TreeViewEventArgs e)
         {
             string selected = e.Node.Text;
@@ -65,9 +68,26 @@ namespace Unicom_TIC.Views.StudentView
             // View Details
             if (selected == "View Details")
             {
-                Student_Details viewStudentAction = new Student_Details();
+                Student_Details viewStudentAction = new Student_Details(studentId);
                 viewStudentAction.Dock = DockStyle.Fill;
                 MainStudentMainPanel.Controls.Add(viewStudentAction);
+            }
+
+            // ============================ TIMETABLE ============================
+            else if (selected == "View Timetable")
+            {
+                Student_Timetable TimetableAction = new Student_Timetable();
+                TimetableAction.Dock = DockStyle.Fill;
+                MainStudentMainPanel.Controls.Add(TimetableAction);
+            }
+
+
+            // ============================ Marks ============================
+            else if (selected == "View Marks")
+            {
+                Student_Timetable TimetableAction = new Student_Timetable();
+                TimetableAction.Dock = DockStyle.Fill;
+                MainStudentMainPanel.Controls.Add(TimetableAction);
             }
         }
 

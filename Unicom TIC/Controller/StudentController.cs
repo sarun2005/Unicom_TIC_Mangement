@@ -76,5 +76,45 @@ namespace Unicom_TIC.Controller
             }
             return list;
         }
+
+
+        // ===================================== VIEW (ONE) =====================================
+        public Student GetStudentById(int id)
+        {
+            using (var connection = DataBaseConnection.GetConnection())
+            {
+                const string sql = @"SELECT  s.StudentID, s.FirstName, s.LastName, s.Address,s.DOB, s.Gender, s.Email, s.PhoneNumber,s.CourseID, c.CourseName
+                                     FROM  Students s
+                                     LEFT JOIN Courses c ON s.CourseID = c.CourseID
+                                     WHERE   s.StudentID = @id    LIMIT 1;";
+                
+
+                using (var cmd = new SQLiteCommand(sql, connection))
+                {
+                    cmd.Parameters.AddWithValue("@id", id);
+
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            return new Student
+                            {
+                                StudentID = Convert.ToInt32(reader["StudentID"]),
+                                FirstName = reader["FirstName"].ToString(),
+                                LastName = reader["LastName"].ToString(),
+                                Address = reader["Address"].ToString(),
+                                DOB = reader["DOB"].ToString(),
+                                Gender = reader["Gender"].ToString(),
+                                CourseID = Convert.ToInt32(reader["CourseID"]),
+                                CourseName = reader["CourseName"] == DBNull.Value ? null : reader["CourseName"].ToString(),
+                                Email = reader["Email"].ToString(),
+                                PhoneNumber = reader["PhoneNumber"].ToString()
+                            };
+                        }
+                    }
+                }
+            }
+            return null;
+        }
     }
 }

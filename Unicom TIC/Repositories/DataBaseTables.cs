@@ -181,6 +181,7 @@ namespace Unicom_TIC.Repositories
                          LecturerID INTEGER,
                          TimeSlot TEXT NOT NULL,
                          RoomID INTEGER,
+                         GroupName TEXT,
                          FOREIGN KEY(SubjectID) REFERENCES Subjects(SubjectID),
                          FOREIGN KEY(RoomID) REFERENCES Rooms(RoomID),  
                          FOREIGN KEY(LecturerID) REFERENCES Lecturers(LecturerID)  

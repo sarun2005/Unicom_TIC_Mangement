@@ -36,3 +36,9 @@ Z:\Projects\New folder\Unicom TIC\obj\Debug\Unicom TIC.csproj.Up2Date
 Z:\Projects\New folder\Unicom TIC\obj\Debug\Unicom TIC.exe
 Z:\Projects\New folder\Unicom TIC\obj\Debug\Unicom TIC.pdb
 Z:\Projects\New folder\Unicom TIC\obj\Debug\Unicom_TIC.Views.AdminView.Marks_Add_and_Delete_and_Update.resources
+Z:\Projects\New folder\Unicom TIC\obj\Debug\Unicom_TIC.Views.LecturerView.Lecturer_Marks.resources
+Z:\Projects\New folder\Unicom TIC\obj\Debug\Unicom_TIC.Views.LecturerView.Lecturer_Timetable.resources
+Z:\Projects\New folder\Unicom TIC\obj\Debug\Unicom_TIC.Views.StaffView.Staff_Timetable.resources
+Z:\Projects\New folder\Unicom TIC\obj\Debug\Unicom_TIC.Views.StudentView.Marks.resources
+Z:\Projects\New folder\Unicom TIC\obj\Debug\Unicom_TIC.Views.StudentView.Student_Timetable.resources
+Z:\Projects\New folder\Unicom TIC\obj\Debug\Unicom_TIC.Views.StaffView.Staff_Marks.resources

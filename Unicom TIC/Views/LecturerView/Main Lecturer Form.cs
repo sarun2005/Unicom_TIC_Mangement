@@ -15,7 +15,7 @@ namespace Unicom_TIC.Views.LecturerView
     {
         private int lecturerId;
 
-        public Main_Lecturer_Form(int id)
+        public Main_Lecturer_Form(int id = 0)
         {
             InitializeComponent();
             lecturerId = id;
@@ -39,9 +39,8 @@ namespace Unicom_TIC.Views.LecturerView
 
             // Marks Management
             TreeNode MarksNode = LecturerTreeView.Nodes.Add("Marks Management");
-            MarksNode.Nodes.Add("Add Marks");
-            MarksNode.Nodes.Add("View/Delete Marks");
-            MarksNode.Nodes.Add("Update Marks");
+            MarksNode.Nodes.Add("Add/View/Delete Marks");
+            
 
 
             // Timetable Management
@@ -59,14 +58,37 @@ namespace Unicom_TIC.Views.LecturerView
 
 
 
-            // View Details
+            // ============================ View Details ============================
             if (selected == "View Details")
             {
                 Lecturer_Details viewLecturerAction = new Lecturer_Details(lecturerId);
                 viewLecturerAction.Dock = DockStyle.Fill;
                 MainLecturerMainPanel.Controls.Add(viewLecturerAction);
             }
+
+
+            // ============================ TIMETABLE ============================
+            else if (selected == "View Timetable")
+            {
+                Lecturer_Timetable TimetableAction = new Lecturer_Timetable();
+                TimetableAction.Dock = DockStyle.Fill;
+                MainLecturerMainPanel.Controls.Add(TimetableAction);
+            }
+
+
+            // ============================ Marks ============================
+            else if (selected == "Add/View/Delete Marks")
+            {
+                Lecturer_Marks TimetableAction = new Lecturer_Marks();
+                TimetableAction.Dock = DockStyle.Fill;
+                MainLecturerMainPanel.Controls.Add(TimetableAction);
+            }
         }
+
+
+
+
+
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();

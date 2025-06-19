@@ -35,20 +35,20 @@
             this.TimetableGroup = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.TimetableView = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.TimetableRoom = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.TimetableSlotCombo = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.TimetableLecturer = new System.Windows.Forms.ComboBox();
             this.TimetableUpdate = new System.Windows.Forms.Button();
             this.TimetableSave = new System.Windows.Forms.Button();
             this.TimetabeDelete = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TimetableView)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -79,6 +79,7 @@
             this.TimetableSubject.Name = "TimetableSubject";
             this.TimetableSubject.Size = new System.Drawing.Size(218, 21);
             this.TimetableSubject.TabIndex = 12;
+            this.TimetableSubject.SelectedIndexChanged += new System.EventHandler(this.TimetableSubject_SelectedIndexChanged);
             // 
             // TimetableCourse
             // 
@@ -87,6 +88,7 @@
             this.TimetableCourse.Name = "TimetableCourse";
             this.TimetableCourse.Size = new System.Drawing.Size(218, 21);
             this.TimetableCourse.TabIndex = 1;
+            this.TimetableCourse.SelectedIndexChanged += new System.EventHandler(this.TimetableCourse_SelectedIndexChanged);
             // 
             // label6
             // 
@@ -104,6 +106,7 @@
             this.TimetableGroup.Name = "TimetableGroup";
             this.TimetableGroup.Size = new System.Drawing.Size(218, 21);
             this.TimetableGroup.TabIndex = 9;
+            this.TimetableGroup.SelectedIndexChanged += new System.EventHandler(this.TimetableGroup_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -123,13 +126,14 @@
             this.label5.TabIndex = 7;
             this.label5.Text = "Group";
             // 
-            // dataGridView1
+            // TimetableView
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(155, 295);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(637, 210);
-            this.dataGridView1.TabIndex = 3;
+            this.TimetableView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TimetableView.Location = new System.Drawing.Point(155, 295);
+            this.TimetableView.Name = "TimetableView";
+            this.TimetableView.Size = new System.Drawing.Size(637, 210);
+            this.TimetableView.TabIndex = 3;
+            this.TimetableView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // label2
             // 
@@ -149,9 +153,9 @@
             this.tableLayoutPanel2.Controls.Add(this.TimetableRoom, 1, 2);
             this.tableLayoutPanel2.Controls.Add(this.label3, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.label9, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.dateTimePicker1, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.TimetableSlotCombo, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.label7, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.comboBox2, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.TimetableLecturer, 1, 1);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(520, 120);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 3;
@@ -169,6 +173,7 @@
             this.TimetableRoom.Name = "TimetableRoom";
             this.TimetableRoom.Size = new System.Drawing.Size(218, 21);
             this.TimetableRoom.TabIndex = 15;
+            this.TimetableRoom.SelectedIndexChanged += new System.EventHandler(this.TimetableRoom_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -188,12 +193,13 @@
             this.label9.TabIndex = 6;
             this.label9.Text = "Date and Time";
             // 
-            // dateTimePicker1
+            // TimetableSlotCombo
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(111, 3);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(218, 20);
-            this.dateTimePicker1.TabIndex = 13;
+            this.TimetableSlotCombo.Location = new System.Drawing.Point(111, 3);
+            this.TimetableSlotCombo.Name = "TimetableSlotCombo";
+            this.TimetableSlotCombo.Size = new System.Drawing.Size(218, 20);
+            this.TimetableSlotCombo.TabIndex = 13;
+            this.TimetableSlotCombo.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // label7
             // 
@@ -204,13 +210,14 @@
             this.label7.TabIndex = 5;
             this.label7.Text = "Lecturer";
             // 
-            // comboBox2
+            // TimetableLecturer
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(111, 47);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(218, 21);
-            this.comboBox2.TabIndex = 10;
+            this.TimetableLecturer.FormattingEnabled = true;
+            this.TimetableLecturer.Location = new System.Drawing.Point(111, 47);
+            this.TimetableLecturer.Name = "TimetableLecturer";
+            this.TimetableLecturer.Size = new System.Drawing.Size(218, 21);
+            this.TimetableLecturer.TabIndex = 10;
+            this.TimetableLecturer.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // TimetableUpdate
             // 
@@ -230,6 +237,7 @@
             this.TimetableSave.TabIndex = 16;
             this.TimetableSave.Text = "Save";
             this.TimetableSave.UseVisualStyleBackColor = true;
+            this.TimetableSave.Click += new System.EventHandler(this.TimetableSave_Click);
             // 
             // TimetabeDelete
             // 
@@ -239,6 +247,7 @@
             this.TimetabeDelete.TabIndex = 17;
             this.TimetabeDelete.Text = "Delete";
             this.TimetabeDelete.UseVisualStyleBackColor = true;
+            this.TimetabeDelete.Click += new System.EventHandler(this.TimetabeDelete_Click);
             // 
             // Timetable
             // 
@@ -249,13 +258,14 @@
             this.Controls.Add(this.TimetableUpdate);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.TimetableView);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Timetable";
             this.Size = new System.Drawing.Size(1014, 685);
+            this.Load += new System.EventHandler(this.Timetable_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TimetableView)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             this.ResumeLayout(false);
@@ -268,7 +278,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.ComboBox TimetableCourse;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView TimetableView;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
@@ -276,9 +286,9 @@
         private System.Windows.Forms.ComboBox TimetableSubject;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker TimetableSlotCombo;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox TimetableLecturer;
         private System.Windows.Forms.ComboBox TimetableRoom;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button TimetableUpdate;

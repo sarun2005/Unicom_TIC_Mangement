@@ -179,7 +179,7 @@ namespace Unicom_TIC.Controller
         {
             using (var connection = DataBaseConnection.GetConnection())
             {
-                const string sql = "SELECT * FROM Lecturers WHERE LecturerID = @id LIMIT 1;";
+                const string sql = "SELECT * FROM Lecturers WHERE LecturerID = @id LIMIT 1;";   // const = Mostly, value never changes during the program.
                 using (var cmd = new SQLiteCommand(sql, connection))
                 {
                     cmd.Parameters.AddWithValue("@id", id);
