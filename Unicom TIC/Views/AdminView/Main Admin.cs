@@ -12,9 +12,12 @@ namespace Unicom_TIC.Views.AdminView
 {
     public partial class Main_Admin : Form
     {
-        public Main_Admin()
+        private int adminId;
+
+        public Main_Admin(int id)
         {
             InitializeComponent();
+            adminId = id;
         }
 
 

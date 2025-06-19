@@ -13,13 +13,15 @@ namespace Unicom_TIC.Views.LecturerView
 {
     public partial class Main_Lecturer_Form : Form
     {
+        private int lecturerId;
 
-        public Main_Lecturer_Form()
+        public Main_Lecturer_Form(int id)
         {
             InitializeComponent();
+            lecturerId = id;
         }
 
-       
+
 
         private void MainLecturerMainPanel_Paint(object sender, PaintEventArgs e)
         {
@@ -56,11 +58,11 @@ namespace Unicom_TIC.Views.LecturerView
             MainLecturerMainPanel.Controls.Clear(); // Only once is enough
 
 
-            
+
             // View Details
             if (selected == "View Details")
             {
-                Lecturer_Details viewLecturerAction = new Lecturer_Details();
+                Lecturer_Details viewLecturerAction = new Lecturer_Details(lecturerId);
                 viewLecturerAction.Dock = DockStyle.Fill;
                 MainLecturerMainPanel.Controls.Add(viewLecturerAction);
             }

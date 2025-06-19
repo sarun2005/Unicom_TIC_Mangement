@@ -89,38 +89,35 @@ namespace Unicom_TIC.Views
 
 
 
+            // Login_Click() method-ல்
             if (isValid)
             {
-               
                 Form nextForm = null;
 
-                switch (role)                
+                switch (role)
                 {
                     case "Admin":
-                        nextForm = new Main_Admin();
+                        nextForm = new Main_Admin(enteredId);
                         break;
                     case "Lecturer":
-                        nextForm = new Main_Lecturer_Form();
+                        nextForm = new Main_Lecturer_Form(enteredId);
                         break;
                     case "Staff":
-                        nextForm = new Main_Staff_Form();
+                        nextForm = new Main_Staff_Form(enteredId);
                         break;
                     case "Student":
-                        nextForm = new Main_Student_Form();
+                        nextForm = new Main_Student_Form(enteredId);
                         break;
                 }
 
-                
+                MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                MessageBox.Show("Login successful!","Success",MessageBoxButtons.OK,MessageBoxIcon.Information);
-
-                this.Hide();            
-                nextForm.ShowDialog(); 
-
-                
+                this.Hide();
+                nextForm.ShowDialog();
                 this.Show();
-                ClearFields();         
+                ClearFields();
             }
+
             else
             {
                 MessageBox.Show("Incorrect credentials. Please try again.","Login Failed",MessageBoxButtons.OK,MessageBoxIcon.Error);

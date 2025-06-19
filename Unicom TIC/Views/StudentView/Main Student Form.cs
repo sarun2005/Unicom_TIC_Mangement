@@ -13,9 +13,12 @@ namespace Unicom_TIC.Views.StudentView
 {
     public partial class Main_Student_Form : Form
     {
-        public Main_Student_Form()
+        private int studentId;
+
+        public Main_Student_Form(int id)
         {
             InitializeComponent();
+            studentId = id;
         }
 
         private void MainLecturerMainPanel_Paint(object sender, PaintEventArgs e)

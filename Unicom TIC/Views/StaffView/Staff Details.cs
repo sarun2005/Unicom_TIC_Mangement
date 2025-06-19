@@ -12,9 +12,17 @@ namespace Unicom_TIC.Views.StaffView
 {
     public partial class Staff_Details : UserControl
     {
-        public Staff_Details()
+        private int staffId;
+
+        public Staff_Details(int id)
         {
             InitializeComponent();
+            staffId = id;
+        }
+
+        private void Staff_Details_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

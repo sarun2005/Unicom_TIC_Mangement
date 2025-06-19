@@ -170,5 +170,43 @@ namespace Unicom_TIC.Controller
             return lecturers;
         }
 
+
+
+
+       
+        // ===================================== VIEW (ONE) =====================================
+        public Lecturer GetLecturerById(int id)
+        {
+            using (var connection = DataBaseConnection.GetConnection())
+            {
+                const string sql = "SELECT * FROM Lecturers WHERE LecturerID = @id LIMIT 1;";
+                using (var cmd = new SQLiteCommand(sql, connection))
+                {
+                    cmd.Parameters.AddWithValue("@id", id);
+
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            return new Lecturer
+                            {
+                                LecturerID = Convert.ToInt32(reader["LecturerID"]),
+                                FirstName = reader["FirstName"].ToString(),
+                                LastName = reader["LastName"].ToString(),
+                                Address = reader["Address"].ToString(),
+                                DOB = reader["DOB"].ToString(),
+                                Gender = reader["Gender"].ToString(),
+                                Subject = reader["Subject"].ToString(),
+                                Email = reader["Email"].ToString(),
+                                PhoneNumber = reader["PhoneNumber"].ToString()
+                            };
+                        }
+                    }
+                }
+            }
+            return null; 
+        }
+
+
     }
 }

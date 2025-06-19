@@ -13,9 +13,12 @@ namespace Unicom_TIC.Views.StaffView
 {
     public partial class Main_Staff_Form : Form
     {
-        public Main_Staff_Form()
+        private int staffId;
+
+        public Main_Staff_Form(int id)
         {
             InitializeComponent();
+            staffId = id;
         }
 
         private void StaffMainPanel_Paint(object sender, PaintEventArgs e)
@@ -52,7 +55,7 @@ namespace Unicom_TIC.Views.StaffView
             // View Details
             if (selected == "View Details")
             {
-                Staff_Details viewStaffAction = new Staff_Details();
+                Staff_Details viewStaffAction = new Staff_Details(staffId);
                 viewStaffAction.Dock = DockStyle.Fill;
                 MainStaffMainPanel.Controls.Add(viewStaffAction);
             }

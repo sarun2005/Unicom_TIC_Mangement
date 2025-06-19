@@ -33,23 +33,23 @@
             this.label4 = new System.Windows.Forms.Label();
             this.StaffMale = new System.Windows.Forms.RadioButton();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.StaffStaffID = new System.Windows.Forms.TextBox();
+            this.StaffPhoneNumber = new System.Windows.Forms.TextBox();
+            this.StaffEmail = new System.Windows.Forms.TextBox();
+            this.StaffRole = new System.Windows.Forms.ComboBox();
             this.StaffDOB = new System.Windows.Forms.DateTimePicker();
+            this.StaffAddress = new System.Windows.Forms.TextBox();
+            this.StaffLastName = new System.Windows.Forms.TextBox();
+            this.StaffFirstName = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.StaffLastName = new System.Windows.Forms.TextBox();
-            this.StaffFirstName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.StaffAddress = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.StaffRole = new System.Windows.Forms.ComboBox();
-            this.StaffEmail = new System.Windows.Forms.TextBox();
-            this.StaffPhoneNumber = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.StaffStaffID = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.s.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -136,6 +136,44 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(447, 326);
             this.tableLayoutPanel1.TabIndex = 29;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(3, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(43, 13);
+            this.label10.TabIndex = 45;
+            this.label10.Text = "Staff ID";
+            // 
+            // StaffStaffID
+            // 
+            this.StaffStaffID.Location = new System.Drawing.Point(177, 3);
+            this.StaffStaffID.Name = "StaffStaffID";
+            this.StaffStaffID.Size = new System.Drawing.Size(224, 20);
+            this.StaffStaffID.TabIndex = 46;
+            // 
+            // StaffPhoneNumber
+            // 
+            this.StaffPhoneNumber.Location = new System.Drawing.Point(177, 283);
+            this.StaffPhoneNumber.Name = "StaffPhoneNumber";
+            this.StaffPhoneNumber.Size = new System.Drawing.Size(224, 20);
+            this.StaffPhoneNumber.TabIndex = 11;
+            // 
+            // StaffEmail
+            // 
+            this.StaffEmail.Location = new System.Drawing.Point(177, 243);
+            this.StaffEmail.Name = "StaffEmail";
+            this.StaffEmail.Size = new System.Drawing.Size(224, 20);
+            this.StaffEmail.TabIndex = 18;
+            // 
+            // StaffRole
+            // 
+            this.StaffRole.FormattingEnabled = true;
+            this.StaffRole.Location = new System.Drawing.Point(177, 203);
+            this.StaffRole.Name = "StaffRole";
+            this.StaffRole.Size = new System.Drawing.Size(224, 21);
+            this.StaffRole.TabIndex = 2;
+            // 
             // StaffDOB
             // 
             this.StaffDOB.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -143,6 +181,54 @@
             this.StaffDOB.Name = "StaffDOB";
             this.StaffDOB.Size = new System.Drawing.Size(224, 20);
             this.StaffDOB.TabIndex = 15;
+            // 
+            // StaffAddress
+            // 
+            this.StaffAddress.Location = new System.Drawing.Point(177, 123);
+            this.StaffAddress.Name = "StaffAddress";
+            this.StaffAddress.Size = new System.Drawing.Size(224, 20);
+            this.StaffAddress.TabIndex = 10;
+            // 
+            // StaffLastName
+            // 
+            this.StaffLastName.Location = new System.Drawing.Point(177, 83);
+            this.StaffLastName.Name = "StaffLastName";
+            this.StaffLastName.Size = new System.Drawing.Size(224, 20);
+            this.StaffLastName.TabIndex = 9;
+            // 
+            // StaffFirstName
+            // 
+            this.StaffFirstName.Location = new System.Drawing.Point(177, 43);
+            this.StaffFirstName.Name = "StaffFirstName";
+            this.StaffFirstName.Size = new System.Drawing.Size(224, 20);
+            this.StaffFirstName.TabIndex = 3;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(3, 280);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(78, 13);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "Phone Number";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(3, 240);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(32, 13);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "Email";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(3, 200);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(29, 13);
+            this.label8.TabIndex = 20;
+            this.label8.Text = "Role";
             // 
             // label9
             // 
@@ -171,20 +257,6 @@
             this.label3.TabIndex = 13;
             this.label3.Text = "Last Name";
             // 
-            // StaffLastName
-            // 
-            this.StaffLastName.Location = new System.Drawing.Point(177, 83);
-            this.StaffLastName.Name = "StaffLastName";
-            this.StaffLastName.Size = new System.Drawing.Size(224, 20);
-            this.StaffLastName.TabIndex = 9;
-            // 
-            // StaffFirstName
-            // 
-            this.StaffFirstName.Location = new System.Drawing.Point(177, 43);
-            this.StaffFirstName.Name = "StaffFirstName";
-            this.StaffFirstName.Size = new System.Drawing.Size(224, 20);
-            this.StaffFirstName.TabIndex = 3;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -193,62 +265,6 @@
             this.label2.Size = new System.Drawing.Size(57, 13);
             this.label2.TabIndex = 12;
             this.label2.Text = "First Name";
-            // 
-            // StaffAddress
-            // 
-            this.StaffAddress.Location = new System.Drawing.Point(177, 123);
-            this.StaffAddress.Name = "StaffAddress";
-            this.StaffAddress.Size = new System.Drawing.Size(224, 20);
-            this.StaffAddress.TabIndex = 10;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(3, 200);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(29, 13);
-            this.label8.TabIndex = 20;
-            this.label8.Text = "Role";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(3, 240);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(32, 13);
-            this.label6.TabIndex = 16;
-            this.label6.Text = "Email";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 280);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(78, 13);
-            this.label5.TabIndex = 15;
-            this.label5.Text = "Phone Number";
-            // 
-            // StaffRole
-            // 
-            this.StaffRole.FormattingEnabled = true;
-            this.StaffRole.Location = new System.Drawing.Point(177, 203);
-            this.StaffRole.Name = "StaffRole";
-            this.StaffRole.Size = new System.Drawing.Size(224, 21);
-            this.StaffRole.TabIndex = 2;
-            // 
-            // StaffEmail
-            // 
-            this.StaffEmail.Location = new System.Drawing.Point(177, 243);
-            this.StaffEmail.Name = "StaffEmail";
-            this.StaffEmail.Size = new System.Drawing.Size(224, 20);
-            this.StaffEmail.TabIndex = 18;
-            // 
-            // StaffPhoneNumber
-            // 
-            this.StaffPhoneNumber.Location = new System.Drawing.Point(177, 283);
-            this.StaffPhoneNumber.Name = "StaffPhoneNumber";
-            this.StaffPhoneNumber.Size = new System.Drawing.Size(224, 20);
-            this.StaffPhoneNumber.TabIndex = 11;
             // 
             // label1
             // 
@@ -260,22 +276,6 @@
             this.label1.TabIndex = 27;
             this.label1.Text = "Your Details";
             // 
-            // StaffStaffID
-            // 
-            this.StaffStaffID.Location = new System.Drawing.Point(177, 3);
-            this.StaffStaffID.Name = "StaffStaffID";
-            this.StaffStaffID.Size = new System.Drawing.Size(224, 20);
-            this.StaffStaffID.TabIndex = 46;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(3, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(43, 13);
-            this.label10.TabIndex = 45;
-            this.label10.Text = "Staff ID";
-            // 
             // Staff_Details
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -285,6 +285,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Staff_Details";
             this.Size = new System.Drawing.Size(771, 655);
+            this.Load += new System.EventHandler(this.Staff_Details_Load);
             this.s.ResumeLayout(false);
             this.s.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
