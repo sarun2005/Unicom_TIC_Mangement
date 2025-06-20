@@ -150,47 +150,19 @@ namespace Unicom_TIC.Views.AdminView
             AdminAdminUpdateRole.Items.Add("Lecturer");
         }
 
-       
-
-        private void AdminAdminSearchText_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void AdminAdminUpdatePhoneNumber_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void AdminAdminUpdateEmail_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void AdminAdminUpdateBack_Click(object sender, EventArgs e)
         {
             ClearUpdateFields();
         }
 
-        private void AdminAdminUpdateRole_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
-        }
 
-       
-        private void AdminAdminUpdateAdminID_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void AdminAdminUpdateFirstName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void AdminAdminUpdateLastName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        private void AdminAdminSearchText_TextChanged(object sender, EventArgs e){}
+        private void AdminAdminUpdatePhoneNumber_TextChanged(object sender, EventArgs e){}
+        private void AdminAdminUpdateEmail_TextChanged(object sender, EventArgs e){}  
+        private void AdminAdminUpdateRole_SelectedIndexChanged(object sender, EventArgs e){}       
+        private void AdminAdminUpdateAdminID_TextChanged(object sender, EventArgs e){}
+        private void AdminAdminUpdateFirstName_TextChanged(object sender, EventArgs e){}
+        private void AdminAdminUpdateLastName_TextChanged(object sender, EventArgs e){}
     }
 }

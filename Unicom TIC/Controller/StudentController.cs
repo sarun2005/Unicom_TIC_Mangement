@@ -78,7 +78,7 @@ namespace Unicom_TIC.Controller
         }
 
 
-        // ===================================== VIEW (ONE) =====================================
+        // ===================================== VIEW (ONE) IN MAIN STUDENT FORM =====================================
         public Student GetStudentById(int id)
         {
             using (var connection = DataBaseConnection.GetConnection())

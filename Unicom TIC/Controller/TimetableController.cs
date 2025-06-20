@@ -13,17 +13,19 @@ namespace Unicom_TIC.Controller
         {
             using (var connection = DataBaseConnection.GetConnection())
             {
-                const string sql = @"INSERT INTO Timetables (SubjectID, LecturerID, TimeSlot, RoomID, GroupName)
-                                    VALUES (@SubjectID, @LecturerID, @TimeSlot, @RoomID, @GroupName);";
+                const string sql = @"INSERT INTO Timetables ( SubjectID , CourseID , LecturerID , Date , StartTime , EndTime , RoomID , GroupName)
+                                    VALUES ( @SubjectID , @CourseID , @LecturerID , @Date , @StartTime , @EndTime , @RoomID , @GroupName );";
 
                 using (var cmd = new SQLiteCommand(sql, connection))
                 {
+                    cmd.Parameters.AddWithValue("@GroupName", timetable.GroupName);
+                    cmd.Parameters.AddWithValue("@Date", timetable.Date);
+                    cmd.Parameters.AddWithValue("@StartTime", timetable.StartTime);
+                    cmd.Parameters.AddWithValue("@EndTime", timetable.EndTime);
+                    cmd.Parameters.AddWithValue("@CourseID", timetable.CourseID);
                     cmd.Parameters.AddWithValue("@SubjectID", timetable.SubjectID);
-                    cmd.Parameters.AddWithValue("@LecturerID", timetable.LecturerID);
-                    cmd.Parameters.AddWithValue("@TimeSlot", timetable.TimeSlot);
                     cmd.Parameters.AddWithValue("@RoomID", timetable.RoomID);
-                    cmd.Parameters.AddWithValue("@Group", timetable.GroupName);
-
+                    cmd.Parameters.AddWithValue("@LecturerID", timetable.LecturerID);
                     cmd.ExecuteNonQuery();
                 }
             }
@@ -36,28 +38,41 @@ namespace Unicom_TIC.Controller
 
             using (var connection = DataBaseConnection.GetConnection())
             {
-                const string sql = @"SELECT  t.TimetableID , t.SubjectID , s.SubjectName , t.LecturerID , (l.FirstName || ' ' || l.LastName) AS LecturerName,
-                t.TimeSlot , t.RoomID , r.RoomName , t.GroupName FROM Timetables t JOIN    Subjects   s ON t.SubjectID  = s.SubjectID
-                JOIN    Lecturers  l ON t.LecturerID = l.LecturerID
-                JOIN    Rooms      r ON t.RoomID     = r.RoomID;";
+                const string sql = @"SELECT t.TimetableID , t.GroupName , t.Date , t.StartTime , t.EndTime , s.CourseID,c.CourseName , t.SubjectID,s.SubjectName , t.RoomID,r.RoomName, 
+                                    t.LecturerID, (l.FirstName || ' ' || l.LastName) AS LecturerName
+                                    FROM Timetables t JOIN Subjects   s ON t.SubjectID  = s.SubjectID
+                                    JOIN Courses    c ON s.CourseID   = c.CourseID        
+                                    JOIN Lecturers  l ON t.LecturerID = l.LecturerID
+                                    JOIN Rooms      r ON t.RoomID     = r.RoomID;
+;";
 
                 using (var cmd = new SQLiteCommand(sql, connection))
                 using (var rdr = cmd.ExecuteReader())
                 {
                     while (rdr.Read())
+
                     {
                         list.Add(new Timetable
                         {
-                            TimetableID = rdr.GetInt32(0),
-                            SubjectID = rdr.GetInt32(1),
+                            TimetableID = Convert.ToInt32(rdr["TimetableID"]),
+                            GroupName = rdr["GroupName"].ToString(),
+                            Date = DateTime.Parse(rdr["Date"].ToString()),
+                            StartTime = rdr["StartTime"].ToString(),
+                            EndTime = rdr["EndTime"].ToString(),
+
+                            CourseID = Convert.ToInt32(rdr["CourseID"]),
+                            CourseName = rdr["CourseName"].ToString(),
+
+                            SubjectID = Convert.ToInt32(rdr["SubjectID"]),
                             SubjectName = rdr["SubjectName"].ToString(),
-                            LecturerID = rdr.GetInt32(3),
-                            LecturerName = rdr["LecturerName"].ToString(),
-                            TimeSlot = rdr["TimeSlot"].ToString(),
-                            RoomID = rdr.GetInt32(6),
+
+                            RoomID = Convert.ToInt32(rdr["RoomID"]),
                             RoomName = rdr["RoomName"].ToString(),
-                            GroupName = rdr["GroupName"].ToString()
+
+                            LecturerID = Convert.ToInt32(rdr["LecturerID"]),
+                            LecturerName = rdr["LecturerName"].ToString()
                         });
+
                     }
                 }
             }
@@ -69,14 +84,17 @@ namespace Unicom_TIC.Controller
         {
             using (var connection = DataBaseConnection.GetConnection())
             {
-                const string sql = @"UPDATE Timetables SET SubjectID = @SubjectID, LecturerID = @LecturerID, TimeSlot = @TimeSlot, RoomID = @RoomID, Group = @Group
+                const string sql = @"UPDATE Timetables SET SubjectID = @SubjectID,CourseID = @CourseID, LecturerID = @LecturerID, Date = @Date,StartTime = @StartTime,EndTime = @EndTime, RoomID = @RoomID, Group = @Group
                                     WHERE TimetableID = @TimetableID;";
 
                 using (var cmd = new SQLiteCommand(sql, connection))
                 {
                     cmd.Parameters.AddWithValue("@SubjectID", timetable.SubjectID);
+                    cmd.Parameters.AddWithValue("@CourseID", timetable.CourseID);
                     cmd.Parameters.AddWithValue("@LecturerID", timetable.LecturerID);
-                    cmd.Parameters.AddWithValue("@TimeSlot", timetable.TimeSlot);
+                    cmd.Parameters.AddWithValue("@Date", timetable.Date);
+                    cmd.Parameters.AddWithValue("@StartTime", timetable.StartTime);
+                    cmd.Parameters.AddWithValue("@EndTime", timetable.EndTime);
                     cmd.Parameters.AddWithValue("@RoomID", timetable.RoomID);
                     cmd.Parameters.AddWithValue("@Group", timetable.GroupName);
                     cmd.Parameters.AddWithValue("@TimetableID", timetable.TimetableID);

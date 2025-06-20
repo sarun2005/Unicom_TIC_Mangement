@@ -174,7 +174,7 @@ namespace Unicom_TIC.Controller
 
 
        
-        // ===================================== VIEW (ONE) =====================================
+        // ===================================== VIEW (ONE) IN MAIN LECTURER FORM =====================================
         public Lecturer GetLecturerById(int id)
         {
             using (var connection = DataBaseConnection.GetConnection())

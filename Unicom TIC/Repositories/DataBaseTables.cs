@@ -179,10 +179,14 @@ namespace Unicom_TIC.Repositories
                          TimetableID INTEGER PRIMARY KEY AUTOINCREMENT,
                          SubjectID INTEGER,
                          LecturerID INTEGER,
-                         TimeSlot TEXT NOT NULL,
+                         CourseID INTEGER,
+                         Date TEXT NOT NULL,
+                         StartTime TEXT NOT NULL,
+                         EndTime TEXT NOT NULL,
                          RoomID INTEGER,
                          GroupName TEXT,
                          FOREIGN KEY(SubjectID) REFERENCES Subjects(SubjectID),
+                         FOREIGN KEY(CourseID) REFERENCES Courses(CourseID),
                          FOREIGN KEY(RoomID) REFERENCES Rooms(RoomID),  
                          FOREIGN KEY(LecturerID) REFERENCES Lecturers(LecturerID)  
                        );

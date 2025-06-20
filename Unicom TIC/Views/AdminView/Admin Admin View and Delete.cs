@@ -94,24 +94,9 @@ namespace Unicom_TIC.Views.AdminView
 
 
 
-        private void AdminAdminSearch_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void Admin_Admin_View_and_Delete_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
+        private void AdminAdminSearch_Click(object sender, EventArgs e){}
+        private void Admin_Admin_View_and_Delete_Load(object sender, EventArgs e){}
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e){}
+        private void label1_Click(object sender, EventArgs e){}
     }
 }

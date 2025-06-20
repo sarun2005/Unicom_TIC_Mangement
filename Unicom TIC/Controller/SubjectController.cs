@@ -28,35 +28,33 @@ namespace Unicom_TIC.Controller
 
 
 
-        // ===================================== View Subjects (+ Course Name) =====================================
+        // ===================================== VIEW =====================================
         public List<Subject> ViewAllSubjectsWithCourse()
         {
-            var list = new List<Subject>();
+            List<Subject> subjects = new List<Subject>();
             using (var connection = DataBaseConnection.GetConnection())
             {
-                const string sql = @"
-            SELECT s.SubjectID, s.SubjectName,c.CourseID,  c.CourseName
-            FROM Subjects s
-            LEFT JOIN Courses c ON s.CourseID = c.CourseID;";
+               string viewSubjectQuery = @"SELECT s.SubjectID, s.SubjectName,c.CourseID,  c.CourseName
+                                     FROM Subjects s
+                                     LEFT JOIN Courses c ON s.CourseID = c.CourseID;";
 
-                using (var cmd = new SQLiteCommand(sql, connection))
-                using (var rdr = cmd.ExecuteReader())
+                SQLiteCommand viewAllExams = new SQLiteCommand(viewSubjectQuery, connection);
+                var reader = viewAllExams.ExecuteReader();
+                while (reader.Read())
                 {
-                    while (rdr.Read())
+                    Subject subject = new Subject
                     {
-                        Subject subject = new Subject
-                        {
-                            SubjectID = Convert.ToInt32(rdr["SubjectID"]),
-                            SubjectName = rdr["SubjectName"].ToString(),
-                            CourseID = Convert.ToInt32(rdr["CourseID"]),
-                            CourseName = rdr["CourseName"] == DBNull.Value ? null : rdr["CourseName"].ToString()
-                        };
-                        list.Add(subject);
+                        SubjectID = Convert.ToInt32(reader["SubjectID"]),
+                        SubjectName = reader["SubjectName"].ToString(),
+                        CourseID = Convert.ToInt32(reader["CourseID"]),
+                        CourseName = reader["CourseName"] == DBNull.Value ? null : reader["CourseName"].ToString()
+                    };
+                    subjects.Add(subject);
                        
-                    }
                 }
+                
             }
-            return list;
+            return subjects;
         }
 
 

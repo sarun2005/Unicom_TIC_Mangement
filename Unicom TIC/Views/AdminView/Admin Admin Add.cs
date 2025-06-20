@@ -20,10 +20,6 @@ namespace Unicom_TIC.Views.AdminView
         }
 
 
-
-
-
-
         private void Admin_Admin_Add_Load(object sender, EventArgs e)
         {
             // ============================ Add items to the role dropdown ============================
@@ -34,11 +30,6 @@ namespace Unicom_TIC.Views.AdminView
             AdminAdminAddRole.Items.Add("Staff");
             AdminAdminAddRole.Items.Add("Lecturer");
         }
-
-
-
-
-
 
 
         //  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ Admin Add +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -152,21 +143,12 @@ namespace Unicom_TIC.Views.AdminView
 
 
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void AdminAdminAddRole_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-               
-
-        private void AdminAdminAddFirstName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        private void label1_Click(object sender, EventArgs e){}
+        private void AdminAdminAddRole_SelectedIndexChanged(object sender, EventArgs e){}
+        private void AdminAdminAddFirstName_TextChanged(object sender, EventArgs e){}
+        private void AdminAdminAddLastName_TextChanged(object sender, EventArgs e){}
+        private void AdminAdminAddPhoneNumber_TextChanged(object sender, EventArgs e){}
+        private void AdminAdminAddEmail_TextChanged(object sender, EventArgs e){}
     }    
     
 }

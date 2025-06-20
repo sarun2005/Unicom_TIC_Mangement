@@ -47,7 +47,7 @@
             this.MainAdminLeftPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.MainAdminLeftPanel.Location = new System.Drawing.Point(0, 0);
             this.MainAdminLeftPanel.Name = "MainAdminLeftPanel";
-            this.MainAdminLeftPanel.Size = new System.Drawing.Size(214, 720);
+            this.MainAdminLeftPanel.Size = new System.Drawing.Size(230, 720);
             this.MainAdminLeftPanel.TabIndex = 2;
             // 
             // button1
@@ -70,7 +70,7 @@
             this.TreeMainAdmin.ItemHeight = 22;
             this.TreeMainAdmin.Location = new System.Drawing.Point(0, 0);
             this.TreeMainAdmin.Name = "TreeMainAdmin";
-            this.TreeMainAdmin.Size = new System.Drawing.Size(211, 720);
+            this.TreeMainAdmin.Size = new System.Drawing.Size(230, 720);
             this.TreeMainAdmin.TabIndex = 0;
             this.TreeMainAdmin.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.TreeMainAdmin_AfterSelect);
             // 
@@ -78,9 +78,9 @@
             // 
             this.MainAdminMainPanel.BackColor = System.Drawing.Color.White;
             this.MainAdminMainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MainAdminMainPanel.Location = new System.Drawing.Point(214, 94);
+            this.MainAdminMainPanel.Location = new System.Drawing.Point(230, 94);
             this.MainAdminMainPanel.Name = "MainAdminMainPanel";
-            this.MainAdminMainPanel.Size = new System.Drawing.Size(974, 626);
+            this.MainAdminMainPanel.Size = new System.Drawing.Size(958, 626);
             this.MainAdminMainPanel.TabIndex = 3;
             this.MainAdminMainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -89,9 +89,9 @@
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(214, 0);
+            this.panel1.Location = new System.Drawing.Point(230, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(974, 94);
+            this.panel1.Size = new System.Drawing.Size(958, 94);
             this.panel1.TabIndex = 0;
             // 
             // pictureBox1

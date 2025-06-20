@@ -123,6 +123,7 @@
             this.AdminAdminAddEmail.Name = "AdminAdminAddEmail";
             this.AdminAdminAddEmail.Size = new System.Drawing.Size(224, 20);
             this.AdminAdminAddEmail.TabIndex = 11;
+            this.AdminAdminAddEmail.TextChanged += new System.EventHandler(this.AdminAdminAddEmail_TextChanged);
             // 
             // AdminAdminAddPhoneNumber
             // 
@@ -130,6 +131,7 @@
             this.AdminAdminAddPhoneNumber.Name = "AdminAdminAddPhoneNumber";
             this.AdminAdminAddPhoneNumber.Size = new System.Drawing.Size(224, 20);
             this.AdminAdminAddPhoneNumber.TabIndex = 10;
+            this.AdminAdminAddPhoneNumber.TextChanged += new System.EventHandler(this.AdminAdminAddPhoneNumber_TextChanged);
             // 
             // AdminAdminAddLastName
             // 
@@ -137,6 +139,7 @@
             this.AdminAdminAddLastName.Name = "AdminAdminAddLastName";
             this.AdminAdminAddLastName.Size = new System.Drawing.Size(224, 20);
             this.AdminAdminAddLastName.TabIndex = 9;
+            this.AdminAdminAddLastName.TextChanged += new System.EventHandler(this.AdminAdminAddLastName_TextChanged);
             // 
             // AdminAdminAddRole
             // 

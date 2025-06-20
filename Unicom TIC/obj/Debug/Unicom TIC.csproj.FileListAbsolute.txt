@@ -42,3 +42,4 @@ Z:\Projects\New folder\Unicom TIC\obj\Debug\Unicom_TIC.Views.StaffView.Staff_Tim
 Z:\Projects\New folder\Unicom TIC\obj\Debug\Unicom_TIC.Views.StudentView.Marks.resources
 Z:\Projects\New folder\Unicom TIC\obj\Debug\Unicom_TIC.Views.StudentView.Student_Timetable.resources
 Z:\Projects\New folder\Unicom TIC\obj\Debug\Unicom_TIC.Views.StaffView.Staff_Marks.resources
+Z:\Projects\New folder\Unicom TIC\obj\Debug\Unicom_TIC.Views.AdminView.Admin_Exam_Management.resources

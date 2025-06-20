@@ -68,14 +68,13 @@ namespace Unicom_TIC.Views.AdminView
 
             // Exam Management
             TreeNode ExamNode = TreeMainAdmin.Nodes.Add("Exam Management");
-            ExamNode.Nodes.Add("Add Exam");
-            ExamNode.Nodes.Add("View/Delete Exams");
-            ExamNode.Nodes.Add("Update Exams");
+            ExamNode.Nodes.Add("Add/View/Delete Exam");
+            
 
 
             // Marks Management
             TreeNode MarksNode = TreeMainAdmin.Nodes.Add("Marks Management");
-            MarksNode.Nodes.Add("Add/View/Delete Timetable");
+            MarksNode.Nodes.Add("Add/View/Delete Marks");
             
 
             // Timetable Management
@@ -252,11 +251,6 @@ namespace Unicom_TIC.Views.AdminView
             }
 
 
-
-
-
-
-
             // ============================ SUBJECT ============================
             else if (selected == "Add/View/Delete Subject")
             {
@@ -279,11 +273,19 @@ namespace Unicom_TIC.Views.AdminView
             // ============================ Marks ============================
             else if (selected == "Add/View/Delete Marks")
             {
-                Marks_Add_and_Delete_and_Update TimetableAction = new Marks_Add_and_Delete_and_Update();
-                TimetableAction.Dock = DockStyle.Fill;
-                MainAdminMainPanel.Controls.Add(TimetableAction);
+                Marks_Add_and_Delete_and_Update MarksAction = new Marks_Add_and_Delete_and_Update();
+                MarksAction.Dock = DockStyle.Fill;
+                MainAdminMainPanel.Controls.Add(MarksAction);
             }
 
+
+            // ============================ Exams ============================
+            else if (selected == "Add/View/Delete Exam")
+            {
+                Admin_Exam_Management ExamAction = new Admin_Exam_Management();
+                ExamAction.Dock = DockStyle.Fill;
+                MainAdminMainPanel.Controls.Add(ExamAction);
+            }
 
             // ============================ ROOM ============================
             else if (selected == "Add/View/Delete Room")
@@ -296,26 +298,20 @@ namespace Unicom_TIC.Views.AdminView
             // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         }
 
-
-
-
-
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
             LoginForm loginForm = new LoginForm();
             loginForm.ShowDialog();
         }
+
+
+
+
+
+        private void label1_Click(object sender, EventArgs e){}
+        private void panel1_Paint(object sender, PaintEventArgs e){}
+
+        
     }
 }

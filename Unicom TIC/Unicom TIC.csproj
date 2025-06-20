@@ -54,7 +54,9 @@
   <ItemGroup>
     <Compile Include="Controller\AdminController.cs" />
     <Compile Include="Controller\CourseController.cs" />
+    <Compile Include="Controller\ExamController.cs" />
     <Compile Include="Controller\LecturerController.cs" />
+    <Compile Include="Controller\MarksController.cs" />
     <Compile Include="Controller\RoomController.cs" />
     <Compile Include="Controller\StaffController.cs" />
     <Compile Include="Controller\StudentController.cs" />
@@ -101,6 +103,12 @@
     </Compile>
     <Compile Include="Views\AdminView\Admin Course Add and View and Delete.Designer.cs">
       <DependentUpon>Admin Course Add and View and Delete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AdminView\Admin Exam Management.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\AdminView\Admin Exam Management.Designer.cs">
+      <DependentUpon>Admin Exam Management.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\AdminView\Admin Lecturer Add.cs">
       <SubType>UserControl</SubType>
@@ -290,6 +298,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\AdminView\Admin Course Add and View and Delete.resx">
       <DependentUpon>Admin Course Add and View and Delete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AdminView\Admin Exam Management.resx">
+      <DependentUpon>Admin Exam Management.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\AdminView\Admin Lecturer Add.resx">
       <DependentUpon>Admin Lecturer Add.cs</DependentUpon>
