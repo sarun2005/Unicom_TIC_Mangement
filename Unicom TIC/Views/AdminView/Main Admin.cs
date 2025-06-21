@@ -14,7 +14,7 @@ namespace Unicom_TIC.Views.AdminView
     {
         private int adminId;
 
-        public Main_Admin(int id = 0)
+        public Main_Admin(int id)
         {
             InitializeComponent();
             adminId = id;

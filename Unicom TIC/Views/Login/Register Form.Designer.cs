@@ -257,6 +257,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.Register);
             this.Name = "Register_Form";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Register_Form";
             this.Load += new System.EventHandler(this.Register_Form_Load);
             this.RegisterID.ResumeLayout(false);

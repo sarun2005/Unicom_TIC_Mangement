@@ -47,8 +47,9 @@
             // 
             // AdminAdminAddClear
             // 
-            this.AdminAdminAddClear.Location = new System.Drawing.Point(12, 450);
+            this.AdminAdminAddClear.Location = new System.Drawing.Point(143, 532);
             this.AdminAdminAddClear.Name = "AdminAdminAddClear";
+            this.AdminAdminAddClear.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.AdminAdminAddClear.Size = new System.Drawing.Size(107, 29);
             this.AdminAdminAddClear.TabIndex = 18;
             this.AdminAdminAddClear.Text = "Clear";
@@ -70,8 +71,9 @@
             this.tableLayoutPanel1.Controls.Add(this.AdminAdminAddRole, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.AdminAdminAddFirstName, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(99, 101);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(230, 183);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tableLayoutPanel1.RowCount = 5;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
@@ -169,8 +171,9 @@
             // 
             // AdminAdminAddSave
             // 
-            this.AdminAdminAddSave.Location = new System.Drawing.Point(553, 450);
+            this.AdminAdminAddSave.Location = new System.Drawing.Point(684, 532);
             this.AdminAdminAddSave.Name = "AdminAdminAddSave";
+            this.AdminAdminAddSave.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.AdminAdminAddSave.Size = new System.Drawing.Size(107, 29);
             this.AdminAdminAddSave.TabIndex = 16;
             this.AdminAdminAddSave.Text = "Save";
@@ -181,8 +184,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(276, 38);
+            this.label1.Location = new System.Drawing.Point(407, 120);
             this.label1.Name = "label1";
+            this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label1.Size = new System.Drawing.Size(117, 24);
             this.label1.TabIndex = 15;
             this.label1.Text = "Add Admin";
@@ -197,7 +201,7 @@
             this.Controls.Add(this.AdminAdminAddSave);
             this.Controls.Add(this.label1);
             this.Name = "Admin_Admin_Add";
-            this.Size = new System.Drawing.Size(796, 489);
+            this.Size = new System.Drawing.Size(958, 626);
             this.Load += new System.EventHandler(this.Admin_Admin_Add_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();

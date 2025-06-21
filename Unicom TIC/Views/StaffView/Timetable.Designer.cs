@@ -37,7 +37,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(456, 65);
+            this.label2.Location = new System.Drawing.Point(360, 225);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(261, 25);
             this.label2.TabIndex = 20;
@@ -46,10 +46,11 @@
             // TimetableView
             // 
             this.TimetableView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.TimetableView.Location = new System.Drawing.Point(240, 330);
+            this.TimetableView.Location = new System.Drawing.Point(166, 368);
             this.TimetableView.Name = "TimetableView";
             this.TimetableView.Size = new System.Drawing.Size(637, 210);
             this.TimetableView.TabIndex = 19;
+            this.TimetableView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TimetableView_CellContentClick);
             // 
             // Staff_Timetable
             // 
@@ -58,7 +59,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.TimetableView);
             this.Name = "Staff_Timetable";
-            this.Size = new System.Drawing.Size(1121, 701);
+            this.Size = new System.Drawing.Size(988, 720);
+            this.Load += new System.EventHandler(this.Staff_Timetable_Load);
             ((System.ComponentModel.ISupportInitialize)(this.TimetableView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

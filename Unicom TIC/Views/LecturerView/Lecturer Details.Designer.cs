@@ -63,7 +63,7 @@
             this.s.Controls.Add(this.LecturerFemale, 2, 0);
             this.s.Controls.Add(this.label4, 0, 0);
             this.s.Controls.Add(this.LecturerMale, 1, 0);
-            this.s.Location = new System.Drawing.Point(134, 534);
+            this.s.Location = new System.Drawing.Point(255, 540);
             this.s.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.s.Name = "s";
             this.s.RowCount = 1;
@@ -128,7 +128,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label7, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(134, 207);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(255, 213);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 8;
@@ -301,7 +301,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(312, 136);
+            this.label1.Location = new System.Drawing.Point(433, 142);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(131, 24);
@@ -318,7 +318,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "Lecturer_Details";
-            this.Size = new System.Drawing.Size(815, 669);
+            this.Size = new System.Drawing.Size(988, 720);
             this.Load += new System.EventHandler(this.Lecturer_Details_Load);
             this.s.ResumeLayout(false);
             this.s.PerformLayout();

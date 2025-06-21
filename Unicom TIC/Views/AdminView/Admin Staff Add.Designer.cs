@@ -63,7 +63,7 @@
             this.s.Controls.Add(this.AdminStaffAddFemale, 2, 0);
             this.s.Controls.Add(this.label4, 0, 0);
             this.s.Controls.Add(this.AdminStaffAddMale, 1, 0);
-            this.s.Location = new System.Drawing.Point(157, 368);
+            this.s.Location = new System.Drawing.Point(259, 455);
             this.s.Name = "s";
             this.s.RowCount = 1;
             this.s.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -103,7 +103,7 @@
             // 
             // AdminStaffAddClear
             // 
-            this.AdminStaffAddClear.Location = new System.Drawing.Point(41, 447);
+            this.AdminStaffAddClear.Location = new System.Drawing.Point(143, 534);
             this.AdminStaffAddClear.Name = "AdminStaffAddClear";
             this.AdminStaffAddClear.Size = new System.Drawing.Size(107, 29);
             this.AdminStaffAddClear.TabIndex = 25;
@@ -130,7 +130,7 @@
             this.tableLayoutPanel1.Controls.Add(this.AdminStaffAddRole, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.AdminStaffAddEmail, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.AdminStaffAddPhoneNumber, 1, 6);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(157, 95);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(259, 182);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 7;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
@@ -267,7 +267,7 @@
             // 
             // AdminStaffAddSave
             // 
-            this.AdminStaffAddSave.Location = new System.Drawing.Point(616, 447);
+            this.AdminStaffAddSave.Location = new System.Drawing.Point(718, 534);
             this.AdminStaffAddSave.Name = "AdminStaffAddSave";
             this.AdminStaffAddSave.Size = new System.Drawing.Size(107, 29);
             this.AdminStaffAddSave.TabIndex = 23;
@@ -279,7 +279,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(309, 24);
+            this.label1.Location = new System.Drawing.Point(411, 111);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(100, 24);
             this.label1.TabIndex = 22;
@@ -295,7 +295,7 @@
             this.Controls.Add(this.AdminStaffAddSave);
             this.Controls.Add(this.label1);
             this.Name = "Admin_Staff_Add";
-            this.Size = new System.Drawing.Size(796, 489);
+            this.Size = new System.Drawing.Size(958, 626);
             this.Load += new System.EventHandler(this.Admin_Staff_Add_Load);
             this.s.ResumeLayout(false);
             this.s.PerformLayout();

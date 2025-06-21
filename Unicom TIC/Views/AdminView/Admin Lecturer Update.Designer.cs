@@ -60,7 +60,7 @@
             // 
             // AdminLecturerUpdateLecturerID
             // 
-            this.AdminLecturerUpdateLecturerID.Location = new System.Drawing.Point(403, 125);
+            this.AdminLecturerUpdateLecturerID.Location = new System.Drawing.Point(473, 172);
             this.AdminLecturerUpdateLecturerID.Name = "AdminLecturerUpdateLecturerID";
             this.AdminLecturerUpdateLecturerID.Size = new System.Drawing.Size(224, 20);
             this.AdminLecturerUpdateLecturerID.TabIndex = 30;
@@ -68,7 +68,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(228, 132);
+            this.label10.Location = new System.Drawing.Point(298, 179);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(60, 13);
             this.label10.TabIndex = 29;
@@ -83,7 +83,7 @@
             this.s.Controls.Add(this.AdminLecturerUpdateFemale, 2, 0);
             this.s.Controls.Add(this.label4, 0, 0);
             this.s.Controls.Add(this.AdminLecturerUpdateMale, 1, 0);
-            this.s.Location = new System.Drawing.Point(225, 439);
+            this.s.Location = new System.Drawing.Point(295, 486);
             this.s.Name = "s";
             this.s.RowCount = 1;
             this.s.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -123,7 +123,7 @@
             // 
             // AdminLecturerUpdateClear
             // 
-            this.AdminLecturerUpdateClear.Location = new System.Drawing.Point(110, 501);
+            this.AdminLecturerUpdateClear.Location = new System.Drawing.Point(180, 548);
             this.AdminLecturerUpdateClear.Name = "AdminLecturerUpdateClear";
             this.AdminLecturerUpdateClear.Size = new System.Drawing.Size(107, 29);
             this.AdminLecturerUpdateClear.TabIndex = 27;
@@ -150,7 +150,7 @@
             this.tableLayoutPanel1.Controls.Add(this.AdminLecturerUpdateSubject, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.AdminLecturerUpdateEmail, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.AdminLecturerUpdatePhoneNumber, 1, 6);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(225, 166);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(295, 213);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 7;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
@@ -287,7 +287,7 @@
             // 
             // AdminLecturerUpdateSave
             // 
-            this.AdminLecturerUpdateSave.Location = new System.Drawing.Point(671, 501);
+            this.AdminLecturerUpdateSave.Location = new System.Drawing.Point(741, 548);
             this.AdminLecturerUpdateSave.Name = "AdminLecturerUpdateSave";
             this.AdminLecturerUpdateSave.Size = new System.Drawing.Size(107, 29);
             this.AdminLecturerUpdateSave.TabIndex = 25;
@@ -299,7 +299,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(376, 13);
+            this.label1.Location = new System.Drawing.Point(446, 60);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(161, 24);
             this.label1.TabIndex = 24;
@@ -307,7 +307,7 @@
             // 
             // AdminLecturerSearch
             // 
-            this.AdminLecturerSearch.Location = new System.Drawing.Point(258, 76);
+            this.AdminLecturerSearch.Location = new System.Drawing.Point(328, 123);
             this.AdminLecturerSearch.Name = "AdminLecturerSearch";
             this.AdminLecturerSearch.Size = new System.Drawing.Size(103, 23);
             this.AdminLecturerSearch.TabIndex = 32;
@@ -317,7 +317,7 @@
             // 
             // AdminUpdateLecturerSearchText
             // 
-            this.AdminUpdateLecturerSearchText.Location = new System.Drawing.Point(424, 79);
+            this.AdminUpdateLecturerSearchText.Location = new System.Drawing.Point(494, 126);
             this.AdminUpdateLecturerSearchText.Name = "AdminUpdateLecturerSearchText";
             this.AdminUpdateLecturerSearchText.Size = new System.Drawing.Size(177, 20);
             this.AdminUpdateLecturerSearchText.TabIndex = 31;
@@ -337,7 +337,7 @@
             this.Controls.Add(this.AdminLecturerUpdateSave);
             this.Controls.Add(this.label1);
             this.Name = "Admin_Lecturer_Update";
-            this.Size = new System.Drawing.Size(829, 547);
+            this.Size = new System.Drawing.Size(958, 626);
             this.Load += new System.EventHandler(this.Admin_Lecturer_Update_Load);
             this.s.ResumeLayout(false);
             this.s.PerformLayout();

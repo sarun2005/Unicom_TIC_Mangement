@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SQLite;
+using System.Text;
 using Unicom_TIC.Model;
 using Unicom_TIC.Repositories;
+using static System.Collections.Specialized.BitVector32;
 
 namespace Unicom_TIC.Controller
 {
@@ -31,6 +33,7 @@ namespace Unicom_TIC.Controller
             }
         }
 
+        
         // ============================ VIEW ALL ============================ 
         public List<Timetable> ViewAllTimetables()
         {
@@ -44,7 +47,7 @@ namespace Unicom_TIC.Controller
                                     JOIN Courses    c ON s.CourseID   = c.CourseID        
                                     JOIN Lecturers  l ON t.LecturerID = l.LecturerID
                                     JOIN Rooms      r ON t.RoomID     = r.RoomID;
-;";
+                                                                                    ;";
 
                 using (var cmd = new SQLiteCommand(sql, connection))
                 using (var rdr = cmd.ExecuteReader())
@@ -78,6 +81,11 @@ namespace Unicom_TIC.Controller
             }
             return list;
         }
+        
+
+       
+
+
 
         // ============================ UPDATE ============================ 
         public void UpdateTimetable(Timetable timetable)
@@ -85,7 +93,7 @@ namespace Unicom_TIC.Controller
             using (var connection = DataBaseConnection.GetConnection())
             {
                 const string sql = @"UPDATE Timetables SET SubjectID = @SubjectID,CourseID = @CourseID, LecturerID = @LecturerID, Date = @Date,StartTime = @StartTime,EndTime = @EndTime, RoomID = @RoomID, Group = @Group
-                                    WHERE TimetableID = @TimetableID;";
+                                        WHERE TimetableID = @TimetableID;";
 
                 using (var cmd = new SQLiteCommand(sql, connection))
                 {
@@ -103,6 +111,7 @@ namespace Unicom_TIC.Controller
                 }
             }
         }
+    
 
         // ============================ DELETE ============================ 
         public void DeleteTimetable(int timetableId)
@@ -118,5 +127,8 @@ namespace Unicom_TIC.Controller
                 }
             }
         }
+
+        
+
     }
 }

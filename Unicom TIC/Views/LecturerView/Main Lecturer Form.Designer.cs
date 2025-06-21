@@ -81,7 +81,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(51, 684);
+            this.button1.Location = new System.Drawing.Point(47, 684);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(79, 24);
             this.button1.TabIndex = 1;
@@ -110,6 +110,7 @@
             this.Controls.Add(this.MainLecturerMainPanel);
             this.Controls.Add(this.StudentLeftPanel);
             this.Name = "Main_Lecturer_Form";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main_Lecturer_Form";
             this.Load += new System.EventHandler(this.Main_Lecturer_Form_Load);
             this.StudentTopPanel.ResumeLayout(false);

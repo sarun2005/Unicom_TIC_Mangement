@@ -1,0 +1,4 @@
+Role = Admin
+ID = 1
+Username = Admin
+Password = 1234567

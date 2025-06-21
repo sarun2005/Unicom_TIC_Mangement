@@ -109,6 +109,7 @@
             this.Controls.Add(this.MainStaffMainPanel);
             this.Controls.Add(this.StudentLeftPanel);
             this.Name = "Main_Staff_Form";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main_Staff_Form";
             this.Load += new System.EventHandler(this.Main_Staff_Form_Load);
             this.StudentTopPanel.ResumeLayout(false);

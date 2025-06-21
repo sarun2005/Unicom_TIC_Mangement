@@ -63,7 +63,7 @@
             this.s.Controls.Add(this.StaffFemale, 2, 0);
             this.s.Controls.Add(this.label4, 0, 0);
             this.s.Controls.Add(this.StaffMale, 1, 0);
-            this.s.Location = new System.Drawing.Point(167, 536);
+            this.s.Location = new System.Drawing.Point(270, 565);
             this.s.Name = "s";
             this.s.RowCount = 1;
             this.s.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -122,7 +122,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label7, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(168, 207);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(270, 233);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 8;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
@@ -270,7 +270,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(320, 136);
+            this.label1.Location = new System.Drawing.Point(422, 162);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(131, 24);
             this.label1.TabIndex = 27;
@@ -284,7 +284,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.label1);
             this.Name = "Staff_Details";
-            this.Size = new System.Drawing.Size(771, 655);
+            this.Size = new System.Drawing.Size(988, 720);
             this.Load += new System.EventHandler(this.Staff_Details_Load);
             this.s.ResumeLayout(false);
             this.s.PerformLayout();

@@ -62,6 +62,7 @@
     <Compile Include="Controller\StudentController.cs" />
     <Compile Include="Controller\SubjectController.cs" />
     <Compile Include="Controller\TimetableController.cs" />
+    <Compile Include="Controller\UserContext.cs" />
     <Compile Include="Controller\UserController.cs" />
     <Compile Include="Model\Admin.cs" />
     <Compile Include="Model\Course.cs" />

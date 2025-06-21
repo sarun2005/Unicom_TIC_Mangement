@@ -16,7 +16,7 @@ namespace Unicom_TIC.Views.StudentView
     {
         private int studentId;
 
-        public Main_Student_Form(int id = 0)
+        public Main_Student_Form(int id)
         {
             InitializeComponent();
             studentId = id;

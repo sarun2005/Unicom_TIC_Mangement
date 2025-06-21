@@ -15,10 +15,20 @@ namespace Unicom_TIC.Views.LecturerView
     {
         private int lecturerId;
 
-        public Main_Lecturer_Form(int id = 0)
+        public Main_Lecturer_Form(int id)
         {
             InitializeComponent();
             lecturerId = id;
+            LoadTimetablePage();
+        }
+
+        private void LoadTimetablePage()
+        {
+            var uc = new Lecturer_Timetable(lecturerId);   // pass ID
+            uc.Dock = DockStyle.Fill;
+
+            MainLecturerMainPanel.Controls.Clear();   
+            MainLecturerMainPanel.Controls.Add(uc);
         }
 
 
@@ -70,10 +80,11 @@ namespace Unicom_TIC.Views.LecturerView
             // ============================ TIMETABLE ============================
             else if (selected == "View Timetable")
             {
-                Lecturer_Timetable TimetableAction = new Lecturer_Timetable();
-                TimetableAction.Dock = DockStyle.Fill;
-                MainLecturerMainPanel.Controls.Add(TimetableAction);
+                Lecturer_Timetable timetableUC = new Lecturer_Timetable(lecturerId);
+                timetableUC.Dock = DockStyle.Fill;
+                MainLecturerMainPanel.Controls.Add(timetableUC);
             }
+
 
 
             // ============================ Marks ============================

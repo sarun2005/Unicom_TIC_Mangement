@@ -52,7 +52,7 @@
             // 
             // TimetabeDelete
             // 
-            this.TimetabeDelete.Location = new System.Drawing.Point(119, 584);
+            this.TimetabeDelete.Location = new System.Drawing.Point(56, 582);
             this.TimetabeDelete.Name = "TimetabeDelete";
             this.TimetabeDelete.Size = new System.Drawing.Size(75, 23);
             this.TimetabeDelete.TabIndex = 24;
@@ -61,7 +61,7 @@
             // 
             // TimetableSave
             // 
-            this.TimetableSave.Location = new System.Drawing.Point(904, 584);
+            this.TimetableSave.Location = new System.Drawing.Point(770, 566);
             this.TimetableSave.Name = "TimetableSave";
             this.TimetableSave.Size = new System.Drawing.Size(75, 23);
             this.TimetableSave.TabIndex = 23;
@@ -71,7 +71,7 @@
             // 
             // TimetableUpdate
             // 
-            this.TimetableUpdate.Location = new System.Drawing.Point(506, 584);
+            this.TimetableUpdate.Location = new System.Drawing.Point(443, 582);
             this.TimetableUpdate.Name = "TimetableUpdate";
             this.TimetableUpdate.Size = new System.Drawing.Size(75, 23);
             this.TimetableUpdate.TabIndex = 22;
@@ -87,7 +87,7 @@
             this.tableLayoutPanel2.Controls.Add(this.label9, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.label4, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.AdminMarksScore, 1, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(598, 142);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(535, 140);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
@@ -133,7 +133,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(449, 52);
+            this.label2.Location = new System.Drawing.Point(386, 50);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(221, 25);
             this.label2.TabIndex = 20;
@@ -142,7 +142,7 @@
             // AdminMarksView
             // 
             this.AdminMarksView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.AdminMarksView.Location = new System.Drawing.Point(271, 317);
+            this.AdminMarksView.Location = new System.Drawing.Point(208, 315);
             this.AdminMarksView.Name = "AdminMarksView";
             this.AdminMarksView.Size = new System.Drawing.Size(541, 210);
             this.AdminMarksView.TabIndex = 19;
@@ -157,7 +157,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label6, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.AmdminMarksCourse, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(119, 142);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(56, 140);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
@@ -218,7 +218,7 @@
             this.Controls.Add(this.AdminMarksView);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Marks_Add_and_Delete_and_Update";
-            this.Size = new System.Drawing.Size(1035, 653);
+            this.Size = new System.Drawing.Size(958, 626);
             this.Load += new System.EventHandler(this.Marks_Add_and_Delete_and_Update_Load);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();

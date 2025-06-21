@@ -15,7 +15,7 @@ namespace Unicom_TIC.Views.StaffView
     {
         private int staffId;
 
-        public Main_Staff_Form(int id = 0)
+        public Main_Staff_Form(int id)
         {
             InitializeComponent();
             staffId = id;

@@ -38,7 +38,7 @@
             // 
             // AdminStaffSearchText
             // 
-            this.AdminStaffSearchText.Location = new System.Drawing.Point(402, 76);
+            this.AdminStaffSearchText.Location = new System.Drawing.Point(443, 235);
             this.AdminStaffSearchText.Name = "AdminStaffSearchText";
             this.AdminStaffSearchText.Size = new System.Drawing.Size(177, 20);
             this.AdminStaffSearchText.TabIndex = 17;
@@ -48,7 +48,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(309, 19);
+            this.label1.Location = new System.Drawing.Point(398, 176);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(130, 24);
             this.label1.TabIndex = 16;
@@ -57,7 +57,7 @@
             // AdminStaffDetails
             // 
             this.AdminStaffDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.AdminStaffDetails.Location = new System.Drawing.Point(23, 127);
+            this.AdminStaffDetails.Location = new System.Drawing.Point(112, 284);
             this.AdminStaffDetails.Name = "AdminStaffDetails";
             this.AdminStaffDetails.Size = new System.Drawing.Size(702, 218);
             this.AdminStaffDetails.TabIndex = 15;
@@ -65,7 +65,7 @@
             // 
             // AdminStaffDelete
             // 
-            this.AdminStaffDelete.Location = new System.Drawing.Point(293, 396);
+            this.AdminStaffDelete.Location = new System.Drawing.Point(382, 553);
             this.AdminStaffDelete.Name = "AdminStaffDelete";
             this.AdminStaffDelete.Size = new System.Drawing.Size(107, 29);
             this.AdminStaffDelete.TabIndex = 5;
@@ -77,7 +77,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(310, 80);
+            this.label2.Location = new System.Drawing.Point(351, 239);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(50, 16);
             this.label2.TabIndex = 18;
@@ -93,7 +93,7 @@
             this.Controls.Add(this.AdminStaffDetails);
             this.Controls.Add(this.AdminStaffDelete);
             this.Name = "Admin_Staff_View_and_Delete";
-            this.Size = new System.Drawing.Size(796, 489);
+            this.Size = new System.Drawing.Size(958, 626);
             this.Load += new System.EventHandler(this.Admin_Staff_View_and_Delete_Load);
             ((System.ComponentModel.ISupportInitialize)(this.AdminStaffDetails)).EndInit();
             this.ResumeLayout(false);

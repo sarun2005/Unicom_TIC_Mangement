@@ -46,7 +46,7 @@
             // AminRoomView
             // 
             this.AminRoomView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.AminRoomView.Location = new System.Drawing.Point(230, 315);
+            this.AminRoomView.Location = new System.Drawing.Point(345, 431);
             this.AminRoomView.Name = "AminRoomView";
             this.AminRoomView.Size = new System.Drawing.Size(312, 150);
             this.AminRoomView.TabIndex = 0;
@@ -71,7 +71,7 @@
             // 
             // AdminRoomDelete
             // 
-            this.AdminRoomDelete.Location = new System.Drawing.Point(471, 249);
+            this.AdminRoomDelete.Location = new System.Drawing.Point(586, 365);
             this.AdminRoomDelete.Name = "AdminRoomDelete";
             this.AdminRoomDelete.Size = new System.Drawing.Size(75, 23);
             this.AdminRoomDelete.TabIndex = 3;
@@ -83,7 +83,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(288, 12);
+            this.label2.Location = new System.Drawing.Point(415, 101);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(173, 21);
             this.label2.TabIndex = 4;
@@ -91,7 +91,7 @@
             // 
             // AdminRoomUpdate
             // 
-            this.AdminRoomUpdate.Location = new System.Drawing.Point(323, 249);
+            this.AdminRoomUpdate.Location = new System.Drawing.Point(438, 365);
             this.AdminRoomUpdate.Name = "AdminRoomUpdate";
             this.AdminRoomUpdate.Size = new System.Drawing.Size(75, 23);
             this.AdminRoomUpdate.TabIndex = 5;
@@ -101,7 +101,7 @@
             // 
             // AdminRoomSave
             // 
-            this.AdminRoomSave.Location = new System.Drawing.Point(198, 249);
+            this.AdminRoomSave.Location = new System.Drawing.Point(313, 365);
             this.AdminRoomSave.Name = "AdminRoomSave";
             this.AdminRoomSave.Size = new System.Drawing.Size(75, 23);
             this.AdminRoomSave.TabIndex = 6;
@@ -127,7 +127,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.AdminRoomRoomType, 1, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(230, 67);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(345, 183);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -145,7 +145,7 @@
             // 
             // clear
             // 
-            this.clear.Location = new System.Drawing.Point(601, 249);
+            this.clear.Location = new System.Drawing.Point(716, 365);
             this.clear.Name = "clear";
             this.clear.Size = new System.Drawing.Size(75, 23);
             this.clear.TabIndex = 10;
@@ -165,7 +165,7 @@
             this.Controls.Add(this.AdminRoomDelete);
             this.Controls.Add(this.AminRoomView);
             this.Name = "Admin_Room_Add_and_View_and_Delete";
-            this.Size = new System.Drawing.Size(796, 489);
+            this.Size = new System.Drawing.Size(958, 626);
             this.Load += new System.EventHandler(this.Admin_Room_Add_and_View_and_Delete_Load);
             ((System.ComponentModel.ISupportInitialize)(this.AminRoomView)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);

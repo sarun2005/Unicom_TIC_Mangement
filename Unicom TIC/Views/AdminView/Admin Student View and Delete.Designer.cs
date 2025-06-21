@@ -38,7 +38,7 @@
             // 
             // AdminStudentDelete
             // 
-            this.AdminStudentDelete.Location = new System.Drawing.Point(346, 443);
+            this.AdminStudentDelete.Location = new System.Drawing.Point(425, 566);
             this.AdminStudentDelete.Name = "AdminStudentDelete";
             this.AdminStudentDelete.Size = new System.Drawing.Size(107, 29);
             this.AdminStudentDelete.TabIndex = 5;
@@ -49,7 +49,7 @@
             // AdminStudentDetails
             // 
             this.AdminStudentDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.AdminStudentDetails.Location = new System.Drawing.Point(27, 159);
+            this.AdminStudentDetails.Location = new System.Drawing.Point(106, 282);
             this.AdminStudentDetails.Name = "AdminStudentDetails";
             this.AdminStudentDetails.Size = new System.Drawing.Size(742, 257);
             this.AdminStudentDetails.TabIndex = 12;
@@ -59,7 +59,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(318, 15);
+            this.label1.Location = new System.Drawing.Point(397, 138);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(154, 24);
             this.label1.TabIndex = 11;
@@ -67,7 +67,7 @@
             // 
             // AdminStudentSearchText
             // 
-            this.AdminStudentSearchText.Location = new System.Drawing.Point(397, 96);
+            this.AdminStudentSearchText.Location = new System.Drawing.Point(476, 219);
             this.AdminStudentSearchText.Name = "AdminStudentSearchText";
             this.AdminStudentSearchText.Size = new System.Drawing.Size(177, 20);
             this.AdminStudentSearchText.TabIndex = 13;
@@ -77,7 +77,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(273, 100);
+            this.label2.Location = new System.Drawing.Point(352, 223);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(50, 16);
             this.label2.TabIndex = 15;
@@ -93,7 +93,7 @@
             this.Controls.Add(this.AdminStudentDelete);
             this.Controls.Add(this.label1);
             this.Name = "Admin_Student_View_and_Delete";
-            this.Size = new System.Drawing.Size(796, 489);
+            this.Size = new System.Drawing.Size(958, 626);
             this.Load += new System.EventHandler(this.Admin_Student_View_and_Delete_Load);
             ((System.ComponentModel.ISupportInitialize)(this.AdminStudentDetails)).EndInit();
             this.ResumeLayout(false);

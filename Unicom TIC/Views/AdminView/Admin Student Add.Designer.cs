@@ -63,7 +63,7 @@
             this.s.Controls.Add(this.AdminStudentAddFemale, 2, 0);
             this.s.Controls.Add(this.label4, 0, 0);
             this.s.Controls.Add(this.AdminStudentAddMale, 1, 0);
-            this.s.Location = new System.Drawing.Point(194, 355);
+            this.s.Location = new System.Drawing.Point(263, 438);
             this.s.Name = "s";
             this.s.RowCount = 1;
             this.s.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -103,7 +103,7 @@
             // 
             // AdminStudentAddClear
             // 
-            this.AdminStudentAddClear.Location = new System.Drawing.Point(78, 434);
+            this.AdminStudentAddClear.Location = new System.Drawing.Point(147, 517);
             this.AdminStudentAddClear.Name = "AdminStudentAddClear";
             this.AdminStudentAddClear.Size = new System.Drawing.Size(107, 29);
             this.AdminStudentAddClear.TabIndex = 30;
@@ -130,7 +130,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label5, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.AdminStudentAddEmail, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.AdminStudentAddCourse, 1, 6);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(194, 82);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(263, 165);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 7;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
@@ -260,7 +260,7 @@
             // 
             // AdminStudentAddSave
             // 
-            this.AdminStudentAddSave.Location = new System.Drawing.Point(653, 434);
+            this.AdminStudentAddSave.Location = new System.Drawing.Point(722, 517);
             this.AdminStudentAddSave.Name = "AdminStudentAddSave";
             this.AdminStudentAddSave.Size = new System.Drawing.Size(107, 29);
             this.AdminStudentAddSave.TabIndex = 28;
@@ -272,7 +272,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(346, 11);
+            this.label1.Location = new System.Drawing.Point(415, 94);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(124, 24);
             this.label1.TabIndex = 27;
@@ -288,7 +288,7 @@
             this.Controls.Add(this.AdminStudentAddSave);
             this.Controls.Add(this.label1);
             this.Name = "Admin_Student_Add";
-            this.Size = new System.Drawing.Size(796, 489);
+            this.Size = new System.Drawing.Size(958, 626);
             this.Load += new System.EventHandler(this.Admin_Student_Add_Load);
             this.s.ResumeLayout(false);
             this.s.PerformLayout();

@@ -46,7 +46,7 @@
             // AdminSubjectDetails
             // 
             this.AdminSubjectDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.AdminSubjectDetails.Location = new System.Drawing.Point(221, 302);
+            this.AdminSubjectDetails.Location = new System.Drawing.Point(320, 417);
             this.AdminSubjectDetails.Name = "AdminSubjectDetails";
             this.AdminSubjectDetails.Size = new System.Drawing.Size(294, 151);
             this.AdminSubjectDetails.TabIndex = 0;
@@ -54,7 +54,7 @@
             // 
             // AdminSubjectSave
             // 
-            this.AdminSubjectSave.Location = new System.Drawing.Point(98, 210);
+            this.AdminSubjectSave.Location = new System.Drawing.Point(197, 325);
             this.AdminSubjectSave.Name = "AdminSubjectSave";
             this.AdminSubjectSave.Size = new System.Drawing.Size(75, 23);
             this.AdminSubjectSave.TabIndex = 1;
@@ -66,7 +66,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(267, 19);
+            this.label1.Location = new System.Drawing.Point(366, 134);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(188, 21);
             this.label1.TabIndex = 2;
@@ -109,7 +109,7 @@
             // 
             // AdminSubjectUpdate
             // 
-            this.AdminSubjectUpdate.Location = new System.Drawing.Point(251, 210);
+            this.AdminSubjectUpdate.Location = new System.Drawing.Point(350, 325);
             this.AdminSubjectUpdate.Name = "AdminSubjectUpdate";
             this.AdminSubjectUpdate.Size = new System.Drawing.Size(75, 23);
             this.AdminSubjectUpdate.TabIndex = 7;
@@ -119,7 +119,7 @@
             // 
             // AdminSubjectDelete
             // 
-            this.AdminSubjectDelete.Location = new System.Drawing.Point(440, 210);
+            this.AdminSubjectDelete.Location = new System.Drawing.Point(539, 325);
             this.AdminSubjectDelete.Name = "AdminSubjectDelete";
             this.AdminSubjectDelete.Size = new System.Drawing.Size(75, 23);
             this.AdminSubjectDelete.TabIndex = 8;
@@ -136,7 +136,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.AdminSubjectSubjectName, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.AdminSubjectCourseName, 1, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(177, 62);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(276, 177);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -146,7 +146,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(620, 210);
+            this.button1.Location = new System.Drawing.Point(719, 325);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 10;
@@ -166,7 +166,7 @@
             this.Controls.Add(this.AdminSubjectSave);
             this.Controls.Add(this.AdminSubjectDetails);
             this.Name = "Admin_Subject_Add_and_View_and_Delete";
-            this.Size = new System.Drawing.Size(796, 489);
+            this.Size = new System.Drawing.Size(958, 626);
             this.Load += new System.EventHandler(this.Admin_Subject_Add_and_View_and_Delete_Load);
             ((System.ComponentModel.ISupportInitialize)(this.AdminSubjectDetails)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);

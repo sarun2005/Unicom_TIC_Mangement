@@ -60,14 +60,14 @@
             // 
             // AdminStaffSearchText
             // 
-            this.AdminStaffSearchText.Location = new System.Drawing.Point(397, 76);
+            this.AdminStaffSearchText.Location = new System.Drawing.Point(447, 128);
             this.AdminStaffSearchText.Name = "AdminStaffSearchText";
             this.AdminStaffSearchText.Size = new System.Drawing.Size(223, 20);
             this.AdminStaffSearchText.TabIndex = 46;
             // 
             // AdminStaffUpdateSearch
             // 
-            this.AdminStaffUpdateSearch.Location = new System.Drawing.Point(245, 73);
+            this.AdminStaffUpdateSearch.Location = new System.Drawing.Point(295, 125);
             this.AdminStaffUpdateSearch.Name = "AdminStaffUpdateSearch";
             this.AdminStaffUpdateSearch.Size = new System.Drawing.Size(75, 23);
             this.AdminStaffUpdateSearch.TabIndex = 45;
@@ -77,7 +77,7 @@
             // 
             // AdminStaffUpdateStaffID
             // 
-            this.AdminStaffUpdateStaffID.Location = new System.Drawing.Point(396, 119);
+            this.AdminStaffUpdateStaffID.Location = new System.Drawing.Point(446, 171);
             this.AdminStaffUpdateStaffID.Name = "AdminStaffUpdateStaffID";
             this.AdminStaffUpdateStaffID.Size = new System.Drawing.Size(224, 20);
             this.AdminStaffUpdateStaffID.TabIndex = 44;
@@ -85,7 +85,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(221, 126);
+            this.label10.Location = new System.Drawing.Point(271, 178);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(43, 13);
             this.label10.TabIndex = 43;
@@ -100,7 +100,7 @@
             this.s.Controls.Add(this.AdminStaffUpdateFemale, 2, 0);
             this.s.Controls.Add(this.label4, 0, 0);
             this.s.Controls.Add(this.AdminStaffUpdateMale, 1, 0);
-            this.s.Location = new System.Drawing.Point(218, 437);
+            this.s.Location = new System.Drawing.Point(268, 489);
             this.s.Name = "s";
             this.s.RowCount = 1;
             this.s.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -140,7 +140,7 @@
             // 
             // AdminStaffUpdateClear
             // 
-            this.AdminStaffUpdateClear.Location = new System.Drawing.Point(105, 501);
+            this.AdminStaffUpdateClear.Location = new System.Drawing.Point(155, 553);
             this.AdminStaffUpdateClear.Name = "AdminStaffUpdateClear";
             this.AdminStaffUpdateClear.Size = new System.Drawing.Size(107, 29);
             this.AdminStaffUpdateClear.TabIndex = 41;
@@ -167,7 +167,7 @@
             this.tableLayoutPanel1.Controls.Add(this.AdminStaffUpdateRole, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.AdminStaffUpdateEmail, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.AdminSatffUpdatePhoneNumber, 1, 6);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(218, 164);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(268, 216);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 7;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
@@ -303,7 +303,7 @@
             // 
             // AdminStaffUpdateSave
             // 
-            this.AdminStaffUpdateSave.Location = new System.Drawing.Point(677, 501);
+            this.AdminStaffUpdateSave.Location = new System.Drawing.Point(727, 553);
             this.AdminStaffUpdateSave.Name = "AdminStaffUpdateSave";
             this.AdminStaffUpdateSave.Size = new System.Drawing.Size(107, 29);
             this.AdminStaffUpdateSave.TabIndex = 39;
@@ -315,7 +315,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(389, 7);
+            this.label1.Location = new System.Drawing.Point(439, 59);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(128, 24);
             this.label1.TabIndex = 38;
@@ -335,7 +335,7 @@
             this.Controls.Add(this.AdminStaffUpdateSave);
             this.Controls.Add(this.label1);
             this.Name = "Admin_Staff_Update_New";
-            this.Size = new System.Drawing.Size(902, 681);
+            this.Size = new System.Drawing.Size(958, 626);
             this.s.ResumeLayout(false);
             this.s.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
