@@ -22,7 +22,6 @@ namespace Unicom_TIC.Model
         [Browsable(false)] public int SubjectID { get; set; }
         [Browsable(false)] public int RoomID { get; set; }
         [Browsable(false)] public int LecturerID { get; set; }
-        public string Room { get; internal set; }
-        public string Day { get; internal set; }
+        
     }
 }

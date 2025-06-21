@@ -62,7 +62,7 @@ namespace Unicom_TIC.Views.AdminView
 
 
             // ============================ Phone Number validation ============================
-            if (admin.PhoneNumber.Length != 10 || !admin.PhoneNumber.All(char.IsDigit))
+            if (admin.PhoneNumber.Length != 10 || !admin.PhoneNumber.All(char.IsDigit))                     // ! = NOT
             {
                 MessageBox.Show("Please enter a valid Phone Number", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -79,11 +79,11 @@ namespace Unicom_TIC.Views.AdminView
 
             // ============================ Save using Controller ONLY ============================
             AdminController adminController = new AdminController();
+            adminController.AddAdmin(admin);
 
 
             try
-            {
-                adminController.AddAdmin(admin);
+            {               
                 MessageBox.Show("New Admin Saved Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)

@@ -44,6 +44,8 @@ namespace Unicom_TIC.Views
             LoginRole.Items.Add("Staff");
             LoginRole.Items.Add("Student");
 
+            Loginpassword.UseSystemPasswordChar = true;
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -134,7 +136,7 @@ namespace Unicom_TIC.Views
 
         private void checkBoxShowPassword_CheckedChanged(object sender, EventArgs e)
         {
-
+            Loginpassword.UseSystemPasswordChar = !checkBoxShowPassword.Checked;
         }
 
         private void Loginusername_TextChanged(object sender, EventArgs e)

@@ -34,14 +34,14 @@
             this.label4 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.StaffMarksView = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.TimetableCourse = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.TimetableGroup = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StaffMarksView)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -104,13 +104,13 @@
             this.label2.TabIndex = 24;
             this.label2.Text = "Marks Management";
             // 
-            // dataGridView1
+            // StaffMarksView
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(155, 364);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(637, 210);
-            this.dataGridView1.TabIndex = 23;
+            this.StaffMarksView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.StaffMarksView.Location = new System.Drawing.Point(155, 364);
+            this.StaffMarksView.Name = "StaffMarksView";
+            this.StaffMarksView.Size = new System.Drawing.Size(637, 210);
+            this.StaffMarksView.TabIndex = 23;
             // 
             // tableLayoutPanel1
             // 
@@ -169,13 +169,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.StaffMarksView);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Staff_Marks";
             this.Size = new System.Drawing.Size(988, 720);
+            this.Load += new System.EventHandler(this.Staff_Marks_Load);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StaffMarksView)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
@@ -191,7 +192,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView StaffMarksView;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.ComboBox TimetableCourse;
         private System.Windows.Forms.Label label6;

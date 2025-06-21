@@ -85,7 +85,8 @@ namespace Unicom_TIC.Views.StudentView
             // ============================ Marks ============================
             else if (selected == "View Marks")
             {
-                Student_Timetable TimetableAction = new Student_Timetable();
+                
+                StudentMarks TimetableAction = new StudentMarks(studentId);
                 TimetableAction.Dock = DockStyle.Fill;
                 MainStudentMainPanel.Controls.Add(TimetableAction);
             }

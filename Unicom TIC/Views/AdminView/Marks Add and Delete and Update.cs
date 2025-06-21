@@ -14,6 +14,7 @@ namespace Unicom_TIC.Views.AdminView
 {
     public partial class Marks_Add_and_Delete_and_Update : UserControl
     {
+        private readonly MarksController _controller = new MarksController();
         public Marks_Add_and_Delete_and_Update()
         {
             InitializeComponent();
@@ -24,18 +25,17 @@ namespace Unicom_TIC.Views.AdminView
             LoadMarks();
             LoadCourses();
             LoadExams();
+            
         }
 
         public void LoadMarks()
         {
-            MarksController markController = new MarksController();
-            List<Mark> marks = markController.ViewAllMarks();
-
-            AdminMarksView.DataSource = null;
-            AdminMarksView.DataSource = marks;
+            var data = _controller.ViewMarks(Role.Admin);             
+            AdminMarksView.AutoGenerateColumns = true;
+            AdminMarksView.DataSource = data;
                      
         }
-        
+
         private void LoadCourses()
         {
             AmdminMarksCourse.DropDownStyle = ComboBoxStyle.DropDownList;

@@ -43,7 +43,10 @@ namespace Unicom_TIC.Views.Login
             RegisterRole.Items.Add("Lecturer");
             RegisterRole.Items.Add("Staff");
             RegisterRole.Items.Add("Student");
-           
+
+            Registerpassword.UseSystemPasswordChar = true;
+            Registerconformpassword.UseSystemPasswordChar = true;
+
         }
 
 
@@ -261,7 +264,8 @@ namespace Unicom_TIC.Views.Login
 
         private void checkBoxShowPassword_CheckedChanged(object sender, EventArgs e) 
         {
-        
+            Registerpassword.UseSystemPasswordChar = !checkBoxShowPassword.Checked;
+            Registerconformpassword.UseSystemPasswordChar = !checkBoxShowPassword.Checked;
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

@@ -62,7 +62,6 @@
     <Compile Include="Controller\StudentController.cs" />
     <Compile Include="Controller\SubjectController.cs" />
     <Compile Include="Controller\TimetableController.cs" />
-    <Compile Include="Controller\UserContext.cs" />
     <Compile Include="Controller\UserController.cs" />
     <Compile Include="Model\Admin.cs" />
     <Compile Include="Model\Course.cs" />
@@ -70,6 +69,7 @@
     <Compile Include="Model\Lecturer.cs" />
     <Compile Include="Model\LecturerSubject.cs" />
     <Compile Include="Model\Mark.cs" />
+    <Compile Include="Model\Role.cs" />
     <Compile Include="Model\Room.cs" />
     <Compile Include="Model\Staff.cs" />
     <Compile Include="Model\Student.cs" />

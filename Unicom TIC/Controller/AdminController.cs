@@ -16,9 +16,8 @@ namespace Unicom_TIC.Controller
         {
             using (var connection = DataBaseConnection.GetConnection())
             {
-                string addadminQuery = "INSERT INTO Admins ( FirstName , LastName , Role , Email , PhoneNumber ) " +
-                                       "VALUES ( @FirstName , @LastName , @Role , @Email , @PhoneNumber )";
-
+                string addadminQuery = @"INSERT INTO Admins ( FirstName , LastName , Role , Email , PhoneNumber ) 
+                                       VALUES ( @FirstName , @LastName , @Role , @Email , @PhoneNumber )";
 
                 SQLiteCommand insertAdminCommand = new SQLiteCommand(addadminQuery, connection);
                 insertAdminCommand.Parameters.AddWithValue("@FirstName", admin.FirstName);
@@ -29,8 +28,6 @@ namespace Unicom_TIC.Controller
                 insertAdminCommand.ExecuteNonQuery();
             }
         }
-
-
 
 
 

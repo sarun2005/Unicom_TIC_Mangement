@@ -39,7 +39,7 @@ Z:\Projects\New folder\Unicom TIC\obj\Debug\Unicom_TIC.Views.AdminView.Marks_Add
 Z:\Projects\New folder\Unicom TIC\obj\Debug\Unicom_TIC.Views.LecturerView.Lecturer_Marks.resources
 Z:\Projects\New folder\Unicom TIC\obj\Debug\Unicom_TIC.Views.LecturerView.Lecturer_Timetable.resources
 Z:\Projects\New folder\Unicom TIC\obj\Debug\Unicom_TIC.Views.StaffView.Staff_Timetable.resources
-Z:\Projects\New folder\Unicom TIC\obj\Debug\Unicom_TIC.Views.StudentView.Marks.resources
 Z:\Projects\New folder\Unicom TIC\obj\Debug\Unicom_TIC.Views.StudentView.Student_Timetable.resources
 Z:\Projects\New folder\Unicom TIC\obj\Debug\Unicom_TIC.Views.StaffView.Staff_Marks.resources
 Z:\Projects\New folder\Unicom TIC\obj\Debug\Unicom_TIC.Views.AdminView.Admin_Exam_Management.resources
+Z:\Projects\New folder\Unicom TIC\obj\Debug\Unicom_TIC.Views.StudentView.StudentMarks.resources
