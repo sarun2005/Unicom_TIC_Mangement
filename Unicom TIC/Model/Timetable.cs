@@ -18,10 +18,10 @@ namespace Unicom_TIC.Model
         public string SubjectName { get; set; }
         public string RoomName { get; set; }
         public string LecturerName { get; set; }
-        [Browsable(false)] public int CourseID { get; set; }
-        [Browsable(false)] public int SubjectID { get; set; }
-        [Browsable(false)] public int RoomID { get; set; }
-        [Browsable(false)] public int LecturerID { get; set; }
+        public int CourseID { get; set; }
+        public int SubjectID { get; set; }
+        public int RoomID { get; set; }
+        public int LecturerID { get; set; }
         
     }
 }

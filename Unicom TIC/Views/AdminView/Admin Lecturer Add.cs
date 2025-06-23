@@ -17,6 +17,7 @@ namespace Unicom_TIC.Views.AdminView
 
        
 
+        // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ LECTURER ADD +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         private void AdminLecturerAddSave_Click(object sender, EventArgs e)
         {
             // ============================ Gender Check ============================
@@ -34,17 +35,13 @@ namespace Unicom_TIC.Views.AdminView
                 LastName = AdminLecturerAddLastName.Text,
                 Address = AdminLecturerAddAddress.Text,
                 DOB = AdminLecturerAddDOB.Value.ToString("yyyy-MM-dd"),
-                Gender = gender,
+                gender = gender,
                 Subject = AdminLecturerAddSubject.Text,
                 PhoneNumber = AdminLecturerAddPhoneNumber.Text,
                 Email = AdminLecturerAddEmail.Text
             };
 
-            // ============================ Save using Controller ONLY ============================
-            LecturerController lecturerController = new LecturerController();
-
-
-
+           
 
             // ============================ Input Validation ============================
             if (string.IsNullOrWhiteSpace(AdminLecturerAddFirstName.Text) ||
@@ -78,28 +75,26 @@ namespace Unicom_TIC.Views.AdminView
             
             try
             {
+                LecturerController lecturerController = new LecturerController();
                 lecturerController.AddLecturer(lecturer);
                 MessageBox.Show("New Lecturer Saved Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LoadLecturers(); // Refresh the lecturer list after Add
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-            
-            ClearFields();
-            LoadLecturers();
+                        
+            ClearFields(); // Clear
+          
         }
-
-        private void LoadLecturers()
-        {
-            
-        }
+        // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
 
 
-        // ============================ CLEAR ============================
+
+        // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ CLEAR ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         private void ClearFields()
         {
             AdminLecturerAddFirstName.Text = "";
@@ -113,7 +108,17 @@ namespace Unicom_TIC.Views.AdminView
             AdminLecturerAddFemale.Checked = false;
         }
 
-        // Load subjects to ComboBox
+        private void AdminLecturerAddClear_Click(object sender, EventArgs e)
+        {
+            ClearFields();
+        }
+        // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+
+
+        // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ LOAD SUBJECTS TO COMBOBOX +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         private void Admin_Lecturer_Add_Load(object sender, EventArgs e)
         {
             LoadSubjectsIntoComboBox();
@@ -130,22 +135,14 @@ namespace Unicom_TIC.Views.AdminView
             AdminLecturerAddSubject.DataSource = subjects;
             AdminLecturerAddSubject.SelectedIndex = -1;
         }
+        // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+       
 
 
-        private void AdminLecturerAddClear_Click(object sender, EventArgs e)
-        {
-            ClearFields();
 
-        }
-
-        private void AdminLecturerAddSubject_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void AdminLecturerAddEmail_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        private void LoadLecturers(){} // View
+        private void AdminLecturerAddSubject_SelectedIndexChanged(object sender, EventArgs e){}
+        private void AdminLecturerAddEmail_TextChanged(object sender, EventArgs e){}
     }
 }

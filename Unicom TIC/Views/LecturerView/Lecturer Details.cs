@@ -99,11 +99,11 @@ namespace Unicom_TIC.Views.LecturerView
 
 
             // ================= Gender Check =======================
-            if (lecturer.Gender == "Male")
+            if (lecturer.gender == "Male")
             {
                 LecturerMale.Checked = true;
             }
-            else if (lecturer.Gender == "Female")
+            else if (lecturer.gender == "Female")
             {
                 LecturerFemale.Checked = true;
             }

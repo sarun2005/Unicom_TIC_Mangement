@@ -15,7 +15,7 @@ namespace Unicom_TIC.Controller
         {
             using (var connection = DataBaseConnection.GetConnection())
             {
-                const string sql = @"INSERT INTO Timetables ( SubjectID , CourseID , LecturerID , Date , StartTime , EndTime , RoomID , GroupName)
+                const string sql = @"INSERT INTO Timetables ( SubjectID , CourseID , LecturerID , Date , StartTime , EndTime , RoomID , GroupName )
                                     VALUES ( @SubjectID , @CourseID , @LecturerID , @Date , @StartTime , @EndTime , @RoomID , @GroupName );";
 
                 using (var cmd = new SQLiteCommand(sql, connection))
@@ -46,8 +46,8 @@ namespace Unicom_TIC.Controller
                                     FROM Timetables t JOIN Subjects   s ON t.SubjectID  = s.SubjectID
                                     JOIN Courses    c ON s.CourseID   = c.CourseID        
                                     JOIN Lecturers  l ON t.LecturerID = l.LecturerID
-                                    JOIN Rooms      r ON t.RoomID     = r.RoomID;
-                                                                                    ;";
+                                    JOIN Rooms      r ON t.RoomID     = r.RoomID
+                ;";
 
                 using (var cmd = new SQLiteCommand(sql, connection))
                 using (var rdr = cmd.ExecuteReader())
@@ -92,8 +92,8 @@ namespace Unicom_TIC.Controller
         {
             using (var connection = DataBaseConnection.GetConnection())
             {
-                const string sql = @"UPDATE Timetables SET SubjectID = @SubjectID,CourseID = @CourseID, LecturerID = @LecturerID, Date = @Date,StartTime = @StartTime,EndTime = @EndTime, RoomID = @RoomID, Group = @Group
-                                        WHERE TimetableID = @TimetableID;";
+                const string sql = @"UPDATE Timetables SET SubjectID = @SubjectID , CourseID = @CourseID , LecturerID = @LecturerID , Date = @Date , StartTime = @StartTime  ,EndTime = @EndTime , RoomID = @RoomID , GroupName = @GroupName
+                                     WHERE TimetableID = @TimetableID;";
 
                 using (var cmd = new SQLiteCommand(sql, connection))
                 {
@@ -104,7 +104,7 @@ namespace Unicom_TIC.Controller
                     cmd.Parameters.AddWithValue("@StartTime", timetable.StartTime);
                     cmd.Parameters.AddWithValue("@EndTime", timetable.EndTime);
                     cmd.Parameters.AddWithValue("@RoomID", timetable.RoomID);
-                    cmd.Parameters.AddWithValue("@Group", timetable.GroupName);
+                    cmd.Parameters.AddWithValue("@GroupName", timetable.GroupName);
                     cmd.Parameters.AddWithValue("@TimetableID", timetable.TimetableID);
 
                     cmd.ExecuteNonQuery();

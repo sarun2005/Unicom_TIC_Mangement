@@ -20,7 +20,7 @@ namespace Unicom_TIC.Model
 
         public string DOB { get; set; }
 
-        public string Gender { get; set; }
+        public string gender { get; set; }
 
         public string Subject { get; set; }
 

@@ -19,12 +19,12 @@ namespace Unicom_TIC.Controller
                 string addadminQuery = @"INSERT INTO Admins ( FirstName , LastName , Role , Email , PhoneNumber ) 
                                        VALUES ( @FirstName , @LastName , @Role , @Email , @PhoneNumber )";
 
-                SQLiteCommand insertAdminCommand = new SQLiteCommand(addadminQuery, connection);
-                insertAdminCommand.Parameters.AddWithValue("@FirstName", admin.FirstName);
-                insertAdminCommand.Parameters.AddWithValue("@LastName", admin.LastName);
-                insertAdminCommand.Parameters.AddWithValue("@Role", admin.Role);
-                insertAdminCommand.Parameters.AddWithValue("@Email", admin.Email);
-                insertAdminCommand.Parameters.AddWithValue("@PhoneNumber", admin.PhoneNumber);
+                SQLiteCommand insertAdminCommand = new SQLiteCommand(addadminQuery , connection);
+                insertAdminCommand.Parameters.AddWithValue("@FirstName" , admin.FirstName);
+                insertAdminCommand.Parameters.AddWithValue("@LastName" , admin.LastName);
+                insertAdminCommand.Parameters.AddWithValue("@Role" , admin.Role);
+                insertAdminCommand.Parameters.AddWithValue("@Email" , admin.Email);
+                insertAdminCommand.Parameters.AddWithValue("@PhoneNumber" , admin.PhoneNumber);
                 insertAdminCommand.ExecuteNonQuery();
             }
         }
@@ -38,9 +38,9 @@ namespace Unicom_TIC.Controller
             using (var connection = DataBaseConnection.GetConnection())
             {
                 string viewAllAdminsQuery = "SELECT * FROM Admins";
-                SQLiteCommand viewAllAdmins = new SQLiteCommand(viewAllAdminsQuery, connection);
-                var reader = viewAllAdmins.ExecuteReader();
-                while (reader.Read())
+                SQLiteCommand viewAllAdmins = new SQLiteCommand(viewAllAdminsQuery , connection);
+                var reader = viewAllAdmins.ExecuteReader();     // ExecuteReader() = row‑by‑row read
+                while (reader.Read())   // Read() = Check next row
                 {
                     Admin admin = new Admin
                     {
@@ -66,8 +66,8 @@ namespace Unicom_TIC.Controller
             using (var connection = DataBaseConnection.GetConnection())
             {
                 string deleteAdminQuery = "DELETE FROM Admins WHERE AdminID = @AdminID";
-                SQLiteCommand deleteAdminCommand = new SQLiteCommand(deleteAdminQuery, connection);
-                deleteAdminCommand.Parameters.AddWithValue("@AdminID", adminID);
+                SQLiteCommand deleteAdminCommand = new SQLiteCommand(deleteAdminQuery , connection);
+                deleteAdminCommand.Parameters.AddWithValue("@AdminID" , adminID);
                 deleteAdminCommand.ExecuteNonQuery();
             }
         }
@@ -86,17 +86,17 @@ namespace Unicom_TIC.Controller
 
             using (var connection = DataBaseConnection.GetConnection())
             {
-                string updateQuery = "UPDATE Admins SET FirstName = @FirstName, LastName = @LastName, Role = @Role, Email = @Email," +
-                                     " PhoneNumber = @PhoneNumber WHERE AdminID = @AdminID";
+                string updateQuery = @"UPDATE Admins SET FirstName = @FirstName , LastName = @LastName , Role = @Role , Email = @Email ,
+                                     PhoneNumber = @PhoneNumber WHERE AdminID = @AdminID";
 
                 using (var command = new SQLiteCommand(updateQuery, connection))
                 {
-                    command.Parameters.AddWithValue("@FirstName", admin.FirstName);
-                    command.Parameters.AddWithValue("@LastName", admin.LastName);
-                    command.Parameters.AddWithValue("@Role", admin.Role);
-                    command.Parameters.AddWithValue("@Email", admin.Email);
-                    command.Parameters.AddWithValue("@PhoneNumber", admin.PhoneNumber);
-                    command.Parameters.AddWithValue("@AdminID", admin.AdminID);
+                    command.Parameters.AddWithValue("@FirstName" , admin.FirstName);
+                    command.Parameters.AddWithValue("@LastName" , admin.LastName);
+                    command.Parameters.AddWithValue("@Role" , admin.Role);
+                    command.Parameters.AddWithValue("@Email" , admin.Email);
+                    command.Parameters.AddWithValue("@PhoneNumber" , admin.PhoneNumber);
+                    command.Parameters.AddWithValue("@AdminID" , admin.AdminID);
                     command.ExecuteNonQuery(); 
                 }
             }
@@ -111,11 +111,11 @@ namespace Unicom_TIC.Controller
             List<Admin> admins = new List<Admin>();
             bool isNumeric = int.TryParse(keyword, out int idVal);
 
-            string sql = @"
-                SELECT * FROM Admins
-                WHERE FirstName LIKE @AdminAdminSearchText COLLATE NOCASE
-                   OR LastName LIKE @AdminAdminSearchText COLLATE NOCASE
-                   OR Email LIKE @AdminAdminSearchText COLLATE NOCASE";
+            string sql = @" SELECT * FROM Admins
+                            WHERE FirstName LIKE @AdminAdminSearchText COLLATE NOCASE
+                               OR LastName LIKE @AdminAdminSearchText COLLATE NOCASE
+                               OR Role LIKE @AdminAdminSearchText COLLATE NOCASE                               
+                               OR Email LIKE @AdminAdminSearchText COLLATE NOCASE";
 
 
             if (isNumeric)
@@ -188,11 +188,11 @@ namespace Unicom_TIC.Controller
            }
            return admin;
        }
-       */
+       
 
 
 
-        /*
+        
 
         // =====================================  VIEW AND DELETE SEARCH =====================================
         public List<Admin> SearchAdmins(string keyword)

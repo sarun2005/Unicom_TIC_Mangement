@@ -32,6 +32,7 @@ namespace Unicom_TIC.Controller
                     cmd.Parameters.AddWithValue("@CourseID", student.CourseID);
 
                     cmd.ExecuteNonQuery();
+                    connection.Close();
                 }
             }
         }
@@ -78,6 +79,62 @@ namespace Unicom_TIC.Controller
         }
 
 
+
+        // ===================================== VIEW AND UPDATE SEARCH =====================================
+        public List<Student> SearchStudents(string keyword)
+        {
+            List<Student> students = new List<Student>();
+            bool isNumeric = int.TryParse(keyword, out int idVal);
+
+            string sql = @"
+        SELECT * FROM Students
+        WHERE FirstName LIKE @AdminStudentSearchText COLLATE NOCASE
+           OR LastName LIKE @AdminStudentSearchText COLLATE NOCASE                   
+           OR Address LIKE @AdminStudentSearchText COLLATE NOCASE
+           OR DOB LIKE @AdminStudentSearchText COLLATE NOCASE
+           OR Gender LIKE @AdminStudentSearchText COLLATE NOCASE                    
+           OR Email LIKE @AdminStudentSearchText COLLATE NOCASE";
+
+            if (isNumeric)
+            {
+                sql += " OR StudentID = @AdminStudentSearchID";
+            }
+
+            using (var connection = DataBaseConnection.GetConnection())
+            using (var cmd = new SQLiteCommand(sql, connection))
+            {
+                cmd.Parameters.AddWithValue("@AdminStudentSearchText", $"%{keyword}%");
+
+                if (isNumeric)
+                {
+                    cmd.Parameters.AddWithValue("@AdminStudentSearchID", idVal);
+                }
+
+                using (var read = cmd.ExecuteReader())
+                {
+                    while (read.Read())
+                    {
+                        students.Add(new Student
+                        {
+                            StudentID = Convert.ToInt32(read["StudentID"]), 
+                            FirstName = read["FirstName"].ToString(),
+                            LastName = read["LastName"].ToString(),
+                            Address = read["Address"].ToString(),
+                            DOB = read["DOB"].ToString(),
+                            gender = read["Gender"].ToString(),
+                            Email = read["Email"].ToString(),
+                            PhoneNumber = read["PhoneNumber"].ToString()
+                        });
+                    }
+                }
+            }
+
+            return students;
+        }
+
+
+
+
         // ===================================== VIEW (ONE) IN MAIN STUDENT FORM =====================================
         public Student GetStudentById(int id)
         {
@@ -115,6 +172,19 @@ namespace Unicom_TIC.Controller
                 }
             }
             return null;
+        }
+
+
+        // ===================================== DELETE =====================================
+        public void DeleteStudent(int studentID)
+        {
+            using (var connection = DataBaseConnection.GetConnection())
+            {
+                string deleteStudentQuery = "DELETE FROM Students WHERE StudentID = @StudentID";
+                SQLiteCommand deleteLecturerCommand = new SQLiteCommand(deleteStudentQuery, connection);
+                deleteLecturerCommand.Parameters.AddWithValue("@StudentID", studentID);
+                deleteLecturerCommand.ExecuteNonQuery();
+            }
         }
     }
 }

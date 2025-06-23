@@ -38,13 +38,12 @@ namespace Unicom_TIC.Views.AdminView
 
         private void AdminCourseSave_Click(object sender, EventArgs e)
         {
-            // Course Object Creation ================================================================
+            // ============================ Course Object Creation ============================
             Course course = new Course
             {
                 CourseName = AdminCourseName.Text,
                
             };
-
 
 
             // ============================ Input Validation ============================
@@ -55,12 +54,14 @@ namespace Unicom_TIC.Views.AdminView
                 return;
             };
 
-            // ============================ Save using Controller ONLY ============================
-            CourseController courseController = new CourseController();
+
+            
+            
 
 
             try
             {
+                CourseController courseController = new CourseController();
                 courseController.AddCourse(course);
                 MessageBox.Show("New Course Saved Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -79,14 +80,8 @@ namespace Unicom_TIC.Views.AdminView
         }
 
 
-        // Delete an Course ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+        // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ DELETE AN COURSE ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
         private void button3_Click(object sender, EventArgs e)
-        {
-            DeleteCourse();
-        }
-
-        // Method to delete a course based on selected row in DataGridView =========================
-        private void DeleteCourse()
         {
             if (AdminCourseDetails.SelectedRows.Count > 0)
             {
@@ -105,7 +100,10 @@ namespace Unicom_TIC.Views.AdminView
             {
                 MessageBox.Show("Please select a course to delete.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            
         }
+        // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        
 
        
 
@@ -151,6 +149,16 @@ namespace Unicom_TIC.Views.AdminView
                 AdminCourseName.Text = row.Cells["CourseName"].Value?.ToString() ?? "";
             }
         }
+
+
+
+
+
+
+
+
+
+
 
         private void AdminCourseDetails_CellContentClick(object sender, DataGridViewCellEventArgs e){}
         private void Admin_Course_Add_and_View_and_Delete_Load(object sender, EventArgs e){}

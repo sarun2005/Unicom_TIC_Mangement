@@ -48,7 +48,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.TimetableStartTime = new System.Windows.Forms.DateTimePicker();
-            this.TimetableUpdate = new System.Windows.Forms.Button();
+            this.UpdateButton = new System.Windows.Forms.Button();
             this.TimetableSave = new System.Windows.Forms.Button();
             this.TimetabeDelete = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
@@ -271,15 +271,15 @@
             this.TimetableStartTime.TabIndex = 14;
             this.TimetableStartTime.Value = new System.DateTime(2025, 6, 20, 6, 0, 0, 0);
             // 
-            // TimetableUpdate
+            // UpdateButton
             // 
-            this.TimetableUpdate.Location = new System.Drawing.Point(426, 577);
-            this.TimetableUpdate.Name = "TimetableUpdate";
-            this.TimetableUpdate.Size = new System.Drawing.Size(75, 23);
-            this.TimetableUpdate.TabIndex = 15;
-            this.TimetableUpdate.Text = "Update";
-            this.TimetableUpdate.UseVisualStyleBackColor = true;
-            this.TimetableUpdate.Click += new System.EventHandler(this.button1_Click);
+            this.UpdateButton.Location = new System.Drawing.Point(426, 577);
+            this.UpdateButton.Name = "UpdateButton";
+            this.UpdateButton.Size = new System.Drawing.Size(75, 23);
+            this.UpdateButton.TabIndex = 15;
+            this.UpdateButton.Text = "Update";
+            this.UpdateButton.UseVisualStyleBackColor = true;
+            this.UpdateButton.Click += new System.EventHandler(this.button1_Click);
             // 
             // TimetableSave
             // 
@@ -307,7 +307,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.TimetabeDelete);
             this.Controls.Add(this.TimetableSave);
-            this.Controls.Add(this.TimetableUpdate);
+            this.Controls.Add(this.UpdateButton);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.TimetableView);
@@ -343,7 +343,7 @@
         private System.Windows.Forms.ComboBox TimetableLecturer;
         private System.Windows.Forms.ComboBox TimetableRoom;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button TimetableUpdate;
+        private System.Windows.Forms.Button UpdateButton;
         private System.Windows.Forms.Button TimetableSave;
         private System.Windows.Forms.Button TimetabeDelete;
         private System.Windows.Forms.Label label4;

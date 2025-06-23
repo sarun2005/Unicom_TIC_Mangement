@@ -32,10 +32,10 @@ namespace Unicom_TIC.Views.AdminView
         }
 
 
-        //  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ Admin Add +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        //  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ ADMIN ADD +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         private void AdminAdminAddSave_Click(object sender, EventArgs e)
         {
-            // ============================ Admin Object Creation ============================
+            // ============================ Add Admin Object Creation ============================
             Admin admin = new Admin
             {
                 FirstName = AdminAdminAddFirstName.Text,
@@ -77,44 +77,31 @@ namespace Unicom_TIC.Views.AdminView
             }
 
 
-            // ============================ Save using Controller ONLY ============================
-            AdminController adminController = new AdminController();
-            adminController.AddAdmin(admin);
+            
 
 
             try
-            {               
+            {
+                AdminController adminController = new AdminController();
+                adminController.AddAdmin(admin);  // Call the AddAdmin method
+
                 MessageBox.Show("New Admin Saved Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LoadAdmins();  // Refresh the admin list after Add
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-
-            // ------------- CLEAR -------------
-            ClearFields();
-
-            // ------------- VIEW -------------
-            LoadAdmins();
+         
+            ClearFields(); // Cleear
+                                 
         }
 
         // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
-
-
-
-
-        // ------------- VIEW -------------
-        private void LoadAdmins()
-        {
-
-        }
-
-
-
-
+           
+        
 
 
         // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ CLEAR +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -142,7 +129,7 @@ namespace Unicom_TIC.Views.AdminView
 
 
 
-
+        private void LoadAdmins() { } // View
         private void label1_Click(object sender, EventArgs e){}
         private void AdminAdminAddRole_SelectedIndexChanged(object sender, EventArgs e){}
         private void AdminAdminAddFirstName_TextChanged(object sender, EventArgs e){}

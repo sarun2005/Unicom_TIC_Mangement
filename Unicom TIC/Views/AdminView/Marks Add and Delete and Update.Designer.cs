@@ -33,20 +33,20 @@
             this.TimetableSave = new System.Windows.Forms.Button();
             this.TimetableUpdate = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.AdminMarksStudentID = new System.Windows.Forms.TextBox();
+            this.MarksStudentID = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.AdminMarksScore = new System.Windows.Forms.TextBox();
+            this.MarksScore = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.AdminMarksView = new System.Windows.Forms.DataGridView();
+            this.MarksView = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.AdminMarksExam = new System.Windows.Forms.ComboBox();
+            this.MarksExam = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.AmdminMarksCourse = new System.Windows.Forms.ComboBox();
+            this.MarksSubject = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.tableLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.AdminMarksView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MarksView)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,10 +58,11 @@
             this.TimetabeDelete.TabIndex = 24;
             this.TimetabeDelete.Text = "Delete";
             this.TimetabeDelete.UseVisualStyleBackColor = true;
+            this.TimetabeDelete.Click += new System.EventHandler(this.TimetabeDelete_Click);
             // 
             // TimetableSave
             // 
-            this.TimetableSave.Location = new System.Drawing.Point(770, 566);
+            this.TimetableSave.Location = new System.Drawing.Point(770, 582);
             this.TimetableSave.Name = "TimetableSave";
             this.TimetableSave.Size = new System.Drawing.Size(75, 23);
             this.TimetableSave.TabIndex = 23;
@@ -77,16 +78,17 @@
             this.TimetableUpdate.TabIndex = 22;
             this.TimetableUpdate.Text = "Update";
             this.TimetableUpdate.UseVisualStyleBackColor = true;
+            this.TimetableUpdate.Click += new System.EventHandler(this.TimetableUpdate_Click);
             // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.69231F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 72.30769F));
-            this.tableLayoutPanel2.Controls.Add(this.AdminMarksStudentID, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.MarksStudentID, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.label9, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.label4, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.AdminMarksScore, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.MarksScore, 1, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(535, 140);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
@@ -95,13 +97,13 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(381, 134);
             this.tableLayoutPanel2.TabIndex = 21;
             // 
-            // AdminMarksStudentID
+            // MarksStudentID
             // 
-            this.AdminMarksStudentID.Location = new System.Drawing.Point(108, 70);
-            this.AdminMarksStudentID.Name = "AdminMarksStudentID";
-            this.AdminMarksStudentID.Size = new System.Drawing.Size(202, 20);
-            this.AdminMarksStudentID.TabIndex = 18;
-            this.AdminMarksStudentID.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.MarksStudentID.Location = new System.Drawing.Point(108, 70);
+            this.MarksStudentID.Name = "MarksStudentID";
+            this.MarksStudentID.Size = new System.Drawing.Size(202, 20);
+            this.MarksStudentID.TabIndex = 18;
+            this.MarksStudentID.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label9
             // 
@@ -121,13 +123,13 @@
             this.label4.TabIndex = 16;
             this.label4.Text = "StudentID";
             // 
-            // AdminMarksScore
+            // MarksScore
             // 
-            this.AdminMarksScore.Location = new System.Drawing.Point(108, 3);
-            this.AdminMarksScore.Name = "AdminMarksScore";
-            this.AdminMarksScore.Size = new System.Drawing.Size(202, 20);
-            this.AdminMarksScore.TabIndex = 17;
-            this.AdminMarksScore.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.MarksScore.Location = new System.Drawing.Point(108, 3);
+            this.MarksScore.Name = "MarksScore";
+            this.MarksScore.Size = new System.Drawing.Size(202, 20);
+            this.MarksScore.TabIndex = 17;
+            this.MarksScore.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label2
             // 
@@ -139,23 +141,23 @@
             this.label2.TabIndex = 20;
             this.label2.Text = "Marks Management";
             // 
-            // AdminMarksView
+            // MarksView
             // 
-            this.AdminMarksView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.AdminMarksView.Location = new System.Drawing.Point(208, 315);
-            this.AdminMarksView.Name = "AdminMarksView";
-            this.AdminMarksView.Size = new System.Drawing.Size(541, 210);
-            this.AdminMarksView.TabIndex = 19;
-            this.AdminMarksView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.MarksView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.MarksView.Location = new System.Drawing.Point(208, 315);
+            this.MarksView.Name = "MarksView";
+            this.MarksView.Size = new System.Drawing.Size(541, 210);
+            this.MarksView.TabIndex = 19;
+            this.MarksView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.61361F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 71.38639F));
-            this.tableLayoutPanel1.Controls.Add(this.AdminMarksExam, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.MarksExam, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label6, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.AmdminMarksCourse, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.MarksSubject, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(56, 140);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -165,14 +167,14 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(390, 134);
             this.tableLayoutPanel1.TabIndex = 18;
             // 
-            // AdminMarksExam
+            // MarksExam
             // 
-            this.AdminMarksExam.FormattingEnabled = true;
-            this.AdminMarksExam.Location = new System.Drawing.Point(114, 70);
-            this.AdminMarksExam.Name = "AdminMarksExam";
-            this.AdminMarksExam.Size = new System.Drawing.Size(218, 21);
-            this.AdminMarksExam.TabIndex = 1;
-            this.AdminMarksExam.SelectedIndexChanged += new System.EventHandler(this.TimetableCourse_SelectedIndexChanged);
+            this.MarksExam.FormattingEnabled = true;
+            this.MarksExam.Location = new System.Drawing.Point(114, 70);
+            this.MarksExam.Name = "MarksExam";
+            this.MarksExam.Size = new System.Drawing.Size(218, 21);
+            this.MarksExam.TabIndex = 1;
+            this.MarksExam.SelectedIndexChanged += new System.EventHandler(this.TimetableCourse_SelectedIndexChanged);
             // 
             // label6
             // 
@@ -183,23 +185,23 @@
             this.label6.TabIndex = 8;
             this.label6.Text = "Exam";
             // 
-            // AmdminMarksCourse
+            // MarksSubject
             // 
-            this.AmdminMarksCourse.FormattingEnabled = true;
-            this.AmdminMarksCourse.Location = new System.Drawing.Point(114, 3);
-            this.AmdminMarksCourse.Name = "AmdminMarksCourse";
-            this.AmdminMarksCourse.Size = new System.Drawing.Size(218, 21);
-            this.AmdminMarksCourse.TabIndex = 9;
-            this.AmdminMarksCourse.SelectedIndexChanged += new System.EventHandler(this.TimetableGroup_SelectedIndexChanged);
+            this.MarksSubject.FormattingEnabled = true;
+            this.MarksSubject.Location = new System.Drawing.Point(114, 3);
+            this.MarksSubject.Name = "MarksSubject";
+            this.MarksSubject.Size = new System.Drawing.Size(218, 21);
+            this.MarksSubject.TabIndex = 9;
+            this.MarksSubject.SelectedIndexChanged += new System.EventHandler(this.TimetableGroup_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 13);
+            this.label1.Size = new System.Drawing.Size(43, 13);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Course";
+            this.label1.Text = "Subject";
             // 
             // contextMenuStrip1
             // 
@@ -215,14 +217,14 @@
             this.Controls.Add(this.TimetableUpdate);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.AdminMarksView);
+            this.Controls.Add(this.MarksView);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Marks_Add_and_Delete_and_Update";
             this.Size = new System.Drawing.Size(958, 626);
             this.Load += new System.EventHandler(this.Marks_Add_and_Delete_and_Update_Load);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.AdminMarksView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.MarksView)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
@@ -238,15 +240,15 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView AdminMarksView;
+        private System.Windows.Forms.DataGridView MarksView;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.ComboBox AdminMarksExam;
+        private System.Windows.Forms.ComboBox MarksExam;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox AmdminMarksCourse;
+        private System.Windows.Forms.ComboBox MarksSubject;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox AdminMarksStudentID;
-        private System.Windows.Forms.TextBox AdminMarksScore;
+        private System.Windows.Forms.TextBox MarksStudentID;
+        private System.Windows.Forms.TextBox MarksScore;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
     }
 }

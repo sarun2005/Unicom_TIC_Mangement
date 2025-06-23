@@ -21,6 +21,7 @@ namespace Unicom_TIC.Views.AdminView
 
         private void Admin_Lecturer_Update_Load(object sender, EventArgs e)
         {
+            // ============================ Add items to the role dropdown ============================
             AdminLecturerUpdateSubject.DropDownStyle = ComboBoxStyle.DropDownList;
 
             AdminLecturerUpdateSubject.Items.Add("Python");
@@ -30,11 +31,8 @@ namespace Unicom_TIC.Views.AdminView
             AdminLecturerUpdateSubject.Items.Add("PHP");
         }
 
-        private void AdminLecturerUpdateRole_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
-        }
-
+        // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ UPDATE SAVE ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         private void AdminLecturerUpdateSave_Click(object sender, EventArgs e)
         {
             if (!int.TryParse(AdminLecturerUpdateLecturerID.Text, out int id))
@@ -43,22 +41,37 @@ namespace Unicom_TIC.Views.AdminView
                 return;
             }
 
+            // ============================ Gender Check ============================
+            string gender = "";
+            if (AdminLecturerUpdateMale.Checked)
+                gender = "Male";
+            else if (AdminLecturerUpdateFemale.Checked)
+                gender = "Female";
+
+            // ============================ Lecturer Object Creation ============================
             Lecturer lecturer = new Lecturer
             {
                 LecturerID = id,
                 FirstName = AdminLecturerUpdateFirstName.Text.Trim(),
                 LastName = AdminLecturerUpdateLastName.Text.Trim(),
                 Subject = AdminLecturerUpdateSubject.Text.Trim(),
+                DOB = AdminLecturerUpdateDOB.Value.ToString("yyyy-MM-dd"),
+                gender = gender,
                 Email = AdminLecturerUpdateEmail.Text.Trim(),
-                PhoneNumber = AdminLecturerUpdatePhoneNumber.Text.Trim()
+                PhoneNumber = AdminLecturerUpdatePhoneNumber.Text.Trim(),
+                Address = AdminLecturerUpdateAddress.Text.Trim()   
             };
 
+
             // Input Validation
-            if (string.IsNullOrWhiteSpace(lecturer.FirstName) ||
-                string.IsNullOrWhiteSpace(lecturer.Email) ||
-                string.IsNullOrWhiteSpace(lecturer.LastName) ||
-                string.IsNullOrWhiteSpace(lecturer.Subject) ||
-                string.IsNullOrWhiteSpace(lecturer.PhoneNumber))
+            if (string.IsNullOrWhiteSpace(AdminLecturerUpdateFirstName.Text) ||
+                string.IsNullOrWhiteSpace(AdminLecturerUpdateLastName.Text) ||
+                string.IsNullOrWhiteSpace(AdminLecturerUpdateAddress.Text) ||
+                string.IsNullOrWhiteSpace(AdminLecturerUpdateDOB.Text) ||
+                string.IsNullOrWhiteSpace(AdminLecturerUpdateSubject.Text) ||
+                string.IsNullOrWhiteSpace(AdminLecturerUpdatePhoneNumber.Text) ||
+                string.IsNullOrWhiteSpace(AdminLecturerUpdateEmail.Text) ||
+                string.IsNullOrWhiteSpace(gender))
             {
                 MessageBox.Show("Please enter your details", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -87,6 +100,8 @@ namespace Unicom_TIC.Views.AdminView
                 controller.UpdateLecturer(lecturer); 
 
                 MessageBox.Show("Lecturer details updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                // ============================ After View Update ============================
                 LoadLecturers(); 
             }
             catch (Exception ex)
@@ -94,25 +109,20 @@ namespace Unicom_TIC.Views.AdminView
                 MessageBox.Show($"Update failed:\n{ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        private void LoadLecturers()
-        {
-            
-        }
-
-        private void AdminLecturerSearchText_TextChanged(object sender, EventArgs e)
-        {
-           
-        }
+        // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
-        
 
-        private void AdminLecturerUpdateClear_Click(object sender, EventArgs e)
-        {
-            ClearUpdateFields();
-        }
 
+
+
+
+
+
+
+
+
+        // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ UPDATE SEARCH LECTURER ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         private void AdminLecturerSearch_Click(object sender, EventArgs e)
         {
             if (!int.TryParse(AdminUpdateLecturerSearchText.Text.Trim(), out int lecturerID))
@@ -140,15 +150,35 @@ namespace Unicom_TIC.Views.AdminView
             AdminLecturerUpdateFirstName.Text = lecturer.FirstName;
             AdminLecturerUpdateLastName.Text = lecturer.LastName;
             AdminLecturerUpdateAddress.Text = lecturer.Address;
-            AdminLecturerUpdateSubject.Text = lecturer.Subject;
             AdminLecturerUpdateEmail.Text = lecturer.Email;
             AdminLecturerUpdatePhoneNumber.Text = lecturer.PhoneNumber;
+            AdminLecturerUpdateDOB.Value = DateTime.Parse(lecturer.DOB);
+
+
+            if (!AdminLecturerUpdateSubject.Items.Contains(lecturer.Subject))
+                AdminLecturerUpdateSubject.Items.Add(lecturer.Subject);
+            AdminLecturerUpdateSubject.SelectedItem = lecturer.Subject;
+
             
+            AdminLecturerUpdateMale.Checked = lecturer.gender == "Male";
+            AdminLecturerUpdateFemale.Checked = lecturer.gender == "Female";
+
+        }
+        // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+
+        // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ CLEAR +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+        private void AdminLecturerUpdateClear_Click(object sender, EventArgs e)
+        {
+            ClearUpdateFields();
         }
 
-        // ============================ CLEAR ============================
         private void ClearUpdateFields()
         {
+            AdminUpdateLecturerSearchText.Clear();
             AdminLecturerUpdateLecturerID.Clear();
             AdminLecturerUpdateFirstName.Clear();
             AdminLecturerUpdateLastName.Clear();
@@ -160,6 +190,14 @@ namespace Unicom_TIC.Views.AdminView
             AdminLecturerUpdateFemale.Checked = false;
             AdminLecturerUpdateDOB.Value = DateTime.Now;
         }
+        // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+
+        private void LoadLecturers() { } // View
+        private void AdminLecturerUpdateRole_SelectedIndexChanged(object sender, EventArgs e){}
+        private void AdminLecturerSearchText_TextChanged(object sender, EventArgs e){}
     }
     
 }

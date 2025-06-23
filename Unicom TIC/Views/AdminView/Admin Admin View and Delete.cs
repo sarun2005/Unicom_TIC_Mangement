@@ -16,11 +16,8 @@ namespace Unicom_TIC.Views.AdminView
     {
         public Admin_Admin_View_and_Delete()
         {
-            InitializeComponent();
-
-
-            // ------- VIEW -------
-            LoadAdmins();
+            InitializeComponent();                      
+            LoadAdmins(); // View
 
         }
 
@@ -37,7 +34,7 @@ namespace Unicom_TIC.Views.AdminView
 
 
 
-        //  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ Admin Delete +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        //  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ ADMIN DELETE +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         private void AdminAdminDelete_Click(object sender, EventArgs e)
         {
             if (AdminAdminDetails.SelectedRows.Count > 0)
@@ -52,7 +49,7 @@ namespace Unicom_TIC.Views.AdminView
                     controller.DeleteAdmin(adminID);
 
                     MessageBox.Show("Admin deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    LoadAdmins();
+                    LoadAdmins();  // Refresh the admin list after Delete
                 }
             }
             else
@@ -66,7 +63,7 @@ namespace Unicom_TIC.Views.AdminView
 
 
 
-        //  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ Admin Search in View and Delete +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        //  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ ADMIN SEARCH IN VIEW AND DELETE ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         private void AdminAdminSearchText_TextChanged(object sender, EventArgs e)
         {
 

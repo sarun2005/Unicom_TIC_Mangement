@@ -19,8 +19,22 @@ namespace Unicom_TIC.Views.AdminView
             InitializeComponent();
         }
 
+        private void Admin_Admin_Update_Load(object sender, EventArgs e)
+        {
+            // ============================ Add items to the role dropdown ============================
+            AdminAdminUpdateRole.DropDownStyle = ComboBoxStyle.DropDownList;
 
-        // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ Update Admin +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+            AdminAdminUpdateRole.Items.Add("Owner");
+            AdminAdminUpdateRole.Items.Add("Manager");
+            AdminAdminUpdateRole.Items.Add("Staff");
+            AdminAdminUpdateRole.Items.Add("Lecturer");
+        }
+
+
+
+
+
+        // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ UPDATE ADMIN SAVE +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         private void AdminAdminUpdateSave_Click(object sender, EventArgs e)
         {
             if (!int.TryParse(AdminAdminUpdateAdminID.Text, out int id))
@@ -29,6 +43,8 @@ namespace Unicom_TIC.Views.AdminView
                 return;
             }
 
+
+            // ============================ Update Admin Object Creation ============================
             Admin admin = new Admin
             {
                 AdminID = id,
@@ -39,7 +55,7 @@ namespace Unicom_TIC.Views.AdminView
                 PhoneNumber = AdminAdminUpdatePhoneNumber.Text.Trim()
             };
 
-            // Input Validation
+            // ============================ Input Validation ============================
             if (string.IsNullOrWhiteSpace(admin.FirstName) ||
                 string.IsNullOrWhiteSpace(admin.Email) ||
                 string.IsNullOrWhiteSpace(admin.LastName) ||
@@ -50,27 +66,33 @@ namespace Unicom_TIC.Views.AdminView
                 return;
             }
 
-            // Phone Number validation
+
+            // ============================ Phone Number validation ============================
             if (admin.PhoneNumber.Length != 10 || !admin.PhoneNumber.All(char.IsDigit))
             {
                 MessageBox.Show("Please enter a valid Phone Number", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            // Email validation
+
+            // ============================ Email validation ============================
             if (!admin.Email.Contains("@") || !admin.Email.Contains("."))
             {
                 MessageBox.Show("Please enter a valid email address", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
+
+
             if (MessageBox.Show("Are you sure you want to update this admin?", "Confirm Update", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes)
                 return;
+
+
 
             try
             {
                 AdminController controller = new AdminController();
-                controller.UpdateAdmin(admin); // Call the UpdateAdmin method
+                controller.UpdateAdmin(admin);   // Call the UpdateAdmin method
 
                 MessageBox.Show("Admin details updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadAdmins(); // Refresh the admin list after update
@@ -80,16 +102,13 @@ namespace Unicom_TIC.Views.AdminView
                 MessageBox.Show($"Update failed:\n{ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
 
-        private void LoadAdmins()
-        {
-
-        }
 
 
-        // ============================ SEARCH ADMINID ============================
+        // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ UPDATE SEARCH ADMIN ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         private void AdminAdminSearch_Click(object sender, EventArgs e)
         {
             
@@ -120,43 +139,41 @@ namespace Unicom_TIC.Views.AdminView
             AdminAdminUpdateEmail.Text = admin.Email;
             AdminAdminUpdatePhoneNumber.Text = admin.PhoneNumber;
         }
-        // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
 
 
-        // ============================ CLEAR ============================
-        private void ClearUpdateFields()
-        {
-            AdminAdminUpdateAdminID.Clear();
-            AdminAdminUpdateFirstName.Clear();
-            AdminAdminUpdateLastName.Clear();
-            AdminAdminUpdateRole.SelectedIndex = -1;   
-            AdminAdminUpdateEmail.Clear();
-            AdminAdminUpdatePhoneNumber.Clear();
-        }
 
 
 
-        private void Admin_Admin_Update_Load(object sender, EventArgs e)
-        {
-                       
-            // ============================ Add items to the role dropdown ============================
-            AdminAdminUpdateRole.DropDownStyle = ComboBoxStyle.DropDownList;
 
-            AdminAdminUpdateRole.Items.Add("Owner");
-            AdminAdminUpdateRole.Items.Add("Manager");
-            AdminAdminUpdateRole.Items.Add("Staff");
-            AdminAdminUpdateRole.Items.Add("Lecturer");
-        }
 
+        // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ CLEAR ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         private void AdminAdminUpdateBack_Click(object sender, EventArgs e)
         {
             ClearUpdateFields();
         }
 
 
+        // ============================ CLEAR ============================
+        private void ClearUpdateFields()
+        {
+            AdminAdminSearchText.Clear();
+            AdminAdminUpdateAdminID.Clear();
+            AdminAdminUpdateFirstName.Clear();
+            AdminAdminUpdateLastName.Clear();
+            AdminAdminUpdateRole.SelectedIndex = -1;
+            AdminAdminUpdateEmail.Clear();
+            AdminAdminUpdatePhoneNumber.Clear();
+        }
+        // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+
+
+
+
+        private void LoadAdmins(){} // View
         private void AdminAdminSearchText_TextChanged(object sender, EventArgs e){}
         private void AdminAdminUpdatePhoneNumber_TextChanged(object sender, EventArgs e){}
         private void AdminAdminUpdateEmail_TextChanged(object sender, EventArgs e){}  

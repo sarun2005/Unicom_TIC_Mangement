@@ -16,16 +16,15 @@ namespace Unicom_TIC.Controller
         {
             using (var connection = DataBaseConnection.GetConnection())
             {
-                string addlecturerQuery = "INSERT INTO Lecturers ( FirstName , LastName , Address , DOB , Gender , Subject , Email , PhoneNumber ) " +
-                                           "VALUES ( @FirstName , @LastName , @Address ,@DOB , @gender ,  @Subject , @Email , @PhoneNumber )";
-
+                string addlecturerQuery = @"INSERT INTO Lecturers ( FirstName , LastName , Address , DOB , Gender , Subject , Email , PhoneNumber )
+                                            VALUES ( @FirstName , @LastName , @Address , @DOB , @gender ,  @Subject , @Email , @PhoneNumber )";
 
                 SQLiteCommand insertLecturerCommand = new SQLiteCommand(addlecturerQuery, connection);
                 insertLecturerCommand.Parameters.AddWithValue("@FirstName", lecturer.FirstName);
                 insertLecturerCommand.Parameters.AddWithValue("@LastName", lecturer.LastName);
                 insertLecturerCommand.Parameters.AddWithValue("@Address", lecturer.Address);
                 insertLecturerCommand.Parameters.AddWithValue("@DOB", lecturer.DOB);
-                insertLecturerCommand.Parameters.AddWithValue("@gender", lecturer.Gender);
+                insertLecturerCommand.Parameters.AddWithValue("@gender", lecturer.gender);
                 insertLecturerCommand.Parameters.AddWithValue("@Subject", lecturer.Subject);
                 insertLecturerCommand.Parameters.AddWithValue("@Email", lecturer.Email);
                 insertLecturerCommand.Parameters.AddWithValue("@PhoneNumber", lecturer.PhoneNumber);
@@ -53,7 +52,7 @@ namespace Unicom_TIC.Controller
                         LastName = reader.GetString(2),
                         Address = reader.GetString(3),
                         DOB = reader.GetString(4),
-                        Gender = reader.GetString(5),
+                        gender = reader.GetString(5),
                         Subject = reader.GetString(6),
                         PhoneNumber = reader.GetString(7),
                         Email = reader.GetString(8),
@@ -65,6 +64,62 @@ namespace Unicom_TIC.Controller
             return lecturers;
         }
 
+
+
+
+        // ===================================== VIEW AND UPDATE SEARCH =====================================
+        public List<Lecturer> SearchLecturers(string keyword)
+        {
+            List<Lecturer> lecturers = new List<Lecturer>();
+            bool isNumeric = int.TryParse(keyword, out int idVal);
+
+            string sql = @"
+                SELECT * FROM Lecturers
+                WHERE FirstName LIKE @AdminLecturerSearchText COLLATE NOCASE
+                   OR LastName LIKE @AdminLecturerSearchText COLLATE NOCASE                   
+                   OR Address LIKE @AdminLecturerSearchText COLLATE NOCASE
+                   OR DOB LIKE @AdminLecturerSearchText COLLATE NOCASE
+                   OR gender LIKE @AdminLecturerSearchText COLLATE NOCASE                    
+                   OR Email LIKE @AdminLecturerSearchText COLLATE NOCASE";
+
+
+            if (isNumeric)
+            {
+                sql += " OR LecturerID = @AdminLecturerSearchID";
+            }
+
+            using (var connection = DataBaseConnection.GetConnection())
+            using (var cmd = new SQLiteCommand(sql, connection))
+            {
+                cmd.Parameters.AddWithValue("@AdminLecturerSearchText", $"%{keyword}%");
+
+                if (isNumeric)
+                {
+                    cmd.Parameters.AddWithValue("@AdminLecturerSearchID", idVal);
+                }
+
+                using (var read = cmd.ExecuteReader())
+                {
+                    while (read.Read())
+                    {
+                        lecturers.Add(new Lecturer
+                        {
+                            LecturerID = Convert.ToInt32(read["LecturerID"]),
+                            FirstName = read["FirstName"].ToString(),
+                            LastName = read["LastName"].ToString(),
+                            Address = read["Address"].ToString(),
+                            DOB = read["DOB"].ToString(),
+                            gender = read["gender"].ToString(),
+                            Subject = read["Subject"].ToString(),
+                            Email = read["Email"].ToString(),
+                            PhoneNumber = read["PhoneNumber"].ToString()
+                        });
+                    }
+                }
+            }
+
+            return lecturers;
+        }
 
 
 
@@ -105,7 +160,7 @@ namespace Unicom_TIC.Controller
                     updateLecturerCommand.Parameters.AddWithValue("@LastName", lecturer.LastName);
                     updateLecturerCommand.Parameters.AddWithValue("@Address", lecturer.Address);
                     updateLecturerCommand.Parameters.AddWithValue("@DOB", lecturer.DOB);
-                    updateLecturerCommand.Parameters.AddWithValue("@gender", lecturer.Gender);
+                    updateLecturerCommand.Parameters.AddWithValue("@gender", lecturer.gender);
                     updateLecturerCommand.Parameters.AddWithValue("@Subject", lecturer.Subject);
                     updateLecturerCommand.Parameters.AddWithValue("@Email", lecturer.Email);
                     updateLecturerCommand.Parameters.AddWithValue("@PhoneNumber", lecturer.PhoneNumber);
@@ -119,57 +174,7 @@ namespace Unicom_TIC.Controller
 
 
 
-        // ===================================== VIEW SEARCH =====================================
-        public List<Lecturer> SearchLecturers(string keyword)
-        {
-            List<Lecturer> lecturers = new List<Lecturer>();
-            bool isNumeric = int.TryParse(keyword, out int idVal);
-
-            string sql = @"
-                SELECT * FROM Lecturers
-                WHERE FirstName LIKE @AdminLecturerSearchText COLLATE NOCASE
-                   OR LastName LIKE @AdminLecturerSearchText COLLATE NOCASE
-                   OR Email LIKE @AdminLecturerSearchText COLLATE NOCASE";
-
-
-            if (isNumeric)
-            {
-                sql += " OR LecturerID = @AdminLecturerSearchID";
-            }
-
-            using (var connection = DataBaseConnection.GetConnection())
-            using (var cmd = new SQLiteCommand(sql, connection))
-            {
-                cmd.Parameters.AddWithValue("@AdminLecturerSearchText", $"%{keyword}%");
-
-                if (isNumeric)
-                {
-                    cmd.Parameters.AddWithValue("@AdminLecturerSearchID", idVal);
-                }
-
-                using (var read = cmd.ExecuteReader())
-                {
-                    while (read.Read())
-                    {
-                        lecturers.Add(new Lecturer
-                        {
-                            LecturerID = Convert.ToInt32(read["LecturerID"]),
-                            FirstName = read["FirstName"].ToString(),
-                            LastName = read["LastName"].ToString(),
-                            Address = read["Address"].ToString(),
-                            DOB = read["DOB"].ToString(),
-                            Gender = read["gender"].ToString(),
-                            Subject = read["Subject"].ToString(),
-                            Email = read["Email"].ToString(),
-                            PhoneNumber = read["PhoneNumber"].ToString()
-                        });
-                    }
-                }
-            }
-
-            return lecturers;
-        }
-
+        
 
 
 
@@ -195,7 +200,7 @@ namespace Unicom_TIC.Controller
                                 LastName = reader["LastName"].ToString(),
                                 Address = reader["Address"].ToString(),
                                 DOB = reader["DOB"].ToString(),
-                                Gender = reader["Gender"].ToString(),
+                                gender = reader["Gender"].ToString(),
                                 Subject = reader["Subject"].ToString(),
                                 Email = reader["Email"].ToString(),
                                 PhoneNumber = reader["PhoneNumber"].ToString()

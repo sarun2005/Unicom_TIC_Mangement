@@ -30,9 +30,7 @@
         {
             this.AdminAdminUpdateBack = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label7 = new System.Windows.Forms.Label();
             this.AdminAdminUpdateFirstName = new System.Windows.Forms.TextBox();
-            this.AdminAdminUpdateAdminID = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -46,6 +44,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.AdminAdminSearch = new System.Windows.Forms.Button();
             this.AdminAdminSearchText = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.AdminAdminUpdateAdminID = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -88,15 +88,6 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(448, 252);
             this.tableLayoutPanel1.TabIndex = 17;
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(3, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(47, 13);
-            this.label7.TabIndex = 18;
-            this.label7.Text = "AdminID";
-            // 
             // AdminAdminUpdateFirstName
             // 
             this.AdminAdminUpdateFirstName.Location = new System.Drawing.Point(178, 47);
@@ -104,14 +95,6 @@
             this.AdminAdminUpdateFirstName.Size = new System.Drawing.Size(224, 20);
             this.AdminAdminUpdateFirstName.TabIndex = 9;
             this.AdminAdminUpdateFirstName.TextChanged += new System.EventHandler(this.AdminAdminUpdateFirstName_TextChanged);
-            // 
-            // AdminAdminUpdateAdminID
-            // 
-            this.AdminAdminUpdateAdminID.Location = new System.Drawing.Point(178, 3);
-            this.AdminAdminUpdateAdminID.Name = "AdminAdminUpdateAdminID";
-            this.AdminAdminUpdateAdminID.Size = new System.Drawing.Size(224, 20);
-            this.AdminAdminUpdateAdminID.TabIndex = 3;
-            this.AdminAdminUpdateAdminID.TextChanged += new System.EventHandler(this.AdminAdminUpdateAdminID_TextChanged);
             // 
             // label6
             // 
@@ -229,6 +212,23 @@
             this.AdminAdminSearchText.TabIndex = 19;
             this.AdminAdminSearchText.TextChanged += new System.EventHandler(this.AdminAdminSearchText_TextChanged);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(3, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(47, 13);
+            this.label7.TabIndex = 18;
+            this.label7.Text = "AdminID";
+            // 
+            // AdminAdminUpdateAdminID
+            // 
+            this.AdminAdminUpdateAdminID.Location = new System.Drawing.Point(178, 3);
+            this.AdminAdminUpdateAdminID.Name = "AdminAdminUpdateAdminID";
+            this.AdminAdminUpdateAdminID.Size = new System.Drawing.Size(224, 20);
+            this.AdminAdminUpdateAdminID.TabIndex = 3;
+            this.AdminAdminUpdateAdminID.TextChanged += new System.EventHandler(this.AdminAdminUpdateAdminID_TextChanged);
+            // 
             // Admin_Admin_Update
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -253,9 +253,7 @@
 
         private System.Windows.Forms.Button AdminAdminUpdateBack;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox AdminAdminUpdateFirstName;
-        private System.Windows.Forms.TextBox AdminAdminUpdateAdminID;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
@@ -269,5 +267,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button AdminAdminSearch;
         private System.Windows.Forms.TextBox AdminAdminSearchText;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox AdminAdminUpdateAdminID;
     }
 }

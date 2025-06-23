@@ -18,12 +18,16 @@ namespace Unicom_TIC.Views.AdminView
 {
     public partial class Timetable : UserControl
     {
+        private int selectedTimetableID = -1;
+
         public Timetable()
         {
             InitializeComponent();
+            TimetableView.RowHeaderMouseClick += TimetableView_RowHeaderMouseClick;
+            
+
         }
 
-        
 
         private void Timetable_Load(object sender, EventArgs e)
         {
@@ -36,13 +40,25 @@ namespace Unicom_TIC.Views.AdminView
 
             // ============================ Add items in Group Combobox ============================
             TimetableGroup.DropDownStyle = ComboBoxStyle.DropDownList;
-            TimetableGroup.Items.AddRange(new[] { "A", "B" });
-                      
+            TimetableGroup.Items.AddRange(new[] { "A", "B" });                    
 
         }
 
 
+        // ============================ View ============================
+        private void LoadTimetableView()
+        {
+            TimetableController controller = new TimetableController();
+            List<TimetableModel> timetables = controller.ViewAllTimetables();
+            TimetableView.DataSource = null;
+            TimetableView.DataSource = timetables;
 
+            TimetableView.Columns["CourseID"].Visible = false;
+            TimetableView.Columns["SubjectID"].Visible = false;
+            TimetableView.Columns["RoomID"].Visible = false;
+            TimetableView.Columns["LecturerID"].Visible = false;
+
+        }
 
 
 
@@ -60,6 +76,7 @@ namespace Unicom_TIC.Views.AdminView
         }
 
 
+
         // ============================ Add items in Room Combobox ============================
         private void LoadRooms()
         {
@@ -72,6 +89,7 @@ namespace Unicom_TIC.Views.AdminView
             TimetableRoom.DataSource = rooms;
             TimetableRoom.SelectedIndex = -1;
         }
+
 
 
         // ============================ Add items in Course Combobox ============================
@@ -88,6 +106,7 @@ namespace Unicom_TIC.Views.AdminView
         }
 
 
+
         // ============================ Add items in Subject Combobox ============================
         private void LoadSubjects()
         {
@@ -101,17 +120,11 @@ namespace Unicom_TIC.Views.AdminView
             TimetableSubject.SelectedIndex = -1;
         }
 
-        private void LoadTimetableView()
-        {
-            TimetableController controller = new TimetableController();
-            List<TimetableModel> timetables = controller.ViewAllTimetables();  
-            TimetableView.DataSource = null;
-            TimetableView.DataSource = timetables;
-        }
 
 
 
 
+        // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ SAVE TIMETABLE ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         private void TimetableSave_Click(object sender, EventArgs e)
         {
 
@@ -127,16 +140,14 @@ namespace Unicom_TIC.Views.AdminView
                 LecturerID = Convert.ToInt32(TimetableLecturer.SelectedValue)
                                               
             };
-
-
             
 
             try
             {
                 TimetableController controller = new TimetableController();
-                controller.AddTimetable(timetable);
-                LoadTimetableView();
+                controller.AddTimetable(timetable);                
                 MessageBox.Show("Timetable entry saved successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LoadTimetableView();
                 ResetForm();
             }
             catch (Exception ex)
@@ -146,8 +157,13 @@ namespace Unicom_TIC.Views.AdminView
             
            
         }
+        // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
+
+
+
+        // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ CLEAR +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         private void ResetForm()
         {
             TimetableCourse.SelectedIndex = -1;
@@ -156,10 +172,17 @@ namespace Unicom_TIC.Views.AdminView
             TimetableRoom.SelectedIndex = -1;
             TimetableGroup.SelectedIndex = -1;
             TimetableDate.Value = DateTime.Now;
+            TimetableStartTime.Value = DateTime.Now;
+            TimetableEndTime.Value = DateTime.Now.AddHours(1);
+            selectedTimetableID = -1;
         }
+        // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-        
 
+
+
+
+        // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ DELETE TIMETABLE +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         private void TimetabeDelete_Click(object sender, EventArgs e)
         {
             if (TimetableView.SelectedRows.Count > 0)
@@ -167,34 +190,117 @@ namespace Unicom_TIC.Views.AdminView
                 int selectedRowIndex = TimetableView.SelectedRows[0].Index;
                 int timetableID = Convert.ToInt32(TimetableView.Rows[selectedRowIndex].Cells["TimetableID"].Value);
 
-                DialogResult result = MessageBox.Show("Are you sure you want to delete this timelable row?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                DialogResult result = MessageBox.Show("Are you sure you want to delete this timetable row?", "Confirm Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (result == DialogResult.Yes)
                 {
                     TimetableController controller = new TimetableController();
                     controller.DeleteTimetable(timetableID);
 
-                    MessageBox.Show("Timelable row deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Timetable row deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                     LoadTimetableView();
+                    ResetForm(); 
                 }
             }
             else
             {
-                MessageBox.Show("Please select an timelable row to delete.", "Selection Required", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please select a timetable row to delete.", "Selection Required", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }       
+        // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+
+        // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ UPDATE TIMETABLE ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        private void button1_Click(object sender, EventArgs e)
+        {            
+            if (selectedTimetableID == -1)
+            {
+                MessageBox.Show("Please select a row to update.","No Row Selected", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            
+            try
+            {
+                var timetable = new TimetableModel
+                {
+                    TimetableID = selectedTimetableID,
+                    GroupName = TimetableGroup.Text,
+                    Date = TimetableDate.Value.Date,
+                    StartTime = TimetableStartTime.Value.ToString("HH:mm"),
+                    EndTime = TimetableEndTime.Value.ToString("HH:mm"),
+                    CourseID = Convert.ToInt32(TimetableCourse.SelectedValue),
+                    SubjectID = Convert.ToInt32(TimetableSubject.SelectedValue),
+                    RoomID = Convert.ToInt32(TimetableRoom.SelectedValue),
+                    LecturerID = Convert.ToInt32(TimetableLecturer.SelectedValue)
+                };
+
+
+                new TimetableController().UpdateTimetable(timetable);
+                MessageBox.Show("Timetable updated successfully!","Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LoadTimetableView();
+                ResetForm();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error updating timetable: {ex.Message}","Update Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
 
+        
+
+        // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
 
 
+
+
+        // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ LOAD DATA ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        private void TimetableView_RowHeaderMouseClick(object sender,DataGridViewCellMouseEventArgs e)
+        {
+            if (e.RowIndex < 0) return;          
+
+            
+            var timetable = TimetableView.Rows[e.RowIndex].DataBoundItem as TimetableModel;
+            if (timetable == null) return;
+
+            
+            selectedTimetableID = timetable.TimetableID;
+            TimetableGroup.Text = timetable.GroupName;
+            TimetableDate.Value = timetable.Date;
+            TimetableStartTime.Value = DateTime.ParseExact(timetable.StartTime, "HH:mm", null);
+            TimetableEndTime.Value = DateTime.ParseExact(timetable.EndTime, "HH:mm", null);
+
+            TimetableCourse.SelectedValue = timetable.CourseID;
+            TimetableSubject.SelectedValue = timetable.SubjectID;
+            TimetableRoom.SelectedValue = timetable.RoomID;
+            TimetableLecturer.SelectedValue = timetable.LecturerID;
+        }
+
+        // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+        // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ ROW SELECT +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        private void TimetableView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                TimetableView_RowHeaderMouseClick(sender,
+                    new DataGridViewCellMouseEventArgs(e.ColumnIndex, e.RowIndex, 0, 0, new MouseEventArgs(MouseButtons.Left, 1, 0, 0, 0)));
+            }
+        }
+        // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
 
 
 
         private void label4_Click(object sender, EventArgs e){}
-        private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e){}
-        private void button1_Click(object sender, EventArgs e){}
+        private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e){}        
         private void timer1_Tick(object sender, EventArgs e){}
         private void TimetableCourse_SelectedIndexChanged(object sender, EventArgs e){}
         private void TimetableGroup_SelectedIndexChanged(object sender, EventArgs e){}

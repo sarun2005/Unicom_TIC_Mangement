@@ -8,6 +8,8 @@ namespace Unicom_TIC.Model
 {
     internal class Student
     {
+        internal string gender;
+
         public int StudentID { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -18,5 +20,10 @@ namespace Unicom_TIC.Model
         public string Email { get; set; }
         public int CourseID { get; set; }
         public string CourseName { get; internal set; }
+
+        internal static void Add(Student student)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
