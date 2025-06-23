@@ -114,6 +114,54 @@ namespace Unicom_TIC.Controller
 
 
 
+
+        // ============================ SEARCH ============================
+        public List<Staff> SearchStaffs(string keyword)
+        {
+            var staffs = new List<Staff>();
+            bool isNumeric = int.TryParse(keyword, out int idVal);
+
+            string sql = @"
+                SELECT * FROM Staffs
+                WHERE FirstName   LIKE @Txt COLLATE NOCASE
+                   OR LastName    LIKE @Txt COLLATE NOCASE
+                   OR Address     LIKE @Txt COLLATE NOCASE
+                   OR DOB         LIKE @Txt COLLATE NOCASE
+                   OR Gender      LIKE @Txt COLLATE NOCASE
+                   OR Role        LIKE @Txt COLLATE NOCASE
+                   OR Email       LIKE @Txt COLLATE NOCASE
+                   OR PhoneNumber LIKE @Txt COLLATE NOCASE";
+
+            if (isNumeric)
+                sql += " OR StaffID = @Id";
+
+            using (var connection = DataBaseConnection.GetConnection())
+            using (var cmd = new SQLiteCommand(sql, connection))
+            {
+                cmd.Parameters.AddWithValue("@Txt", $"%{keyword}%");
+                cmd.Parameters.AddWithValue("@Id", isNumeric ? idVal : -1);
+
+                using (var r = cmd.ExecuteReader())
+                    while (r.Read())
+                    {
+                        staffs.Add(new Staff
+                        {
+                            StaffID = Convert.ToInt32(r["StaffID"]),
+                            FirstName = r["FirstName"].ToString(),
+                            LastName = r["LastName"].ToString(),
+                            Address = r["Address"].ToString(),
+                            DOB = r["DOB"].ToString(),
+                            Gender = r["Gender"].ToString(),
+                            Role = r["Role"].ToString(),
+                            Email = r["Email"].ToString(),
+                            PhoneNumber = r["PhoneNumber"].ToString()
+                        });
+                    }
+            }
+            return staffs;
+        }
+
+        /*
         // ===================================== UPDATE AND VIEW SEARCH =====================================
         public List<Staff> SearchStaffs(string keyword)
         {
@@ -163,7 +211,7 @@ namespace Unicom_TIC.Controller
             }
 
             return staffs;
-        }
+        }*/
 
 
         // ===================================== VIEW (ONE) IN MAIN STAFF FORM =====================================

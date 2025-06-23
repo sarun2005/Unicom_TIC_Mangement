@@ -87,17 +87,11 @@
     <Compile Include="Views\AdminView\Admin Admin Add.Designer.cs">
       <DependentUpon>Admin Admin Add.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\AdminView\Admin Admin Update.cs">
+    <Compile Include="Views\AdminView\Admin Admin View and Delete and Update.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\AdminView\Admin Admin Update.Designer.cs">
-      <DependentUpon>Admin Admin Update.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\AdminView\Admin Admin View and Delete.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Views\AdminView\Admin Admin View and Delete.Designer.cs">
-      <DependentUpon>Admin Admin View and Delete.cs</DependentUpon>
+    <Compile Include="Views\AdminView\Admin Admin View and Delete and Update.Designer.cs">
+      <DependentUpon>Admin Admin View and Delete and Update.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\AdminView\Admin Course Add and View and Delete.cs">
       <SubType>UserControl</SubType>
@@ -117,17 +111,11 @@
     <Compile Include="Views\AdminView\Admin Lecturer Add.Designer.cs">
       <DependentUpon>Admin Lecturer Add.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\AdminView\Admin Lecturer Update.cs">
+    <Compile Include="Views\AdminView\Admin Lecturer View and Delete and Update.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\AdminView\Admin Lecturer Update.Designer.cs">
-      <DependentUpon>Admin Lecturer Update.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\AdminView\Admin Lecturer View and Delete.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Views\AdminView\Admin Lecturer View and Delete.Designer.cs">
-      <DependentUpon>Admin Lecturer View and Delete.cs</DependentUpon>
+    <Compile Include="Views\AdminView\Admin Lecturer View and Delete and Update.Designer.cs">
+      <DependentUpon>Admin Lecturer View and Delete and Update.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\AdminView\Admin Room Add and View and Delete.cs">
       <SubType>UserControl</SubType>
@@ -141,17 +129,11 @@
     <Compile Include="Views\AdminView\Admin Staff Add.Designer.cs">
       <DependentUpon>Admin Staff Add.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\AdminView\Admin Staff Update New.cs">
+    <Compile Include="Views\AdminView\Admin Staff View and Delete and Update.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\AdminView\Admin Staff Update New.Designer.cs">
-      <DependentUpon>Admin Staff Update New.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\AdminView\Admin Staff View and Delete.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Views\AdminView\Admin Staff View and Delete.Designer.cs">
-      <DependentUpon>Admin Staff View and Delete.cs</DependentUpon>
+    <Compile Include="Views\AdminView\Admin Staff View and Delete and Update.Designer.cs">
+      <DependentUpon>Admin Staff View and Delete and Update.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\AdminView\Admin Student Add.cs">
       <SubType>UserControl</SubType>
@@ -159,17 +141,11 @@
     <Compile Include="Views\AdminView\Admin Student Add.Designer.cs">
       <DependentUpon>Admin Student Add.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\AdminView\Admin Student Update.cs">
+    <Compile Include="Views\AdminView\Admin Student View and Delete and Update New.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\AdminView\Admin Student Update.Designer.cs">
-      <DependentUpon>Admin Student Update.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\AdminView\Admin Student View and Delete.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Views\AdminView\Admin Student View and Delete.Designer.cs">
-      <DependentUpon>Admin Student View and Delete.cs</DependentUpon>
+    <Compile Include="Views\AdminView\Admin Student View and Delete and Update New.Designer.cs">
+      <DependentUpon>Admin Student View and Delete and Update New.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\AdminView\Admin Subject Add and View and Delete.cs">
       <SubType>UserControl</SubType>
@@ -291,11 +267,8 @@
     <EmbeddedResource Include="Views\AdminView\Admin Admin Add.resx">
       <DependentUpon>Admin Admin Add.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\AdminView\Admin Admin Update.resx">
-      <DependentUpon>Admin Admin Update.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\AdminView\Admin Admin View and Delete.resx">
-      <DependentUpon>Admin Admin View and Delete.cs</DependentUpon>
+    <EmbeddedResource Include="Views\AdminView\Admin Admin View and Delete and Update.resx">
+      <DependentUpon>Admin Admin View and Delete and Update.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\AdminView\Admin Course Add and View and Delete.resx">
       <DependentUpon>Admin Course Add and View and Delete.cs</DependentUpon>
@@ -306,11 +279,8 @@
     <EmbeddedResource Include="Views\AdminView\Admin Lecturer Add.resx">
       <DependentUpon>Admin Lecturer Add.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\AdminView\Admin Lecturer Update.resx">
-      <DependentUpon>Admin Lecturer Update.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\AdminView\Admin Lecturer View and Delete.resx">
-      <DependentUpon>Admin Lecturer View and Delete.cs</DependentUpon>
+    <EmbeddedResource Include="Views\AdminView\Admin Lecturer View and Delete and Update.resx">
+      <DependentUpon>Admin Lecturer View and Delete and Update.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\AdminView\Admin Room Add and View and Delete.resx">
       <DependentUpon>Admin Room Add and View and Delete.cs</DependentUpon>
@@ -318,20 +288,14 @@
     <EmbeddedResource Include="Views\AdminView\Admin Staff Add.resx">
       <DependentUpon>Admin Staff Add.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\AdminView\Admin Staff Update New.resx">
-      <DependentUpon>Admin Staff Update New.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\AdminView\Admin Staff View and Delete.resx">
-      <DependentUpon>Admin Staff View and Delete.cs</DependentUpon>
+    <EmbeddedResource Include="Views\AdminView\Admin Staff View and Delete and Update.resx">
+      <DependentUpon>Admin Staff View and Delete and Update.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\AdminView\Admin Student Add.resx">
       <DependentUpon>Admin Student Add.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\AdminView\Admin Student Update.resx">
-      <DependentUpon>Admin Student Update.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\AdminView\Admin Student View and Delete.resx">
-      <DependentUpon>Admin Student View and Delete.cs</DependentUpon>
+    <EmbeddedResource Include="Views\AdminView\Admin Student View and Delete and Update New.resx">
+      <DependentUpon>Admin Student View and Delete and Update New.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\AdminView\Admin Subject Add and View and Delete.resx">
       <DependentUpon>Admin Subject Add and View and Delete.cs</DependentUpon>

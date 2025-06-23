@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SQLite;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Unicom_TIC.Model;
 using Unicom_TIC.Repositories;
 
@@ -32,14 +29,9 @@ namespace Unicom_TIC.Controller
                     cmd.Parameters.AddWithValue("@CourseID", student.CourseID);
 
                     cmd.ExecuteNonQuery();
-                    connection.Close();
                 }
             }
         }
-
-
-
-
 
         // ===================================== View Students (+ Course Name) =====================================
         public List<Student> ViewAllStudentWithCourse()
@@ -48,7 +40,7 @@ namespace Unicom_TIC.Controller
             using (var connection = DataBaseConnection.GetConnection())
             {
                 const string sql = @"
-                    SELECT s.StudentID, s.FirstName, s.LastName, s.Address,s.DOB, s.Gender, s.Email, s.PhoneNumber,s.CourseID, c.CourseName
+                    SELECT s.StudentID, s.FirstName, s.LastName, s.Address, s.DOB, s.Gender, s.Email, s.PhoneNumber, s.CourseID, c.CourseName
                     FROM Students s
                     LEFT JOIN Courses c ON s.CourseID = c.CourseID;";
 
@@ -56,7 +48,7 @@ namespace Unicom_TIC.Controller
                 using (var rdr = cmd.ExecuteReader())
                 {
                     while (rdr.Read())
-                    {                       
+                    {
                         Student student = new Student
                         {
                             StudentID = Convert.ToInt32(rdr["StudentID"]),
@@ -71,80 +63,72 @@ namespace Unicom_TIC.Controller
                             CourseName = rdr["CourseName"] == DBNull.Value ? null : rdr["CourseName"].ToString()
                         };
                         list.Add(student);
-                        
                     }
                 }
             }
             return list;
         }
 
-
-
-        // ===================================== VIEW AND UPDATE SEARCH =====================================
+        // ===================================== SEARCH STUDENTS =====================================
         public List<Student> SearchStudents(string keyword)
         {
-            List<Student> students = new List<Student>();
-            bool isNumeric = int.TryParse(keyword, out int idVal);
+            var students = new List<Student>();
 
-            string sql = @"
-        SELECT * FROM Students
-        WHERE FirstName LIKE @AdminStudentSearchText COLLATE NOCASE
-           OR LastName LIKE @AdminStudentSearchText COLLATE NOCASE                   
-           OR Address LIKE @AdminStudentSearchText COLLATE NOCASE
-           OR DOB LIKE @AdminStudentSearchText COLLATE NOCASE
-           OR Gender LIKE @AdminStudentSearchText COLLATE NOCASE                    
-           OR Email LIKE @AdminStudentSearchText COLLATE NOCASE";
-
-            if (isNumeric)
-            {
-                sql += " OR StudentID = @AdminStudentSearchID";
-            }
+            const string sql = @"
+                SELECT * FROM Students
+                WHERE StudentID = @Id
+                   OR FirstName   LIKE @Txt COLLATE NOCASE
+                   OR LastName    LIKE @Txt COLLATE NOCASE
+                   OR Address     LIKE @Txt COLLATE NOCASE
+                   OR DOB         LIKE @Txt COLLATE NOCASE
+                   OR Gender      LIKE @Txt COLLATE NOCASE
+                   OR Email       LIKE @Txt COLLATE NOCASE
+                   OR PhoneNumber LIKE @Txt COLLATE NOCASE;";
 
             using (var connection = DataBaseConnection.GetConnection())
             using (var cmd = new SQLiteCommand(sql, connection))
             {
-                cmd.Parameters.AddWithValue("@AdminStudentSearchText", $"%{keyword}%");
+                // Wild-card text
+                cmd.Parameters.AddWithValue("@Txt", $"%{keyword}%");
 
-                if (isNumeric)
-                {
-                    cmd.Parameters.AddWithValue("@AdminStudentSearchID", idVal);
-                }
+                // Optional numeric ID
+                if (int.TryParse(keyword, out int id))
+                    cmd.Parameters.AddWithValue("@Id", id);
+                else
+                    cmd.Parameters.AddWithValue("@Id", -1);   // No match
 
-                using (var read = cmd.ExecuteReader())
+                using (var r = cmd.ExecuteReader())
                 {
-                    while (read.Read())
+                    while (r.Read())
                     {
                         students.Add(new Student
                         {
-                            StudentID = Convert.ToInt32(read["StudentID"]), 
-                            FirstName = read["FirstName"].ToString(),
-                            LastName = read["LastName"].ToString(),
-                            Address = read["Address"].ToString(),
-                            DOB = read["DOB"].ToString(),
-                            gender = read["Gender"].ToString(),
-                            Email = read["Email"].ToString(),
-                            PhoneNumber = read["PhoneNumber"].ToString()
+                            StudentID = Convert.ToInt32(r["StudentID"]),
+                            FirstName = r["FirstName"].ToString(),
+                            LastName = r["LastName"].ToString(),
+                            Address = r["Address"].ToString(),
+                            DOB = r["DOB"].ToString(),
+                            Gender = r["Gender"].ToString(),
+                            Email = r["Email"].ToString(),
+                            PhoneNumber = r["PhoneNumber"].ToString(),
+                            CourseID = Convert.ToInt32(r["CourseID"]),
+                            CourseName = r["CourseName"] == DBNull.Value ? null : r["CourseName"].ToString()
                         });
                     }
                 }
             }
-
             return students;
         }
 
-
-
-
-        // ===================================== VIEW (ONE) IN MAIN STUDENT FORM =====================================
+        // ===================================== VIEW (ONE) IN MAIN STUDENT FORM =====================================
         public Student GetStudentById(int id)
         {
             using (var connection = DataBaseConnection.GetConnection())
             {
-                const string sql = @"SELECT  s.StudentID, s.FirstName, s.LastName, s.Address,s.DOB, s.Gender, s.Email, s.PhoneNumber,s.CourseID, c.CourseName
-                                     FROM  Students s
+                const string sql = @"SELECT s.StudentID, s.FirstName, s.LastName, s.Address, s.DOB, s.Gender, s.Email, s.PhoneNumber, s.CourseID, c.CourseName
+                                     FROM Students s
                                      LEFT JOIN Courses c ON s.CourseID = c.CourseID
-                                     WHERE   s.StudentID = @id    LIMIT 1;";
-                
+                                     WHERE s.StudentID = @id LIMIT 1;";
 
                 using (var cmd = new SQLiteCommand(sql, connection))
                 {
@@ -174,17 +158,23 @@ namespace Unicom_TIC.Controller
             return null;
         }
 
-
         // ===================================== DELETE =====================================
         public void DeleteStudent(int studentID)
         {
             using (var connection = DataBaseConnection.GetConnection())
             {
                 string deleteStudentQuery = "DELETE FROM Students WHERE StudentID = @StudentID";
-                SQLiteCommand deleteLecturerCommand = new SQLiteCommand(deleteStudentQuery, connection);
-                deleteLecturerCommand.Parameters.AddWithValue("@StudentID", studentID);
-                deleteLecturerCommand.ExecuteNonQuery();
+                using (var deleteStudentCommand = new SQLiteCommand(deleteStudentQuery, connection))
+                {
+                    deleteStudentCommand.Parameters.AddWithValue("@StudentID", studentID);
+                    deleteStudentCommand.ExecuteNonQuery();
+                }
             }
+        }
+
+        internal void UpdateStudent(Student student)
+        {
+            throw new NotImplementedException();
         }
     }
 }

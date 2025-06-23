@@ -14,7 +14,7 @@ namespace Unicom_TIC.Views.AdminView
     {
         private int adminId;
 
-        public Main_Admin(int id)
+        public Main_Admin(int id = 0)
         {
             InitializeComponent();
             adminId = id;
@@ -29,29 +29,29 @@ namespace Unicom_TIC.Views.AdminView
             // Admin Management
             TreeNode AdminNode = TreeMainAdmin.Nodes.Add("Admin Management");
             AdminNode.Nodes.Add("Add New Admin");
-            AdminNode.Nodes.Add("View/Delete Admins");
-            AdminNode.Nodes.Add("Update Admins");
+            AdminNode.Nodes.Add("View/Delete/Update Admins");
+           
 
 
             // Lecturer Management
             TreeNode LecturerNode = TreeMainAdmin.Nodes.Add("Lecturer Management");
             LecturerNode.Nodes.Add("Add New Lecturer");
-            LecturerNode.Nodes.Add("View/Delete Lecturers");
-            LecturerNode.Nodes.Add("Update Lecturers");
+            LecturerNode.Nodes.Add("View/Delete/Update Lecturers");
+           
 
 
             // Staff Management
             TreeNode StaffNode = TreeMainAdmin.Nodes.Add("Staff Management");
             StaffNode.Nodes.Add("Add New Staff");
-            StaffNode.Nodes.Add("View/Delete Staffs");
-            StaffNode.Nodes.Add("Update Staffs");
+            StaffNode.Nodes.Add("View/Delete/Update Staffs");
+            
 
 
             // Student Management
             TreeNode StudentNode = TreeMainAdmin.Nodes.Add("Student Management");
             StudentNode.Nodes.Add("Add New Student");
-            StudentNode.Nodes.Add("View/Delete Students");
-            StudentNode.Nodes.Add("Update Students");
+            StudentNode.Nodes.Add("View/Delete/Update Students");
+            
 
 
             // Course Management
@@ -120,25 +120,14 @@ namespace Unicom_TIC.Views.AdminView
             }
 
 
-            // Admin View/Delete 
-            else if (selected == "View/Delete Admins")
+            // Admin View/Delete/Update
+            else if (selected == "View/Delete/Update Admins")
             {
-                Admin_Admin_View_and_Delete ViewandDeleteAdminAction = new Admin_Admin_View_and_Delete();
+                Admin_Admin_View_and_Delete_and_Update ViewandDeleteAdminAction = new Admin_Admin_View_and_Delete_and_Update();
                 ViewandDeleteAdminAction.Dock = DockStyle.Fill;
                 MainAdminMainPanel.Controls.Add(ViewandDeleteAdminAction);
             }
-
-
-            // Admin Update 
-            else if (selected == "Update Admins")
-            {
-                Admin_Admin_Update AdminUpdateAction = new Admin_Admin_Update();
-                AdminUpdateAction.Dock = DockStyle.Fill;
-                MainAdminMainPanel.Controls.Add(AdminUpdateAction);
-            }
-
-
-
+                    
 
 
 
@@ -153,27 +142,13 @@ namespace Unicom_TIC.Views.AdminView
                 MainAdminMainPanel.Controls.Add(addLecturerAction);
             }
 
-            // Lecturer View/Delete 
-            else if (selected == "View/Delete Lecturers")
+            // Lecturer View/Delete/Update
+            else if (selected == "View/Delete/Update Lecturers")
             {
-                Admin_Lecturer_View_and_Delete ViewandDeleteLecturerAction = new Admin_Lecturer_View_and_Delete();
+                Admin_Lecturer_View_and_Delete_Update ViewandDeleteLecturerAction = new Admin_Lecturer_View_and_Delete_Update();
                 ViewandDeleteLecturerAction.Dock = DockStyle.Fill;
                 MainAdminMainPanel.Controls.Add(ViewandDeleteLecturerAction);
             }
-
-
-            // Lecturer Update 
-            else if (selected == "Update Lecturers")
-            {
-                Admin_Lecturer_Update LecturerUpdateAction = new Admin_Lecturer_Update();
-                LecturerUpdateAction.Dock = DockStyle.Fill;
-                MainAdminMainPanel.Controls.Add(LecturerUpdateAction);
-            }
-
-
-
-
-
 
 
 
@@ -187,26 +162,14 @@ namespace Unicom_TIC.Views.AdminView
             }
 
             // Staff View/Delete 
-            else if (selected == "View/Delete Staffs")
+            else if (selected == "View/Delete/Update Staffs")
             {
-                Admin_Staff_View_and_Delete ViewandDeleteStaffAction = new Admin_Staff_View_and_Delete();
+                Admin_Staff_View_and_Delete_and_Update ViewandDeleteStaffAction = new Admin_Staff_View_and_Delete_and_Update();
                 ViewandDeleteStaffAction.Dock = DockStyle.Fill;
                 MainAdminMainPanel.Controls.Add(ViewandDeleteStaffAction);
             }
 
-            
-            // Staff Update 
-            else if (selected == "Update Staffs")
-            {
-                Admin_Staff_Update_New StaffUpdateAction = new Admin_Staff_Update_New();
-                StaffUpdateAction.Dock = DockStyle.Fill;
-                MainAdminMainPanel.Controls.Add(StaffUpdateAction);
-            }
-
-
-
-
-
+          
 
 
             // ============================ STUDENT ============================
@@ -219,24 +182,15 @@ namespace Unicom_TIC.Views.AdminView
             }
 
             // Student View/Delete 
-            else if (selected == "View/Delete Students")
+            else if (selected == "View/Delete/Update Students")
             {
-                Admin_Student_View_and_Delete ViewandDeleteStudentAction = new Admin_Student_View_and_Delete();
+                Admin_Student_View_and_Delete_and_Update_New ViewandDeleteStudentAction = new Admin_Student_View_and_Delete_and_Update_New();
                 ViewandDeleteStudentAction.Dock = DockStyle.Fill;
                 MainAdminMainPanel.Controls.Add(ViewandDeleteStudentAction);
             }
 
 
-            // Student Update 
-            else if (selected == "Update Students")
-            {
-                Admin_Student_Update StudentUpdateAction = new Admin_Student_Update();
-                StudentUpdateAction.Dock = DockStyle.Fill;
-                MainAdminMainPanel.Controls.Add(StudentUpdateAction);
-            }
-
-
-
+           
 
 
 

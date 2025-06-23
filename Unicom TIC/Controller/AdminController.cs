@@ -104,7 +104,7 @@ namespace Unicom_TIC.Controller
 
 
 
-
+        /*
         // ===================================== UPDATE AND VIEW SEARCH =====================================
         public List<Admin> SearchAdmins(string keyword)
         {
@@ -152,12 +152,12 @@ namespace Unicom_TIC.Controller
 
             return admins;
         }
-
+        
 
         
 
 
-        /*
+        
        // ===================================== UPDATE SEARCH =====================================
        public Admin ViewAdminByID(int adminID)
        {
@@ -188,12 +188,12 @@ namespace Unicom_TIC.Controller
            }
            return admin;
        }
-       
+       */
 
 
 
         
-
+        
         // =====================================  VIEW AND DELETE SEARCH =====================================
         public List<Admin> SearchAdmins(string keyword)
         {
@@ -237,7 +237,7 @@ namespace Unicom_TIC.Controller
             return admins;
         }
 
-        */
+        
 
 
     }

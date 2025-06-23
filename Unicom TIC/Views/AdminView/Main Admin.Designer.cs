@@ -47,13 +47,13 @@
             this.MainAdminLeftPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.MainAdminLeftPanel.Location = new System.Drawing.Point(0, 0);
             this.MainAdminLeftPanel.Name = "MainAdminLeftPanel";
-            this.MainAdminLeftPanel.Size = new System.Drawing.Size(230, 720);
+            this.MainAdminLeftPanel.Size = new System.Drawing.Size(230, 839);
             this.MainAdminLeftPanel.TabIndex = 2;
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(48, 684);
+            this.button1.Location = new System.Drawing.Point(56, 803);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(79, 24);
             this.button1.TabIndex = 0;
@@ -70,7 +70,7 @@
             this.TreeMainAdmin.ItemHeight = 22;
             this.TreeMainAdmin.Location = new System.Drawing.Point(0, 0);
             this.TreeMainAdmin.Name = "TreeMainAdmin";
-            this.TreeMainAdmin.Size = new System.Drawing.Size(230, 720);
+            this.TreeMainAdmin.Size = new System.Drawing.Size(230, 839);
             this.TreeMainAdmin.TabIndex = 0;
             this.TreeMainAdmin.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.TreeMainAdmin_AfterSelect);
             // 
@@ -80,7 +80,7 @@
             this.MainAdminMainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MainAdminMainPanel.Location = new System.Drawing.Point(230, 94);
             this.MainAdminMainPanel.Name = "MainAdminMainPanel";
-            this.MainAdminMainPanel.Size = new System.Drawing.Size(958, 626);
+            this.MainAdminMainPanel.Size = new System.Drawing.Size(1205, 745);
             this.MainAdminMainPanel.TabIndex = 3;
             this.MainAdminMainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -91,7 +91,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(230, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(958, 94);
+            this.panel1.Size = new System.Drawing.Size(1205, 94);
             this.panel1.TabIndex = 0;
             // 
             // pictureBox1
@@ -100,7 +100,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(974, 94);
+            this.pictureBox1.Size = new System.Drawing.Size(1205, 94);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -109,7 +109,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1188, 720);
+            this.ClientSize = new System.Drawing.Size(1435, 839);
             this.Controls.Add(this.MainAdminMainPanel);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.MainAdminLeftPanel);

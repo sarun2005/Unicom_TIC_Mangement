@@ -64,14 +64,62 @@ namespace Unicom_TIC.Controller
             return lecturers;
         }
 
+        public List<Lecturer> SearchLecturers(string keyword)
+        {
+            var lecturers = new List<Lecturer>();
+
+            const string sql = @"
+                SELECT * FROM Lecturers
+                WHERE LecturerID = @Id
+                   OR FirstName   LIKE @Txt COLLATE NOCASE
+                   OR LastName    LIKE @Txt COLLATE NOCASE
+                   OR Address     LIKE @Txt COLLATE NOCASE
+                   OR DOB         LIKE @Txt COLLATE NOCASE
+                   OR Gender      LIKE @Txt COLLATE NOCASE
+                   OR Subject     LIKE @Txt COLLATE NOCASE
+                   OR Email       LIKE @Txt COLLATE NOCASE
+                   OR PhoneNumber LIKE @Txt COLLATE NOCASE;";
+
+            using (var connection = DataBaseConnection.GetConnection())
+            using (var cmd = new SQLiteCommand(sql, connection))
+            {
+                // Wild-card text
+                cmd.Parameters.AddWithValue("@Txt", $"%{keyword}%");
+
+                // Optional numeric ID
+                if (int.TryParse(keyword, out int id))
+                    cmd.Parameters.AddWithValue("@Id", id);
+                else
+                    cmd.Parameters.AddWithValue("@Id", -1);   // No match
+
+                using (var r = cmd.ExecuteReader())
+                    while (r.Read())
+                    {
+                        lecturers.Add(new Lecturer
+                        {
+                            LecturerID = Convert.ToInt32(r["LecturerID"]),
+                            FirstName = r["FirstName"].ToString(),
+                            LastName = r["LastName"].ToString(),
+                            Address = r["Address"].ToString(),
+                            DOB = r["DOB"].ToString(),
+                            gender = r["Gender"].ToString(),
+                            Subject = r["Subject"].ToString(),
+                            Email = r["Email"].ToString(),
+                            PhoneNumber = r["PhoneNumber"].ToString()
+                        });
+                    }
+            }
+            return lecturers;
+        }
 
 
 
+        /*
         // ===================================== VIEW AND UPDATE SEARCH =====================================
         public List<Lecturer> SearchLecturers(string keyword)
         {
             List<Lecturer> lecturers = new List<Lecturer>();
-            bool isNumeric = int.TryParse(keyword, out int idVal);
+           
 
             string sql = @"
                 SELECT * FROM Lecturers
@@ -83,10 +131,7 @@ namespace Unicom_TIC.Controller
                    OR Email LIKE @AdminLecturerSearchText COLLATE NOCASE";
 
 
-            if (isNumeric)
-            {
-                sql += " OR LecturerID = @AdminLecturerSearchID";
-            }
+            
 
             using (var connection = DataBaseConnection.GetConnection())
             using (var cmd = new SQLiteCommand(sql, connection))
@@ -102,24 +147,13 @@ namespace Unicom_TIC.Controller
                 {
                     while (read.Read())
                     {
-                        lecturers.Add(new Lecturer
-                        {
-                            LecturerID = Convert.ToInt32(read["LecturerID"]),
-                            FirstName = read["FirstName"].ToString(),
-                            LastName = read["LastName"].ToString(),
-                            Address = read["Address"].ToString(),
-                            DOB = read["DOB"].ToString(),
-                            gender = read["gender"].ToString(),
-                            Subject = read["Subject"].ToString(),
-                            Email = read["Email"].ToString(),
-                            PhoneNumber = read["PhoneNumber"].ToString()
-                        });
+                        
                     }
                 }
             }
 
             return lecturers;
-        }
+        }*/
 
 
 
