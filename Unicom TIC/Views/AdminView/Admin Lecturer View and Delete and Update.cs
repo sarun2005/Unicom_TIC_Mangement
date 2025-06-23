@@ -15,6 +15,9 @@ namespace Unicom_TIC.Views.AdminView
     public partial class Admin_Lecturer_View_and_Delete_Update : UserControl
     {
         private int selectedLecturerID = -1;
+        private int selectedSubjectId;
+
+        public string SubjectName { get; private set; }
 
         public Admin_Lecturer_View_and_Delete_Update()
         {
@@ -33,6 +36,8 @@ namespace Unicom_TIC.Views.AdminView
             List<Lecturer> lecturers = lecturerController.ViewAllLecturers();
             AdminLecturerDetails.DataSource = null;
             AdminLecturerDetails.DataSource = lecturers;
+
+            
         }
 
         
@@ -99,17 +104,22 @@ namespace Unicom_TIC.Views.AdminView
 
         private void Admin_Lecturer_View_and_Delete_Load(object sender, EventArgs e)
         {
-            // ============================ Add items to the role dropdown ============================
-            AdminLecturerUpdateSubject.DropDownStyle = ComboBoxStyle.DropDownList;
-
-            AdminLecturerUpdateSubject.Items.Add("Python");
-            AdminLecturerUpdateSubject.Items.Add("C#");
-            AdminLecturerUpdateSubject.Items.Add("Java");
-            AdminLecturerUpdateSubject.Items.Add("HTML");
-            AdminLecturerUpdateSubject.Items.Add("PHP");
+            LoadSubjects();
         }
 
-        
+        // ============================ Add items in Subject Combobox ============================
+        private void LoadSubjects()
+        {
+            AdminLecturerUpdateSubject.DropDownStyle = ComboBoxStyle.DropDownList;
+
+            SubjectController controller = new SubjectController();
+            List<Subject> subjects = controller.ViewAllSubjectsWithCourse();
+            AdminLecturerUpdateSubject.DisplayMember = "SubjectName";
+            AdminLecturerUpdateSubject.ValueMember = "SubjectID";
+            AdminLecturerUpdateSubject.DataSource = subjects;
+            AdminLecturerUpdateSubject.SelectedIndex = -1;
+        }
+
 
 
         // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ CLEAR +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -137,121 +147,127 @@ namespace Unicom_TIC.Views.AdminView
 
 
 
-
         // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ UPDATE ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         private void AdminLecturerUpdate_Click(object sender, EventArgs e)
         {
             if (selectedLecturerID == -1)
             {
-                MessageBox.Show("Please select a lecturer row first.",
-                                "No Row Selected", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please select a lecturer row first.","No Row Selected", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             // gender
-            string gender = AdminLecturerUpdateMale.Checked ? "Male" :
-                            AdminLecturerUpdateFemale.Checked ? "Female" : "";
+            string gender = AdminLecturerUpdateMale.Checked ? "Male" : AdminLecturerUpdateFemale.Checked ? "Female" : "";
 
-            // basic validation
-            if (string.IsNullOrWhiteSpace(AdminLecturerUpdateFirstName.Text) ||
-                string.IsNullOrWhiteSpace(AdminLecturerUpdateLastName.Text) ||
-                string.IsNullOrWhiteSpace(AdminLecturerUpdateAddress.Text) ||
-                string.IsNullOrWhiteSpace(AdminLecturerUpdateSubject.Text) ||
-                string.IsNullOrWhiteSpace(AdminLecturerUpdateEmail.Text) ||
-                string.IsNullOrWhiteSpace(AdminLecturerUpdatePhoneNumber.Text) ||
-                string.IsNullOrWhiteSpace(gender))
-            {
-                MessageBox.Show("Please fill-in all required details.",
-                                "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
 
-            // phone
-            string phone = AdminLecturerUpdatePhoneNumber.Text.Trim();
-            if (phone.Length != 10 || !phone.All(char.IsDigit))
-            {
-                MessageBox.Show("Enter a 10-digit phone number.",
-                                "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            // email
-            string email = AdminLecturerUpdateEmail.Text.Trim();
-            if (!email.Contains("@") || !email.Contains("."))
-            {
-                MessageBox.Show("Enter a valid email address.",
-                                "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            if (MessageBox.Show("Are you sure you want to update this lecturer?",
-                                "Confirm Update", MessageBoxButtons.YesNo,
-                                MessageBoxIcon.Question) != DialogResult.Yes) return;
-
-            // build object
-            var lec = new Lecturer
+            var lecturer = new Lecturer
             {
                 LecturerID = selectedLecturerID,
                 FirstName = AdminLecturerUpdateFirstName.Text.Trim(),
                 LastName = AdminLecturerUpdateLastName.Text.Trim(),
-                Subject = AdminLecturerUpdateSubject.Text.Trim(),
                 Address = AdminLecturerUpdateAddress.Text.Trim(),
                 DOB = AdminLecturerUpdateDOB.Value.ToString("yyyy-MM-dd"),
-                gender = gender,
-                Email = email,
-                PhoneNumber = phone
+                Gender = gender,
+                Email = AdminLecturerUpdateEmail.Text.Trim(),
+                PhoneNumber = AdminLecturerUpdatePhoneNumber.Text.Trim(),
+                SubjectID = (int)AdminLecturerUpdateSubject.SelectedValue, 
+                SubjectName = AdminLecturerUpdateSubject.Text.Trim(),
             };
+
+
+
+
+
+            // ============================ Check Validation ============================
+            if (string.IsNullOrWhiteSpace(lecturer.FirstName) ||
+                string.IsNullOrWhiteSpace(lecturer.LastName) ||
+                string.IsNullOrWhiteSpace(lecturer.Address) ||
+                string.IsNullOrWhiteSpace(lecturer.SubjectName) ||
+                string.IsNullOrWhiteSpace(lecturer.Email) ||
+                string.IsNullOrWhiteSpace(lecturer.PhoneNumber) ||
+                string.IsNullOrWhiteSpace(gender))
+            {
+                MessageBox.Show("Please fill-in all required details.","Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+
+            // ============================ Phone Number validation ============================
+            if (lecturer.PhoneNumber.Length != 10 || !lecturer.PhoneNumber.All(char.IsDigit))
+            {
+                MessageBox.Show("Enter a 10-digit phone number.","Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // ============================ Email validation ============================
+            if (!lecturer.Email.Contains("@") || !lecturer.Email.Contains("."))
+            {
+                MessageBox.Show("Enter a valid email address.","Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+
+            if (MessageBox.Show("Are you sure you want to update this lecturer?","Confirm Update", MessageBoxButtons.YesNo,MessageBoxIcon.Question) != DialogResult.Yes) return;
+
+            
+           
 
             try
             {
-                new LecturerController().UpdateLecturer(lec);
-                MessageBox.Show("Lecturer details updated successfully!",
-                                "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                new LecturerController().UpdateLecturer(lecturer);
+                MessageBox.Show("Lecturer details updated successfully!","Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                LoadLecturers();     // grid refresh
-                ClearUpdateFields(); // reset form
+                LoadLecturers();     
+                ClearUpdateFields(); 
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Update failed:\n{ex.Message}",
-                                "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Update failed:\n{ex.Message}","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-        private void AdminLecturerDetails_RowHeaderMouseClick(object sender,
-                                      DataGridViewCellMouseEventArgs e)
+
+
+
+        // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ LOAD DATA ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        private void AdminLecturerDetails_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             if (e.RowIndex < 0) return;
 
-            var lec = AdminLecturerDetails.Rows[e.RowIndex].DataBoundItem as Lecturer;
-            if (lec == null) return;
+            var lecturer = AdminLecturerDetails.Rows[e.RowIndex].DataBoundItem as Lecturer;
+            if (lecturer == null) return;
 
-            selectedLecturerID = lec.LecturerID;
+            selectedLecturerID = lecturer.LecturerID;
 
-            AdminLecturerUpdateLecturerID.Text = lec.LecturerID.ToString();
-            AdminLecturerUpdateFirstName.Text = lec.FirstName;
-            AdminLecturerUpdateLastName.Text = lec.LastName;
-            AdminLecturerUpdateSubject.Text = lec.Subject;
-            AdminLecturerUpdateEmail.Text = lec.Email;
-            AdminLecturerUpdatePhoneNumber.Text = lec.PhoneNumber;
-            AdminLecturerUpdateAddress.Text = lec.Address;
+            AdminLecturerUpdateLecturerID.Text = lecturer.LecturerID.ToString();
+            AdminLecturerUpdateFirstName.Text = lecturer.FirstName;
+            AdminLecturerUpdateLastName.Text = lecturer.LastName;
+            AdminLecturerUpdateEmail.Text = lecturer.Email;
+            AdminLecturerUpdatePhoneNumber.Text = lecturer.PhoneNumber;
+            AdminLecturerUpdateAddress.Text = lecturer.Address;
+
+            // Set the selected subject in the combo box
+            AdminLecturerUpdateSubject.SelectedValue = lecturer.SubjectID;
 
             // gender
-            AdminLecturerUpdateMale.Checked = lec.gender == "Male";
-            AdminLecturerUpdateFemale.Checked = lec.gender == "Female";
+            AdminLecturerUpdateMale.Checked = lecturer.Gender == "Male";
+            AdminLecturerUpdateFemale.Checked = lecturer.Gender == "Female";
 
             // DOB
-            if (DateTime.TryParse(lec.DOB, out DateTime dob))
+            if (DateTime.TryParse(lecturer.DOB, out DateTime dob))
                 AdminLecturerUpdateDOB.Value = dob;
         }
 
+        // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+        // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ ROW SELECT (normal cell click) ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         private void AdminLecturerDetails_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
-                AdminLecturerDetails_RowHeaderMouseClick(
-                    sender,
+                AdminLecturerDetails_RowHeaderMouseClick(sender,
                     new DataGridViewCellMouseEventArgs(e.ColumnIndex, e.RowIndex, 0, 0,
                         new MouseEventArgs(MouseButtons.Left, 1, 0, 0, 0)));
             }
@@ -260,25 +276,9 @@ namespace Unicom_TIC.Views.AdminView
 
         private void label1_Click(object sender, EventArgs e){}
         private void AdminLecturerDetails_CellContentClick(object sender, DataGridViewCellEventArgs e){}
-
-        private void s_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+        private void s_Paint(object sender, PaintEventArgs e){}
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e){}
+        private void label2_Click(object sender, EventArgs e){}
+        private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e){}
     }
 }

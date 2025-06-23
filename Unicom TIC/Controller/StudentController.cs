@@ -75,15 +75,17 @@ namespace Unicom_TIC.Controller
             var students = new List<Student>();
 
             const string sql = @"
-                SELECT * FROM Students
-                WHERE StudentID = @Id
-                   OR FirstName   LIKE @Txt COLLATE NOCASE
-                   OR LastName    LIKE @Txt COLLATE NOCASE
-                   OR Address     LIKE @Txt COLLATE NOCASE
-                   OR DOB         LIKE @Txt COLLATE NOCASE
-                   OR Gender      LIKE @Txt COLLATE NOCASE
-                   OR Email       LIKE @Txt COLLATE NOCASE
-                   OR PhoneNumber LIKE @Txt COLLATE NOCASE;";
+        SELECT s.*, c.CourseName 
+        FROM Students s
+        LEFT JOIN Courses c ON s.CourseID = c.CourseID
+        WHERE s.StudentID = @Id
+           OR s.FirstName   LIKE @Txt COLLATE NOCASE
+           OR s.LastName    LIKE @Txt COLLATE NOCASE
+           OR s.Address     LIKE @Txt COLLATE NOCASE
+           OR s.DOB         LIKE @Txt COLLATE NOCASE
+           OR s.Gender      LIKE @Txt COLLATE NOCASE
+           OR s.Email       LIKE @Txt COLLATE NOCASE
+           OR s.PhoneNumber LIKE @Txt COLLATE NOCASE;";
 
             using (var connection = DataBaseConnection.GetConnection())
             using (var cmd = new SQLiteCommand(sql, connection))
@@ -112,13 +114,14 @@ namespace Unicom_TIC.Controller
                             Email = r["Email"].ToString(),
                             PhoneNumber = r["PhoneNumber"].ToString(),
                             CourseID = Convert.ToInt32(r["CourseID"]),
-                            CourseName = r["CourseName"] == DBNull.Value ? null : r["CourseName"].ToString()
+                            CourseName = r["CourseName"] == DBNull.Value ? null : r["CourseName"].ToString() // Ensure CourseName is accessed correctly
                         });
                     }
                 }
             }
             return students;
         }
+
 
         // ===================================== VIEW (ONE) IN MAIN STUDENT FORM =====================================
         public Student GetStudentById(int id)

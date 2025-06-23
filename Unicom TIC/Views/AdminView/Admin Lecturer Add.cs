@@ -35,8 +35,9 @@ namespace Unicom_TIC.Views.AdminView
                 LastName = AdminLecturerAddLastName.Text,
                 Address = AdminLecturerAddAddress.Text,
                 DOB = AdminLecturerAddDOB.Value.ToString("yyyy-MM-dd"),
-                gender = gender,
-                Subject = AdminLecturerAddSubject.Text,
+                Gender = gender,
+                //SubjectName = AdminLecturerAddSubject.Text,
+                SubjectID = Convert.ToInt32(AdminLecturerAddSubject.SelectedValue),
                 PhoneNumber = AdminLecturerAddPhoneNumber.Text,
                 Email = AdminLecturerAddEmail.Text
             };
@@ -118,12 +119,17 @@ namespace Unicom_TIC.Views.AdminView
 
 
 
-        // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ LOAD SUBJECTS TO COMBOBOX +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+       
         private void Admin_Lecturer_Add_Load(object sender, EventArgs e)
         {
             LoadSubjectsIntoComboBox();
+           
         }
 
+
+        
+
+        // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ LOAD SUBJECTS TO COMBOBOX +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         private void LoadSubjectsIntoComboBox()
         {
             AdminLecturerAddSubject.DropDownStyle = ComboBoxStyle.DropDownList;

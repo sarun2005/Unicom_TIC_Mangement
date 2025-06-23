@@ -56,7 +56,7 @@
             this.label18 = new System.Windows.Forms.Label();
             this.AdminStaffUpdateRole = new System.Windows.Forms.ComboBox();
             this.AdminStaffUpdateEmail = new System.Windows.Forms.TextBox();
-            this.AdminSatffUpdatePhoneNumber = new System.Windows.Forms.TextBox();
+            this.AdminStaffUpdatePhoneNumber = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.AdminStaffDetails)).BeginInit();
             this.s.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -301,7 +301,7 @@
             this.tableLayoutPanel2.Controls.Add(this.label18, 0, 3);
             this.tableLayoutPanel2.Controls.Add(this.AdminStaffUpdateRole, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.AdminStaffUpdateEmail, 1, 2);
-            this.tableLayoutPanel2.Controls.Add(this.AdminSatffUpdatePhoneNumber, 1, 3);
+            this.tableLayoutPanel2.Controls.Add(this.AdminStaffUpdatePhoneNumber, 1, 3);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(714, 136);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 4;
@@ -361,12 +361,12 @@
             this.AdminStaffUpdateEmail.Size = new System.Drawing.Size(224, 20);
             this.AdminStaffUpdateEmail.TabIndex = 18;
             // 
-            // AdminSatffUpdatePhoneNumber
+            // AdminStaffUpdatePhoneNumber
             // 
-            this.AdminSatffUpdatePhoneNumber.Location = new System.Drawing.Point(187, 156);
-            this.AdminSatffUpdatePhoneNumber.Name = "AdminSatffUpdatePhoneNumber";
-            this.AdminSatffUpdatePhoneNumber.Size = new System.Drawing.Size(224, 20);
-            this.AdminSatffUpdatePhoneNumber.TabIndex = 11;
+            this.AdminStaffUpdatePhoneNumber.Location = new System.Drawing.Point(187, 156);
+            this.AdminStaffUpdatePhoneNumber.Name = "AdminStaffUpdatePhoneNumber";
+            this.AdminStaffUpdatePhoneNumber.Size = new System.Drawing.Size(224, 20);
+            this.AdminStaffUpdatePhoneNumber.TabIndex = 11;
             // 
             // Admin_Staff_View_and_Delete_and_Update
             // 
@@ -427,6 +427,6 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.ComboBox AdminStaffUpdateRole;
         private System.Windows.Forms.TextBox AdminStaffUpdateEmail;
-        private System.Windows.Forms.TextBox AdminSatffUpdatePhoneNumber;
+        private System.Windows.Forms.TextBox AdminStaffUpdatePhoneNumber;
     }
 }

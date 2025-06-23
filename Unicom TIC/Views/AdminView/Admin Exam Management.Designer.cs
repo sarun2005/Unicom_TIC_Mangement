@@ -38,16 +38,24 @@
             this.AdminExamSave = new System.Windows.Forms.Button();
             this.AdminExamUpdate = new System.Windows.Forms.Button();
             this.AdminExamDelete = new System.Windows.Forms.Button();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.ExamDate = new System.Windows.Forms.DateTimePicker();
+            this.ExamStartTime = new System.Windows.Forms.DateTimePicker();
+            this.ExamEndTime = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.AdminExamView)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // AdminExamView
             // 
             this.AdminExamView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.AdminExamView.Location = new System.Drawing.Point(308, 375);
+            this.AdminExamView.Location = new System.Drawing.Point(236, 375);
             this.AdminExamView.Name = "AdminExamView";
-            this.AdminExamView.Size = new System.Drawing.Size(321, 155);
+            this.AdminExamView.Size = new System.Drawing.Size(520, 155);
             this.AdminExamView.TabIndex = 0;
             this.AdminExamView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AdminExamView_CellContentClick);
             // 
@@ -60,7 +68,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.AdminExamName, 1, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(308, 196);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(70, 132);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -144,10 +152,89 @@
             this.AdminExamDelete.UseVisualStyleBackColor = true;
             this.AdminExamDelete.Click += new System.EventHandler(this.AdminExamDelete_Click);
             // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.69231F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 72.30769F));
+            this.tableLayoutPanel2.Controls.Add(this.label9, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.label5, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.label8, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.ExamDate, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.ExamStartTime, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.ExamEndTime, 1, 2);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(499, 132);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 3;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(381, 161);
+            this.tableLayoutPanel2.TabIndex = 15;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(3, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(30, 13);
+            this.label9.TabIndex = 6;
+            this.label9.Text = "Date";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(3, 53);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(55, 13);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Start Time";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(3, 106);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(52, 13);
+            this.label8.TabIndex = 16;
+            this.label8.Text = "End Time";
+            // 
+            // ExamDate
+            // 
+            this.ExamDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.ExamDate.Location = new System.Drawing.Point(108, 3);
+            this.ExamDate.Name = "ExamDate";
+            this.ExamDate.Size = new System.Drawing.Size(218, 20);
+            this.ExamDate.TabIndex = 13;
+            this.ExamDate.Value = new System.DateTime(2025, 6, 20, 6, 58, 0, 0);
+            // 
+            // ExamStartTime
+            // 
+            this.ExamStartTime.CustomFormat = "\"HH:mm\"";
+            this.ExamStartTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.ExamStartTime.Location = new System.Drawing.Point(108, 56);
+            this.ExamStartTime.Name = "ExamStartTime";
+            this.ExamStartTime.ShowUpDown = true;
+            this.ExamStartTime.Size = new System.Drawing.Size(218, 20);
+            this.ExamStartTime.TabIndex = 14;
+            this.ExamStartTime.Value = new System.DateTime(2025, 6, 20, 6, 0, 0, 0);
+            // 
+            // ExamEndTime
+            // 
+            this.ExamEndTime.CustomFormat = "\"HH:mm\"";
+            this.ExamEndTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.ExamEndTime.Location = new System.Drawing.Point(108, 109);
+            this.ExamEndTime.Name = "ExamEndTime";
+            this.ExamEndTime.ShowUpDown = true;
+            this.ExamEndTime.Size = new System.Drawing.Size(218, 20);
+            this.ExamEndTime.TabIndex = 17;
+            this.ExamEndTime.Value = new System.DateTime(2025, 6, 20, 6, 0, 0, 0);
+            // 
             // Admin_Exam_Management
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.AdminExamDelete);
             this.Controls.Add(this.AdminExamUpdate);
             this.Controls.Add(this.AdminExamSave);
@@ -160,6 +247,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.AdminExamView)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -177,5 +266,12 @@
         private System.Windows.Forms.ComboBox AdminSubjectName;
         private System.Windows.Forms.Button AdminExamUpdate;
         private System.Windows.Forms.Button AdminExamDelete;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.DateTimePicker ExamDate;
+        private System.Windows.Forms.DateTimePicker ExamStartTime;
+        private System.Windows.Forms.DateTimePicker ExamEndTime;
     }
 }

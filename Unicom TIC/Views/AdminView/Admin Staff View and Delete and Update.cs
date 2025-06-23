@@ -69,7 +69,7 @@ namespace Unicom_TIC.Views.AdminView
 
 
 
-        // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  
 
 
 
@@ -124,7 +124,7 @@ namespace Unicom_TIC.Views.AdminView
                 string.IsNullOrWhiteSpace(AdminStaffUpdateLastName.Text) ||
                 string.IsNullOrWhiteSpace(AdminStaffUpdateRole.Text) ||
                 string.IsNullOrWhiteSpace(AdminStaffUpdateEmail.Text) ||
-                string.IsNullOrWhiteSpace(AdminSatffUpdatePhoneNumber.Text) ||
+                string.IsNullOrWhiteSpace(AdminStaffUpdatePhoneNumber.Text) ||
                 string.IsNullOrWhiteSpace(AdminStaffUpdateAddress.Text) ||
                 string.IsNullOrWhiteSpace(gender))
             {
@@ -132,7 +132,7 @@ namespace Unicom_TIC.Views.AdminView
                 return;
             }
 
-            string phone = AdminSatffUpdatePhoneNumber.Text.Trim();
+            string phone = AdminStaffUpdatePhoneNumber.Text.Trim();
             if (phone.Length != 10 || !phone.All(char.IsDigit))
             {
                 MessageBox.Show("Phone number must be exactly 10 digits.","Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -167,14 +167,15 @@ namespace Unicom_TIC.Views.AdminView
             try
             {
                 new StaffController().UpdateStaff(staff);
-                MessageBox.Show("Staff details updated successfully!","Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Staff details updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadStaffs();
                 ClearUpdateFields();
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Update failed:\n{ex.Message}","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Update failed:\n{ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
         }
         // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -186,23 +187,26 @@ namespace Unicom_TIC.Views.AdminView
         {
             ClearUpdateFields();
         }
-        
+
         private void ClearUpdateFields()
         {
             AdminStaffUpdateStaffID.Clear();
             AdminStaffUpdateFirstName.Clear();
             AdminStaffUpdateLastName.Clear();
-            AdminStaffUpdateRole.SelectedIndex = -1;
+            AdminStaffUpdateRole.SelectedIndex = -1; 
+            AdminStaffUpdateDOB.Value = DateTime.Now;
             AdminStaffUpdateEmail.Clear();
-            AdminSatffUpdatePhoneNumber.Clear();
-
+            AdminStaffUpdatePhoneNumber.Clear(); 
+            AdminStaffUpdateAddress.Clear();
+            AdminStaffUpdateMale.Checked = false;
+            AdminStaffUpdateFemale.Checked = false;
         }
+
         // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
         // =========== GRID → FORM autofill ===========
-        private void AdminStaffDetails_RowHeaderMouseClick(object sender,
-                                      DataGridViewCellMouseEventArgs e)
+        private void AdminStaffDetails_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             if (e.RowIndex < 0) return;
 
@@ -215,16 +219,18 @@ namespace Unicom_TIC.Views.AdminView
             AdminStaffUpdateLastName.Text = staff.LastName;
             AdminStaffUpdateRole.Text = staff.Role;
             AdminStaffUpdateEmail.Text = staff.Email;
-            AdminSatffUpdatePhoneNumber.Text = staff.PhoneNumber;
-
-            
+            AdminStaffUpdatePhoneNumber.Text = staff.PhoneNumber; // Corrected variable name
             AdminStaffUpdateAddress.Text = staff.Address;
+
+            // Set DOB
             if (DateTime.TryParse(staff.DOB, out DateTime dob))
                 AdminStaffUpdateDOB.Value = dob;
 
+            // Set Gender
             AdminStaffUpdateMale.Checked = staff.Gender == "Male";
             AdminStaffUpdateFemale.Checked = staff.Gender == "Female";
         }
+
 
         private void AdminStaffDetails_CellClick(object s, DataGridViewCellEventArgs e)
         {

@@ -11,9 +11,12 @@ namespace Unicom_TIC.Model
     {
         public int ExamID { get; set; }
         public string ExamName { get; set; }
-        public string SubjectName { get; set; }
-
         [Browsable(false)] public int SubjectID { get; set; }
-        
+
+        public string SubjectName { get; set; }
+        public DateTime Date { get; set; } 
+        public TimeSpan StartTime { get; set; }
+        public TimeSpan EndTime { get; set; }
+
     }
 }

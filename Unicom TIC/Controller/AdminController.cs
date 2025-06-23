@@ -204,7 +204,7 @@ namespace Unicom_TIC.Controller
                     WHERE AdminID   = @AdminAdminSearchID
                           OR FirstName LIKE @AdminAdminSearchText
                           OR LastName  LIKE @AdminAdminSearchText
-                          OR Email     LIKE @AdminAdminSearchText"
+                          OR Role  LIKE @AdminAdminSearchText"
                 ;
 
             using (var connection = DataBaseConnection.GetConnection())

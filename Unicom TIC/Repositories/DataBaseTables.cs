@@ -78,10 +78,11 @@ namespace Unicom_TIC.Repositories
                          LastName TEXT NOT NULL,
                          Address TEXT NOT NULL,
                          DOB TEXT,
-                         Gender TEXT,
-                         Subject TEXT NOT NULL,
+                         Gender TEXT,                         
+                         SubjectID INTEGER,
                          Email TEXT NOT NULL,
-                         PhoneNumber TEXT NOT NULL
+                         PhoneNumber TEXT NOT NULL,
+                         FOREIGN KEY(SubjectID) REFERENCES Subjects(SubjectID)
                        );
                 ";
                 cmd.ExecuteNonQuery();
@@ -137,6 +138,9 @@ namespace Unicom_TIC.Repositories
                         ExamID INTEGER PRIMARY KEY AUTOINCREMENT,
                         ExamName TEXT NOT NULL,
                         SubjectID INTEGER,
+                        Date TEXT NOT NULL,
+                        StartTime TEXT NOT NULL,
+                        EndTime TEXT NOT NULL,
                         FOREIGN KEY(SubjectID) REFERENCES Subjects(SubjectID)
                       );
                 ";

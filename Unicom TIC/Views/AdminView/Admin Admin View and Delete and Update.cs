@@ -55,6 +55,7 @@ namespace Unicom_TIC.Views.AdminView
 
                     MessageBox.Show("Admin deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LoadAdmins();  // Refresh the admin list after Delete
+                    ClearDetails();
                 }
             }
             else
@@ -132,14 +133,14 @@ namespace Unicom_TIC.Views.AdminView
             };
 
 
-            // ============================ Input Validation ============================
+            // ============================ Check Validation ============================
             if (string.IsNullOrWhiteSpace(admin.FirstName) ||
                 string.IsNullOrWhiteSpace(admin.Email) ||
                 string.IsNullOrWhiteSpace(admin.LastName) ||
                 string.IsNullOrWhiteSpace(admin.Role) ||
                 string.IsNullOrWhiteSpace(admin.PhoneNumber))
             {
-                MessageBox.Show("Please enter your details", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please fill-in all required details.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -172,7 +173,7 @@ namespace Unicom_TIC.Views.AdminView
 
                 MessageBox.Show("Admin updated successfully.","Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadAdmins();     
-                ClearAdminForm(); 
+                ClearDetails(); 
             }
             catch (Exception ex)
             {
@@ -187,10 +188,10 @@ namespace Unicom_TIC.Views.AdminView
         // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ CLEAR ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         private void AdminAdminUpdateBack_Click(object sender, EventArgs e)
         {
-            ClearAdminForm();
+            ClearDetails();
         }
 
-        private void ClearAdminForm()
+        private void ClearDetails()
         {
             AdminAdminSearchText.Clear();
             AdminAdminUpdateAdminID.Clear();
@@ -206,8 +207,7 @@ namespace Unicom_TIC.Views.AdminView
 
 
         // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ LOAD DATA ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-        private void AdminAdminDetails_RowHeaderMouseClick(object sender,
-                DataGridViewCellMouseEventArgs e)
+        private void AdminAdminDetails_RowHeaderMouseClick(object sender,DataGridViewCellMouseEventArgs e)
         {
             if (e.RowIndex < 0) return;   
            
@@ -230,7 +230,7 @@ namespace Unicom_TIC.Views.AdminView
 
 
 
-        // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ ROW SELECT (normal cell click) ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ ROW SELECT ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         private void AdminAdminDetails_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)

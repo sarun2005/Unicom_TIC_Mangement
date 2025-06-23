@@ -141,7 +141,7 @@ namespace Unicom_TIC.Views.AdminView
 
             try
             {
-                new StudentController().UpdateStudent(student);   // ➜  Update!
+                new StudentController().UpdateStudent(student);  
                 MessageBox.Show("Student details updated successfully!",
                                 "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadStudents();

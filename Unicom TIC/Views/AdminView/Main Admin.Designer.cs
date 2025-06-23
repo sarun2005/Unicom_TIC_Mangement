@@ -47,7 +47,7 @@
             this.MainAdminLeftPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.MainAdminLeftPanel.Location = new System.Drawing.Point(0, 0);
             this.MainAdminLeftPanel.Name = "MainAdminLeftPanel";
-            this.MainAdminLeftPanel.Size = new System.Drawing.Size(230, 839);
+            this.MainAdminLeftPanel.Size = new System.Drawing.Size(230, 814);
             this.MainAdminLeftPanel.TabIndex = 2;
             // 
             // button1
@@ -80,7 +80,7 @@
             this.MainAdminMainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MainAdminMainPanel.Location = new System.Drawing.Point(230, 94);
             this.MainAdminMainPanel.Name = "MainAdminMainPanel";
-            this.MainAdminMainPanel.Size = new System.Drawing.Size(1205, 745);
+            this.MainAdminMainPanel.Size = new System.Drawing.Size(1225, 720);
             this.MainAdminMainPanel.TabIndex = 3;
             this.MainAdminMainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -91,7 +91,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(230, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1205, 94);
+            this.panel1.Size = new System.Drawing.Size(1225, 94);
             this.panel1.TabIndex = 0;
             // 
             // pictureBox1
@@ -109,7 +109,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1435, 839);
+            this.ClientSize = new System.Drawing.Size(1455, 814);
             this.Controls.Add(this.MainAdminMainPanel);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.MainAdminLeftPanel);
