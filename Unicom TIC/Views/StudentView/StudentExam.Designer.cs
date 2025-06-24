@@ -46,9 +46,9 @@
             // StudentExamView
             // 
             this.StudentExamView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.StudentExamView.Location = new System.Drawing.Point(411, 429);
+            this.StudentExamView.Location = new System.Drawing.Point(411, 363);
             this.StudentExamView.Name = "StudentExamView";
-            this.StudentExamView.Size = new System.Drawing.Size(520, 155);
+            this.StudentExamView.Size = new System.Drawing.Size(520, 221);
             this.StudentExamView.TabIndex = 21;
             // 
             // StudentExam

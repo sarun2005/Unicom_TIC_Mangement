@@ -24,7 +24,7 @@ namespace Unicom_TIC.Controller
                 {
                     insertRoomCommand.Parameters.Add("@RoomName", System.Data.DbType.String).Value = room.RoomName.Trim();
                     insertRoomCommand.Parameters.Add("@RoomType", System.Data.DbType.String).Value = room.RoomType.Trim();
-                    return insertRoomCommand.ExecuteNonQuery() > 0; // Returns true if a row was inserted
+                    return insertRoomCommand.ExecuteNonQuery() > 0; 
                 }
             }
         }
@@ -98,7 +98,7 @@ namespace Unicom_TIC.Controller
                     cmd.Parameters.Add("@RoomType", System.Data.DbType.String).Value = room.RoomType.Trim();
                     cmd.Parameters.Add("@RoomID", System.Data.DbType.Int32).Value = room.RoomID;
 
-                    return cmd.ExecuteNonQuery() > 0; // Returns true if a row was updated
+                    return cmd.ExecuteNonQuery() > 0; 
                 }
             }
         }

@@ -79,7 +79,7 @@ namespace Unicom_TIC.Views.AdminView
                 LecturerController lecturerController = new LecturerController();
                 lecturerController.AddLecturer(lecturer);
                 MessageBox.Show("New Lecturer Saved Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                LoadLecturers(); // Refresh the lecturer list after Add
+                LoadLecturers();
             }
             catch (Exception ex)
             {

@@ -42,7 +42,7 @@ namespace Unicom_TIC.Views.LecturerView
             MarksView.AutoGenerateColumns = true;
             MarksView.DataSource = data;
 
-            // Hide IDs
+           
             MarksView.Columns["StudentID"].Visible = false;
             MarksView.Columns["SubjectID"].Visible = false;
             MarksView.Columns["ExamID"].Visible = false;
@@ -89,7 +89,7 @@ namespace Unicom_TIC.Views.LecturerView
                     controller.DeleteMarks(markID);
 
                     MessageBox.Show("Marks deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    LoadMarks();  // Refresh the marks list after Delete
+                    LoadMarks(); 
                 }
             }
             else
@@ -160,8 +160,7 @@ namespace Unicom_TIC.Views.LecturerView
         {
             if (selectedMarkID == -1)
             {
-                MessageBox.Show("Please select a record to update.",
-                                "No Row Selected", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please select a record to update.","No Row Selected", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -179,15 +178,13 @@ namespace Unicom_TIC.Views.LecturerView
             try
             {
                 controller.UpdateMarks(mark);
-                MessageBox.Show("Marks updated successfully.",
-                                "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Marks updated successfully.","Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadMarks();
                 ResetForm();
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error while updating marks: {ex.Message}",
-                                "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Error while updating marks: {ex.Message}","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }

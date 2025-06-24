@@ -63,7 +63,7 @@ namespace Unicom_TIC.Controller
                     cmd.Parameters.AddWithValue("@Email", student.Email);
                     cmd.Parameters.AddWithValue("@PhoneNumber", student.PhoneNumber);
                     cmd.Parameters.AddWithValue("@CourseID", student.CourseID);
-                    cmd.Parameters.AddWithValue("@StudentID", student.StudentID); // Ensure to include the StudentID for the WHERE clause
+                    cmd.Parameters.AddWithValue("@StudentID", student.StudentID); 
 
                     cmd.ExecuteNonQuery();
                 }
@@ -127,14 +127,14 @@ namespace Unicom_TIC.Controller
             using (var connection = DataBaseConnection.GetConnection())
             using (var cmd = new SQLiteCommand(sql, connection))
             {
-                // Wild-card text
+               
                 cmd.Parameters.AddWithValue("@Txt", $"%{keyword}%");
 
-                // Optional numeric ID
+                
                 if (int.TryParse(keyword, out int id))
                     cmd.Parameters.AddWithValue("@Id", id);
                 else
-                    cmd.Parameters.AddWithValue("@Id", -1);   // No match
+                    cmd.Parameters.AddWithValue("@Id", -1);  
 
                 using (var r = cmd.ExecuteReader())
                 {

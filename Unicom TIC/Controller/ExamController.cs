@@ -20,9 +20,9 @@ namespace Unicom_TIC.Controller
                 {
                     insertExamCommand.Parameters.AddWithValue("@ExamName", exam.ExamName);
                     insertExamCommand.Parameters.AddWithValue("@SubjectID", exam.SubjectID);
-                    insertExamCommand.Parameters.AddWithValue("@Date", exam.Date.ToString("yyyy-MM-dd")); // Format date
-                    insertExamCommand.Parameters.AddWithValue("@StartTime", exam.StartTime); // TimeSpan is fine
-                    insertExamCommand.Parameters.AddWithValue("@EndTime", exam.EndTime); // TimeSpan is fine
+                    insertExamCommand.Parameters.AddWithValue("@Date", exam.Date.ToString("yyyy-MM-dd")); 
+                    insertExamCommand.Parameters.AddWithValue("@StartTime", exam.StartTime); 
+                    insertExamCommand.Parameters.AddWithValue("@EndTime", exam.EndTime); 
                     insertExamCommand.ExecuteNonQuery();
                 }
             }
@@ -49,14 +49,14 @@ namespace Unicom_TIC.Controller
                             ExamName = reader["ExamName"].ToString(),
                             SubjectID = Convert.ToInt32(reader["SubjectID"]),
                             SubjectName = reader["SubjectName"] != DBNull.Value ? reader["SubjectName"].ToString() : null,
-                            Date = DateTime.Parse(reader["Date"].ToString()), // Ensure correct parsing
-                            StartTime = TimeSpan.Parse(reader["StartTime"].ToString()), // Ensure correct parsing
-                            EndTime = TimeSpan.Parse(reader["EndTime"].ToString()) // Ensure correct parsing
+                            Date = DateTime.Parse(reader["Date"].ToString()), 
+                            StartTime = TimeSpan.Parse(reader["StartTime"].ToString()), 
+                            EndTime = TimeSpan.Parse(reader["EndTime"].ToString()) 
                         });
                     }
                 }
             }
-            return exams; // Ensure the list is returned after reading
+            return exams;
         }
 
         // ============================ UPDATE ============================
@@ -76,9 +76,9 @@ namespace Unicom_TIC.Controller
                 {
                     cmd.Parameters.AddWithValue("@ExamName", exam.ExamName?.Trim());
                     cmd.Parameters.AddWithValue("@SubjectID", exam.SubjectID);
-                    cmd.Parameters.AddWithValue("@Date", exam.Date.ToString("yyyy-MM-dd")); // Format date
-                    cmd.Parameters.AddWithValue("@StartTime", exam.StartTime); // TimeSpan is fine
-                    cmd.Parameters.AddWithValue("@EndTime", exam.EndTime); // TimeSpan is fine
+                    cmd.Parameters.AddWithValue("@Date", exam.Date.ToString("yyyy-MM-dd")); 
+                    cmd.Parameters.AddWithValue("@StartTime", exam.StartTime); 
+                    cmd.Parameters.AddWithValue("@EndTime", exam.EndTime); 
                     cmd.Parameters.AddWithValue("@ExamID", exam.ExamID);
                     cmd.ExecuteNonQuery();
                 }

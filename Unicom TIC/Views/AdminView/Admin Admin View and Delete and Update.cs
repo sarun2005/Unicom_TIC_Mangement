@@ -53,7 +53,7 @@ namespace Unicom_TIC.Views.AdminView
                     controller.DeleteAdmin(adminID);
 
                     MessageBox.Show("Admin deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    LoadAdmins();  // Refresh the admin list after Delete
+                    LoadAdmins();  
                     ClearDetails();
                 }
             }

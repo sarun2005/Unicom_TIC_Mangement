@@ -64,9 +64,9 @@ namespace Unicom_TIC.Views
 
         private void Login_Click(object sender, EventArgs e)
         {
-            // --------------- 1. Input Validation ---------------
+            //Input Validation 
             string username = Loginusername.Text.Trim();
-            string password = Loginpassword.Text;   // Trim not required ‑‑ PasswordChar hides input
+            string password = Loginpassword.Text;   
             string role = LoginRole.Text;
             string idText = LoginID.Text.Trim();
 
@@ -86,7 +86,7 @@ namespace Unicom_TIC.Views
             }
 
 
-            // --------------- 2. AuthenticateUser call ---------------
+            //  AuthenticateUser call 
             bool isValid = UserController.AuthenticateUser(username,password,role,enteredId);
 
 

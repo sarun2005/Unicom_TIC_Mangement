@@ -30,7 +30,7 @@ namespace Unicom_TIC.Views.StudentView
 
         private void Marks_Load(object sender, EventArgs e)
         {
-            var data = _controller.ViewMarks(Role.Student, _studentId);   // ✅
+            var data = _controller.ViewMarks(Role.Student, _studentId);   
             StudentMarksView.AutoGenerateColumns = true;
             StudentMarksView.DataSource = data;
         }

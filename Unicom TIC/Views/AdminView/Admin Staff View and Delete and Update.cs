@@ -110,7 +110,7 @@ namespace Unicom_TIC.Views.AdminView
         // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ UPDATE ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         private void AdminStaffUpdate_Click(object sender, EventArgs e)
         {
-            // Check if any staff row is selected
+            
             if (selectedStaffID == -1)
             {
                 MessageBox.Show("Please select a staff member in the grid first.", "No Row Selected", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -121,7 +121,7 @@ namespace Unicom_TIC.Views.AdminView
             string gender = AdminStaffUpdateMale.Checked ? "Male" :
                             AdminStaffUpdateFemale.Checked ? "Female" : "";
 
-            // Prepare the staff object
+           
             var staff = new Staff
             {
                 StaffID = selectedStaffID,
@@ -170,8 +170,8 @@ namespace Unicom_TIC.Views.AdminView
             {
                 new StaffController().UpdateStaff(staff);
                 MessageBox.Show("Staff details updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                LoadStaffs();         // Refresh table
-                ClearUpdateFields();  // Clear input fields
+                LoadStaffs();         
+                ClearUpdateFields();  
             }
             catch (Exception ex)
             {
@@ -207,7 +207,7 @@ namespace Unicom_TIC.Views.AdminView
         // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
-        // =========== GRID → FORM autofill ===========
+        // =========== GRID FORM autofill ===========
         private void AdminStaffDetails_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             if (e.RowIndex < 0) return;
@@ -221,7 +221,7 @@ namespace Unicom_TIC.Views.AdminView
             AdminStaffUpdateLastName.Text = staff.LastName;
             AdminStaffUpdateRole.Text = staff.Role;
             AdminStaffUpdateEmail.Text = staff.Email;
-            AdminStaffUpdatePhoneNumber.Text = staff.PhoneNumber; // Corrected variable name
+            AdminStaffUpdatePhoneNumber.Text = staff.PhoneNumber; 
             AdminStaffUpdateAddress.Text = staff.Address;
 
             // Set DOB

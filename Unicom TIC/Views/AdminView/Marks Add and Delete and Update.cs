@@ -129,7 +129,7 @@ namespace Unicom_TIC.Views.AdminView
             {
                 controller.AddMarks(mark);
                 MessageBox.Show("Marks added successfully.","Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                LoadMarks();   // Refresh the marks list after Add
+                LoadMarks();   
             }
             catch (Exception ex)
             {
@@ -161,7 +161,7 @@ namespace Unicom_TIC.Views.AdminView
                     controller.DeleteMarks(markID);
 
                     MessageBox.Show("Marks deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    LoadMarks();  // Refresh the marks list after Delete
+                    LoadMarks();  
                 }
             }
             else
@@ -182,8 +182,7 @@ namespace Unicom_TIC.Views.AdminView
                
             if (selectedMarkID == -1)
             {
-                MessageBox.Show("Please select a record to update.",
-                                "No Row Selected", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please select a record to update.","No Row Selected", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -201,15 +200,13 @@ namespace Unicom_TIC.Views.AdminView
             try
             {
                 controller.UpdateMarks(mark);
-                MessageBox.Show("Marks updated successfully.",
-                                "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Marks updated successfully.","Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadMarks();
                 ResetForm();                         
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error while updating marks: {ex.Message}",
-                                "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Error while updating marks: {ex.Message}","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -235,10 +232,10 @@ namespace Unicom_TIC.Views.AdminView
             var mark = MarksView.Rows[e.RowIndex].DataBoundItem as Mark;
             if (mark == null) return;
 
-            /* remember selected row */
+           
             selectedMarkID = mark.MarkID;
 
-            /* populate input controls */
+          
             MarksStudentID.Text = mark.StudentID.ToString();
             MarksScore.Text = mark.Score.ToString();
             MarksSubject.SelectedValue = mark.SubjectID;

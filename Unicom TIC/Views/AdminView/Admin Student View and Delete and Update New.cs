@@ -86,7 +86,7 @@ namespace Unicom_TIC.Views.AdminView
 
             if (string.IsNullOrEmpty(keyword))
             {
-                result = controller.ViewAllStudentWithCourse(); // empty search → show all
+                result = controller.ViewAllStudentWithCourse(); // empty search show all
             }
             else
             {
@@ -163,8 +163,8 @@ namespace Unicom_TIC.Views.AdminView
                 new StudentController().UpdateStudent(student);
                 MessageBox.Show("Student details updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                LoadStudents(); // Refresh the student list
-                ClearUpdateFields(); // Clear the input fields
+                LoadStudents(); 
+                ClearUpdateFields(); 
             }
             catch (Exception ex)
             {
@@ -194,7 +194,7 @@ namespace Unicom_TIC.Views.AdminView
 
 
 
-        // ---------- GRID → FORM autofill ----------
+       
         private void Grid_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             if (e.RowIndex < 0) return;

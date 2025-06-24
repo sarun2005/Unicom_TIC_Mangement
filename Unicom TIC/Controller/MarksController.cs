@@ -135,7 +135,7 @@ namespace Unicom_TIC.Controller
 
                 using (var reader = cmd.ExecuteReader())
                 {
-                    return reader.Read();  // Returns true if a row exists
+                    return reader.Read();  
                 }
             }
         }

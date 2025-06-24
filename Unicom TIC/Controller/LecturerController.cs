@@ -92,7 +92,7 @@ namespace Unicom_TIC.Controller
             {
                 SearchLecturerCommand.Parameters.AddWithValue("AdminLecturerSearchText", $"%{keyword}%");
 
-                // Optional numeric ID
+                
                 if (int.TryParse(keyword, out int id))
                     SearchLecturerCommand.Parameters.AddWithValue("@Id", id);
                 else

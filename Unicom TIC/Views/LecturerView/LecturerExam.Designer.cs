@@ -48,7 +48,7 @@
             this.LecturerExamView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.LecturerExamView.Location = new System.Drawing.Point(408, 411);
             this.LecturerExamView.Name = "LecturerExamView";
-            this.LecturerExamView.Size = new System.Drawing.Size(520, 155);
+            this.LecturerExamView.Size = new System.Drawing.Size(520, 277);
             this.LecturerExamView.TabIndex = 16;
             this.LecturerExamView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.LecturerExamView_CellContentClick);
             // 

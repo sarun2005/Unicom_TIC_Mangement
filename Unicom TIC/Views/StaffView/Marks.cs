@@ -87,7 +87,7 @@ namespace Unicom_TIC.Views.StaffView
                     controller.DeleteMarks(markID);
 
                     MessageBox.Show("Marks deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    LoadMarks();  // Refresh the marks list after Delete
+                    LoadMarks();  
                 }
             }
             else
