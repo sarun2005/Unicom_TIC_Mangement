@@ -209,10 +209,10 @@ namespace Unicom_TIC.Views.LecturerView
             var mark = MarksView.Rows[e.RowIndex].DataBoundItem as Mark;
             if (mark == null) return;
 
-            /* remember selected row */
+            
             selectedMarkID = mark.MarkID;
 
-            /* populate input controls */
+            
             MarksStudentID.Text = mark.StudentID.ToString();
             MarksScore.Text = mark.Score.ToString();
             MarksSubject.SelectedValue = mark.SubjectID;

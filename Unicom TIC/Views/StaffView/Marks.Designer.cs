@@ -112,7 +112,7 @@
             this.MarksView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.MarksView.Location = new System.Drawing.Point(335, 424);
             this.MarksView.Name = "MarksView";
-            this.MarksView.Size = new System.Drawing.Size(637, 210);
+            this.MarksView.Size = new System.Drawing.Size(579, 210);
             this.MarksView.TabIndex = 23;
             this.MarksView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.MarksView_CellContentClick);
             // 
@@ -195,6 +195,7 @@
             this.TimetableUpdate.TabIndex = 29;
             this.TimetableUpdate.Text = "Update";
             this.TimetableUpdate.UseVisualStyleBackColor = true;
+            this.TimetableUpdate.Click += new System.EventHandler(this.TimetableUpdate_Click);
             // 
             // Staff_Marks
             // 
