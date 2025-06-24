@@ -37,7 +37,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(344, 154);
+            this.label2.Location = new System.Drawing.Point(550, 192);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(189, 24);
             this.label2.TabIndex = 20;
@@ -46,9 +46,9 @@
             // StaffExamView
             // 
             this.StaffExamView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.StaffExamView.Location = new System.Drawing.Point(211, 354);
+            this.StaffExamView.Location = new System.Drawing.Point(389, 392);
             this.StaffExamView.Name = "StaffExamView";
-            this.StaffExamView.Size = new System.Drawing.Size(520, 155);
+            this.StaffExamView.Size = new System.Drawing.Size(548, 216);
             this.StaffExamView.TabIndex = 19;
             this.StaffExamView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.StaffExamView_CellContentClick);
             // 
@@ -59,7 +59,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.StaffExamView);
             this.Name = "StaffExam";
-            this.Size = new System.Drawing.Size(942, 663);
+            this.Size = new System.Drawing.Size(1267, 811);
             this.Load += new System.EventHandler(this.StaffExam_Load);
             ((System.ComponentModel.ISupportInitialize)(this.StaffExamView)).EndInit();
             this.ResumeLayout(false);

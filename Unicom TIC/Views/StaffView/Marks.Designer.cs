@@ -57,7 +57,7 @@
             this.tableLayoutPanel2.Controls.Add(this.label9, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.label4, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.MarksScore, 1, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(520, 189);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(700, 249);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
@@ -101,7 +101,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(371, 99);
+            this.label2.Location = new System.Drawing.Point(551, 159);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(221, 25);
             this.label2.TabIndex = 24;
@@ -110,7 +110,7 @@
             // MarksView
             // 
             this.MarksView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.MarksView.Location = new System.Drawing.Point(155, 364);
+            this.MarksView.Location = new System.Drawing.Point(335, 424);
             this.MarksView.Name = "MarksView";
             this.MarksView.Size = new System.Drawing.Size(637, 210);
             this.MarksView.TabIndex = 23;
@@ -125,7 +125,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label6, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.MarksSubject, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(41, 189);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(221, 249);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
@@ -169,7 +169,7 @@
             // 
             // TimetabeDelete
             // 
-            this.TimetabeDelete.Location = new System.Drawing.Point(65, 640);
+            this.TimetabeDelete.Location = new System.Drawing.Point(245, 700);
             this.TimetabeDelete.Name = "TimetabeDelete";
             this.TimetabeDelete.Size = new System.Drawing.Size(75, 23);
             this.TimetabeDelete.TabIndex = 31;
@@ -179,7 +179,7 @@
             // 
             // TimetableSave
             // 
-            this.TimetableSave.Location = new System.Drawing.Point(779, 624);
+            this.TimetableSave.Location = new System.Drawing.Point(959, 684);
             this.TimetableSave.Name = "TimetableSave";
             this.TimetableSave.Size = new System.Drawing.Size(75, 23);
             this.TimetableSave.TabIndex = 30;
@@ -189,7 +189,7 @@
             // 
             // TimetableUpdate
             // 
-            this.TimetableUpdate.Location = new System.Drawing.Point(452, 640);
+            this.TimetableUpdate.Location = new System.Drawing.Point(632, 700);
             this.TimetableUpdate.Name = "TimetableUpdate";
             this.TimetableUpdate.Size = new System.Drawing.Size(75, 23);
             this.TimetableUpdate.TabIndex = 29;
@@ -208,7 +208,7 @@
             this.Controls.Add(this.MarksView);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Staff_Marks";
-            this.Size = new System.Drawing.Size(988, 720);
+            this.Size = new System.Drawing.Size(1267, 811);
             this.Load += new System.EventHandler(this.Staff_Marks_Load);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();

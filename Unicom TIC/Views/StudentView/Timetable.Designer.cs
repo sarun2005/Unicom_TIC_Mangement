@@ -41,7 +41,7 @@
             this.TimetableView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TimetableView.Location = new System.Drawing.Point(213, 367);
             this.TimetableView.Name = "TimetableView";
-            this.TimetableView.Size = new System.Drawing.Size(637, 210);
+            this.TimetableView.Size = new System.Drawing.Size(916, 301);
             this.TimetableView.TabIndex = 19;
             this.TimetableView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TimetableView_CellContentClick);
             // 
@@ -50,7 +50,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(393, 247);
+            this.label2.Location = new System.Drawing.Point(530, 199);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(261, 25);
             this.label2.TabIndex = 20;
@@ -63,7 +63,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.TimetableView);
             this.Name = "Student_Timetable";
-            this.Size = new System.Drawing.Size(988, 720);
+            this.Size = new System.Drawing.Size(1267, 811);
             this.Load += new System.EventHandler(this.Student_Timetable_Load);
             ((System.ComponentModel.ISupportInitialize)(this.TimetableView)).EndInit();
             this.ResumeLayout(false);

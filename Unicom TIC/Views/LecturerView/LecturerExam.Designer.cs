@@ -37,7 +37,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(350, 97);
+            this.label2.Location = new System.Drawing.Point(562, 179);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(189, 24);
             this.label2.TabIndex = 18;
@@ -46,7 +46,7 @@
             // LecturerExamView
             // 
             this.LecturerExamView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.LecturerExamView.Location = new System.Drawing.Point(217, 297);
+            this.LecturerExamView.Location = new System.Drawing.Point(408, 411);
             this.LecturerExamView.Name = "LecturerExamView";
             this.LecturerExamView.Size = new System.Drawing.Size(520, 155);
             this.LecturerExamView.TabIndex = 16;
@@ -59,7 +59,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.LecturerExamView);
             this.Name = "LecturerExam";
-            this.Size = new System.Drawing.Size(934, 631);
+            this.Size = new System.Drawing.Size(1267, 811);
             this.Load += new System.EventHandler(this.LecturerExam_Load);
             ((System.ComponentModel.ISupportInitialize)(this.LecturerExamView)).EndInit();
             this.ResumeLayout(false);

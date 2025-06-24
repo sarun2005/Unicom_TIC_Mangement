@@ -35,6 +35,11 @@ namespace Unicom_TIC.Views.StudentView
             List<Timetable> timetables = controller.ViewAllTimetables();
             TimetableView.DataSource = null;
             TimetableView.DataSource = timetables;
+
+            TimetableView.Columns["CourseID"].Visible = false;
+            TimetableView.Columns["SubjectID"].Visible = false;
+            TimetableView.Columns["RoomID"].Visible = false;
+            TimetableView.Columns["LecturerID"].Visible = false;
         }
     }
 }

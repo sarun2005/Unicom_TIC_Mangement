@@ -99,60 +99,79 @@ namespace Unicom_TIC.Views.AdminView
 
         private void AdminStudentUpdate_Click(object sender, EventArgs e)
         {
-
             if (selectedStudentID == -1)
             {
-                MessageBox.Show("Please select a student in the grid first.",
-                                "No Row Selected", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please select a student row first.", "No Row Selected", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             // Gender
-            string gender = AdminStudentUpdateMale.Checked ? "Male" :
-                            AdminStudentUpdateFemale.Checked ? "Female" : "";
+            string gender = AdminStudentUpdateMale.Checked ? "Male" : AdminStudentUpdateFemale.Checked ? "Female" : "";
 
-            // Basic validation (இதேபோல் இனி உங்கள் தேவைக்கேற்ப சேர்)
-            if (string.IsNullOrWhiteSpace(AdminStudentUpdateFirstName.Text) ||
-                string.IsNullOrWhiteSpace(AdminStudentUpdateLastName.Text) ||
-                string.IsNullOrWhiteSpace(AdminStudentUpdateAddress.Text) ||
-                string.IsNullOrWhiteSpace(AdminStudentUpdateEmail.Text) ||
-                string.IsNullOrWhiteSpace(AdminStudentUpdatePhoneNumber.Text) ||
-                string.IsNullOrWhiteSpace(gender) ||
-                AdminStudentUpdateCourse.SelectedIndex == -1)
+            // Check if a course is selected
+            if (AdminStudentUpdateCourse.SelectedValue == null)
             {
-                MessageBox.Show("Please fill in all required fields.",
-                                "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please select a course.", "No Course Selected", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            // Build object
             var student = new Student
             {
                 StudentID = selectedStudentID,
                 FirstName = AdminStudentUpdateFirstName.Text.Trim(),
                 LastName = AdminStudentUpdateLastName.Text.Trim(),
                 Address = AdminStudentUpdateAddress.Text.Trim(),
-                PhoneNumber = AdminStudentUpdatePhoneNumber.Text.Trim(),
-                Email = AdminStudentUpdateEmail.Text.Trim(),
                 DOB = AdminStudentUpdateDOB.Value.ToString("yyyy-MM-dd"),
                 Gender = gender,
-                CourseID = Convert.ToInt32(AdminStudentUpdateCourse.SelectedValue)
+                Email = AdminStudentUpdateEmail.Text.Trim(),
+                PhoneNumber = AdminStudentUpdatePhoneNumber.Text.Trim(),
+                CourseID = (int)AdminStudentUpdateCourse.SelectedValue,
+                CourseName = AdminStudentUpdateCourse.Text.Trim(),
             };
+
+            // ============================ Check Validation ============================
+            if (string.IsNullOrWhiteSpace(student.FirstName) ||
+                string.IsNullOrWhiteSpace(student.LastName) ||
+                string.IsNullOrWhiteSpace(student.Address) ||
+                string.IsNullOrWhiteSpace(student.CourseName) ||
+                string.IsNullOrWhiteSpace(student.Email) ||
+                string.IsNullOrWhiteSpace(student.PhoneNumber) ||
+                string.IsNullOrWhiteSpace(gender))
+            {
+                MessageBox.Show("Please fill in all required details.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // ============================ Phone Number validation ============================
+            if (student.PhoneNumber.Length != 10 || !student.PhoneNumber.All(char.IsDigit))
+            {
+                MessageBox.Show("Enter a 10-digit phone number.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // ============================ Email validation ============================
+            if (!student.Email.Contains("@") || !student.Email.Contains("."))
+            {
+                MessageBox.Show("Enter a valid email address.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (MessageBox.Show("Are you sure you want to update this student?", "Confirm Update", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes) return;
 
             try
             {
-                new StudentController().UpdateStudent(student);  
-                MessageBox.Show("Student details updated successfully!",
-                                "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                LoadStudents();
-                ClearUpdateFields();
+                new StudentController().UpdateStudent(student);
+                MessageBox.Show("Student details updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                LoadStudents(); // Refresh the student list
+                ClearUpdateFields(); // Clear the input fields
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Update failed:\n" + ex.Message,
-                                "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Update failed:\n{ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
         private void AdminStudentUpdateClear_Click(object sender, EventArgs e)
         {

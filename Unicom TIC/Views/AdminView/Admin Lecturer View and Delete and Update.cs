@@ -15,9 +15,9 @@ namespace Unicom_TIC.Views.AdminView
     public partial class Admin_Lecturer_View_and_Delete_Update : UserControl
     {
         private int selectedLecturerID = -1;
-        private int selectedSubjectId;
+    
 
-        public string SubjectName { get; private set; }
+        
 
         public Admin_Lecturer_View_and_Delete_Update()
         {
@@ -152,13 +152,19 @@ namespace Unicom_TIC.Views.AdminView
         {
             if (selectedLecturerID == -1)
             {
-                MessageBox.Show("Please select a lecturer row first.","No Row Selected", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please select a lecturer row first.", "No Row Selected", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            // gender
+            // Gender
             string gender = AdminLecturerUpdateMale.Checked ? "Male" : AdminLecturerUpdateFemale.Checked ? "Female" : "";
 
+            // Check if a subject is selected
+            if (AdminLecturerUpdateSubject.SelectedValue == null)
+            {
+                MessageBox.Show("Please select a subject.", "No Subject Selected", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
             var lecturer = new Lecturer
             {
@@ -170,13 +176,9 @@ namespace Unicom_TIC.Views.AdminView
                 Gender = gender,
                 Email = AdminLecturerUpdateEmail.Text.Trim(),
                 PhoneNumber = AdminLecturerUpdatePhoneNumber.Text.Trim(),
-                SubjectID = (int)AdminLecturerUpdateSubject.SelectedValue, 
+                SubjectID = (int)AdminLecturerUpdateSubject.SelectedValue,
                 SubjectName = AdminLecturerUpdateSubject.Text.Trim(),
             };
-
-
-
-
 
             // ============================ Check Validation ============================
             if (string.IsNullOrWhiteSpace(lecturer.FirstName) ||
@@ -187,44 +189,40 @@ namespace Unicom_TIC.Views.AdminView
                 string.IsNullOrWhiteSpace(lecturer.PhoneNumber) ||
                 string.IsNullOrWhiteSpace(gender))
             {
-                MessageBox.Show("Please fill-in all required details.","Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please fill-in all required details.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-
 
             // ============================ Phone Number validation ============================
             if (lecturer.PhoneNumber.Length != 10 || !lecturer.PhoneNumber.All(char.IsDigit))
             {
-                MessageBox.Show("Enter a 10-digit phone number.","Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Enter a 10-digit phone number.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             // ============================ Email validation ============================
             if (!lecturer.Email.Contains("@") || !lecturer.Email.Contains("."))
             {
-                MessageBox.Show("Enter a valid email address.","Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Enter a valid email address.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-
-            if (MessageBox.Show("Are you sure you want to update this lecturer?","Confirm Update", MessageBoxButtons.YesNo,MessageBoxIcon.Question) != DialogResult.Yes) return;
-
-            
-           
+            if (MessageBox.Show("Are you sure you want to update this lecturer?", "Confirm Update", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes) return;
 
             try
             {
                 new LecturerController().UpdateLecturer(lecturer);
-                MessageBox.Show("Lecturer details updated successfully!","Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Lecturer details updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                LoadLecturers();     
-                ClearUpdateFields(); 
+                LoadLecturers();
+                ClearUpdateFields();
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Update failed:\n{ex.Message}","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Update failed:\n{ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 

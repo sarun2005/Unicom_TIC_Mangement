@@ -110,73 +110,75 @@ namespace Unicom_TIC.Views.AdminView
         // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ UPDATE ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         private void AdminStaffUpdate_Click(object sender, EventArgs e)
         {
+            // Check if any staff row is selected
             if (selectedStaffID == -1)
             {
-                MessageBox.Show("Please select a staff member in the grid first.","No Row Selected", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please select a staff member in the grid first.", "No Row Selected", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            // radio → gender string
-            string gender = AdminStaffUpdateMale.Checked ? "Male" :AdminStaffUpdateFemale.Checked ? "Female" : "";
+            // Gender
+            string gender = AdminStaffUpdateMale.Checked ? "Male" :
+                            AdminStaffUpdateFemale.Checked ? "Female" : "";
 
-            // validation
-            if (string.IsNullOrWhiteSpace(AdminStaffUpdateFirstName.Text) ||
-                string.IsNullOrWhiteSpace(AdminStaffUpdateLastName.Text) ||
-                string.IsNullOrWhiteSpace(AdminStaffUpdateRole.Text) ||
-                string.IsNullOrWhiteSpace(AdminStaffUpdateEmail.Text) ||
-                string.IsNullOrWhiteSpace(AdminStaffUpdatePhoneNumber.Text) ||
-                string.IsNullOrWhiteSpace(AdminStaffUpdateAddress.Text) ||
-                string.IsNullOrWhiteSpace(gender))
-            {
-                MessageBox.Show("Please fill in all required fields.","Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            string phone = AdminStaffUpdatePhoneNumber.Text.Trim();
-            if (phone.Length != 10 || !phone.All(char.IsDigit))
-            {
-                MessageBox.Show("Phone number must be exactly 10 digits.","Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            string email = AdminStaffUpdateEmail.Text.Trim();
-
-            if (!email.Contains("@") || !email.Contains("."))
-            {
-                MessageBox.Show("Please enter a valid email address.","Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            if (MessageBox.Show("Are you sure you want to update this staff member?","Confirm Update", MessageBoxButtons.YesNo,
-                                MessageBoxIcon.Question) != DialogResult.Yes) return;
-
-            // Build object
+            // Prepare the staff object
             var staff = new Staff
             {
                 StaffID = selectedStaffID,
                 FirstName = AdminStaffUpdateFirstName.Text.Trim(),
                 LastName = AdminStaffUpdateLastName.Text.Trim(),
                 Role = AdminStaffUpdateRole.Text.Trim(),
-                Email = email,
-                PhoneNumber = phone,
+                Email = AdminStaffUpdateEmail.Text.Trim(),
+                PhoneNumber = AdminStaffUpdatePhoneNumber.Text.Trim(),
                 Address = AdminStaffUpdateAddress.Text.Trim(),
                 DOB = AdminStaffUpdateDOB.Value.ToString("yyyy-MM-dd"),
                 Gender = gender
             };
 
+            // ============================ Check Validation ============================
+            if (string.IsNullOrWhiteSpace(staff.FirstName) ||
+                string.IsNullOrWhiteSpace(staff.LastName) ||
+                string.IsNullOrWhiteSpace(staff.Role) ||
+                string.IsNullOrWhiteSpace(staff.Email) ||
+                string.IsNullOrWhiteSpace(staff.PhoneNumber) ||
+                string.IsNullOrWhiteSpace(staff.Address) ||
+                string.IsNullOrWhiteSpace(gender))
+            {
+                MessageBox.Show("Please fill in all required fields.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // ============================ Phone Number validation ============================
+            if (staff.PhoneNumber.Length != 10 || !staff.PhoneNumber.All(char.IsDigit))
+            {
+                MessageBox.Show("Phone number must be exactly 10 digits.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // ============================ Email validation ============================
+            if (!staff.Email.Contains("@") || !staff.Email.Contains("."))
+            {
+                MessageBox.Show("Please enter a valid email address.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // ============================ Confirm and Update ============================
+            if (MessageBox.Show("Are you sure you want to update this staff member?", "Confirm Update", MessageBoxButtons.YesNo, MessageBoxIcon.Question) != DialogResult.Yes)
+                return;
+
             try
             {
                 new StaffController().UpdateStaff(staff);
                 MessageBox.Show("Staff details updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                LoadStaffs();
-                ClearUpdateFields();
+                LoadStaffs();         // Refresh table
+                ClearUpdateFields();  // Clear input fields
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Update failed:\n{ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
+
         // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 

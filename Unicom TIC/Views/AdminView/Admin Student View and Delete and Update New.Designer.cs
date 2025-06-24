@@ -42,20 +42,20 @@
             this.AdminStudentUpdateClear = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label7 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.AdminStudentUpdateAddress = new System.Windows.Forms.TextBox();
             this.AdminStudentUpdateLastName = new System.Windows.Forms.TextBox();
             this.AdminStudentUpdateFirstName = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.AdminStudentUpdateAddress = new System.Windows.Forms.TextBox();
             this.AdminStudentUpdate = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.label12 = new System.Windows.Forms.Label();
-            this.AdminStudentUpdateDOB = new System.Windows.Forms.DateTimePicker();
             this.label13 = new System.Windows.Forms.Label();
-            this.AdminStudentUpdatePhoneNumber = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.AdminStudentUpdateDOB = new System.Windows.Forms.DateTimePicker();
             this.AdminStudentUpdateEmail = new System.Windows.Forms.TextBox();
+            this.AdminStudentUpdatePhoneNumber = new System.Windows.Forms.TextBox();
             this.AdminStudentUpdateCourse = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.AdminStudentDetails)).BeginInit();
             this.s.SuspendLayout();
@@ -84,14 +84,14 @@
             // AdminStudentDetails
             // 
             this.AdminStudentDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.AdminStudentDetails.Location = new System.Drawing.Point(250, 436);
+            this.AdminStudentDetails.Location = new System.Drawing.Point(265, 399);
             this.AdminStudentDetails.Name = "AdminStudentDetails";
             this.AdminStudentDetails.Size = new System.Drawing.Size(742, 257);
             this.AdminStudentDetails.TabIndex = 18;
             // 
             // AdminStudentDelete
             // 
-            this.AdminStudentDelete.Location = new System.Drawing.Point(612, 718);
+            this.AdminStudentDelete.Location = new System.Drawing.Point(604, 684);
             this.AdminStudentDelete.Name = "AdminStudentDelete";
             this.AdminStudentDelete.Size = new System.Drawing.Size(107, 29);
             this.AdminStudentDelete.TabIndex = 16;
@@ -174,7 +174,7 @@
             // 
             // AdminStudentUpdateClear
             // 
-            this.AdminStudentUpdateClear.Location = new System.Drawing.Point(30, 718);
+            this.AdminStudentUpdateClear.Location = new System.Drawing.Point(99, 684);
             this.AdminStudentUpdateClear.Name = "AdminStudentUpdateClear";
             this.AdminStudentUpdateClear.Size = new System.Drawing.Size(107, 29);
             this.AdminStudentUpdateClear.TabIndex = 38;
@@ -214,14 +214,12 @@
             this.label7.TabIndex = 19;
             this.label7.Text = "Address";
             // 
-            // label3
+            // AdminStudentUpdateAddress
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 110);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 13);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "Last Name";
+            this.AdminStudentUpdateAddress.Location = new System.Drawing.Point(191, 168);
+            this.AdminStudentUpdateAddress.Name = "AdminStudentUpdateAddress";
+            this.AdminStudentUpdateAddress.Size = new System.Drawing.Size(224, 20);
+            this.AdminStudentUpdateAddress.TabIndex = 10;
             // 
             // AdminStudentUpdateLastName
             // 
@@ -237,6 +235,15 @@
             this.AdminStudentUpdateFirstName.Size = new System.Drawing.Size(224, 20);
             this.AdminStudentUpdateFirstName.TabIndex = 3;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(3, 110);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(58, 13);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Last Name";
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -246,16 +253,9 @@
             this.label5.TabIndex = 12;
             this.label5.Text = "First Name";
             // 
-            // AdminStudentUpdateAddress
-            // 
-            this.AdminStudentUpdateAddress.Location = new System.Drawing.Point(191, 168);
-            this.AdminStudentUpdateAddress.Name = "AdminStudentUpdateAddress";
-            this.AdminStudentUpdateAddress.Size = new System.Drawing.Size(224, 20);
-            this.AdminStudentUpdateAddress.TabIndex = 10;
-            // 
             // AdminStudentUpdate
             // 
-            this.AdminStudentUpdate.Location = new System.Drawing.Point(1129, 718);
+            this.AdminStudentUpdate.Location = new System.Drawing.Point(1108, 684);
             this.AdminStudentUpdate.Name = "AdminStudentUpdate";
             this.AdminStudentUpdate.Size = new System.Drawing.Size(107, 29);
             this.AdminStudentUpdate.TabIndex = 36;
@@ -286,23 +286,6 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(455, 222);
             this.tableLayoutPanel2.TabIndex = 42;
             // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(3, 165);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(40, 13);
-            this.label12.TabIndex = 22;
-            this.label12.Text = "Course";
-            // 
-            // AdminStudentUpdateDOB
-            // 
-            this.AdminStudentUpdateDOB.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.AdminStudentUpdateDOB.Location = new System.Drawing.Point(180, 3);
-            this.AdminStudentUpdateDOB.Name = "AdminStudentUpdateDOB";
-            this.AdminStudentUpdateDOB.Size = new System.Drawing.Size(224, 20);
-            this.AdminStudentUpdateDOB.TabIndex = 15;
-            // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -311,13 +294,6 @@
             this.label13.Size = new System.Drawing.Size(68, 13);
             this.label13.TabIndex = 21;
             this.label13.Text = "Date Of Birth";
-            // 
-            // AdminStudentUpdatePhoneNumber
-            // 
-            this.AdminStudentUpdatePhoneNumber.Location = new System.Drawing.Point(180, 113);
-            this.AdminStudentUpdatePhoneNumber.Name = "AdminStudentUpdatePhoneNumber";
-            this.AdminStudentUpdatePhoneNumber.Size = new System.Drawing.Size(224, 20);
-            this.AdminStudentUpdatePhoneNumber.TabIndex = 11;
             // 
             // label17
             // 
@@ -337,12 +313,36 @@
             this.label18.TabIndex = 15;
             this.label18.Text = "Phone Number";
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(3, 165);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(40, 13);
+            this.label12.TabIndex = 22;
+            this.label12.Text = "Course";
+            // 
+            // AdminStudentUpdateDOB
+            // 
+            this.AdminStudentUpdateDOB.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.AdminStudentUpdateDOB.Location = new System.Drawing.Point(180, 3);
+            this.AdminStudentUpdateDOB.Name = "AdminStudentUpdateDOB";
+            this.AdminStudentUpdateDOB.Size = new System.Drawing.Size(224, 20);
+            this.AdminStudentUpdateDOB.TabIndex = 15;
+            // 
             // AdminStudentUpdateEmail
             // 
             this.AdminStudentUpdateEmail.Location = new System.Drawing.Point(180, 58);
             this.AdminStudentUpdateEmail.Name = "AdminStudentUpdateEmail";
             this.AdminStudentUpdateEmail.Size = new System.Drawing.Size(224, 20);
             this.AdminStudentUpdateEmail.TabIndex = 18;
+            // 
+            // AdminStudentUpdatePhoneNumber
+            // 
+            this.AdminStudentUpdatePhoneNumber.Location = new System.Drawing.Point(180, 113);
+            this.AdminStudentUpdatePhoneNumber.Name = "AdminStudentUpdatePhoneNumber";
+            this.AdminStudentUpdatePhoneNumber.Size = new System.Drawing.Size(224, 20);
+            this.AdminStudentUpdatePhoneNumber.TabIndex = 11;
             // 
             // AdminStudentUpdateCourse
             // 
@@ -367,7 +367,7 @@
             this.Controls.Add(this.AdminStudentDelete);
             this.Controls.Add(this.label1);
             this.Name = "Admin_Student_View_and_Delete_and_Update_New";
-            this.Size = new System.Drawing.Size(1267, 774);
+            this.Size = new System.Drawing.Size(1237, 717);
             this.Load += new System.EventHandler(this.Admin_Student_View_and_Delete_and_Update_New_Load);
             ((System.ComponentModel.ISupportInitialize)(this.AdminStudentDetails)).EndInit();
             this.s.ResumeLayout(false);

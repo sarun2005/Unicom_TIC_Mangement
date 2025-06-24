@@ -53,7 +53,7 @@
             // AdminExamView
             // 
             this.AdminExamView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.AdminExamView.Location = new System.Drawing.Point(236, 375);
+            this.AdminExamView.Location = new System.Drawing.Point(383, 391);
             this.AdminExamView.Name = "AdminExamView";
             this.AdminExamView.Size = new System.Drawing.Size(520, 155);
             this.AdminExamView.TabIndex = 0;
@@ -68,7 +68,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.AdminExamName, 1, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(70, 132);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(217, 170);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -115,7 +115,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(358, 93);
+            this.label2.Location = new System.Drawing.Point(512, 92);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(189, 24);
             this.label2.TabIndex = 4;
@@ -124,7 +124,7 @@
             // 
             // AdminExamSave
             // 
-            this.AdminExamSave.Location = new System.Drawing.Point(805, 571);
+            this.AdminExamSave.Location = new System.Drawing.Point(952, 609);
             this.AdminExamSave.Name = "AdminExamSave";
             this.AdminExamSave.Size = new System.Drawing.Size(75, 23);
             this.AdminExamSave.TabIndex = 5;
@@ -134,7 +134,7 @@
             // 
             // AdminExamUpdate
             // 
-            this.AdminExamUpdate.Location = new System.Drawing.Point(442, 571);
+            this.AdminExamUpdate.Location = new System.Drawing.Point(589, 609);
             this.AdminExamUpdate.Name = "AdminExamUpdate";
             this.AdminExamUpdate.Size = new System.Drawing.Size(75, 23);
             this.AdminExamUpdate.TabIndex = 6;
@@ -144,7 +144,7 @@
             // 
             // AdminExamDelete
             // 
-            this.AdminExamDelete.Location = new System.Drawing.Point(81, 571);
+            this.AdminExamDelete.Location = new System.Drawing.Point(228, 609);
             this.AdminExamDelete.Name = "AdminExamDelete";
             this.AdminExamDelete.Size = new System.Drawing.Size(75, 23);
             this.AdminExamDelete.TabIndex = 7;
@@ -163,7 +163,7 @@
             this.tableLayoutPanel2.Controls.Add(this.ExamDate, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.ExamStartTime, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.ExamEndTime, 1, 2);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(499, 132);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(646, 170);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 3;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
@@ -242,7 +242,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.AdminExamView);
             this.Name = "Admin_Exam_Management";
-            this.Size = new System.Drawing.Size(958, 626);
+            this.Size = new System.Drawing.Size(1237, 717);
             this.Load += new System.EventHandler(this.Admin_Exam_Management_Load);
             ((System.ComponentModel.ISupportInitialize)(this.AdminExamView)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);

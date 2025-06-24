@@ -54,7 +54,7 @@
             // 
             // AdminAdminDelete
             // 
-            this.AdminAdminDelete.Location = new System.Drawing.Point(587, 700);
+            this.AdminAdminDelete.Location = new System.Drawing.Point(587, 674);
             this.AdminAdminDelete.Name = "AdminAdminDelete";
             this.AdminAdminDelete.Size = new System.Drawing.Size(96, 31);
             this.AdminAdminDelete.TabIndex = 1;
@@ -64,9 +64,9 @@
             // 
             // AdminAdminSearchText
             // 
-            this.AdminAdminSearchText.Location = new System.Drawing.Point(618, 125);
+            this.AdminAdminSearchText.Location = new System.Drawing.Point(620, 112);
             this.AdminAdminSearchText.Name = "AdminAdminSearchText";
-            this.AdminAdminSearchText.Size = new System.Drawing.Size(177, 20);
+            this.AdminAdminSearchText.Size = new System.Drawing.Size(196, 20);
             this.AdminAdminSearchText.TabIndex = 3;
             this.AdminAdminSearchText.TextChanged += new System.EventHandler(this.AdminAdminSearchText_TextChanged);
             // 
@@ -84,7 +84,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(512, 129);
+            this.label2.Location = new System.Drawing.Point(518, 112);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(50, 16);
             this.label2.TabIndex = 14;
@@ -93,15 +93,15 @@
             // AdminAdminDetails
             // 
             this.AdminAdminDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.AdminAdminDetails.Location = new System.Drawing.Point(324, 459);
+            this.AdminAdminDetails.Location = new System.Drawing.Point(346, 445);
             this.AdminAdminDetails.Name = "AdminAdminDetails";
-            this.AdminAdminDetails.Size = new System.Drawing.Size(703, 191);
+            this.AdminAdminDetails.Size = new System.Drawing.Size(631, 191);
             this.AdminAdminDetails.TabIndex = 0;
             this.AdminAdminDetails.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // AdminAdminUpdateBack
             // 
-            this.AdminAdminUpdateBack.Location = new System.Drawing.Point(183, 702);
+            this.AdminAdminUpdateBack.Location = new System.Drawing.Point(73, 665);
             this.AdminAdminUpdateBack.Name = "AdminAdminUpdateBack";
             this.AdminAdminUpdateBack.Size = new System.Drawing.Size(107, 29);
             this.AdminAdminUpdateBack.TabIndex = 21;
@@ -237,7 +237,7 @@
             // 
             // AdminAdminUpdateUpdate
             // 
-            this.AdminAdminUpdateUpdate.Location = new System.Drawing.Point(920, 702);
+            this.AdminAdminUpdateUpdate.Location = new System.Drawing.Point(1084, 676);
             this.AdminAdminUpdateUpdate.Name = "AdminAdminUpdateUpdate";
             this.AdminAdminUpdateUpdate.Size = new System.Drawing.Size(107, 29);
             this.AdminAdminUpdateUpdate.TabIndex = 19;
@@ -258,7 +258,7 @@
             this.Controls.Add(this.AdminAdminDelete);
             this.Controls.Add(this.AdminAdminDetails);
             this.Name = "Admin_Admin_View_and_Delete_and_Update";
-            this.Size = new System.Drawing.Size(1302, 839);
+            this.Size = new System.Drawing.Size(1237, 717);
             this.Load += new System.EventHandler(this.Admin_Admin_View_and_Delete_Load);
             ((System.ComponentModel.ISupportInitialize)(this.AdminAdminDetails)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);

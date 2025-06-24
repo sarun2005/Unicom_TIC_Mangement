@@ -69,7 +69,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.TimetableLecturer, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.label5, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(41, 120);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(209, 190);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
@@ -154,7 +154,7 @@
             // TimetableView
             // 
             this.TimetableView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.TimetableView.Location = new System.Drawing.Point(143, 361);
+            this.TimetableView.Location = new System.Drawing.Point(311, 431);
             this.TimetableView.Name = "TimetableView";
             this.TimetableView.Size = new System.Drawing.Size(637, 210);
             this.TimetableView.TabIndex = 3;
@@ -164,7 +164,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(371, 30);
+            this.label2.Location = new System.Drawing.Point(539, 100);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(261, 25);
             this.label2.TabIndex = 4;
@@ -183,7 +183,7 @@
             this.tableLayoutPanel2.Controls.Add(this.label9, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.label4, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.TimetableStartTime, 1, 2);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(520, 120);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(688, 190);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 4;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
@@ -273,7 +273,7 @@
             // 
             // UpdateButton
             // 
-            this.UpdateButton.Location = new System.Drawing.Point(426, 577);
+            this.UpdateButton.Location = new System.Drawing.Point(594, 647);
             this.UpdateButton.Name = "UpdateButton";
             this.UpdateButton.Size = new System.Drawing.Size(75, 23);
             this.UpdateButton.TabIndex = 15;
@@ -283,7 +283,7 @@
             // 
             // TimetableSave
             // 
-            this.TimetableSave.Location = new System.Drawing.Point(826, 577);
+            this.TimetableSave.Location = new System.Drawing.Point(994, 647);
             this.TimetableSave.Name = "TimetableSave";
             this.TimetableSave.Size = new System.Drawing.Size(75, 23);
             this.TimetableSave.TabIndex = 16;
@@ -293,7 +293,7 @@
             // 
             // TimetabeDelete
             // 
-            this.TimetabeDelete.Location = new System.Drawing.Point(41, 577);
+            this.TimetabeDelete.Location = new System.Drawing.Point(209, 647);
             this.TimetabeDelete.Name = "TimetabeDelete";
             this.TimetabeDelete.Size = new System.Drawing.Size(75, 23);
             this.TimetabeDelete.TabIndex = 17;
@@ -313,7 +313,7 @@
             this.Controls.Add(this.TimetableView);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Timetable";
-            this.Size = new System.Drawing.Size(958, 626);
+            this.Size = new System.Drawing.Size(1237, 717);
             this.Load += new System.EventHandler(this.Timetable_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();

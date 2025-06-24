@@ -52,7 +52,7 @@
             // 
             // TimetabeDelete
             // 
-            this.TimetabeDelete.Location = new System.Drawing.Point(56, 582);
+            this.TimetabeDelete.Location = new System.Drawing.Point(226, 603);
             this.TimetabeDelete.Name = "TimetabeDelete";
             this.TimetabeDelete.Size = new System.Drawing.Size(75, 23);
             this.TimetabeDelete.TabIndex = 24;
@@ -62,7 +62,7 @@
             // 
             // TimetableSave
             // 
-            this.TimetableSave.Location = new System.Drawing.Point(770, 582);
+            this.TimetableSave.Location = new System.Drawing.Point(940, 603);
             this.TimetableSave.Name = "TimetableSave";
             this.TimetableSave.Size = new System.Drawing.Size(75, 23);
             this.TimetableSave.TabIndex = 23;
@@ -72,7 +72,7 @@
             // 
             // TimetableUpdate
             // 
-            this.TimetableUpdate.Location = new System.Drawing.Point(443, 582);
+            this.TimetableUpdate.Location = new System.Drawing.Point(613, 603);
             this.TimetableUpdate.Name = "TimetableUpdate";
             this.TimetableUpdate.Size = new System.Drawing.Size(75, 23);
             this.TimetableUpdate.TabIndex = 22;
@@ -89,7 +89,7 @@
             this.tableLayoutPanel2.Controls.Add(this.label9, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.label4, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.MarksScore, 1, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(535, 140);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(705, 161);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
@@ -135,7 +135,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(386, 50);
+            this.label2.Location = new System.Drawing.Point(556, 71);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(221, 25);
             this.label2.TabIndex = 20;
@@ -144,7 +144,7 @@
             // MarksView
             // 
             this.MarksView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.MarksView.Location = new System.Drawing.Point(208, 315);
+            this.MarksView.Location = new System.Drawing.Point(378, 336);
             this.MarksView.Name = "MarksView";
             this.MarksView.Size = new System.Drawing.Size(541, 210);
             this.MarksView.TabIndex = 19;
@@ -159,7 +159,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label6, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.MarksSubject, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(56, 140);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(226, 161);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
@@ -220,7 +220,7 @@
             this.Controls.Add(this.MarksView);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Marks_Add_and_Delete_and_Update";
-            this.Size = new System.Drawing.Size(958, 626);
+            this.Size = new System.Drawing.Size(1237, 717);
             this.Load += new System.EventHandler(this.Marks_Add_and_Delete_and_Update_Load);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();

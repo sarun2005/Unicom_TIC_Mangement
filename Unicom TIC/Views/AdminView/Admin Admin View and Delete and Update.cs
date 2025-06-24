@@ -14,14 +14,13 @@ namespace Unicom_TIC.Views.AdminView
 {
     public partial class Admin_Admin_View_and_Delete_and_Update : UserControl
     {
-        private int selectedAdminID = -1;
-       
+        private int selectedAdminID = -1;       
 
         public Admin_Admin_View_and_Delete_and_Update()
         {
             InitializeComponent();
-            AdminAdminDetails.RowHeaderMouseClick += AdminAdminDetails_RowHeaderMouseClick;
-            AdminAdminDetails.CellClick += AdminAdminDetails_CellClick;
+            AdminAdminDetails.RowHeaderMouseClick += AdminAdminDetails_RowHeaderMouseClick; // Load data
+            AdminAdminDetails.CellClick += AdminAdminDetails_CellClick;  // Load the full details of the row
             LoadAdmins(); // View
 
         }

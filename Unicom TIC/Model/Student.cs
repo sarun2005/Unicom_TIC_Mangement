@@ -20,7 +20,7 @@ namespace Unicom_TIC.Model
         public string Email { get; set; }
         public int CourseID { get; set; }
         public string CourseName { get; internal set; }
-
+        public string SubjectName { get; private set; }
         internal static void Add(Student student)
         {
             throw new NotImplementedException();

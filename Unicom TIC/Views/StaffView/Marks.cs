@@ -33,6 +33,12 @@ namespace Unicom_TIC.Views.StaffView
             MarksView.AutoGenerateColumns = true;
             MarksView.DataSource = data;
 
+
+            MarksView.Columns["StudentID"].Visible = false;
+            MarksView.Columns["SubjectID"].Visible = false;
+            MarksView.Columns["ExamID"].Visible = false;
+
+
         }
 
         private void TimetabeDelete_Click(object sender, EventArgs e)

@@ -84,7 +84,7 @@
             // AdminStaffDetails
             // 
             this.AdminStaffDetails.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.AdminStaffDetails.Location = new System.Drawing.Point(271, 461);
+            this.AdminStaffDetails.Location = new System.Drawing.Point(275, 421);
             this.AdminStaffDetails.Name = "AdminStaffDetails";
             this.AdminStaffDetails.Size = new System.Drawing.Size(702, 218);
             this.AdminStaffDetails.TabIndex = 15;
@@ -92,7 +92,7 @@
             // 
             // AdminStaffDelete
             // 
-            this.AdminStaffDelete.Location = new System.Drawing.Point(570, 742);
+            this.AdminStaffDelete.Location = new System.Drawing.Point(544, 676);
             this.AdminStaffDelete.Name = "AdminStaffDelete";
             this.AdminStaffDelete.Size = new System.Drawing.Size(107, 29);
             this.AdminStaffDelete.TabIndex = 5;
@@ -175,7 +175,7 @@
             // 
             // AdminStaffUpdateClear
             // 
-            this.AdminStaffUpdateClear.Location = new System.Drawing.Point(35, 742);
+            this.AdminStaffUpdateClear.Location = new System.Drawing.Point(35, 672);
             this.AdminStaffUpdateClear.Name = "AdminStaffUpdateClear";
             this.AdminStaffUpdateClear.Size = new System.Drawing.Size(107, 29);
             this.AdminStaffUpdateClear.TabIndex = 47;
@@ -280,7 +280,7 @@
             // 
             // AdminStaffUpdate
             // 
-            this.AdminStaffUpdate.Location = new System.Drawing.Point(1080, 742);
+            this.AdminStaffUpdate.Location = new System.Drawing.Point(1080, 676);
             this.AdminStaffUpdate.Name = "AdminStaffUpdate";
             this.AdminStaffUpdate.Size = new System.Drawing.Size(107, 29);
             this.AdminStaffUpdate.TabIndex = 45;
@@ -383,7 +383,7 @@
             this.Controls.Add(this.AdminStaffDetails);
             this.Controls.Add(this.AdminStaffDelete);
             this.Name = "Admin_Staff_View_and_Delete_and_Update";
-            this.Size = new System.Drawing.Size(1236, 848);
+            this.Size = new System.Drawing.Size(1237, 717);
             this.Load += new System.EventHandler(this.Admin_Staff_View_and_Delete_Load);
             ((System.ComponentModel.ISupportInitialize)(this.AdminStaffDetails)).EndInit();
             this.s.ResumeLayout(false);

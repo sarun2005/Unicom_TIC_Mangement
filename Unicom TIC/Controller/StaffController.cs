@@ -129,8 +129,7 @@ namespace Unicom_TIC.Controller
                    OR DOB         LIKE @Txt COLLATE NOCASE
                    OR Gender      LIKE @Txt COLLATE NOCASE
                    OR Role        LIKE @Txt COLLATE NOCASE
-                   OR Email       LIKE @Txt COLLATE NOCASE
-                   OR PhoneNumber LIKE @Txt COLLATE NOCASE";
+                  ";
 
             if (isNumeric)
                 sql += " OR StaffID = @Id";

@@ -33,7 +33,12 @@ namespace Unicom_TIC.Views.LecturerView
             List<Timetable> timetables = controller.ViewAllTimetables();
             TimetableView.DataSource = null;
             TimetableView.DataSource = timetables;
-                        
+
+            TimetableView.Columns["CourseID"].Visible = false;
+            TimetableView.Columns["SubjectID"].Visible = false;
+            TimetableView.Columns["RoomID"].Visible = false;
+            TimetableView.Columns["LecturerID"].Visible = false;
+
         }
 
         private void Lecturer_Timetable_Load(object sender, EventArgs e)

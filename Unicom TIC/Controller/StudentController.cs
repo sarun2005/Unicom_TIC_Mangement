@@ -33,6 +33,44 @@ namespace Unicom_TIC.Controller
             }
         }
 
+
+
+
+        // ===================================== UPDATE =====================================
+        internal void UpdateStudent(Student student)
+        {
+            using (var connection = DataBaseConnection.GetConnection())
+            {
+                const string sql = @"
+            UPDATE Students
+            SET FirstName = @FirstName,
+                LastName = @LastName,
+                Address = @Address,
+                DOB = @DOB,
+                Gender = @Gender,
+                Email = @Email,
+                PhoneNumber = @PhoneNumber,
+                CourseID = @CourseID
+            WHERE StudentID = @StudentID;";
+
+                using (var cmd = new SQLiteCommand(sql, connection))
+                {
+                    cmd.Parameters.AddWithValue("@FirstName", student.FirstName);
+                    cmd.Parameters.AddWithValue("@LastName", student.LastName);
+                    cmd.Parameters.AddWithValue("@Address", student.Address);
+                    cmd.Parameters.AddWithValue("@DOB", student.DOB);
+                    cmd.Parameters.AddWithValue("@Gender", student.Gender);
+                    cmd.Parameters.AddWithValue("@Email", student.Email);
+                    cmd.Parameters.AddWithValue("@PhoneNumber", student.PhoneNumber);
+                    cmd.Parameters.AddWithValue("@CourseID", student.CourseID);
+                    cmd.Parameters.AddWithValue("@StudentID", student.StudentID); // Ensure to include the StudentID for the WHERE clause
+
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+
         // ===================================== View Students (+ Course Name) =====================================
         public List<Student> ViewAllStudentWithCourse()
         {
@@ -84,8 +122,7 @@ namespace Unicom_TIC.Controller
            OR s.Address     LIKE @Txt COLLATE NOCASE
            OR s.DOB         LIKE @Txt COLLATE NOCASE
            OR s.Gender      LIKE @Txt COLLATE NOCASE
-           OR s.Email       LIKE @Txt COLLATE NOCASE
-           OR s.PhoneNumber LIKE @Txt COLLATE NOCASE;";
+           ;";
 
             using (var connection = DataBaseConnection.GetConnection())
             using (var cmd = new SQLiteCommand(sql, connection))
@@ -175,9 +212,6 @@ namespace Unicom_TIC.Controller
             }
         }
 
-        internal void UpdateStudent(Student student)
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 }

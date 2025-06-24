@@ -37,7 +37,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(400, 123);
+            this.label2.Location = new System.Drawing.Point(536, 215);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(221, 25);
             this.label2.TabIndex = 24;
@@ -46,7 +46,7 @@
             // StudentMarksView
             // 
             this.StudentMarksView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.StudentMarksView.Location = new System.Drawing.Point(188, 279);
+            this.StudentMarksView.Location = new System.Drawing.Point(324, 371);
             this.StudentMarksView.Name = "StudentMarksView";
             this.StudentMarksView.Size = new System.Drawing.Size(637, 210);
             this.StudentMarksView.TabIndex = 23;
@@ -59,7 +59,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.StudentMarksView);
             this.Name = "StudentMarks";
-            this.Size = new System.Drawing.Size(988, 720);
+            this.Size = new System.Drawing.Size(1267, 811);
             this.Load += new System.EventHandler(this.Marks_Load);
             ((System.ComponentModel.ISupportInitialize)(this.StudentMarksView)).EndInit();
             this.ResumeLayout(false);
