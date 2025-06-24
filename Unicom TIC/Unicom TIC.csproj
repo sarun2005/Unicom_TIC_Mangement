@@ -177,6 +177,12 @@
     <Compile Include="Views\LecturerView\Lecturer Details.Designer.cs">
       <DependentUpon>Lecturer Details.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\LecturerView\LecturerExam.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\LecturerView\LecturerExam.Designer.cs">
+      <DependentUpon>LecturerExam.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\LecturerView\Main Lecturer Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -225,6 +231,12 @@
     <Compile Include="Views\StaffView\Staff Details.Designer.cs">
       <DependentUpon>Staff Details.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\StaffView\StaffExam.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\StaffView\StaffExam.Designer.cs">
+      <DependentUpon>StaffExam.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\StaffView\Timetable.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -248,6 +260,12 @@
     </Compile>
     <Compile Include="Views\StudentView\Student Details.Designer.cs">
       <DependentUpon>Student Details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StudentView\StudentExam.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\StudentView\StudentExam.Designer.cs">
+      <DependentUpon>StudentExam.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\StudentView\Timetable.cs">
       <SubType>UserControl</SubType>
@@ -312,6 +330,9 @@
     <EmbeddedResource Include="Views\LecturerView\Lecturer Details.resx">
       <DependentUpon>Lecturer Details.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\LecturerView\LecturerExam.resx">
+      <DependentUpon>LecturerExam.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\LecturerView\Main Lecturer Form.resx">
       <DependentUpon>Main Lecturer Form.cs</DependentUpon>
     </EmbeddedResource>
@@ -336,6 +357,9 @@
     <EmbeddedResource Include="Views\StaffView\Staff Details.resx">
       <DependentUpon>Staff Details.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\StaffView\StaffExam.resx">
+      <DependentUpon>StaffExam.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\StaffView\Timetable.resx">
       <DependentUpon>Timetable.cs</DependentUpon>
     </EmbeddedResource>
@@ -347,6 +371,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\StudentView\Student Details.resx">
       <DependentUpon>Student Details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StudentView\StudentExam.resx">
+      <DependentUpon>StudentExam.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\StudentView\Timetable.resx">
       <DependentUpon>Timetable.cs</DependentUpon>

@@ -15,7 +15,7 @@ namespace Unicom_TIC.Views.StaffView
     {
         private int staffId;
 
-        public Main_Staff_Form(int id)
+        public Main_Staff_Form(int id = 0)
         {
             InitializeComponent();
             staffId = id;
@@ -42,6 +42,11 @@ namespace Unicom_TIC.Views.StaffView
             // Timetable Management
             TreeNode TimetableNode = StaffTreeView.Nodes.Add("Timetable Management");
             TimetableNode.Nodes.Add("View Timetable");
+
+
+            // Timetable Management
+            TreeNode ExamNode = StaffTreeView.Nodes.Add("Exams Management");
+            ExamNode.Nodes.Add("View Exams");
         }
 
         private void StaffTreeView_AfterSelect(object sender, TreeViewEventArgs e)
@@ -66,6 +71,15 @@ namespace Unicom_TIC.Views.StaffView
                 Staff_Timetable TimetableAction = new Staff_Timetable();
                 TimetableAction.Dock = DockStyle.Fill;
                 MainStaffMainPanel.Controls.Add(TimetableAction);
+            }
+
+
+            // ============================ Exams ============================
+            else if (selected == "View Exams")
+            {
+                StaffExam ExamAction = new StaffExam();
+                ExamAction.Dock = DockStyle.Fill;
+                MainStaffMainPanel.Controls.Add(ExamAction);
             }
 
 

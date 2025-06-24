@@ -26,9 +26,9 @@ namespace Unicom_TIC
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new LoginForm());
             Application.Run(new Main_Admin());
-            //Application.Run(new Main_Lecturer_Form());
-            //Application.Run(new Main_Staff_Form());
-            //Application.Run(new Main_Student_Form()); 
+            Application.Run(new Main_Lecturer_Form());
+            Application.Run(new Main_Staff_Form());
+            Application.Run(new Main_Student_Form()); 
         }
     }
 }

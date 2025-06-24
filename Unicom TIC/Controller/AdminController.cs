@@ -89,18 +89,64 @@ namespace Unicom_TIC.Controller
                 string updateQuery = @"UPDATE Admins SET FirstName = @FirstName , LastName = @LastName , Role = @Role , Email = @Email ,
                                      PhoneNumber = @PhoneNumber WHERE AdminID = @AdminID";
 
-                using (var command = new SQLiteCommand(updateQuery, connection))
+                using (var insertAdminCommand = new SQLiteCommand(updateQuery, connection))
                 {
-                    command.Parameters.AddWithValue("@FirstName" , admin.FirstName);
-                    command.Parameters.AddWithValue("@LastName" , admin.LastName);
-                    command.Parameters.AddWithValue("@Role" , admin.Role);
-                    command.Parameters.AddWithValue("@Email" , admin.Email);
-                    command.Parameters.AddWithValue("@PhoneNumber" , admin.PhoneNumber);
-                    command.Parameters.AddWithValue("@AdminID" , admin.AdminID);
-                    command.ExecuteNonQuery(); 
+                    insertAdminCommand.Parameters.AddWithValue("@FirstName" , admin.FirstName);
+                    insertAdminCommand.Parameters.AddWithValue("@LastName" , admin.LastName);
+                    insertAdminCommand.Parameters.AddWithValue("@Role" , admin.Role);
+                    insertAdminCommand.Parameters.AddWithValue("@Email" , admin.Email);
+                    insertAdminCommand.Parameters.AddWithValue("@PhoneNumber" , admin.PhoneNumber);
+                    insertAdminCommand.Parameters.AddWithValue("@AdminID" , admin.AdminID);
+                    insertAdminCommand.ExecuteNonQuery(); 
                 }
             }
         }
+
+
+
+
+        // =====================================  VIEW AND DELETE SEARCH =====================================
+        public List<Admin> SearchAdmins(string keyword)
+        {
+            List<Admin> admins = new List<Admin>();
+
+            string searchAdminQuery =
+                @"SELECT * FROM Admins
+                  WHERE AdminID   = @AdminAdminSearchID
+                     OR FirstName LIKE @AdminAdminSearchText
+                     OR LastName  LIKE @AdminAdminSearchText
+                      OR Role  LIKE @AdminAdminSearchText"
+                ;
+
+            using (var connection = DataBaseConnection.GetConnection())
+            using (var insertAdminCommand = new SQLiteCommand(searchAdminQuery, connection))
+            {
+                // ---- AdminID parameter ----
+                if (int.TryParse(keyword, out int idVal))
+                    insertAdminCommand.Parameters.AddWithValue("@AdminAdminSearchID", idVal);
+                else
+                    insertAdminCommand.Parameters.AddWithValue("@AdminAdminSearchID", DBNull.Value); // no match
+
+
+                // ---- Text wildcard parameter ----
+                insertAdminCommand.Parameters.AddWithValue("@AdminAdminSearchText", $"%{keyword}%");
+
+                using (var read = insertAdminCommand.ExecuteReader())
+                while (read.Read())
+                admins.Add(new Admin
+                {
+                    AdminID = Convert.ToInt32(read["AdminID"]),
+                    FirstName = read["FirstName"].ToString(),
+                    LastName = read["LastName"].ToString(),
+                    Role = read["Role"].ToString(),
+                    Email = read["Email"].ToString(),
+                    PhoneNumber = read["PhoneNumber"].ToString()
+                });
+            }
+            return admins;
+        }
+
+
 
 
 
@@ -151,13 +197,9 @@ namespace Unicom_TIC.Controller
             }
 
             return admins;
-        }
-        
+        }     
 
-        
-
-
-        
+                
        // ===================================== UPDATE SEARCH =====================================
        public Admin ViewAdminByID(int adminID)
        {
@@ -189,56 +231,6 @@ namespace Unicom_TIC.Controller
            return admin;
        }
        */
-
-
-
-        
-        
-        // =====================================  VIEW AND DELETE SEARCH =====================================
-        public List<Admin> SearchAdmins(string keyword)
-        {
-            List<Admin> admins = new List<Admin>();
-
-            string sql =
-                @"SELECT * FROM Admins
-                    WHERE AdminID   = @AdminAdminSearchID
-                          OR FirstName LIKE @AdminAdminSearchText
-                          OR LastName  LIKE @AdminAdminSearchText
-                          OR Role  LIKE @AdminAdminSearchText"
-                ;
-
-            using (var connection = DataBaseConnection.GetConnection())
-            using (var cmd = new SQLiteCommand(sql, connection))
-            {
-                // ---- AdminID parameter ----
-                if (int.TryParse(keyword, out int idVal))
-                    cmd.Parameters.AddWithValue("@AdminAdminSearchID", idVal);   
-                else
-                    cmd.Parameters.AddWithValue("@AdminAdminSearchID", DBNull.Value); // no match
-
-
-
-                // ---- Text wildcard parameter ----
-                cmd.Parameters.AddWithValue("@AdminAdminSearchText", $"%{keyword}%");
-
-                using (var read = cmd.ExecuteReader())
-                    while (read.Read())
-                        admins.Add(new Admin
-                        {
-                            AdminID = Convert.ToInt32(read["AdminID"]),
-                            FirstName = read["FirstName"].ToString(),
-                            LastName = read["LastName"].ToString(),
-                            Role = read["Role"].ToString(),
-                            Email = read["Email"].ToString(),
-                            PhoneNumber = read["PhoneNumber"].ToString()
-                        });
-            }
-
-            return admins;
-        }
-
-        
-
 
     }
 }

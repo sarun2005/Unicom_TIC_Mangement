@@ -16,7 +16,7 @@ namespace Unicom_TIC.Views.StudentView
     {
         private int studentId;
 
-        public Main_Student_Form(int id)
+        public Main_Student_Form(int id = 0)
         {
             InitializeComponent();
             studentId = id;
@@ -54,6 +54,10 @@ namespace Unicom_TIC.Views.StudentView
             // Timetable Management
             TreeNode TimetableNode = StudentTreeView.Nodes.Add("Timetable Management");
             TimetableNode.Nodes.Add("View Timetable");
+
+            // Exam Management
+            TreeNode ExamNode = StudentTreeView.Nodes.Add("Exam Management");
+            ExamNode.Nodes.Add("View Exams");
         }
 
 
@@ -89,6 +93,17 @@ namespace Unicom_TIC.Views.StudentView
                 StudentMarks TimetableAction = new StudentMarks(studentId);
                 TimetableAction.Dock = DockStyle.Fill;
                 MainStudentMainPanel.Controls.Add(TimetableAction);
+            }
+
+
+
+            // ============================ Exams ============================
+            else if (selected == "View Exams")
+            {
+
+                StudentExam ExamAction = new StudentExam();
+                ExamAction.Dock = DockStyle.Fill;
+                MainStudentMainPanel.Controls.Add(ExamAction);
             }
         }
 

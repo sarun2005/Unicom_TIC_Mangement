@@ -15,7 +15,7 @@ namespace Unicom_TIC.Views.LecturerView
     {
         private int lecturerId;
 
-        public Main_Lecturer_Form(int id)
+        public Main_Lecturer_Form(int id = 0)
         {
             InitializeComponent();
             lecturerId = id;
@@ -58,6 +58,11 @@ namespace Unicom_TIC.Views.LecturerView
             TimetableNode.Nodes.Add("View Timetable");
 
 
+            // Exam Management
+            TreeNode ExamNode = LecturerTreeView.Nodes.Add("Exam Management");
+            ExamNode.Nodes.Add("View Exams");
+
+
         }
 
 
@@ -83,6 +88,15 @@ namespace Unicom_TIC.Views.LecturerView
                 Lecturer_Timetable timetableUC = new Lecturer_Timetable(lecturerId);
                 timetableUC.Dock = DockStyle.Fill;
                 MainLecturerMainPanel.Controls.Add(timetableUC);
+            }
+
+
+            // ============================ Exams ============================
+            else if (selected == "View Exams")
+            {
+                LecturerExam examUC = new LecturerExam();
+                examUC.Dock = DockStyle.Fill;
+                MainLecturerMainPanel.Controls.Add(examUC);
             }
 
 

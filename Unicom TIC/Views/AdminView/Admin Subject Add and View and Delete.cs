@@ -170,7 +170,7 @@ namespace Unicom_TIC.Views.AdminView
             var subject = (Subject)AdminSubjectDetails.Rows[e.RowIndex].DataBoundItem;
             selectedSubjectId = subject.SubjectID;
             AdminSubjectSubjectName.Text = subject.SubjectName;
-            //AdminSubjectCourseName.SelectedValue = subject.CourseID;
+            AdminSubjectCourseName.SelectedValue = subject.CourseID;
         }
 
 

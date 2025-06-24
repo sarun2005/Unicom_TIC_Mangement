@@ -39,3 +39,6 @@ Z:\Projects\New folder\Unicom TIC\obj\Debug\Unicom TIC.csproj.Up2Date
 Z:\Projects\New folder\Unicom TIC\obj\Debug\Unicom TIC.exe
 Z:\Projects\New folder\Unicom TIC\obj\Debug\Unicom TIC.pdb
 Z:\Projects\New folder\Unicom TIC\obj\Debug\Unicom_TIC.Views.AdminView.Admin_Student_View_and_Delete_and_Update_New.resources
+Z:\Projects\New folder\Unicom TIC\obj\Debug\Unicom_TIC.Views.LecturerView.LecturerExam.resources
+Z:\Projects\New folder\Unicom TIC\obj\Debug\Unicom_TIC.Views.StaffView.StaffExam.resources
+Z:\Projects\New folder\Unicom TIC\obj\Debug\Unicom_TIC.Views.StudentView.StudentExam.resources

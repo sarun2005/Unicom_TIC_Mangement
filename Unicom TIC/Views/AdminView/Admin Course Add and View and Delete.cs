@@ -22,14 +22,15 @@ namespace Unicom_TIC.Views.AdminView
             AdminCourseDetails.MultiSelect = false;
             AdminCourseDetails.CellContentClick += AdminCourseDetails_CellContentClick;
             AdminCourseDetails.CellClick += AdminCourseDetails_CellClick;
-            LoadCourses();
+            LoadCourses(); // View
         }
 
+
+        // ============================ View  ============================
         public void LoadCourses()
         {
             var controller = new CourseController();
             List<Course> courses = controller.ViewAllCourses();
-
             AdminCourseDetails.DataSource = null;
             AdminCourseDetails.DataSource = courses;
         }
@@ -52,10 +53,7 @@ namespace Unicom_TIC.Views.AdminView
             {
                 MessageBox.Show("Please enter Course details", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
-            };
-
-
-            
+            };            
             
 
 
@@ -64,16 +62,18 @@ namespace Unicom_TIC.Views.AdminView
                 CourseController courseController = new CourseController();
                 courseController.AddCourse(course);
                 MessageBox.Show("New Course Saved Successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LoadCourses();
+                ClearFields();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-            ClearFields();
-            LoadCourses();
+            }            
+            
         }
 
+
+        // ============================ Clear ============================
         private void ClearFields()
         {
             AdminCourseName.Text = "";
@@ -103,10 +103,10 @@ namespace Unicom_TIC.Views.AdminView
             
         }
         // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-        
 
-       
 
+
+        // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ UPDATE COURSE ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
         private void button4_Click(object sender, EventArgs e)
         {
             if (CourseID == -1)
@@ -114,16 +114,22 @@ namespace Unicom_TIC.Views.AdminView
                 MessageBox.Show("Please select a Course from the list to update.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
+
+
             if (string.IsNullOrWhiteSpace(AdminCourseName.Text))
             {
                 MessageBox.Show("Course Name is required.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+
+
             var course = new Course
             {
                 CourseID = CourseID,
                 CourseName = AdminCourseName.Text.Trim()
             };
+
+
             try
             {
                 new CourseController().UpdateCourse(course);
@@ -136,7 +142,7 @@ namespace Unicom_TIC.Views.AdminView
                 MessageBox.Show("Database Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
+        // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
         // ============================ DATAGRIDVIEW EVENTS ============================
