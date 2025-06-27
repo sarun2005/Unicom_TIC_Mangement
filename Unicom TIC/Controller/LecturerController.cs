@@ -186,7 +186,7 @@ namespace Unicom_TIC.Controller
 
 
 
-
+        /*
         // ===================================== VIEW (ONE) IN MAIN LECTURER FORM =====================================
         public Lecturer GetLecturerById(int id)
         {
@@ -219,6 +219,46 @@ namespace Unicom_TIC.Controller
                 }
             }
             return null; 
+        }
+        */
+
+        public Lecturer GetLecturerById(int id)
+        {
+            using (var connection = DataBaseConnection.GetConnection())
+            {
+                const string sql = @"
+            SELECT l.LecturerID, l.FirstName, l.LastName, l.Address, l.DOB, l.Gender, 
+                   l.SubjectID, s.SubjectName, l.Email, l.PhoneNumber
+            FROM Lecturers l
+            LEFT JOIN Subjects s ON l.SubjectID = s.SubjectID
+            WHERE l.LecturerID = @id LIMIT 1;";
+
+                using (var cmd = new SQLiteCommand(sql, connection))
+                {
+                    cmd.Parameters.AddWithValue("@id", id);
+
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            return new Lecturer
+                            {
+                                LecturerID = Convert.ToInt32(reader["LecturerID"]),
+                                FirstName = reader["FirstName"].ToString(),
+                                LastName = reader["LastName"].ToString(),
+                                Address = reader["Address"].ToString(),
+                                DOB = reader["DOB"].ToString(),
+                                Gender = reader["Gender"].ToString(),
+                                SubjectID = Convert.ToInt32(reader["SubjectID"]),
+                                SubjectName = reader["SubjectName"] == DBNull.Value ? null : reader["SubjectName"].ToString(),
+                                Email = reader["Email"].ToString(),
+                                PhoneNumber = reader["PhoneNumber"].ToString()
+                            };
+                        }
+                    }
+                }
+            }
+            return null;
         }
 
 

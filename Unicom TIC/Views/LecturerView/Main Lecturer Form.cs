@@ -19,24 +19,21 @@ namespace Unicom_TIC.Views.LecturerView
         {
             InitializeComponent();
             lecturerId = id;
-            LoadTimetablePage();
+            //LoadTimetablePage();
         }
 
-        private void LoadTimetablePage()
+        /*private void LoadTimetablePage()
         {
             var uc = new Lecturer_Timetable(lecturerId);   // pass ID
             uc.Dock = DockStyle.Fill;
 
-            MainLecturerMainPanel.Controls.Clear();   
-            MainLecturerMainPanel.Controls.Add(uc);
-        }
+            //MainLecturerMainPanel.Controls.Clear();   
+            //MainLecturerMainPanel.Controls.Add(uc);
+        }*/
 
 
 
-        private void MainLecturerMainPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+        private void MainLecturerMainPanel_Paint(object sender, PaintEventArgs e){}
 
        
 
@@ -121,9 +118,6 @@ namespace Unicom_TIC.Views.LecturerView
             loginForm.ShowDialog();
         }
 
-        private void MainLecturerMainPanel_Paint_1(object sender, PaintEventArgs e)
-        {
-
-        }
+        private void MainLecturerMainPanel_Paint_1(object sender, PaintEventArgs e){}
     }
 }
